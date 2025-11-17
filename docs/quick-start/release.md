@@ -18,6 +18,8 @@ v2.0-dev.x 已经实现基础数据展示、血量显示、计时器、结算页
 
 下载链接如下：
 
+- [v2.0-dev.8](https://lzx0626.lanzouq.com/iSpIl3bbi5mb)：结算页恢复老版本的实现方法以改善老版本闪退、卡顿、死机等问题（新版本无法正常显示结算页，建议新版继续用 dev.7）。同时计时器实现方式简化以降低闪退概率。
+
 - [v2.0-dev.7](https://lzx0626.lanzouq.com/it06z38tuvhe)
 
 - [v2.0-dev.6](https://lzx0626.lanzouq.com/ieTUg37qpene)
