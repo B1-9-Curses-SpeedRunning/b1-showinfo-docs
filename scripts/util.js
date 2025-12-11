@@ -13,7 +13,6 @@
  */
 import fs from 'fs'
 import json2md from 'json2md'
-import parse from "parse-duration"
 import XLSX from "xlsx"
 import moment from 'moment'
 
@@ -76,32 +75,33 @@ export function convertSingleList(inputJsonPath) {
 
     // rawJson 是数组，每个元素是 { "组名": [选手数组] }
     rawJson.forEach(section => {
-        const groupName = Object.keys(section)[0]          // 三虎、四僧等
+        const groupName = Object.keys(section)[0]          // 三虎、四僧等。
         const tableData = section[groupName]
 
         // 生成组标题
         const elements = [{ h3: groupName }]
 
         if (tableData && tableData.length > 0) {
-            // 按成绩排序，快的在前
-            const sortedTable = [...tableData].sort((a, b) => {
-                return parse(normalizeTime(a['成绩'][0])) - parse(normalizeTime(b['成绩'][0]))
-            })
+            // 按成绩排序，快的在前（暂时不排序）
+            // const sortedTable = [...tableData].sort((a, b) => {
+            //     return parse(normalizeTime(a['成绩'][0])) - parse(normalizeTime(b['成绩'][0]))
+            // })
+            const sortedTable = [...tableData]
 
-            // 给每行加排名
+            // 给每行加排名。
             const tableRows = sortedTable.map((entry, index) => ({
                 排名: 1 + index,
                 ...entry
             }))
 
-            // 获取列名
+            // 获取列名。
             const columnNames = Object.keys(tableRows[0])
 
-            // 构造表格内容
+            // 构造表格内容。
             const tableContent = tableRows.map(row =>
                 columnNames.map(col => {
                     const e = row[col]
-                    // 若是数组且长度大于 1 代表带链接
+                    // 若是数组且长度大于 1 代表带链接。
                     return Array.isArray(e)
                         ? (e.length > 1 ? `[${e[0]}](${e[1]})` : e[0])
                         : e
@@ -137,10 +137,11 @@ export function convertTotalList(inputJsonPath) {
 
     // 处理每一行。
     if (rawJson.length > 0) {
-        // 按照“总成绩”进行排序。
-        const sortedTable = [...rawJson].sort((a, b) => {
-            return (a['总成绩'].length ? parse(normalizeTime(a['总成绩'])) : Infinity) - (b['总成绩'].length ? parse(normalizeTime(b['总成绩'])) : Infinity)
-        })
+        // 按照“总成绩”进行排序。（暂时不排序）
+        // const sortedTable = [...rawJson].sort((a, b) => {
+        //     return (a['总成绩'].length ? parse(normalizeTime(a['总成绩'])) : Infinity) - (b['总成绩'].length ? parse(normalizeTime(b['总成绩'])) : Infinity)
+        // })
+        const sortedTable = [...rawJson]
 
         // 获取列名（JSON 对象的字段名）。
         const columnNames = Object.keys(sortedTable[0])
