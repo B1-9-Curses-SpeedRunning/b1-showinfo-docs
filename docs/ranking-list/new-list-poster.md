@@ -90,3 +90,49 @@
 
 <div align="center"><img src="https://i1.hdslb.com/bfs/new_dyn/e0179109ff89f0822d333a1716d25fa925731393.jpg" style="zoom:33%;" /></div>
 
+## 2025 年 11 月
+
+原动态地址：[黑神话悟空九禁连战速通十一月月榜](https://www.bilibili.com/opus/1147034590529978369)。
+
+本月亮点：九禁第一人 [@蚌-](https://space.bilibili.com/1041159056) ​回归！感谢 [@杰哥就是癌情](https://space.bilibili.com/251139311) ​倾力制作的精美海报。也感谢每一位速通天命人的努力和大家对实时数据显示 MOD 的支持！12 月 10 日是连战一周年，目前一周年比赛活动筹备中！见置顶动态！
+
+### 三虎
+
+<div align="center"><img src="https://i1.hdslb.com/bfs/new_dyn/27ac18798f514195502ffec9951d3ed925731393.jpg" style="zoom:20%;" /></div>
+
+### 四僧
+
+<div align="center"><img src="https://i1.hdslb.com/bfs/new_dyn/5bea74ffb0ac0b0c3342a5047d512b1425731393.jpg" style="zoom:20%;" /></div>
+
+### 四渎龙神
+
+<div align="center"><img src="https://i1.hdslb.com/bfs/new_dyn/6789b541edc4a89f8767d26c15aabd3c25731393.jpg" style="zoom:20%;" /></div>
+
+### 六健将
+
+<div align="center"><img src="https://i1.hdslb.com/bfs/new_dyn/c37c2f54ccf759980aeea7f6553e34f225731393.jpg" style="zoom:20%;" /></div>
+
+### 蛰虫始振
+
+<div align="center"><img src="https://i1.hdslb.com/bfs/new_dyn/4feeb93b0c285a658374e77bb03b651425731393.jpg" style="zoom:20%;" /></div>
+
+### 万样骁凶
+
+<div align="center"><img src="https://i1.hdslb.com/bfs/new_dyn/52dded37efc7ecc5beaab1dce5402f1825731393.jpg" style="zoom:20%;" /></div>
+
+### 心猿
+
+<div align="center"><img src="https://i1.hdslb.com/bfs/new_dyn/985595fdc8b1579c832dc9d44f070f9125731393.jpg" style="zoom:20%;" /></div>
+
+### 梅山故人
+
+<div align="center"><img src="https://i1.hdslb.com/bfs/new_dyn/59e385d2c33717c7b7d353dbfebc9c3325731393.jpg" style="zoom:20%;" /></div>
+
+### 六根一性
+
+<div align="center"><img src="https://i1.hdslb.com/bfs/new_dyn/9764a211c2ad2117c65727972372debf25731393.jpg" style="zoom:20%;" /></div>
+
+### 总榜
+
+<div align="center"><img src="https://i1.hdslb.com/bfs/new_dyn/ecb972880cae38ed5883f60fd123b58925731393.jpg" style="zoom:20%;" /></div>
+
