@@ -29,7 +29,7 @@
 
 对应文件如下：
 
-<center><img src="./release.assets/500d2c85104380208186f7bafeff9e77.png" alt="500d2c85104380208186f7bafeff9e77" style="zoom:70%;" /></center>
+<center><img src="https://cdn.davidingplus.cn/images/2025/12/25/500d2c85104380208186f7bafeff9e77.png" alt="500d2c85104380208186f7bafeff9e77" style="zoom:70%;" /></center>
 
 
 ### v2.0-dev.x
