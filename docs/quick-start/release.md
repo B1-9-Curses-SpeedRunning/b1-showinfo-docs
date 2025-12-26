@@ -8,11 +8,11 @@
 
 为方便查找和下载，这里的版本管理采用时间线倒序，将最新的版本放在前面，后续更新稳定 stable 版本以后会单独说明。
 
-### v2.0-LZ-1stAnniv-dev.9.1
+### v2.0-LZ-1stAnniv-dev.10.0
 
 为迎合一周年连战活动制作的特殊版本。
 
-下载链接如下：[v2.0-LZ-1stAnniv-dev.9.1](https://lzx0626.lanzouq.com/igGI73egxjof)
+下载链接如下：[v2.0-LZ-1stAnniv-dev.10.0](https://lzx0626.lanzouq.com/iw8Cp3ej2hub)
 
 发布日志如下：
 
