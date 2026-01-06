@@ -147,6 +147,15 @@ function getSidebar(): DefaultTheme.SidebarItem[] {
             ]
         },
         {
+            text: '一些工具',
+            base: '/tools',
+            collapsed: false,
+            items: [
+                { text: '黑神话悟空 MOD 编辑器', link: '/b1-mod-edit' },
+                { text: '黑神话悟空小风灵', link: '/b1-mini-trainer' }
+            ]
+        },
+        {
             text: '其他',
             base: '/others',
             collapsed: false,
