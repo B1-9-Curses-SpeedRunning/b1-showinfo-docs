@@ -229,7 +229,7 @@ export function generateJsonSingle(filePath, sheetIndex, outputJsonPath) {
             const score = scoreCell ? String(scoreCell.v) : ""
             const link = scoreCell?.l?.Target || ""
             // 日期优先使用格式化显示，否则取原始值。
-            const date = moment(new Date((dateCell.v - 25569) * 86400 * 1000)).format("YYYY/MM/DD");
+            const date = moment(new Date((dateCell.v - 25569) * 86400 * 1000)).format("YYYY/MM/DD")
 
             // 构造选手对象，成绩带链接则使用数组 [成绩, 链接]。
             arr.push({
@@ -299,6 +299,87 @@ export function generateJsonTotal(filePath, sheetIndex, outputJsonPath) {
 
         // 如果行中有选手姓名，才加入结果数组。
         if (hasName) res.push(rowObj)
+    }
+
+    fs.writeFileSync(outputJsonPath, JSON.stringify(res, null, 4), "utf-8")
+}
+
+/**
+ * @brief 解析周年连战成绩表格，生成 JSON 数据。
+ * @param filePath Excel 文件路径。
+ * @param sheetIndex 工作表索引。
+ * @param outputJsonPath 输出的 Json 文件路径。
+ * @return 返回按标题分组的单项成绩 JSON。
+ */
+export function generateJsonAnniversary(filePath, sheetIndex, outputJsonPath) {
+    const workbook = XLSX.readFile(filePath) // 读取 Excel 文件。
+    const sheetName = workbook.SheetNames[sheetIndex] // 获取工作表名称。
+    const sheet = workbook.Sheets[sheetName] // 获取工作表对象。
+    const range = XLSX.utils.decode_range(sheet["!ref"]) // 获取数据范围。
+
+    const titles = []
+    // 提取第一行标题及起始列。
+    for (let c = range.s.c; c <= range.e.c; ++c) {
+        const cell = sheet[XLSX.utils.encode_cell({ r: range.s.r, c })]
+        if (cell && cell.v && String(cell.v).trim()) titles.push({ title: String(cell.v).trim(), startCol: c })
+    }
+
+    const res = []
+    // 遍历每个标题列生成选手数据。
+    for (const { title, startCol } of titles) {
+        // 跳过不需要解析的列，如汇总或备注。
+        if ("排名" === title || "汇总" === title || "备注" === title || "历史成绩-道满归根" === title || "历史成绩-群妖聚义" === title) continue
+
+        const arr = []
+
+        // 从第 3 行开始遍历每个选手的数据（前两行是标题）。
+        for (let r = 2; r <= range.e.r; ++r) {
+            // 获取选手姓名、成绩和日期单元格。
+            const nameCell = sheet[XLSX.utils.encode_cell({ r, c: startCol })]
+            const scoreCell = sheet[XLSX.utils.encode_cell({ r, c: startCol + 1 })]
+            // 单项成绩第三栏是日期，总成绩第三栏是奖励，需要分开处理。
+            const dateOrRewardCell = sheet[XLSX.utils.encode_cell({ r, c: startCol + 2 })]
+
+            // 如果姓名为空，跳过该行。
+            if (!nameCell || nameCell.v == null) continue
+
+            const name = String(nameCell.v).trim()
+            // 特殊行处理：遇到破纪录次数结束，遇到前十玩家跳过。
+            if ("破纪录次数↓" === name) break
+            if ("前十玩家↑" === name) continue
+
+            // 读取成绩和链接。
+            const score = scoreCell ? String(scoreCell.v) : ""
+            const link = scoreCell?.l?.Target || ""
+
+            let dateOrReward = ""
+            if ("总成绩" == title) {
+                dateOrReward = dateOrRewardCell ? String(dateOrRewardCell.v) : ""
+            }
+            else {
+                // 日期优先使用格式化显示，否则取原始值。
+                dateOrReward = moment(new Date((dateOrRewardCell.v - 25569) * 86400 * 1000)).format("YYYY/MM/DD")
+            }
+
+            // 构造选手对象，成绩带链接则使用数组 [成绩, 链接]。
+            if ("总成绩" == title) {
+                arr.push({
+                    选手: name,
+                    成绩: link ? [score, link] : [score],
+                    奖金: dateOrReward
+                })
+            }
+            else {
+                arr.push({
+                    选手: name,
+                    成绩: link ? [score, link] : [score],
+                    日期: dateOrReward
+                })
+            }
+        }
+
+        // 如果该组有选手数据，则添加到结果数组。
+        if (arr.length > 0) res.push({ [title]: arr })
     }
 
     fs.writeFileSync(outputJsonPath, JSON.stringify(res, null, 4), "utf-8")

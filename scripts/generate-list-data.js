@@ -6,7 +6,7 @@
  * Copyright (c) 2025 DavidingPlus
  * 
  */
-import { generateJsonSingle, generateJsonTotal, generateRankingList, generateLastUpdatedTime } from "./util.js"
+import { generateJsonSingle, generateJsonTotal, generateRankingList, generateLastUpdatedTime, generateJsonAnniversary } from "./util.js"
 import fs from 'fs'
 
 
@@ -17,6 +17,8 @@ if ("dev" === process.env.npm_lifecycle_event || "generate-list" === process.env
     generateJsonSingle("data/黑猴九禁速通榜(新).xlsx", 1, "data/new-list-single.json")
 
     generateJsonTotal("data/黑猴九禁速通榜(新).xlsx", 2, "data/new-list-total.json")
+
+    generateJsonAnniversary("data/黑猴九禁速通榜(新).xlsx", 3, "data/new-list-anniversary.json")
 }
 
 
