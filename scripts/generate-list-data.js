@@ -6,7 +6,7 @@
  * Copyright (c) 2025 DavidingPlus
  * 
  */
-import { generateJsonSingle, generateJsonTotal, generateRankingList, generateLastUpdatedTime, generateJsonAnniversary } from "./util.js"
+import { generateJsonSingle, generateJsonTotal, generateOfficialRankingList, generateJsonAnniversary, generateLastUpdatedTime, generateAnniversaryRankingList } from "./util.js"
 import fs from 'fs'
 
 
@@ -24,14 +24,20 @@ if ("dev" === process.env.npm_lifecycle_event || "generate-list" === process.env
 
 const lastUpdatedTime = fs.readFileSync('data/last-updated-time', 'utf-8').trim()
 
-generateRankingList(
+generateOfficialRankingList(
     'data/new-list-single.json',
     'data/new-list-total.json',
     'docs/ranking-list/new-list.md',
     `# 新榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。若更新不及时请优先参考[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v)。\n\n> 榜单最后更新于：${lastUpdatedTime}\n\n`
 )
 
-generateRankingList(
+generateAnniversaryRankingList(
+    'data/new-list-anniversary.json',
+    'docs/ranking-list/new-list-anniversary.md',
+    `# 周年连战榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。若更新不及时请优先参考[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v?tab=000004)。\n\n> 榜单最后更新于：${lastUpdatedTime}\n\n`
+)
+
+generateOfficialRankingList(
     'data/old-list-single.json',
     'data/old-list-total.json',
     'docs/ranking-list/old-list.md',

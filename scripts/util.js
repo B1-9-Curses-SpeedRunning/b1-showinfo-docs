@@ -3,9 +3,9 @@
  * @author DavidingPlus (davidingplus@qq.com)
  * @brief 将榜单单项和总榜的 Excel/JSON 数据生成完整 Markdown 文档。
  * @details 流程：
- * 1. 从 Excel 文件解析单项榜和总榜，生成对应 JSON 数据。
+ * 1. 从 Excel 文件解析单项榜、总榜和周年连战榜，生成对应 JSON 数据。
  * 2. 读取或生成的 JSON 数据，规范化成绩为 parse-duration 可识别格式。
- * 3. 按成绩排序。
+ * 3. 按成绩排序。（目前暂时不排序，按照腾讯文档的顺序来）
  * 4. 转换为 json2md 所需格式，包括标题和表格。
  * 5. 输出完整 Markdown 文档。
  * 
@@ -75,10 +75,10 @@ export function convertSingleList(inputJsonPath) {
 
     // rawJson 是数组，每个元素是 { "组名": [选手数组] }
     rawJson.forEach(section => {
-        const groupName = Object.keys(section)[0]          // 三虎、四僧等。
+        const groupName = Object.keys(section)[0] // 三虎、四僧等。
         const tableData = section[groupName]
 
-        // 生成组标题
+        // 生成组标题。
         const elements = [{ h3: groupName }]
 
         if (tableData && tableData.length > 0) {
@@ -119,6 +119,7 @@ export function convertSingleList(inputJsonPath) {
         markdownElements.push(...elements)
     })
 
+
     return json2md(markdownElements)
 }
 
@@ -128,6 +129,7 @@ export function convertSingleList(inputJsonPath) {
  * @returns {string}
  */
 export function convertTotalList(inputJsonPath) {
+    // 读取原始 JSON 文件。
     const rawJson = JSON.parse(fs.readFileSync(inputJsonPath, 'utf-8'))
 
     // 生成标题：总榜。
@@ -165,20 +167,95 @@ export function convertTotalList(inputJsonPath) {
         })
     }
 
+
     return json2md(markdownElements)
 }
 
 /**
- * 生成榜单 Markdown 文件。
+ * 转换周年连战榜单的数据。
+ * @param {string} inputJsonPath 原始 JSON 文件路径。
+ * @returns {string}
+ */
+export function convertAnniversaryList(inputJsonPath) {
+    // 读取原始 JSON 文件。
+    const rawJson = JSON.parse(fs.readFileSync(inputJsonPath, 'utf-8'))
+
+    const markdownElements = []
+
+    // 由于周年连战的总成绩 json 格式和单项式一样的，因此按照单项的方式处理即可。
+    // rawJson 是数组，每个元素是 { "组名": [选手数组] }
+    rawJson.forEach(section => {
+        const groupName = Object.keys(section)[0]
+        const tableData = section[groupName]
+
+        // 生成组标题。
+        const elements = [{ h2: groupName }]
+
+        if (tableData && tableData.length > 0) {
+            // 按成绩排序，快的在前（暂时不排序）
+            // const sortedTable = [...tableData].sort((a, b) => {
+            //     return parse(normalizeTime(a['成绩'][0])) - parse(normalizeTime(b['成绩'][0]))
+            // })
+            const sortedTable = [...tableData]
+
+            // 给每行加排名。
+            const tableRows = sortedTable.map((entry, index) => ({
+                排名: 1 + index,
+                ...entry
+            }))
+
+            // 获取列名。
+            const columnNames = Object.keys(tableRows[0])
+
+            // 构造表格内容。
+            const tableContent = tableRows.map(row =>
+                columnNames.map(col => {
+                    const e = row[col]
+                    // 若是数组且长度大于 1 代表带链接。
+                    return Array.isArray(e)
+                        ? (e.length > 1 ? `[${e[0]}](${e[1]})` : e[0])
+                        : e
+                })
+            )
+
+            elements.push({
+                table: {
+                    headers: columnNames,
+                    rows: tableContent
+                }
+            })
+        }
+
+        markdownElements.push(...elements)
+    })
+
+
+    return json2md(markdownElements)
+}
+
+/**
+ * 生成官方榜单 Markdown 文件。
  * @param {string} singleJsonPath 单项 JSON 原文件路径。
  * @param {string} totalJsonPath 总榜 JSON 原文件路径。
  * @param {string} outputMdPath 输出的 Markdown 文件路径。
  * @param {string} pageHeader 页面开头显示的标题和说明文字。
  */
-export function generateRankingList(singleJsonPath, totalJsonPath, outputMdPath, pageHeader = '') {
+export function generateOfficialRankingList(singleJsonPath, totalJsonPath, outputMdPath, pageHeader = '') {
     let content = pageHeader
     content += convertSingleList(singleJsonPath)
     content += convertTotalList(totalJsonPath)
+    fs.writeFileSync(outputMdPath, content, 'utf-8')
+}
+
+/**
+ * 生成周年连战榜单 Markdown 文件。
+ * @param {string} anniversaryJsonPath 周年连战 JSON 原文件路径。
+ * @param {string} outputMdPath 输出的 Markdown 文件路径。
+ * @param {string} pageHeader 页面开头显示的标题和说明文字。
+ */
+export function generateAnniversaryRankingList(anniversaryJsonPath, outputMdPath, pageHeader = '') {
+    let content = pageHeader
+    content += convertAnniversaryList(anniversaryJsonPath)
     fs.writeFileSync(outputMdPath, content, 'utf-8')
 }
 
