@@ -62,7 +62,7 @@ export function normalizeTime(timeStr) {
 }
 
 /**
- * 转换单项的数据，按成绩进行排序。
+ * 转换官方连战单项的数据，可按成绩进行排序。
  * @param {string} inputJsonPath 原始 JSON 文件路径。
  * @returns {string}
  */
@@ -124,7 +124,7 @@ export function convertSingleList(inputJsonPath) {
 }
 
 /**
- * 转换总榜的数据，按总成绩排序。
+ * 转换官方连战总榜的数据，可按总成绩排序。
  * @param {string} inputJsonPath 原始 JSON 文件路径。
  * @returns {string}
  */
@@ -172,11 +172,11 @@ export function convertTotalList(inputJsonPath) {
 }
 
 /**
- * 转换周年连战榜单的数据。
+ * 转换一周年活动连战榜单的数据。
  * @param {string} inputJsonPath 原始 JSON 文件路径。
  * @returns {string}
  */
-export function convertAnniversaryList(inputJsonPath) {
+export function convertFirstAnniversaryList(inputJsonPath) {
     // 读取原始 JSON 文件。
     const rawJson = JSON.parse(fs.readFileSync(inputJsonPath, 'utf-8'))
 
@@ -248,19 +248,19 @@ export function generateOfficialRankingList(singleJsonPath, totalJsonPath, outpu
 }
 
 /**
- * 生成周年连战榜单 Markdown 文件。
- * @param {string} anniversaryJsonPath 周年连战 JSON 原文件路径。
+ * 生成一周年活动连战榜单 Markdown 文件。
+ * @param {string} firstAnniversaryJsonPath 周年连战 JSON 原文件路径。
  * @param {string} outputMdPath 输出的 Markdown 文件路径。
  * @param {string} pageHeader 页面开头显示的标题和说明文字。
  */
-export function generateAnniversaryRankingList(anniversaryJsonPath, outputMdPath, pageHeader = '') {
+export function generateFirstAnniversaryRankingList(firstAnniversaryJsonPath, outputMdPath, pageHeader = '') {
     let content = pageHeader
-    content += convertAnniversaryList(anniversaryJsonPath)
+    content += convertFirstAnniversaryList(firstAnniversaryJsonPath)
     fs.writeFileSync(outputMdPath, content, 'utf-8')
 }
 
 /**
- * @brief 解析单项成绩表格，生成 JSON 数据。
+ * @brief 解析官方连战单项成绩表格，生成 JSON 数据。
  * @param filePath Excel 文件路径。
  * @param sheetIndex 工作表索引。
  * @param outputJsonPath 输出的 Json 文件路径。
@@ -324,7 +324,7 @@ export function generateJsonSingle(filePath, sheetIndex, outputJsonPath) {
 }
 
 /**
- * @brief 解析总成绩表格，生成 JSON 数据。
+ * @brief 解析官方连战总成绩表格，生成 JSON 数据。
  * @param filePath Excel 文件路径。
  * @param sheetIndex 工作表索引。
  * @param outputJsonPath 输出的 Json 文件路径。
@@ -382,13 +382,13 @@ export function generateJsonTotal(filePath, sheetIndex, outputJsonPath) {
 }
 
 /**
- * @brief 解析周年连战成绩表格，生成 JSON 数据。
+ * @brief 解析一周年活动连战成绩表格，生成 JSON 数据。
  * @param filePath Excel 文件路径。
  * @param sheetIndex 工作表索引。
  * @param outputJsonPath 输出的 Json 文件路径。
  * @return 返回按标题分组的单项成绩 JSON。
  */
-export function generateJsonAnniversary(filePath, sheetIndex, outputJsonPath) {
+export function generateJsonFirstAnniversary(filePath, sheetIndex, outputJsonPath) {
     const workbook = XLSX.readFile(filePath) // 读取 Excel 文件。
     const sheetName = workbook.SheetNames[sheetIndex] // 获取工作表名称。
     const sheet = workbook.Sheets[sheetName] // 获取工作表对象。
