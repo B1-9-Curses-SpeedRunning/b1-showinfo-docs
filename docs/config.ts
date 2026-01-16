@@ -143,6 +143,7 @@ function getSidebar(): DefaultTheme.SidebarItem[] {
                 { text: '新榜规则', link: '/rules' },
                 { text: '新榜单', link: '/new-list' },
                 { text: '新榜单海报', link: '/new-list-poster' },
+                { text: '一周年活动连战榜单', link: '/first-anniversary' },
                 { text: '旧榜单', link: '/old-list' }
             ]
         },
