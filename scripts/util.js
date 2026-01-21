@@ -238,12 +238,14 @@ export function convertFirstAnniversaryList(inputJsonPath) {
  * @param {string} singleJsonPath 单项 JSON 原文件路径。
  * @param {string} totalJsonPath 总榜 JSON 原文件路径。
  * @param {string} outputMdPath 输出的 Markdown 文件路径。
- * @param {string} pageHeader 页面开头显示的标题和说明文字。
+ * @param {string} pageHeader 页面开头显示的文字。
+ * @param {string} pageFooter 页面结尾显示的文字。
  */
-export function generateOfficialRankingList(singleJsonPath, totalJsonPath, outputMdPath, pageHeader = '') {
+export function generateOfficialRankingList(singleJsonPath, totalJsonPath, outputMdPath, pageHeader = '', pageFooter = '') {
     let content = pageHeader
     content += convertSingleList(singleJsonPath)
     content += convertTotalList(totalJsonPath)
+    content += pageFooter
     fs.writeFileSync(outputMdPath, content, 'utf-8')
 }
 
@@ -251,11 +253,13 @@ export function generateOfficialRankingList(singleJsonPath, totalJsonPath, outpu
  * 生成一周年活动连战榜单 Markdown 文件。
  * @param {string} firstAnniversaryJsonPath 周年连战 JSON 原文件路径。
  * @param {string} outputMdPath 输出的 Markdown 文件路径。
- * @param {string} pageHeader 页面开头显示的标题和说明文字。
+ * @param {string} pageHeader 页面开头显示的文字。
+ * @param {string} pageFooter 页面结尾显示的文字。
  */
-export function generateFirstAnniversaryRankingList(firstAnniversaryJsonPath, outputMdPath, pageHeader = '') {
+export function generateFirstAnniversaryRankingList(firstAnniversaryJsonPath, outputMdPath, pageHeader = '', pageFooter = '') {
     let content = pageHeader
     content += convertFirstAnniversaryList(firstAnniversaryJsonPath)
+    content += pageFooter
     fs.writeFileSync(outputMdPath, content, 'utf-8')
 }
 
