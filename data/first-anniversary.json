@@ -25,11 +25,19 @@
                 "日期": "2026/01/10"
             },
             {
+                "选手": "寻乐苦",
+                "成绩": [
+                    "4'05''41"
+                ],
+                "日期": "2026/01/20"
+            },
+            {
                 "选手": "luyi",
                 "成绩": [
-                    "4'15''19"
+                    "4'06''94",
+                    "https://www.bilibili.com/video/BV1RrkxBBEod/?spm_id_from=333.1365.list.card_archive.click&amp;vd_source=43fd8d8dfb638098fa4fd06e2791cc00"
                 ],
-                "日期": "2026/01/15"
+                "日期": "2026/01/18"
             },
             {
                 "选手": "Yoon君",
@@ -47,19 +55,19 @@
                 "日期": "2026/01/04"
             },
             {
+                "选手": "1xuan",
+                "成绩": [
+                    "4'21''26"
+                ],
+                "日期": "2026/01/17"
+            },
+            {
                 "选手": "君亦-伪",
                 "成绩": [
                     "4'30''55",
                     "https://www.bilibili.com/video/BV1RNiuBqEgn/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
                 ],
                 "日期": "2025/12/31"
-            },
-            {
-                "选手": "寻乐苦",
-                "成绩": [
-                    "4'44''25"
-                ],
-                "日期": "2026/01/03"
             },
             {
                 "选手": "最重要",
@@ -90,6 +98,14 @@
     {
         "群妖聚义": [
             {
+                "选手": "山月为关",
+                "成绩": [
+                    "2'26''82",
+                    "https://www.bilibili.com/video/BV1JXrDB5E4s/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=dt.dt.video.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=f85f151b-8792-45f6-b26b-f3f6fbeced50&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1768668970&amp;unique_k=Z1KDcQq&amp;up_id=3493117797861490"
+                ],
+                "日期": "2026/01/17"
+            },
+            {
                 "选手": "寻乐苦",
                 "成绩": [
                     "2'33''35",
@@ -104,13 +120,6 @@
                     "https://www.bilibili.com/video/BV1ZKiPBhEhx/?buvid=XYFB5EFF1DDA2C1CCB4285811FF57FDB3589A&amp;from_spmid=dt.dt.video.0&amp;is_story_h5=false&amp;mid=tZAbt17WEt4FiUiWpOGUqn8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=6bb72740-2103-487e-8aa5-8693c2dc9e7b&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1767116021&amp;unique_k=39VEIrv&amp;up_id=1041159056"
                 ],
                 "日期": "2025/12/30"
-            },
-            {
-                "选手": "山月为关",
-                "成绩": [
-                    "2'45''81"
-                ],
-                "日期": "2026/01/15"
             },
             {
                 "选手": "Yoon君",
@@ -140,37 +149,37 @@
     {
         "总成绩": [
             {
+                "选手": "山月为关",
+                "成绩": [
+                    "6'31''61"
+                ],
+                "奖金": "3200元"
+            },
+            {
+                "选手": "寻乐苦",
+                "成绩": [
+                    "6'38''76"
+                ],
+                "奖金": "2000元"
+            },
+            {
                 "选手": "蚌",
                 "成绩": [
                     "6'46''04"
                 ],
-                "奖金": "3200元"
+                "奖金": "1200元"
             },
             {
                 "选手": "阿班",
                 "成绩": [
                     "6'48''96"
                 ],
-                "奖金": "2000元"
-            },
-            {
-                "选手": "山月为关",
-                "成绩": [
-                    "6'50''60"
-                ],
-                "奖金": "1200元"
+                "奖金": "800元"
             },
             {
                 "选手": "Yoon君",
                 "成绩": [
                     "7'06''79"
-                ],
-                "奖金": "800元"
-            },
-            {
-                "选手": "寻乐苦",
-                "成绩": [
-                    "7'17''60"
                 ],
                 "奖金": "600元"
             }
