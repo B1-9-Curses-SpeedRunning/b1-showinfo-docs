@@ -29,11 +29,11 @@
 
 ## 使用教程
 
-本来想写一个文字教程的，但是[朴泽辰](https://www.douyin.com/user/MS4wLjABAAAAVeeyNXGg1T8CRoj-yX8onV9lAThW3KQl7qnMEd-nWakKXcaxpz_G6SDsS0-FuF2G)大佬做了一个视频，这里就暂时不写了。都看视频去！
+本来想写一个文字教程的，但是[小布偶-Ragdoll](https://space.bilibili.com/436647221/)大佬做了一个视频，这里就暂时不写了。都看视频去！
 
-视频链接：[https://www.bilibili.com/video/BV1hBWRzEEZW/](https://www.bilibili.com/video/BV1hBWRzEEZW/)
+视频链接：[https://www.bilibili.com/video/BV1BX6YB4EbB/](https://www.bilibili.com/video/BV1BX6YB4EbB/)
 
-<Bili bvid='BV1hBWRzEEZW' />
+<Bili bvid='BV1BX6YB4EbB' />
 
 ## 注意事项
 
@@ -47,4 +47,6 @@
 >
 > 请记得备份旧版本存档！
 >
+
+若实在没有旧版存档，可以使用[尖奕](https://space.bilibili.com/346448060)大佬制作的版本切换工具，详情见[黑神话悟空版本切换工具](/tools/b1-version-switch.html)。
 

@@ -153,7 +153,8 @@ function getSidebar(): DefaultTheme.SidebarItem[] {
             collapsed: false,
             items: [
                 { text: '黑神话悟空 MOD 编辑器', link: '/b1-mod-edit' },
-                { text: '黑神话悟空小风灵', link: '/b1-mini-trainer' }
+                { text: '黑神话悟空小风灵', link: '/b1-mini-trainer' },
+                { text: '黑神话悟空版本切换工具', link: '/b1-version-switch' }
             ]
         },
         {
