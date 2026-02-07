@@ -48,5 +48,5 @@
 > 请记得备份旧版本存档！
 >
 
-若实在没有旧版存档，可以使用[尖奕](https://space.bilibili.com/346448060)大佬制作的版本切换工具，详情见[黑神话悟空版本切换工具](/tools/b1-version-switch.html)。
+若实在没有旧版存档，可以使用[尖奕](https://space.bilibili.com/346448060)大佬制作的版本切换工具，详情见[黑神话悟空存档版本切换工具](/tools/b1-archive-version-switch.html)。
 
