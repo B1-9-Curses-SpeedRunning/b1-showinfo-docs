@@ -1,0 +1,1153 @@
+---
+url: /quick-start/obs-recording-setup.md
+---
+# OBS 录制环境搭建教程
+
+新榜单规则中提到：
+
+> 使用 OBS 进行游戏视频录制，游戏界面配置榜单管理组指定的全键盘键鼠以及手柄映射（手柄选手）。
+>
+> * 键盘选手只需展示键鼠映射。
+> * 手柄玩家必须展示手柄映射和键鼠映射（以防止游戏过程中利用键盘快捷键使用外挂工具），连战完成后，利用键盘敲击此次连战暴伤数字并确保此过程被视频纪录（例如暴伤为 57.5%，依次敲击 5、7、5。此行为了确保键盘映射真实有效）。
+
+因此，本文就规则涉及到的 OBS 录制环境的搭建，提供一个简单的方案。
+
+## 安装 OBS
+
+OBS，全称 OBS Studio，是一款功能强大的开源软件，它使用户能够直接从电脑录制视频和直播内容到 Twitch，YouTube 和 Facebook Live 等平台。它在需要直播或录制屏幕活动的游戏玩家、YouTube 用户和专业人士中特别受欢迎。OBS Studio 允许创建由多个源组成的复杂场景，包括网络摄像头源、屏幕截图和音频输入，这些场景可以在直播期间无缝切换。凭借先进的混音功能、可自定义的视频质量和性能设置以及对各种插件和扩展的支持，OBS Studio 为高质量视频制作和直播提供了多功能且用户友好的解决方案。
+
+简单来讲，OBS 允许你录制视频和直播内容，同时可以自定义想要展示到屏幕上的内容，好用爱用。
+
+安装 OBS，我这里给出两种方案。
+
+1. 官网下载（最推荐）
+
+点击[此链接](https://obsproject.com/download)进行官网下载页面，找到最新版本进行下载。推荐安装 Installer，全自动流程。
+
+![image-20250830111911403](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830111911403.png)
+
+2. Steam 下载
+
+OBS 能在 Steam 商店中找到，直接下载即可。
+
+![image-20250830112049331](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830112049331.png)
+
+注意，通过 Steam 下载的 OBS，当切换账号以后，需要关闭 OBS，重新打开才能正常使用。对于有直播需求并且需要频繁切号的朋友非常不方便。一个比较好的解决思路是进入 OBS 的安装目录，创建入口程序 `obs64.exe` 的快捷方式，后续直接通过快捷方式打开即可。这样就绕过了 Steam 的检测环节。
+
+![image-20250830112335953](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830112335953.png)
+
+另外：
+
+> 本来想放一份安装包到蓝奏云上的，但是蓝奏云免费版文件最大大小 100 MIB，安装包都 150 MIB 了。所以大家还是用前两种办法下载吧。
+>
+> 🐶🐶🐶狗头保命🐶🐶🐶
+
+## 基本配置
+
+在打开 OBS 之前，请先设置一下桌面的快捷方式的属性，右键快捷方式，选择属性，选择兼容性，勾选上以管理员模式启动。避免运行过程中 OBS 缺少管理员权限导致无法正常录制或直播。
+
+打开 OBS 以后，你的界面大概是这样的：
+
+![image-20250830113501507](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830113501507.png)
+
+下面的源默认是空的，我们需要在里面添加能捕捉到显示屏的内容。录制黑猴一般只用得到显示器采集和游戏采集。
+
+关于显示器采集，采集方式默认自动即可，显示器选择你自己的显示器就行，这样 OBS 就能正常抓取到你的屏幕了。
+
+![image-20250830123514878](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830123514878.png)
+
+关于游戏采集，模式可以选择采集全屏应用程序或者采集特定窗口。
+
+采集全屏应用程序，其他的默认即可。
+
+![image-20250830123934789](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830123934789.png)
+
+采集特定窗口，在窗口中选择黑猴的程序 `b1-Win64-Shipping.exe`，其他的依旧默认即可。
+
+![image-20250830124103529](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830124103529.png)
+
+## 录制视频
+
+上述的基本配置做好以后，点击开始录制就可以录制视频了。不过在录制视频以前建议先对录制的视频进行一些设置。以下会我自己使用的一些设置，大家可以根据这个进行调整成自己喜欢的样子。
+
+在视频栏，帧率建议选择 `59.94` 或者 `60`。
+
+![image-20250830124648702](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830124648702.png)
+
+在输出栏，输出模式建议选择高级，以下会给我我自己的直播和录制的设置。
+
+直播的设置如下，没有直播需求的朋友直接看录制设置即可。有直播需求的朋友可以结合我这个和网上其他大佬的设置综合调整。
+
+![image-20250830124912787](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830124912787.png)
+
+录制的录制设置如下，注意修改录像路径到自己指定的位置，防止不知道什么时候 C 盘炸了。
+
+![image-20250830125031474](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830125031474.png)
+
+录制的编码器设置如下，比特率控制建议选 CBR，比特率 8000 到 10000 即可。
+
+![image-20250830125146633](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830125146633.png)
+
+这样设置好以后，就可以开始录制了。更进一步还可以设置快捷键方便开始录制和停止录制。
+
+## 键鼠映射
+
+键鼠映射需要用到一个 OBS 插件 [Input Overlay](https://obsproject.com/forum/resources/input-overlay.552/)，它能在直播中显示键盘、鼠标和手柄的输入情况。它会新增一个来源，用于可视化输入。
+
+这个插件通过纹理（texture）和配置文件来生成覆盖层。这意味着你可以自行配置在屏幕上显示哪些按键、它们的排列方式以及外观。默认情况下，插件已经自带了鼠标、键盘和手柄的预设文件。这些预设文件位于 GitHub Release 页面中的 `presets` 压缩包内。在 OBS 中创建一个 “Input Overlay” 来源时，你可以将其指向这些预设文件，或者指向你自己制作的配置文件。
+
+原下载链接在外网 [Github](https://github.com/univrsal/input-overlay) 上，有兴趣的朋友可以科学上网自己去下载最新版本。这里在蓝奏云上备份了 input-overlay v5.0.6。
+
+下载链接：
+
+* [input-overlay-5.0.6-windows-x64.zip](https://lzx0626.lanzouq.com/iU8hy34xgfeb)
+* [input-overlay-5.0.6-presets.zip](https://lzx0626.lanzouq.com/iVDRY34xgf0h)
+
+下载好以后，首先解压 input-overlay-5.0.6-windows-x64.zip，得到的文件类似如下：
+
+![image-20250830131510053](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830131510053.png)
+
+将这些目录全部拷贝你自己的到 OBS 的安装根目录下，例如我的目录就是 `D:\Scoop\apps\obs-studio\current`，OBS 根目录类似如下：
+
+![image-20250830131618256](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830131618256.png)
+
+完事以后重新打开 OBS，在添加源里面就会发现多了一个**输入叠加**的选项。这个就是添加键鼠映射的入口。
+
+以键盘映射为例，点击输入叠加，会让你选择贴图文件和配置文件。这些东西在上文提到的另一个文件 input-overlay-5.0.6-presets.zip 中，官方给了我们一些预设，直接拿来使用即可。将该文件解压出来以后，放到你自己找得到的位置（不一定是 OBS 的安装根目录）即可。
+
+![image-20250830131917080](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830131917080.png)
+
+由于规则要求键盘映射需要全尺寸键盘，因此键盘的贴图文件推荐使用 `qwertz_full_size_german`。以下以 input-overlay-5.0.6-presets 目录为基准，给出了贴图文件和配置文件的路径。
+
+```markdown
+ 贴图文件：input-overlay-5.0.6-presets/qwertz_full_size_german/qwertz_full_size_german.png
+ 配置文件：input-overlay-5.0.6-presets/qwertz_full_size_german/qwertz_full_size_german.json
+```
+
+添加好以后，你就能在 OBS 中看到键盘映射了。至于在 OBS 的屏幕上放在哪，有多大，这个就读者自行去探索吧。
+
+另外，附上我自己使用的鼠标映射：
+
+```markdown
+贴图文件：input-overlay-5.0.6-presets/mouse/mouse.png
+配置文件：input-overlay-5.0.6-presets/mouse/mouse-arrow.json
+```
+
+## 手柄映射
+
+手柄映射有两种方式，一种是和上文键鼠映射的方式一样，添加一个手柄的贴图和 json 文件，另一种是通过浏览器 URL 采集实现。
+
+第一种方式，同上文给出我自己推荐的手柄映射配置：
+
+```markdown
+贴图文件：input-overlay-5.0.6-presets/gamepad/game-pad.png
+配置文件：input-overlay-5.0.6-presets/gamepad/game-pad.json
+```
+
+第二种方式，通过浏览器 URL 采集实现。首先给出一个在线链接 [Gamepad Viewer](https://ezgame.cc/tools/gamepadviewer.com/)。这是一个在线网站，可以让你根据自己的喜好设置手柄映射，然后返回给你一个 URL，这个 URL 能被 OBS 的浏览器源识别并展示出来。
+
+这里给我我自己的手柄映射 URL：
+
+```markdown
+https://ezgame.cc/tools/gamepadviewer.com/?p=1&s=0
+```
+
+![image-20250830133003743](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830133003743.png)
+
+## 帧率显示
+
+帧率显示有很多办法，我知道就有微信小飞机，Steam 自带的帧数显示，部分厂商例如联想自带的帧数显示，游戏加加等。
+
+读者选择自己喜欢的就行，这里不再赘述。
+
+## 最终效果
+
+最终录制出来的效果大致如下：
+
+![image-20250830133603428](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830133603428.png)
+
+（后面部分暂时没时间写，先这样吧，反正暂时不影响大家伙凹成绩。）
+
+## 回放缓存
+
+待补。
+
+## 使用 OBS 直播
+
+待补。
+
+## 参考文档
+
+待补。
+
+---
+
+---
+url: /ranking-list/first-anniversary.md
+---
+# 一周年活动连战榜单
+
+本页面展示的榜单完全来源于原腾讯文档中的内容。若更新不及时请优先参考[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v?tab=000004)。
+
+> 榜单最后更新于：2026/2/25 19:17:52
+
+## 道满归根
+
+| 排名  | 选手  | 成绩  | 日期  |
+| --- | --- | --- | --- |
+| 1 | 山月为关 | [3'53''63](https://www.bilibili.com/video/BV1ftcNzaE43/?spm_id_from=333.337.search-card.all.click) | 2026/02/08 |
+| 2 | luyixxxx | [3'56''54](https://www.bilibili.com/video/BV1ptFxzFEA8/?spm_id_from=333.337.search-card.all.click) | 2026/02/07 |
+| 3 | 阿班 | [3'58''72](https://www.bilibili.com/video/BV1qtrsBvEdP/?spm_id_from=333.1387.homepage.video_card.click) | 2026/01/14 |
+| 4 | 4\_c\_er | [4'01''31](https://www.bilibili.com/video/BV1bNFJzDEFW/?spm_id_from=333.337.search-card.all.click) | 2026/02/07 |
+| 5 | 辣舞7 | [4'03''69](https://www.bilibili.com/video/BV14TcxzqERw/) | 2026/02/06 |
+| 6 | 蚌 | 4'05''30 | 2026/01/10 |
+| 7 | 寻乐苦 | [4'05''41](https://www.bilibili.com/video/BV1KTFQz6EQQ/?spm_id_from=333.1387.homepage.video_card.click) | 2026/01/20 |
+| 8 | 君亦-伪 | [4'05''82](https://www.bilibili.com/video/BV1QN6FBnE1V/?-Arouter=story\&buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=163\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=5fbfbad3-48ea-4a14-acee-e85d53e9e361\&share_source=QQ\&share_tag=s_i\&spmid=main.ugc-video-detail-vertical.0.0\&timestamp=1769678919\&unique_k=iUJ1SeR\&up_id=296470991) | 2026/01/29 |
+| 9 | Yoon君 | 4'09''97 | 2026/01/27 |
+| 10 | 小何² | [4'17''20](https://www.bilibili.com/video/BV1rrFXzNEvV/?spm_id_from=333.1387.homepage.video_card.click) | 2026/02/10 |
+| 11 | 雌蕊呀 | [4'20''99](https://www.bilibili.com/video/BV1ePirBtEAc/?spm_id_from=333.337.search-card.all.click) | 2026/01/04 |
+| 12 | 1xuan | 4'23''57 | 2026/02/10 |
+| 13 | 欈尰矅 | [4'44''60](https://www.bilibili.com/video/BV1kTiMB7Eiu/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=8babdb1c-3e75-4d55-927e-555805974d5d\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1767271310\&unique_k=sKjZDIi\&up_id=1361287194) | 2025/12/31 |
+| 14 | *忆殇* | [5'08''04](https://www.bilibili.com/video/BV1EoBeBdEmt/?-Arouter=story\&buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=united.player-video-detail.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=163\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=e111b4c9-beda-4c93-be61-977cf74ecc2c\&share_source=QQ\&share_tag=s_i\&spmid=main.ugc-video-detail-vertical.0.0\&timestamp=1766766593\&unique_k=oXIz01u\&up_id=21397068) | 2025/12/26 |
+| 15 | DJiMing | [5'26"22](https://www.bilibili.com/video/BV1omzCB2Evg/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=default-value\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=af530b65-c30e-4301-8f44-917b34ba3351\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1769247283\&unique_k=a16ucyW\&up_id=35423060) | 2026/01/24 |
+| 16 | 秋起泛白露 | [6'34''45](https://www.bilibili.com/video/BV1KgvkBJEBy/?buvid=XYFB5EFF1DDA2C1CCB4285811FF57FDB3589A\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=tZAbt17WEt4FiUiWpOGUqn8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=23443555-ab25-4ad5-8907-51cdf33bc102\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1766930295\&unique_k=QihLPr9\&up_id=486845521) | 2025/12/28 |
+| 17 | 市井小羿 | [8'51''17](https://www.bilibili.com/video/BV18XzjBbEyq?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=bc204d85-1476-4e22-8ade-8df17d7d36b5\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1769009854\&unique_k=cEKPrMP\&up_id=59468586) | 2026/01/20 |
+
+## 群妖聚义
+
+| 排名  | 选手  | 成绩  | 日期  |
+| --- | --- | --- | --- |
+| 1 | 山月为关 | [2'14''92](https://www.bilibili.com/video/BV1BUFXz8EYn/?spm_id_from=333.1387.homepage.video_card.click) | 2026/02/10 |
+| 2 | 寻乐苦 | [2'15''76](https://www.bilibili.com/video/BV14bfZBRECH/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2026/02/04 |
+| 3 | 4\_c\_er | [2'20''74](https://www.bilibili.com/video/BV145FdznEWj/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2026/02/10 |
+| 4 | luyixxxx | [2'25''44](https://www.bilibili.com/video/BV1sz6YBTEpH/?spm_id_from=333.1387.homepage.video_card.click) | 2026/01/30 |
+| 5 | 辣舞7 | [2'29''73](https://www.bilibili.com/video/BV14TcxzqERw/) | 2026/02/10 |
+| 6 | 1xuan | 2'38''05 | 2026/02/09 |
+| 7 | 蚌 | [2'40''74](https://www.bilibili.com/video/BV1ZKiPBhEhx/?buvid=XYFB5EFF1DDA2C1CCB4285811FF57FDB3589A\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=tZAbt17WEt4FiUiWpOGUqn8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=6bb72740-2103-487e-8aa5-8693c2dc9e7b\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1767116021\&unique_k=39VEIrv\&up_id=1041159056) | 2025/12/30 |
+| 8 | 小何² | [2'43''35](https://www.bilibili.com/video/BV1kzFXziEmS/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2026/02/10 |
+| 9 | 君亦-伪 | [2'47''06](https://www.bilibili.com/video/BV1aGFxzgEWe/?vd_source=43fd8d8dfb638098fa4fd06e2791cc00) | 2026/02/08 |
+| 10 | Yoon君 | 2'49''92 | 2026/01/08 |
+| 11 | 阿班 | [2'50''24](https://www.bilibili.com/video/BV1MRiTBxE1S/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=b1d17652-708a-4865-ba9a-38faf8667ddd\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1767177861\&unique_k=IaqyfjK\&up_id=511651162) | 2025/12/31 |
+| 12 | 雌蕊呀 | [2'50''81](https://www.bilibili.com/video/BV1p8z8BQE4n/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=0219aa96-27b4-43e7-825b-47567d259ea1\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1769424268\&unique_k=ogm815J\&up_id=3546621920938165) | 2026/01/26 |
+| 13 | 欈尰矅 | [2'57''98](https://www.bilibili.com/video/BV1NmFLziEQy/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2026/02/03 |
+| 14 | DJiMing | [3'58"85](https://www.bilibili.com/video/BV1PErLBDE4S/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2026/01/13 |
+| 15 | 市井小羿 | [8'51''62](https://www.bilibili.com/video/BV1Huz7BmE75/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=main.space-contribution.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=ff1f6dc8-59f3-453b-8e9b-b3cd659486f7\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1769098281\&unique_k=T3ce8x9\&up_id=59468586) | 2026/01/20 |
+
+## 总成绩
+
+| 排名  | 选手  | 成绩  | 奖金  |
+| --- | --- | --- | --- |
+| 1 | 山月为关 | 6'08''55 | 3200+666元 |
+| 2 | 寻乐苦 | 6'21''17 | 2000元 |
+| 3 | luyixxxx | 6'21''98 | 1200元 |
+| 4 | 4\_c\_er | 6'22''05 | 800元 |
+| 5 | 辣舞7 | 6'33''42 | 600元 |
+| 6 | 阿班 | 6'48''96 | 黑武士5pro |
+| 7 | 君亦-伪 | 6'52"88 | 300元 |
+| 8 | Yoon君 | 6'59''89 | 200元 |
+| 9 | 小何² | 7'00''55 | 八戒小挎包 |
+| 10 | 1xuan | 7'01"62 | 八戒小挎包 |
+| 11 | 雌蕊呀 | 7'11''80 | 八戒小挎包 |
+| 12 | 欈尰矅 | 7'42''58 | 八戒小挎包 |
+| 13 | DJiMing | 9'25''07 | 临沂炒鸡 |
+| 14 | 市井小羿 | 17'42''79 | 临沂炒鸡 |
+| 15 | 蚌 | 6'46''04 | 视频丢失，痛失奖品 |
+
+## 特别祝贺
+
+1. [山月为关](https://space.bilibili.com/3493117797861490/)选手道满归根记录 [4'04''79](https://www.bilibili.com/video/BV1RLiPBsEM4/) 从 2025 年 12 月 30 日保持 10 天至 2026 年 1 月 9 日，获得影之刃零豪华版一份。
+
+2. [阿班](https://space.bilibili.com/511651162/)选手道满归根记录 [3'58''72](https://www.bilibili.com/video/BV1qtrsBvEdP/) 从 2026 年 1 月 10 日保持 10 天至 2025 年 1 月 20 日，获得影之刃零豪华版一份。
+
+---
+
+---
+url: /others/other-mods.md
+---
+# 其他 MOD 分享
+
+分享一些其他黑猴 MOD，包括但不限于皮肤如衣服、武器以及一些功能性 MOD 等。
+
+> 事先说明：以下分享的 MOD 均已经过作者本人同意，未经作者本人同意请勿随意倒卖！！！
+
+## Sterben
+
+作者：[Sterben](https://www.douyin.com/user/MS4wLjABAAAAX5dfMNSi-Rxa-21m84NAGmBLX1FvKZkWUqob-VGDY78)。
+
+1. [Sterben 的 免费 MOD](https://pan.baidu.com/s/1Pf7ij8sQL8IlE9o5X_C3Lg?pwd=imod)
+
+---
+
+---
+url: /quick-start/install.md
+---
+# 实时关键数据显示 MOD 安装教程
+
+1. 下载 MOD：[链接点此](/quick-start/release.html)
+
+2. 解压 “实时关键数据显示 MOD（九禁连战专用）.zip”，将压缩包内的 CSharpLoder 文件夹和 version.dll 文件拷贝到<黑神话悟空安装目录>\b1\Binaries\Win64文件夹下（例如："C:\Program Files (x86)\Steam\steamapps\common\BlackMythWukong\b1\Binaries\Win64"）。
+
+![](https://cdn.davidingplus.cn/images/2025/08/27/AgAABVpOMEyJlEqtlZtOOKDlQrVQ-iwn.png)
+
+> 注意事项！！！为确保 mod 可以和风灵月影兼容，请务必使用 mod 压缩包内提供的 CSharpLoader（如果你已经安装了其他途径下载的 CSharpLoader 用于其他 mod，请先将原来的 CSharpLoader 文件夹和 version.dll 暂时移动到其他地方备份！打完连战后再替换回原来的 CSharpLoader 和 version.dll！！！）
+
+3. 开启游戏即可看到实时关键数据显示在游戏界面。
+
+![](https://cdn.davidingplus.cn/images/2025/08/27/AgAABVpOMEyI8eEzoclPcqJseAnB3XFk.png)
+
+4. MOD 删除：将 CSharpLoader 文件夹和 version.dll 删除即可。
+
+---
+
+---
+url: /ranking-list/new-list.md
+---
+# 新榜单
+
+本页面展示的榜单完全来源于原腾讯文档中的内容。若更新不及时请优先参考[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v)。
+
+> 榜单最后更新于：2026/2/25 19:17:52
+
+## 单项
+
+### 三虎
+
+| 排名  | 选手  | 成绩  | 日期  |
+| --- | --- | --- | --- |
+| 1 | 尖奕 | [49′′69](https://www.bilibili.com/video/BV1cWqFBtELh/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2026/01/06 |
+| 2 | 阿班 | [49''97](https://www.bilibili.com/video/BV1bbFazXEeu) | 2026/02/05 |
+| 3 | 萧风FX | [50''35](https://www.bilibili.com/video/BV1An6CBFE1N/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=main.space.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=b7c659cb-51d8-4a24-80c4-e38da66866c3\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1769845413\&unique_k=swzfCC6\&up_id=3537107876317501) | 2026/01/31 |
+| 4 | 蚌 | 52''25 | 2026/01/04 |
+| 5 | DJiMing | [52''30](https://www.bilibili.com/video/BV1x9cxzKEZz/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=88f80300-62da-487f-90fd-627d97ec260a\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1770812545\&unique_k=8Rieq5z\&up_id=35423060) | 2026/02/11 |
+| 6 | 木木 | [53''07](https://www.bilibili.com/video/BV17JaSzvERJ/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/04 |
+| 7 | 小何² | [53''48](https://b23.tv/X42zJqb) | 2025/11/30 |
+| 8 | 山月为关 | [53''79](https://www.bilibili.com/video/BV1aTaZz1EEs/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/02 |
+| 9 | 存在K | [53''82](https://www.bilibili.com/video/BV1bt2fBwEiU/?buvid=XUCE07BCA4E0F5A84E67EC53E7F0FBA6466EF\&from_spmid=main.space.0.0\&is_story_h5=false\&mid=IsigNVW5Rcv7Qb21XkZP9g%3D%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=f5df7e1f-553a-4030-b589-4a70f86e1dc7\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1765095273\&unique_k=FBOAjLb\&up_id=293705200) | 2025/12/07 |
+| 10 | 离九 | [53''95](https://www.douyin.com/video/7608426814567271010?previous_page=app_code_link) | 2026/02/18 |
+| 11 | 4\_c\_er | [53''99](https://www.bilibili.com/video/BV1jgaCz7Eg9/?spm_id_from=333.1387.homepage.video_card.click) | 2025/09/04 |
+| 12 | 白织 | [54''03](https://www.bilibili.com/video/BV1uwxxzMEoX/?spm_id_from=333.1365.list.card_archive.click\&vd_source=bab071ada82f8ebb9f99be72fca7f571) | 2025/10/04 |
+| 13 | 小庆宝宝 | [54''23](https://www.bilibili.com/video/BV1tnHTzBEgb/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/10/02 |
+| 14 | 馒头 | [54''52](https://www.bilibili.com/video/BV11ipMzgEQ6?spm_id_from=333.788.player.player_end_recommend_autoplay\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/04 |
+| 15 | luyixxxx | [54''67](https://www.bilibili.com/video/BV1o8aYzXEYG/?spm_id_from=333.1387.homepage.video_card.click) | 2025/09/05 |
+| 16 | 极了无 | [55''13](https://www.bilibili.com/video/BV1ydpDz4Ev5/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/20 |
+| 17 | Y-Zz | [55''38](https://www.douyin.com/video/7556447011693792572) | 2025/10/02 |
+| 18 | Zzz患者 | [55''62](https://www.bilibili.com/video/BV1QtnXziEbi/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/28 |
+| 19 | 最重要 | 55''82 | 2025/12/21 |
+| 20 | 福娃芙卡 | [55''926](https://www.bilibili.com/video/BV1v5W5zkEjQ/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/19 |
+| 21 | 析大牛 | [55''929](https://www.douyin.com/video/7566654913037864228) | 2025/10/29 |
+| 22 | 沐沐来了 | [56''16](https://www.douyin.com/video/7548729819362643200) | 2025/09/11 |
+| 23 | LowHead | [56''99](https://www.bilibili.com/video/BV1exWEzDEod/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/30 |
+| 24 | 起飞吧范佩西 | [57''06](https://www.bilibili.com/video/BV18tpgzWEor/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/12 |
+| 25 | 王苍幻 | [57''12](https://www.bilibili.com/video/BV1N21oB7EsJ/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/11/09 |
+
+### 四僧
+
+| 排名  | 选手  | 成绩  | 日期  |
+| --- | --- | --- | --- |
+| 1 | 蚌 | [1'19''21](https://www.bilibili.com/video/BV1jsF7zFEJu/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2026/02/07 |
+| 2 | 小何² | [1'20''18](https://www.bilibili.com/video/BV1fnfnBvE5M/?buvid=XU0B4A10615D95543B4172F09054237E2E98D\&from_spmid=default-value\&is_story_h5=false\&mid=S82tpB0vDUk1xSfEXHdKhw%3D%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=e4727f84-1607-481d-8ec6-6f4d94c179d0\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1771668307\&unique_k=shB5fEl\&up_id=695726695) | 2026/02/21 |
+| 3 | 山月为关 | [1'21''78](https://www.bilibili.com/video/BV1QemUBgEnD/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=21fc1ff3-ac31-44ab-a9f7-2834e4030ea3\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1765566646\&unique_k=z8NGUrL\&up_id=3493117797861490) | 2025/12/13 |
+| 4 | 阿班 | 1'22''90 | 2026/02/07 |
+| 5 | 君亦-伪 | [1'23''59](https://www.bilibili.com/video/BV1gSFHzbEw6?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=c8aaecab-8fdd-4d7e-9b61-73de5c1df86a\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1770462963\&unique_k=R3TTxVj\&up_id=296470991) | 2026/02/07 |
+| 6 | 白织 | [1'24''36](https://www.bilibili.com/video/BV1QKqmB5EPK/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=8cc47c84-a8f4-43e4-b8c5-4a24c987e693\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1766306971\&unique_k=ZNMGRlv\&up_id=359122608) | 2025/12/20 |
+| 7 | 离九 | [1'24''46](https://www.douyin.com/video/7608594199181203875) | 2026/02/19 |
+| 8 | 维尔特陈伯伦 | [1'24''78](https://www.bilibili.com/video/BV1ST43zhEpQ/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/10/11 |
+| 9 | 欈尰矅 | [1'24''87](https://www.bilibili.com/video/BV1NofsBtEWg/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=main.space-contribution.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=dd46ceb7-f159-4a25-9d8b-61ee38a9ef29\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1772018048\&unique_k=uqp5Xs3\&up_id=1361287194) | 2026/02/24 |
+| 10 | 薛定谔de奇点 | [1'25''16](https://www.bilibili.com/video/BV1afyHBtEwq/?spm_id_from=333.337.search-card.all.click) | 2025/11/19 |
+| 11 | LowHead | [1'26''20](https://www.bilibili.com/video/BV1LpWEz9Ehb?spm_id_from=333.788.player.switch\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/10/17 |
+| 12 | 极了无 | [1'26''68](https://www.bilibili.com/video/BV1c6HCzhEQB/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/09 |
+| 13 | 4\_c\_er | [1'27''20](https://www.bilibili.com/video/BV1FnYAzGETV/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/07 |
+| 14 | 雌蕊呀 | [1'28''14](https://www.bilibili.com/video/BV1TeyZBHEp1/?spm_id_from=333.1387.homepage.video_card.click) | 2025/11/02 |
+| 15 | 小庆宝宝 | [1'28''53](https://www.bilibili.com/video/BV1ctxEzMEWe/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/10/06 |
+| 16 | 馒头 | [1'28''78](https://www.bilibili.com/video/BV11ipMzgEQ6?spm_id_from=333.788.player.player_end_recommend_autoplay\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/08 |
+| 17 | 木木 | [1'29''03](https://www.bilibili.com/video/BV1njH9zoEGv/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/10 |
+| 18 | luyixxxx | [1'29''06](https://www.bilibili.com/video/BV1DZYVzdEJo/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/07 |
+| 19 | Y-Zz | [1'29''50](https://www.douyin.com/video/7553885854512041275) | 2025/09/25 |
+| 20 | 福娃芙卡 | [1'29''72](https://www.bilibili.com/video/BV1BAWGzGE6Z/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/19 |
+| 21 | cocoyibo | [1'31''44](https://www.bilibili.com/video/BV1GU2XBWE66/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=c1bf5e36-229e-434a-969c-fb765d2a60e0\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1765026466\&unique_k=UqCV2Bf\&up_id=169961001) | 2025/12/06 |
+| 22 | 小天 | [1'33''22](https://www.douyin.com/video/7567015510836104475) | 2025/10/30 |
+| 23 | *忆殇* | [1'33''23](https://www.bilibili.com/video/BV19UUYBBEf8/?spm_id_from=333.337.search-card.all.click) | 2025/11/26 |
+| 24 | 天傲花 | [1'35''57](https://www.bilibili.com/video/BV1E6YwzzEsN/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/08 |
+| 25 | 猛揣瘸子那条好腿 | [1'37''01](https://www.douyin.com/video/7589656729961368884?previous_page=app_code_link) | 2025/11/30 |
+
+### 四渎龙神
+
+| 排名  | 选手  | 成绩  | 日期  |
+| --- | --- | --- | --- |
+| 1 | 蚌 | [1'38''44](https://www.bilibili.com/video/BV1QUqLBxEnS/?spm_id_from=333.1387.homepage.video_card.click) | 2025/12/17 |
+| 2 | 薛定谔de奇点 | [1'40''98](https://www.bilibili.com/video/BV1Q1qsBEEzW/?buvid=XY1B2A218AA96221CBFADE8B509282AA64C31\&from_spmid=main.my-history.0.0\&is_story_h5=false\&mid=GB%2FAZuZI26hwTQGO9UnIKg%3D%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=288def36-3209-4efc-9310-ec1620aeb0bb\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1765805105\&unique_k=CMCOdud\&up_id=433666745) | 2025/12/15 |
+| 3 | 阿班 | [1'43''17](https://www.bilibili.com/video/BV1MfqLBUEFh/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=87523b26-6436-4f65-a713-cae728232c52\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1765987540\&unique_k=gvhF8K7\&up_id=511651162) | 2025/12/17 |
+| 4 | 山月为关 | [1'44''73](https://www.bilibili.com/video/BV1vfBEBuEj9/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=072babb4-92d2-447e-8a18-5493ca9605c9\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1766329868\&unique_k=Z1sSj08\&up_id=3493117797861490) | 2025/12/21 |
+| 5 | 离九 | [1'45''65](https://www.douyin.com/video/7584365451405528335?previous_page=app_code_link) | 2025/12/16 |
+| 6 | 4\_c\_er | [1'47''33](https://www.bilibili.com/video/BV1FQqUBYE6r?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=d5f4e7fd-662c-448f-bee8-7928048b6586\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1766323229\&unique_k=pw0J7BC\&up_id=34752710) | 2025/12/21 |
+| 7 | 小何² | [1'48''50](https://b23.tv/s7quWNW) | 2025/12/13 |
+| 8 | 极了无 | [1'51''73](https://www.bilibili.com/video/BV19CqsBSEp8/?buvid=XYFB5EFF1DDA2C1CCB4285811FF57FDB3589A\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=tZAbt17WEt4FiUiWpOGUqn8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=9418aca4-62ff-4d7a-91d0-d3887298662a\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1765805366\&unique_k=TdxQj1J\&up_id=626760356) | 2025/12/15 |
+| 9 | luyixxxx | [1'52''21](https://www.bilibili.com/video/BV1SKpXzBEJk/?spm_id_from=333.1387.list.card_archive.click\&vd_source=ee89a74e2b259afea2d26ba59d70b3e1) | 2025/09/20 |
+| 10 | 纯黑得逃生 | [1'52''82](https://www.bilibili.com/video/BV1hp4cz6ETT/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/10/11 |
+| 11 | 馒头 | [1'53''64](https://www.bilibili.com/video/BV11ipMzgEQ6?spm_id_from=333.788.player.player_end_recommend_autoplay\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/03 |
+| 12 | 雌蕊呀 | [1'54''59](https://www.bilibili.com/video/BV1U7UkBDEV9/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/11/24 |
+| 13 | 游戏老潇 | 1'54''76 | 2025/11/07 |
+| 14 | 小天 | [1'56''50](https://www.douyin.com/video/7575516328094682409) | 2025/11/22 |
+| 15 | 忆尘 | [1'56''58](https://www.douyin.com/video/7589886949755727281?previous_page=app_code_link) | 2025/12/31 |
+| 16 | 天傲花 | [1'56''59](https://www.bilibili.com/video/BV1J8pFzGEvf/?spm_id_from=333.1387.homepage.video_card.click) | 2025/09/14 |
+| 17 | 福娃芙卡 | [1'56''82](https://www.bilibili.com/video/BV1YSpszvE3j/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/17 |
+| 18 | 1xuan | [1'58''61](https://www.bilibili.com/video/BV1SUemz9Eod/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/08/27 |
+| 19 | gaming-lunar | [1'59''42](https://www.bilibili.com/video/BV12GvhBEEMf/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=f28f7776-51f0-46f3-9238-bb8d961da255\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1767091399\&unique_k=ISOTTJr\&up_id=3546894571670352) | 2025/12/30 |
+| 20 | 秋起泛白露 | [2'43''14](https://www.bilibili.com/video/BV1mR2tBGEYH/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=search.search-result.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=1b21b745-d643-42a2-bda9-6c5ce559c64e\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1764780827\&unique_k=VoD6fiZ\&up_id=486845521\&vd_source=43fd8d8dfb638098fa4fd06e2791cc00) | 2025/12/03 |
+
+### 六健将
+
+| 排名  | 选手  | 成绩  | 日期  |
+| --- | --- | --- | --- |
+| 1 | 1xuan | [2'03''18](https://www.bilibili.com/video/BV11WsqzZEP7/?spm_id_from=333.337.search-card.all.click) | 2025/10/23 |
+| 2 | 蚌 | [2'05''64](https://www.bilibili.com/video/BV1h3iCBhE8h/?buvid=XX1BD0017390F8118B2DD1C7884DF4920F072\&from_spmid=main.space.0.0\&is_story_h5=false\&mid=%2BKGIpXZ9EbiwORQsKAH9iw%3D%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=3044e287-18b6-4150-9b8d-8ccda176dcb5\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1767784667\&unique_k=KtoJXBM\&up_id=1041159056) | 2026/01/07 |
+| 3 | luyixxxx | [2'14''91](https://www.bilibili.com/video/BV186s6zyEfK/?spm_id_from=333.337.search-card.all.click) | 2025/10/26 |
+| 4 | 辣舞7 | [2'18''42](https://www.bilibili.com/video/BV1dD49zwEcn/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/10/14 |
+| 5 | 雌蕊呀 | [2'24''57](https://www.bilibili.com/video/BV1jf42zCEAa/?spm_id_from=333.337.search-card.all.click) | 2025/10/13 |
+| 6 | 山月为关 | [2'31''50](https://www.bilibili.com/video/BV1zWHkzpE7Z/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/12 |
+| 7 | 馒头 | [2'35''04](https://www.douyin.com/video/7549033752597400841) | 2025/09/12 |
+| 8 | 阿班 | [2'35''18](https://www.bilibili.com/video/BV1ExqnB2EEE/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=d1c6c22d-a307-48df-8b3b-bbca752a10e2\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1766054012\&unique_k=deCqQ4x\&up_id=511651162) | 2025/12/18 |
+| 9 | 小何² | [2'38''40](https://www.bilibili.com/video/BV1YSqSBXEEv/?buvid=XU0B4A10615D95543B4172F09054237E2E98D\&from_spmid=default-value\&is_story_h5=false\&mid=S82tpB0vDUk1xSfEXHdKhw%3D%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=8a3eabe0-db26-43c8-8e88-bd50b6d8bd80\&share_source=COPY\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1766317079\&unique_k=JxK0ucp\&up_id=695726695) | 2025/12/21 |
+| 10 | 极了无 | [2'41''20](https://www.bilibili.com/video/BV13snzzwEgR/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/29 |
+| 11 | A妹 | 2'41''39 | 2025/09/30 |
+| 12 | 离九 | [2'43''78](https://www.douyin.com/video/7585517444875636003?previous_page=app_code_link) | 2025/12/19 |
+| 13 | 福娃芙卡 | [2'53''17](https://www.bilibili.com/video/BV11MpjzhEGr/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/13 |
+| 14 | 尧虽无意逐鹿 | [3'17''35](https://www.bilibili.com/video/BV1SPy1BpEJj/?spm_id_from=333.337.search-card.all.click) | 2025/10/29 |
+| 15 | 一只阳儿吖 | [3'25''89](https://www.bilibili.com/video/BV1pZ4uzUE5a/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/10/12 |
+| 16 | gaming-lunar | [3'29''09](https://www.bilibili.com/video/BV1DC6EBTE9f?-Arouter=story\&buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=main.ugc-video-detail-vertical.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&plat_id=143\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=ca5034a0-dd09-4670-a80e-674852b8d40a\&share_source=QQ\&share_tag=s_i\&spmid=main.ugc-video-detail-verticalspace.0.0\&timestamp=1769595911\&unique_k=9keWpWe\&up_id=3546894571670352) | 2026/01/28 |
+| 17 | 秋起泛白露 | [4'46''39](https://www.bilibili.com/video/BV1VL6QBvEgB/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=86dc7321-8da2-46b1-b137-c8d2b15b3a49\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1768109552\&unique_k=F4JIrY7\&up_id=486845521) | 2026/01/11 |
+| 18 | 长门 | [4'50''49](https://www.douyin.com/video/7575225855312448783) | 2025/11/21 |
+
+### 蛰虫始振
+
+| 排名  | 选手  | 成绩  | 日期  |
+| --- | --- | --- | --- |
+| 1 | 山月为关 | [2'04''20](https://www.bilibili.com/video/BV1p7BLB6ENG/?spm_id_from=333.337.search-card.all.click) | 2025/12/24 |
+| 2 | 蚌 | [2'05''14](https://www.bilibili.com/video/BV1agFxzrEfX/?buvid=XUAA868A93B512B75A2FDB813BC8549AF0A93\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=38MKh8%2FnXuqkOO%2BtBMJEvA%3D%3D\&p=1\&plat_id=114\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=d6d1eb67-5133-4774-8d3b-da8158b4d48d\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1770488252\&unique_k=9EA2Hqp\&up_id=1041159056) | 2026/02/07 |
+| 3 | 辣舞7 | [2'05''19](https://www.bilibili.com/video/BV13zyRBnEK5/?spm_id_from=333.337.search-card.all.click) | 2025/11/02 |
+| 4 | 馒头 | [2'12''11](https://www.douyin.com/video/7552115213382782248) | 2025/09/20 |
+| 5 | 小天 | [2'13''85](https://www.douyin.com/video/7595509589743766836?previous_page=app_code_link) | 2026/01/14 |
+| 6 | 离九 | [2'14''27](https://www.douyin.com/video/7583964149144161536?previous_page=app_code_link) | 2025/12/14 |
+| 7 | 棍势哥 | [2'15''16](https://www.bilibili.com/video/BV1FhU6BNEJv/?spm_id_from=333.1387.homepage.video_card.click) | 2025/11/25 |
+| 8 | 福娃芙卡 | [2'15''26](https://www.bilibili.com/video/BV1yZprzPEu2/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/16 |
+| 9 | 想吃软饭 | [2'15''69](https://www.douyin.com/video/7593646181494885670) | 2026/01/10 |
+| 10 | 1xuan | [2'16''22](https://www.bilibili.com/video/BV1msWcztESn/?spm_id_from=333.788.top_right_bar_window_history.content.click\&vd_source=6d2a5a555187150470bc28325a2d7c05) | 2025/09/21 |
+| 11 | luyixxxx | [2'16''80](https://www.bilibili.com/video/BV15EHVzPEcW/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/10/03 |
+| 12 | 落山秋 | [2'17''21](https://www.douyin.com/video/7593618853251403043) | 2026/01/09 |
+| 13 | 雌蕊呀 | [2'17''80](https://www.bilibili.com/video/BV1arxAzGEFh/?spm_id_from=333.1387.homepage.video_card.click) | 2025/10/26 |
+| 14 | 小何² | [2'19''23](https://www.bilibili.com/video/BV1NC26BuEvQ/?share_source=copy_web\&vd_source=1fe82609797d93299c09b9d6a7efb787) | 2025/12/08 |
+| 15 | 尧虽无意逐鹿 | [2'19''42](https://www.bilibili.com/video/BV1JVfEBYELA/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=48c23c2c-f2bc-4dd9-9bcb-63be6c708726\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1771663937\&unique_k=Eu1MGcN\&up_id=1192015343) | 2026/02/21 |
+| 16 | 极了无 | [2'19''51](https://www.bilibili.com/video/BV1X1pnzQESg/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/13 |
+| 17 | 4\_c\_er | [2'20''30](https://www.bilibili.com/video/BV11hxfz4EqR/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/10/08 |
+| 18 | 薛定谔de奇点 | 2'21''88 | 2025/10/10 |
+| 19 | 阿班 | [2'24''40](https://www.bilibili.com/video/BV1KGCtBcE6u/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/11/13 |
+| 20 | 最重要 | [2'25''17](https://www.bilibili.com/video/BV1RdfABmEk8/?-Arouter=story\&buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=163\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=1f0eaa7f-fde3-47d7-bad9-3fe8dc4be8fe\&share_source=QQ\&share_tag=s_i\&spmid=main.ugc-video-detail-vertical.0.0\&timestamp=1771769820\&unique_k=brYMfK8\&up_id=1361287194) | 2026/02/22 |
+| 21 | Y-Zz | [2'26''86](https://www.douyin.com/video/7573156769682413434) | 2025/11/16 |
+| 22 | 六根 | [2'27''60](https://www.douyin.com/video/7555133276631027002) | 2025/09/28 |
+| 23 | 忆尘 | [2'31''78](https://www.douyin.com/video/7587983972405253221?previous_page=app_code_link) | 2025/12/26 |
+| 24 | cocoyibo | [2'36''69](https://www.bilibili.com/video/BV1qZ2QBtEWG/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=84a23a77-f3ae-4cf8-bbe6-b8d312b4f955\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1765028401\&unique_k=UYC0QVx\&up_id=169961001) | 2025/12/06 |
+| 25 | 天傲花 | [2'37''80](https://www.bilibili.com/video/BV1SSJ1zLE65/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/22 |
+
+### 万样骁凶
+
+| 排名  | 选手  | 成绩  | 日期  |
+| --- | --- | --- | --- |
+| 1 | 小何² | [2'27''90](https://www.bilibili.com/video/BV1g5FAz6Ecg) | 2026/02/05 |
+| 2 | 土豆 | [2'30''29](https://www.bilibili.com/video/BV1fdUXBvEaX/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/11/25 |
+| 3 | 离九 | 2'35''24 | 2026/02/23 |
+| 4 | 辣舞7 | [2'35''26](https://www.bilibili.com/video/BV1kjnfzuEFX/?spm_id_from=333.337.search-card.all.click) | 2025/09/28 |
+| 5 | 山月为关 | [2'35''46](https://www.bilibili.com/video/BV1zUHpzeE3v/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/11/08 |
+| 6 | 福娃芙卡 | [2'35''49](https://www.bilibili.com/video/BV1o6hhz5Equ/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/08/30 |
+| 7 | 小天 | [2'36''18](https://www.douyin.com/video/7553348864070241578) | 2025/09/23 |
+| 8 | 一只刘富贵 | [2'36''49](https://www.douyin.com/video/7580894621803930291) | 2025/12/07 |
+| 9 | 棍势哥 | [2'36''78](https://www.bilibili.com/video/BV1Bd1aBPEbm/?spm_id_from=333.337.search-card.all.click) | 2025/11/03 |
+| 10 | 4\_c\_er | [2'36''81](https://www.bilibili.com/video/BV1fX2bBaEqd/?spm_id_from=333.1387.homepage.video_card.click) | 2025/12/04 |
+| 11 | Dawn | [2'37''14](https://www.douyin.com/video/7606736280432463154) | 2026/02/14 |
+| 12 | 想吃软饭 | [2'37''44](https://www.douyin.com/video/7567610660687760649) | 2025/11/01 |
+| 13 | 沐沐来了 | [2'37''60](https://www.douyin.com/video/7556272075220978994) | 2025/10/01 |
+| 14 | 蚌 | 2'37''62 | 2026/02/11 |
+| 15 | 青衣 | [2'38''29](https://www.bilibili.com/video/BV1cHcNzqE7b?-Arouter=story\&buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&plat_id=163\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=776d9cbb-4a13-4324-b6c0-30e9e08fbd36\&share_source=QQ\&share_tag=s_i\&spmid=main.ugc-video-detail-vertical.0.0\&timestamp=1770615324\&unique_k=dXMnxkw\&up_id=30316805) | 2026/02/08 |
+| 16 | 天傲花 | [2'38''79](https://www.bilibili.com/video/BV1nyzVBME4e/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=75eb757a-d4e8-44ea-9b76-e57f7a144739\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1768990978\&unique_k=uvJLhUx\&up_id=422735802) | 2026/01/20 |
+| 17 | 面条子 | 2'39''90 | 2025/12/31 |
+| 18 | 馒头 | [2'40''50](https://www.douyin.com/video/7545555798844263721) | 2025/08/27 |
+| 19 | 析大牛 | [2'40''99](https://www.douyin.com/video/7559998307506883875) | 2025/10/11 |
+| 20 | luyixxxx | [2'43''35](https://www.bilibili.com/video/BV1SepvzxELM/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=ee89a74e2b259afea2d26ba59d70b3e1) | 2025/09/18 |
+| 21 | 落山秋 | [2'43''40](https://www.douyin.com/video/7568358034129341723) | 2025/11/02 |
+| 22 | 秦个个 | [2'43''92](https://www.bilibili.com/video/BV1SWSnBcE7f?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=search.search-result.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=aa33566b-5ef8-416e-908a-7bc40184b7db\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1764760949\&unique_k=BhMb9SC\&up_id=3632319346772666) | 2025/11/28 |
+| 23 | 阿班 | [2'43''98](https://www.bilibili.com/video/BV1WzYKzdEVM/?spm_id_from=333.1387.homepage.video_card.click) | 2025/09/04 |
+| 24 | 灵魂在缠绕 | [2'44''05](https://www.douyin.com/user/MS4wLjABAAAAgC4Krs3y3P4pE_F-4QX8aHQt4kzDNshBHiGel7pfn9k?from_tab_name=main\&modal_id=7546159833532206388\&vid=7545100156530609443) | 2025/09/04 |
+| 25 | 敲敲 | [2'44''21](https://www.douyin.com/video/7574296218839414949) | 2025/11/19 |
+
+### 心猿
+
+| 排名  | 选手  | 成绩  | 日期  |
+| --- | --- | --- | --- |
+| 1 | luyixxxx | [1'12''23](https://www.bilibili.com/video/BV1ZPZBBjEND/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2026/02/20 |
+| 2 | 阿班 | [1'12''49](https://www.bilibili.com/video/BV1raF5zoEmK/?spm_id_from=333.337.search-card.all.click) | 2026/02/03 |
+| 3 | 蚌 | [1'13''39](https://www.bilibili.com/video/BV1GEFuzwErk/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2026/02/02 |
+| 4 | TEQSHOT | [1'14''53](https://www.bilibili.com/video/BV19bF4z7EJQ?buvid=Z24AF4248406B43A421C8202A0AB33E2D755\&is_story_h5=false\&mid=R2Lo1iuFz%2Fu1uYoa31H5ZQ%3D%3D\&plat_id=114\&share_from=ugc\&share_medium=iphone\&share_plat=ios\&share_session_id=4D143B96-2A50-48FE-9274-803D3F1A2E8F\&share_source=QQ\&share_tag=s_i\&timestamp=1770519831\&unique_k=tUSGbWY\&up_id=3546949024221202) | 2026/02/07 |
+| 5 | 杰哥 | [1'14''91](https://www.bilibili.com/video/BV1C3UVBAEUX/?spm_id_from=333.337.search-card.all.click) | 2025/11/24 |
+| 6 | 离九 | 1'15''81 | 2026/02/23 |
+| 7 | 是一碗两掺 | [1'16''27](https://www.bilibili.com/video/BV1iEcMzKEbM?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=search.search-result.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=ae3d51af-4bfa-42ad-83ce-2d021c27bfb8\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1770628647\&unique_k=FnIQyWx\&up_id=3493274002131348) | 2026/02/09 |
+| 8 | 4\_c\_er | [1'16''55](https://www.bilibili.com/video/BV1Zn48zeE4W/?spm_id_from=333.337.search-card.all.click) | 2025/10/14 |
+| 9 | 白织 | [1'16''57](https://www.bilibili.com/video/BV19o4gzMEtw/) | 2025/10/12 |
+| 10 | 萧风FX | 1'17''35 | 2026/01/04 |
+| 11 | 关注君君milimo谢谢喵 | 1'17''51 | 2025/11/20 |
+| 12 | 小何² | [1'17''58](https://www.bilibili.com/video/BV1fEmUBnEi2/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=746049a7-4b47-4bde-b813-f040859c9dca\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1765566667\&unique_k=pjoSOPH\&up_id=695726695) | 2025/12/13 |
+| 13 | 山月为关 | [1'17''81](https://www.bilibili.com/video/BV1k1Hsz5Ewf/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/10/01 |
+| 14 | 馒头 | [1'18''19](https://www.douyin.com/video/7561766242965589282) | 2025/10/16 |
+| 15 | 零零妖 | [1'18''24](https://www.bilibili.com/video/BV1RwxrzpEez/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/10/09 |
+| 16 | 木木 | [1'18''55](https://www.bilibili.com/video/BV18pYKzqEQ1/?spm_id_from=333.337.search-card.all.click) | 2025/09/06 |
+| 17 | 沐沐来了 | [1'18''82](https://www.douyin.com/video/7552040866932591881) | 2025/09/20 |
+| 18 | 1xuan | [1'19''07](https://www.bilibili.com/video/BV1PNWEzKE59/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/10/17 |
+| 19 | 栩畅 | 1'19''18 | 2025/09/19 |
+| 20 | Y-Zz | [1'19''80](https://www.douyin.com/video/7552378756736847162) | 2025/09/21 |
+| 21 | 想吃软饭 | 1'19''99 | 2026/01/23 |
+| 22 | 极了无 | [1'20''06](https://www.bilibili.com/video/BV1FCHCzbEpv/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/07 |
+| 23 | 忆尘 | [1'21''93](https://www.douyin.com/video/7597790249791667557?previous_page=app_code_link) | 2026/01/21 |
+| 24 | 雌蕊呀 | [1'22''48](https://www.bilibili.com/video/BV1MJ4BzMETm/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/10/15 |
+| 25 | 鸡腿嗷 | [1'22''49](https://www.douyin.com/video/7556626244797123850) | 2025/10/02 |
+
+### 梅山故人
+
+| 排名  | 选手  | 成绩  | 日期  |
+| --- | --- | --- | --- |
+| 1 | 4\_c\_er | [2'50''80](https://www.bilibili.com/video/BV1nTfNBFENv/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2026/02/23 |
+| 2 | 蚌 | [2'50''97](https://www.bilibili.com/video/BV1xWi3BAE4A?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=4e5119c4-e5fe-4552-9b57-e068aef06a57\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1767203850\&unique_k=3JDuSsi\&up_id=1041159056) | 2025/12/31 |
+| 3 | 辣舞7 | [2'51''78](https://www.bilibili.com/video/BV1B8vYByEAv/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=197e8948-04c6-4ee0-af30-a88a57a1e916\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1767091100\&unique_k=LZOKwEJ\&up_id=290027032) | 2025/12/29 |
+| 4 | 小何² | [2'55''39](https://www.bilibili.com/video/BV1akfVBMEhw/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2026/02/20 |
+| 5 | 阿班 | 2'57''11 | 2026/02/23 |
+| 6 | 寻乐苦 | [2'58''55](https://www.bilibili.com/video/BV18vCvBtESf/?spm_id_from=333.1387.homepage.video_card.click) | 2025/11/17 |
+| 7 | 棍势哥 | [3'00''86](https://www.bilibili.com/video/BV1sXUwBvEK8/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/11/23 |
+| 8 | kun | [3'03''06](https://www.douyin.com/video/7603800676598074670) | 2026/02/07 |
+| 9 | 维尔特陈伯伦 | [3'03''11](https://www.bilibili.com/video/BV1sZcjzrEXg/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=98198f7b-76fc-4fac-a682-41c52eacdaa9\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1770971783\&unique_k=SilnX1a\&up_id=1027845560) | 2026/02/13 |
+| 10 | 山月为关 | [3'03''56](https://www.bilibili.com/video/BV1rUHfzgEYp/?spm_id_from=333.337.search-card.all.click) | 2025/09/14 |
+| 11 | luyixxxx | [3'06''82](https://www.bilibili.com/video/BV1DPBMBKEJM/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=00eeb451-66fd-407b-9573-01fa7ed1f04a\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1766505970\&unique_k=hwfjXVR\&up_id=480163929) | 2025/12/23 |
+| 12 | 雌蕊呀 | [3'07''40](https://www.bilibili.com/video/BV1GqynB9EPs/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/11/19 |
+| 13 | 白织 | [3'08''90](https://www.bilibili.com/video/BV1q5awzYEjS/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/02 |
+| 14 | 福娃芙卡 | [3'08''95](https://www.bilibili.com/video/BV18yYjzAEUp/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/07 |
+| 15 | 木木 | [3'10''28](https://www.bilibili.com/video/BV1vdBEB3E6N/?spm_id_from=333.1387.homepage.video_card.click) | 2025/12/21 |
+| 16 | 从此不尿尿 | 3'11''04 | 2026/02/08 |
+| 17 | 摸鱼 | [3'14''89](https://www.bilibili.com/video/BV1gpH3zXE3p/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/10/28 |
+| 18 | cocoyibo | [3'18''12](https://www.bilibili.com/video/BV1cUUXB3E1A/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/12/01 |
+| 19 | 离九 | [3'19''95](https://www.douyin.com/video/7571364109103963584) | 2025/11/11 |
+| 20 | 馒头 | [3'23''94](https://www.bilibili.com/video/BV11ipMzgEQ6?spm_id_from=333.788.player.player_end_recommend_autoplay\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/14 |
+| 21 | 君亦-伪 | 3'25''87 | 2026/02/25 |
+| 22 | 小天 | [3'25''94](https://www.douyin.com/video/7599948945325968659?previous_page=app_code_link) | 2026/01/26 |
+| 23 | LowHead | 3'27''42 | 2025/12/27 |
+| 24 | 想吃软饭 | 3'43''37 | 2026/01/03 |
+| 25 | 天傲花 | [3'44"98](https://www.bilibili.com/video/BV1TUcxzzE3k/?-Arouter=story\&buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=163\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=be0ad813-cb94-4393-93a4-ea6afb362c06\&share_source=QQ\&share_tag=s_i\&spmid=main.ugc-video-detail-vertical.0.0\&timestamp=1770813913\&unique_k=6vY3nBf\&up_id=422735802) | 2026/02/11 |
+
+### 六根一性
+
+| 排名  | 选手  | 成绩  | 日期  |
+| --- | --- | --- | --- |
+| 1 | 蚌 | [4'37''61](https://www.bilibili.com/video/BV1EBzuBdEqZ/?buvid=XYFB5EFF1DDA2C1CCB4285811FF57FDB3589A\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=tZAbt17WEt4FiUiWpOGUqn8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=3d4def99-f227-406e-993f-cc4af28b2176\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1769184560\&unique_k=yPl71r1\&up_id=1041159056) | 2026/01/23 |
+| 2 | 土豆 | [4'41''65](https://www.bilibili.com/video/BV1uJ64BdEdL/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=952e9578-caa4-4b3d-9cce-d69a681ef8d3\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1769942578\&unique_k=tQqZVju\&up_id=12251587) | 2026/01/31 |
+| 3 | 君亦-伪 | [4'42''47](https://www.bilibili.com/video/BV1F5chzMEsM/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2026/02/11 |
+| 4 | 离九 | [4'44''22](https://www.douyin.com/video/7607298393211363171?previous_page=app_code_link) | 2026/02/16 |
+| 5 | 阿班 | 4'47''26 | 2026/01/27 |
+| 6 | 白织 | [4'47''69](https://www.bilibili.com/video/BV15eypBeEWM/?spm_id_from=333.337.search-card.all.click) | 2025/11/19 |
+| 7 | 小何² | [4'48''28](https://www.bilibili.com/video/BV1kefHB1Erg/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=e915b962-1947-4cb0-b6a1-46e1706a2acf\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1771730956\&unique_k=fdUwzI0\&up_id=695726695) | 2026/02/21 |
+| 8 | 山月为关 | 4'48''99 | 2026/02/23 |
+| 9 | Y-Zz | [4'52''82](https://www.douyin.com/video/7596530286595300773?previous_page=app_code_link) | 2026/01/17 |
+| 10 | 落山秋 | [4'52''85](https://www.douyin.com/video/7590010963953241385?previous_page=app_code_link) | 2025/12/31 |
+| 11 | 寻乐苦 | [4'53''33](https://www.bilibili.com/video/BV1nqWyzuEm7/?spm_id_from=333.1387.homepage.video_card.click) | 2025/10/17 |
+| 12 | 想吃软饭 | [4'53''76](https://www.douyin.com/video/7584315436796284179?previous_page=app_code_link) | 2025/12/15 |
+| 13 | 棍势哥 | [4'55''27](https://www.bilibili.com/video/BV1D9yKB1Eyv/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/11/21 |
+| 14 | 从此不尿尿 | [4'55''83](https://b23.tv/Kxh9KZQ) | 2025/12/02 |
+| 15 | 沐沐来了 | [4'58''77](https://www.douyin.com/video/7583636058655558950) | 2025/12/14 |
+| 16 | luyixxxx | [4'59''11](https://www.bilibili.com/video/BV1q1aEzjET2/?spm_id_from=333.1387.homepage.video_card.click) | 2025/09/01 |
+| 17 | 析大牛 | 4'59''12 | 2026/01/03 |
+| 18 | 张明煌 | 5'00''44 | 2026/02/22 |
+| 19 | 吃花椒的芝麻酱 | [5'00''69](https://www.bilibili.com/video/BV1ExxAzWE98/?spm_id_from=333.1391.0.0\&vd_source=bab071ada82f8ebb9f99be72fca7f571) | 2025/10/26 |
+| 20 | 福娃芙卡 | [5'01''97](https://www.bilibili.com/video/BV1AGnVzLEzT/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/09/26 |
+| 21 | 4\_c\_er | [5'03''28](https://www.bilibili.com/video/BV1owmBBHExd/?spm_id_from=333.1387.homepage.video_card.click) | 2025/12/15 |
+| 22 | 馒头 | [5'03''94](https://www.douyin.com/video/7550238943002905892) | 2025/09/11 |
+| 23 | 小天 | [5'04''81](https://www.douyin.com/video/7562508176503999786) | 2025/10/18 |
+| 24 | kun | [5'07''40](https://www.douyin.com/video/7554970844733115691) | 2025/09/28 |
+| 25 | 极了无 | [5'08''33](https://www.bilibili.com/video/BV1xByABFE5L/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/11/20 |
+
+## 总榜
+
+| 选手  | 三虎  | 四僧  | 四渎龙神 | 六健将 | 蛰虫始振 | 万样骁凶 | 心猿  | 梅山故人 | 六根一性 | 总成绩 |
+| --- | --- | --- | ---- | --- | ---- | ---- | --- | ---- | ---- | --- |
+| 蚌 | 52''25 | [1'19''21](https://www.bilibili.com/video/BV1jsF7zFEJu/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [1'38''44](https://www.bilibili.com/video/BV1QUqLBxEnS/?spm_id_from=333.1387.homepage.video_card.click) | [2'05''64](https://www.bilibili.com/video/BV1h3iCBhE8h/?buvid=XX1BD0017390F8118B2DD1C7884DF4920F072\&from_spmid=main.space.0.0\&is_story_h5=false\&mid=%2BKGIpXZ9EbiwORQsKAH9iw%3D%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=3044e287-18b6-4150-9b8d-8ccda176dcb5\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1767784667\&unique_k=KtoJXBM\&up_id=1041159056) | [2'05''14](https://www.bilibili.com/video/BV1agFxzrEfX/?buvid=XUAA868A93B512B75A2FDB813BC8549AF0A93\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=38MKh8%2FnXuqkOO%2BtBMJEvA%3D%3D\&p=1\&plat_id=114\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=d6d1eb67-5133-4774-8d3b-da8158b4d48d\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1770488252\&unique_k=9EA2Hqp\&up_id=1041159056) | 2'38''75 | [1'13''39](https://www.bilibili.com/video/BV1GEFuzwErk/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [2'50''97](https://www.bilibili.com/video/BV1xWi3BAE4A?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=4e5119c4-e5fe-4552-9b57-e068aef06a57\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1767203850\&unique_k=3JDuSsi\&up_id=1041159056) | [4'37''61](https://www.bilibili.com/video/BV1EBzuBdEqZ/?buvid=XYFB5EFF1DDA2C1CCB4285811FF57FDB3589A\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=tZAbt17WEt4FiUiWpOGUqn8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=3d4def99-f227-406e-993f-cc4af28b2176\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1769184560\&unique_k=yPl71r1\&up_id=1041159056) | 19'21''40 |
+| 山月为关 | [53''79](https://www.bilibili.com/video/BV1aTaZz1EEs/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [1'21''78](https://www.bilibili.com/video/BV1QemUBgEnD/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=21fc1ff3-ac31-44ab-a9f7-2834e4030ea3\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1765566646\&unique_k=z8NGUrL\&up_id=3493117797861490) | [1'44''73](https://www.bilibili.com/video/BV1vfBEBuEj9/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=072babb4-92d2-447e-8a18-5493ca9605c9\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1766329868\&unique_k=Z1sSj08\&up_id=3493117797861490) | [2'31''50](https://www.bilibili.com/video/BV1zWHkzpE7Z/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [2'04''20](https://www.bilibili.com/video/BV1p7BLB6ENG/?spm_id_from=333.337.search-card.all.click) | [2'35''46](https://www.bilibili.com/video/BV1zUHpzeE3v/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [1'17''81](https://www.bilibili.com/video/BV1k1Hsz5Ewf/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [3'03''56](https://www.bilibili.com/video/BV1rUHfzgEYp/?spm_id_from=333.337.search-card.all.click) | 4'48''99 | 20'21''82 |
+| 小何² | [53''48](https://b23.tv/X42zJqb) | [1'20''18](https://www.bilibili.com/video/BV1fnfnBvE5M/?buvid=XU0B4A10615D95543B4172F09054237E2E98D\&from_spmid=default-value\&is_story_h5=false\&mid=S82tpB0vDUk1xSfEXHdKhw%3D%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=e4727f84-1607-481d-8ec6-6f4d94c179d0\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1771668307\&unique_k=shB5fEl\&up_id=695726695) | [1'48''50](https://b23.tv/s7quWNW) | [2'38''40](https://www.bilibili.com/video/BV1YSqSBXEEv/?buvid=XU0B4A10615D95543B4172F09054237E2E98D\&from_spmid=default-value\&is_story_h5=false\&mid=S82tpB0vDUk1xSfEXHdKhw%3D%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=8a3eabe0-db26-43c8-8e88-bd50b6d8bd80\&share_source=COPY\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1766317079\&unique_k=JxK0ucp\&up_id=695726695) | [2'19''23](https://www.bilibili.com/video/BV1NC26BuEvQ/?share_source=copy_web\&vd_source=1fe82609797d93299c09b9d6a7efb787) | [2'27''90](https://www.bilibili.com/video/BV1g5FAz6Ecg) | [1'17''58](https://www.bilibili.com/video/BV1fEmUBnEi2/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=746049a7-4b47-4bde-b813-f040859c9dca\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1765566667\&unique_k=pjoSOPH\&up_id=695726695) | [2'55''39](https://www.bilibili.com/video/BV1akfVBMEhw/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [4'48''28](https://www.bilibili.com/video/BV1kefHB1Erg/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=e915b962-1947-4cb0-b6a1-46e1706a2acf\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1771730956\&unique_k=fdUwzI0\&up_id=695726695) | 20'28''94 |
+| 阿班 | [49''97](https://www.bilibili.com/video/BV1bbFazXEeu) | 1'22''90 | [1'43''17](https://www.bilibili.com/video/BV1MfqLBUEFh/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=87523b26-6436-4f65-a713-cae728232c52\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1765987540\&unique_k=gvhF8K7\&up_id=511651162) | [2'35''18](https://www.bilibili.com/video/BV1ExqnB2EEE/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=d1c6c22d-a307-48df-8b3b-bbca752a10e2\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1766054012\&unique_k=deCqQ4x\&up_id=511651162) | [2'24''40](https://www.bilibili.com/video/BV1KGCtBcE6u/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [2'43''98](https://www.bilibili.com/video/BV1WzYKzdEVM/?spm_id_from=333.1387.homepage.video_card.click) | [1'12''49](https://www.bilibili.com/video/BV1raF5zoEmK/?spm_id_from=333.337.search-card.all.click) | 2'57''11 | 4'47''26 | 20'37''41 |
+| luyixxxx | [54''67](https://www.bilibili.com/video/BV1o8aYzXEYG/?spm_id_from=333.1387.homepage.video_card.click) | [1'29''06](https://www.bilibili.com/video/BV1DZYVzdEJo/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [1'52''21](https://www.bilibili.com/video/BV1SKpXzBEJk/?spm_id_from=333.1387.list.card_archive.click\&vd_source=ee89a74e2b259afea2d26ba59d70b3e1) | [2'14''91](https://www.bilibili.com/video/BV186s6zyEfK/?spm_id_from=333.337.search-card.all.click) | [2'16''80](https://www.bilibili.com/video/BV15EHVzPEcW/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [2'43''35](https://www.bilibili.com/video/BV1SepvzxELM/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=ee89a74e2b259afea2d26ba59d70b3e1) | [1'17''84](https://www.bilibili.com/video/BV1hr43zMEr8/?spm_id_from=333.1387.upload.video_card.click\&vd_source=ee89a74e2b259afea2d26ba59d70b3e1) | [3'06''82](https://www.bilibili.com/video/BV1DPBMBKEJM/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=00eeb451-66fd-407b-9573-01fa7ed1f04a\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1766505970\&unique_k=hwfjXVR\&up_id=480163929) | [4'59''11](https://www.bilibili.com/video/BV1q1aEzjET2/?spm_id_from=333.1387.homepage.video_card.click) | 20'54''77 |
+| 离九 | [53''95](https://www.douyin.com/video/7608426814567271010?previous_page=app_code_link) | [1'24''46](https://v.douyin.com/8Yl4egN8AVE/) | [1'45''65](https://www.douyin.com/video/7584365451405528335?previous_page=app_code_link) | [2'43''78](https://www.douyin.com/video/7585517444875636003?previous_page=app_code_link) | [2'14''27](https://www.douyin.com/video/7583964149144161536?previous_page=app_code_link) | 2'35''24 | 1'15''81 | [3'19''95](https://www.douyin.com/video/7571364109103963584) | [4'44''22](https://v.douyin.com/_S9OqYpgh-I/) | 20'57''33 |
+| 馒头 | [54''52](https://www.bilibili.com/video/BV11ipMzgEQ6?spm_id_from=333.788.player.player_end_recommend_autoplay\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [1'28''78](https://www.bilibili.com/video/BV11ipMzgEQ6?spm_id_from=333.788.player.player_end_recommend_autoplay\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [1'53''64](https://www.bilibili.com/video/BV11ipMzgEQ6?spm_id_from=333.788.player.player_end_recommend_autoplay\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [2'35''04](https://www.douyin.com/video/7549033752597400841) | [2'12''11](https://www.douyin.com/video/7552115213382782248) | [2'40''50](https://www.douyin.com/user/MS4wLjABAAAAJWMgIlFFBb3ivfHZIbmh2V7AjrGLub4jJb7wU77gNE7iLK1hKUSPyPNsGki9n2qf?from_tab_name=main\&modal_id=7545555798844263721) | [1'18''19](https://www.douyin.com/video/7561766242965589282) | [3'23''94](https://www.bilibili.com/video/BV11ipMzgEQ6?spm_id_from=333.788.player.player_end_recommend_autoplay\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [5'03''94](https://www.douyin.com/video/7550238943002905892) | 21'30''66 |
+| 福娃芙卡 | [55''92](https://www.bilibili.com/video/BV1v5W5zkEjQ/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [1'29''72](https://www.bilibili.com/video/BV1BAWGzGE6Z/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [1'56''82](https://www.bilibili.com/video/BV1YSpszvE3j/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [2'53''17](https://www.bilibili.com/video/BV11MpjzhEGr/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [2'15''26](https://www.bilibili.com/video/BV1yZprzPEu2/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [2'35''49](https://www.bilibili.com/video/BV1o6hhz5Equ/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [1'22''82](https://www.bilibili.com/video/BV1t9pRz5Ejg/?spm_id_from=333.1007.top_right_bar_window_dynamic.content.click\&vd_source=7cf4cab059ea7f93283282c9c6208bcd) | [3'08''95](https://www.bilibili.com/video/BV18yYjzAEUp/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [5'01''97](https://www.bilibili.com/video/BV1AGnVzLEzT/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 21'40''12 |
+| 极了无 | [55''13](https://www.bilibili.com/video/BV1ydpDz4Ev5/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [1'26''68](https://www.bilibili.com/video/BV1c6HCzhEQB/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [1'51''73](https://www.bilibili.com/video/BV19CqsBSEp8/?buvid=XYFB5EFF1DDA2C1CCB4285811FF57FDB3589A\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=tZAbt17WEt4FiUiWpOGUqn8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=9418aca4-62ff-4d7a-91d0-d3887298662a\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1765805366\&unique_k=TdxQj1J\&up_id=626760356) | [2'41''20](https://www.bilibili.com/video/BV13snzzwEgR/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [2'19''51](https://www.bilibili.com/video/BV1X1pnzQESg/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [2'44''75](https://www.bilibili.com/video/BV1taJdzqEy6/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [1'20''06](https://www.bilibili.com/video/BV1FCHCzbEpv/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [4'00''08](https://www.bilibili.com/video/BV1NgsKzMEBT/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [5'08''33](https://www.bilibili.com/video/BV1xByABFE5L/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 22'27''47 |
+| gaming-lunar | [1'04''68](https://www.bilibili.com/video/BV1H8CnBvE5w/?-Arouter=story\&buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=united.player-video-detail.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=163\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=6c1e5c1c-65ff-4fe0-b742-010e36cce61b\&share_source=QQ\&share_tag=s_i\&spmid=main.ugc-video-detail-vertical.0.0\&timestamp=1765183648\&unique_k=OOZsibl\&up_id=3546894571670352) | [1'38''65](https://www.bilibili.com/video/BV1Kd1hBLEp9/?spm_id_from=333.337.search-card.all.click) | [1'59''42](https://www.bilibili.com/video/BV12GvhBEEMf/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=dt.dt.video.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=f28f7776-51f0-46f3-9238-bb8d961da255\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1767091399\&unique_k=ISOTTJr\&up_id=3546894571670352) | [3'29''09](https://www.bilibili.com/video/BV1DC6EBTE9f?-Arouter=story\&buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=main.ugc-video-detail-vertical.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&plat_id=143\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=ca5034a0-dd09-4670-a80e-674852b8d40a\&share_source=QQ\&share_tag=s_i\&spmid=main.ugc-video-detail-verticalspace.0.0\&timestamp=1769595911\&unique_k=9keWpWe\&up_id=3546894571670352) | [2'57''74](https://www.bilibili.com/video/BV1DMxTznEzx/?spm_id_from=333.1387.homepage.video_card.click) | [3'28''43](https://www.bilibili.com/video/BV1DMxTznEzx/?spm_id_from=333.1387.homepage.video_card.click) | 1'38''73 | [4'22''78](https://www.bilibili.com/video/BV1rVmxBxExM/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=main.space-contribution.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=b0b96658-a296-4d97-839d-8273877b33ee\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1765362756\&unique_k=ieIGfOV\&up_id=3546894571670352) | [6'26''81](https://www.bilibili.com/video/BV1nLU3BQECV/?spm_id_from=333.1387.homepage.video_card.click) | 27'06''33 |
+| 白织 | [54''03](https://www.bilibili.com/video/BV1uwxxzMEoX/?spm_id_from=333.1365.list.card_archive.click\&vd_source=bab071ada82f8ebb9f99be72fca7f571) | [1'24''36](https://www.bilibili.com/video/BV1QKqmB5EPK/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=8cc47c84-a8f4-43e4-b8c5-4a24c987e693\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1766306971\&unique_k=ZNMGRlv\&up_id=359122608) |  |  |  | [2'47''13](https://www.bilibili.com/video/BV1MdxnzdECS/?spm_id_from=333.337.search-card.all.click) | [1'16''57](https://www.bilibili.com/video/BV19o4gzMEtw/) | [3'08''90](https://www.bilibili.com/video/BV1q5awzYEjS/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [4'47''69](https://www.bilibili.com/video/BV15eypBeEWM/?spm_id_from=333.337.search-card.all.click) |  |
+| 4\_c\_er | [53''99](https://www.bilibili.com/video/BV1jgaCz7Eg9/?spm_id_from=333.1387.homepage.video_card.click) | [1'27''20](https://www.bilibili.com/video/BV1FnYAzGETV/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [1'47''33](https://www.bilibili.com/video/BV1FQqUBYE6r?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=d5f4e7fd-662c-448f-bee8-7928048b6586\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1766323229\&unique_k=pw0J7BC\&up_id=34752710) |  | [2'20''30](https://www.bilibili.com/video/BV11hxfz4EqR/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [2'36''81](https://www.bilibili.com/video/BV1fX2bBaEqd/?spm_id_from=333.1387.homepage.video_card.click) | [1'16''55](https://www.bilibili.com/video/BV1Zn48zeE4W/?spm_id_from=333.337.search-card.all.click) | [2'57''12](https://www.bilibili.com/video/BV12K2dBUEGv?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=0ba4f6c2-4617-4ca1-ae68-4e6bd23b39ce\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1765062386\&unique_k=kCB525u\&up_id=34752710\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9\&p=2\&spm_id_from=333.788.videopod.sections) | [5'03''28](https://www.bilibili.com/video/BV1owmBBHExd/?spm_id_from=333.1387.homepage.video_card.click) |  |
+| 雌蕊呀 | [57''24](https://www.bilibili.com/video/BV1zMWUzyEy2?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=main.space-contribution.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=e344bed9-263c-499e-a104-c86c50126347\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1764606653\&unique_k=6XH0QU8\&up_id=3546621920938165) | [1'28''14](https://www.bilibili.com/video/BV1TeyZBHEp1/?spm_id_from=333.1387.homepage.video_card.click) | [1'54''59](https://www.bilibili.com/video/BV1U7UkBDEV9/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [2'24''57](https://www.bilibili.com/video/BV1jf42zCEAa/?spm_id_from=333.337.search-card.all.click) | [2'17''80](https://www.bilibili.com/video/BV1arxAzGEFh/?spm_id_from=333.1387.homepage.video_card.click) |  | [1'22''48](https://www.bilibili.com/video/BV1MJ4BzMETm/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [3'07''40](https://www.bilibili.com/video/BV1GqynB9EPs/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [5'17''11](https://www.bilibili.com/video/BV1hMxDzgEgH/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) |  |
+| 1xuan |  |  | [1'58''61](https://www.bilibili.com/video/BV1SUemz9Eod/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [2'03''18](https://www.bilibili.com/video/BV11WsqzZEP7/?spm_id_from=333.337.search-card.all.click) | [2'16''22](https://www.bilibili.com/video/BV1msWcztESn/?spm_id_from=333.788.top_right_bar_window_history.content.click\&vd_source=6d2a5a555187150470bc28325a2d7c05) | [2'44''89](https://www.bilibili.com/video/BV1xnxnzSE8K/?spm_id_from=333.1007.top_right_bar_window_dynamic.content.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [1'19''07](https://www.bilibili.com/video/BV1PNWEzKE59/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) |  | [5'28''05](https://www.bilibili.com/video/BV1mMagzzEQU?spm_id_from=333.788.videopod.sections\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) |  |
+| 天傲花 | [57''43](https://www.bilibili.com/video/BV1z6p4zJEvR?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=main.space-contribution.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=0a843d48-da7d-4333-a19b-65f3e8c5acf1\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1764606704\&unique_k=mCWTZHB\&up_id=422735802) | [1'35''57](https://www.bilibili.com/video/BV1E6YwzzEsN/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [1'56''59](https://www.bilibili.com/video/BV1J8pFzGEvf/?spm_id_from=333.1387.homepage.video_card.click) |  | [2'37''80](https://www.bilibili.com/video/BV1SSJ1zLE65/?spm_id_from=333.1387.homepage.video_card.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [2'38''79](https://www.bilibili.com/video/BV1nyzVBME4e/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB\&from_spmid=tm.recommend.0.0\&is_story_h5=false\&mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D\&p=1\&plat_id=116\&share_from=ugc\&share_medium=android\&share_plat=android\&share_session_id=75eb757a-d4e8-44ea-9b76-e57f7a144739\&share_source=QQ\&share_tag=s_i\&spmid=united.player-video-detail.0.0\&timestamp=1768990978\&unique_k=uvJLhUx\&up_id=422735802) |  | [3'57"64](https://www.bilibili.com/video/BV1r26YBhEWQ/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [5'30''65](https://www.bilibili.com/video/BV1fVCgBiEmh/?spm_id_from=333.337.search-card.all.click) |  |
+
+---
+
+---
+url: /ranking-list/rules.md
+---
+# 新榜单入榜规则
+
+在新榜单的背景下，为了避免各位的成绩出现问题，我们不得不对各位的录制环境提出一些基本规则，还请各位理解！
+
+重要的事情说三遍：
+
+> 请先阅读入榜规则，避免凹出无效成绩！！！！
+>
+> 请先阅读入榜规则，避免凹出无效成绩！！！！
+>
+> 请先阅读入榜规则，避免凹出无效成绩！！！！
+
+另外说明一点：
+
+> 本部分的规则摘录自新榜单中展示的规则，若有更新不及时，请优先参考[此链接](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v?tab=1ts630)中的规则。
+
+## 入榜规则
+
+1. 不得使用风灵月影（全局加速功能重开除外）、加 Buff MOD（例如凤穿花必暴）等修改正常游戏数据的工具进行连战，一但发现永不录用成绩。
+2. 必须使用九禁连战速通专用“数据实时显示MOD”（简称ShowInfo）进行连战（[下载地址](/quick-start/install.html)）。版本号必须 >=2.0-dev.7。
+3. 战斗界面必须展示全部 UI 组件，伤害数字显示必须打开。
+4. 游戏界面不能遮挡正常交战画面及数据显示界面。
+5. 战斗过程中不能进行暂停游戏，切换界面，激活软件等无关操作。
+6. 使用 OBS 进行游戏视频录制，游戏界面配置榜单管理组指定的全键盘键鼠以及手柄映射（手柄选手）。配置教程[点此](/quick-start/obs-recording-setup.html)。
+   * 键盘玩家只需展示键鼠映射
+   * 手柄玩家必须展示手柄映射和键鼠映射（以防止游戏过程中利用键盘快捷键使用外挂工具），连战完成后，利用键盘敲击此次连战暴伤数字并确保此过程被视频纪录（例如暴伤为 57.5%，依次敲击 5、7、5。此行为了确保键盘映射真实有效）。
+7. 通关后必须展示结算界面以及展示配装、泡酒物、根器、全部天赋加点。
+8. JC 技巧视为邪道，会计入特殊榜单。如果 JC 在连战过程中没有起到关键作用（例如更快速攒棍势），可忽略。
+9. PS5 玩家只需连战结束后按 HOME 键展示 PS5 系统界面即可（战斗界面手柄图标不能完全保证游戏画面来自 PS5 主机）。
+
+以下为建议而非强制：
+
+10. 画面上需要显示游戏帧数（任意显示帧数工具均可）。
+11. 尽量选择低画质，确保画面流畅不掉帧。
+12. 关闭帧生成，设置 120 帧率上限。
+13. 建议保留原版录制视频。以防需要后续盯帧分析。
+
+## 特别说明
+
+1. 为鼓励参与，每位玩家只取一个最佳成绩入榜。
+2. 为降低管理组搜寻成绩工作量，只收录发布于 B 站、抖音的连战成绩。对成绩不满意不想发 B 站抖音的可私信视频给榜单管理组（QQ：623969184）审核。
+3. 特殊情况可以酌情放宽入榜条件，例如 ShowInfo MOD 测试期间版本号 <1.0 的成绩/特殊原因未能及时更新 ShowInfo 版本、忘记（或闪退等意外情况）展示配装、天赋点等。每人放宽入榜条件次数有限，最终解释权归榜单管理组所有。
+4. 现有规则的防作弊机制无法做到100%完美，遇到特殊情况，成绩是否有效决定最终解释权归榜单管理组所有。
+5. 其他问题请加入 QQ 群 1037297581 进行讨论。
+
+祝各位速通天命人坐牢愉快！！！
+
+---
+
+---
+url: /ranking-list/new-list-poster.md
+---
+# 新榜单海报
+
+## 2025 年 9 月
+
+原动态地址：[黑神话悟空九禁连战速通九月月榜](https://www.bilibili.com/opus/1121846333922082818)。
+
+黑神话悟空九禁连战速通首个月榜（九月）发布！88 个席位，34 位天命人，15 次刷新纪录！每个成绩，都是一次次出棍、一帧帧闪避于千万次轮回的淬炼。感谢 [@杰哥就是癌情](https://space.bilibili.com/251139311) 倾力制作的精美海报，感谢每一位速通天命人的努力和大家对实时数据显示 MOD 的支持！
+
+### 三虎
+
+### 四僧
+
+### 四渎龙神
+
+### 六健将
+
+### 蛰虫始振
+
+### 万样骁凶
+
+### 心猿
+
+### 梅山故人
+
+### 六根一性
+
+## 2025 年 10 月
+
+原动态地址：[黑神话悟空九禁连战速通十月月榜](https://www.bilibili.com/opus/1133843719502430208)。
+
+感谢 [@杰哥就是癌情](https://space.bilibili.com/251139311) ​倾力制作的精美海报，也感谢每一位速通天命人的努力和大家对实时数据显示 MOD 的支持！下一次月榜连战一周年纪念见！（12 月 10 日）
+
+### 三虎
+
+### 四僧
+
+### 四渎龙神
+
+### 六健将
+
+### 蛰虫始振
+
+### 万样骁凶
+
+### 心猿
+
+### 梅山故人
+
+### 六根一性
+
+### 总榜
+
+## 2025 年 11 月
+
+原动态地址：[黑神话悟空九禁连战速通十一月月榜](https://www.bilibili.com/opus/1147034590529978369)。
+
+本月亮点：九禁第一人 [@蚌-](https://space.bilibili.com/1041159056) ​回归！感谢 [@杰哥就是癌情](https://space.bilibili.com/251139311) ​倾力制作的精美海报。也感谢每一位速通天命人的努力和大家对实时数据显示 MOD 的支持！12 月 10 日是连战一周年，目前一周年比赛活动筹备中！见置顶动态！
+
+### 三虎
+
+### 四僧
+
+### 四渎龙神
+
+### 六健将
+
+### 蛰虫始振
+
+### 万样骁凶
+
+### 心猿
+
+### 梅山故人
+
+### 六根一性
+
+### 总榜
+
+---
+
+---
+url: /ranking-list/old-list.md
+---
+# 旧榜单
+
+本页面展示的榜单完全来源于原腾讯文档中的内容。由于已停更，仅展示前十名，[原文档](https://docs.qq.com/sheet/DTXNnc09DRGZWVGxt)。
+
+## 单项
+
+### 三虎
+
+| 排名  | 选手  | 成绩  | 日期  |
+| --- | --- | --- | --- |
+| 1 | 尖奕 | [50''86](https://www.bilibili.com/video/BV18oKJzqEN2/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/6/25 |
+| 2 | 尖奕 | 50''99 | 2025/8/12 |
+| 3 | 尖奕 | 51''67 | 2025/7/23 |
+| 4 | 木木 | [51''92](https://www.bilibili.com/video/BV1YdV5zEEfc) | 2025/5/2 |
+| 5 | 尖奕 | 51''96 | 2025/7/21 |
+| 6 | 尖奕 | 52''11 |  |
+| 7 | 尖奕 | 52''27 |  |
+| 8 | 尖奕 | 52''28 |  |
+| 9 | 尖奕 | 52''30 | 2025/8/1 |
+| 10 | 宋笛 | 52''33 | 2025/5/1 |
+
+### 四僧
+
+| 排名  | 选手  | 成绩  | 日期  |
+| --- | --- | --- | --- |
+| 1 | 薛定谔 | [1'19''71](https://www.bilibili.com/video/BV1CDu8zAEyF/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/7/16 |
+| 2 | 薛定谔 | [1'23''38](https://www.bilibili.com/video/BV1Yr3jzUEy9/?spm_id_from=333.1387.homepage.video_card.click) | 2025/7/4 |
+| 3 | 4\_c\_er | 1'23''72 | 2025/4/7 |
+| 4 | 4\_c\_er | [1'23''82](https://www.bilibili.com/video/BV1nmRfY7Ez3/) | 2025/4/6 |
+| 5 | 4\_c\_er | 1'24''16 | 2025/4/9 |
+| 6 | 4\_c\_er | 1'24''50 | 2025/4/6 |
+| 7 | 蚌 | [1'24''93](https://www.bilibili.com/video/BV17zXiYqEY2/?spm_id_from=333.1387.upload.video_card.click) | 2025/3/21 |
+| 8 | 4\_c\_er | 1'25''02 | 2025/4/6 |
+| 9 | 薛定谔 | 1'27''05 | 2025/7/4 |
+| 10 | 蚌 | 1'27''63 | 2025/3/21 |
+
+### 四渎龙神
+
+| 排名  | 选手  | 成绩  | 日期  |
+| --- | --- | --- | --- |
+| 1 | 薛定谔 | [1'39''07](https://www.bilibili.com/video/BV1xStLzGEHH/) | 2025/8/5 |
+| 2 | 宋笛 | 1'44''64 | 2025/8/3 |
+| 3 | 薛定谔 | [1'45''87](https://www.bilibili.com/video/BV1KVG3z4E9T/?spm_id_from=333.337.search-card.all.click) | 2025/7/10 |
+| 4 | 薛定谔 | 1'47''34 | 2025/8/1 |
+| 5 | 宋笛 | [1'47''53](https://www.bilibili.com/video/BV1B53SzjE9z/) | 2025/7/5 |
+| 6 | 薛定谔 | 1'48''17 | 2025/8/24 |
+| 7 | x | [1'48''79](https://www.douyin.com/user/MS4wLjABAAAA_IzqLJ-5JvPcSg975P6OU99VKQEhcBhcJiOAlp111ho9ZyNq3pIH6oWn-_v7C72F?from_tab_name=main\&modal_id=7522338184052329788) | 2025/7/2 |
+| 8 | 薛定谔 | 1'49''07 | 2025/7/2 |
+| 9 | 薛定谔 | [1'49''31](https://www.bilibili.com/video/BV188KrzvEex/?spm_id_from=333.1387.homepage.video_card.click) | 2025/6/28 |
+| 10 | 山月为关 | [1'49''67](https://www.bilibili.com/video/BV1ND57zVEP6/) | 2025/4/18 |
+
+### 六健将
+
+| 排名  | 选手  | 成绩  | 日期  |
+| --- | --- | --- | --- |
+| 1 | 宋笛 | [2'25''40](https://www.bilibili.com/video/BV1BY8FzREmQ/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/7/23 |
+| 2 | 蚌 | [2'30''85](https://www.bilibili.com/video/BV14wjnz8ESH/?spm_id_from=333.1387.homepage.video_card.click) | 2025/5/23 |
+| 3 | 宋笛 | 2'39''59 | 2025/7/21 |
+| 4 | 宋笛 | 2'41''49 | 2025/7/20 |
+| 5 | 宋笛 | 2'43''48 | 2025/7/22 |
+| 6 | 宋笛 | 2'43''64 | 2025/7/20 |
+| 7 | xuan | [2'45''68](https://www.bilibili.com/video/BV1BygtzpEMe/?spm_id_from=333.337.search-card.all.click) | 2025/7/20 |
+| 8 | 宋笛 | 2'47''26 | 2025/7/18 |
+| 9 | 宋笛 | 2'47''64 | 2025/7/19 |
+| 10 | 宋笛 | 2'49''47 | 2025/5/7 |
+
+### 蛰虫始振
+
+| 排名  | 选手  | 成绩  | 日期  |
+| --- | --- | --- | --- |
+| 1 | 蚌 | [2'17''03](https://www.bilibili.com/video/BV1HZj3zcE1w/?spm_id_from=333.337.search-card.all.click) | 2025/5/25 |
+| 2 | 山月为关 | 2'17''73 | 2025/8/6 |
+| 3 | 山月为关 | 2'19''06 | 2025/8/11 |
+| 4 | xuan | [2'19''09](https://www.bilibili.com/video/BV1QRG7zQE2n/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/7/8 |
+| 5 | 山月为关 | 2'19''64 | 2025/8/11 |
+| 6 | 山月为关 | 2'19''91 | 2025/8/10 |
+| 7 | 维尔特陈伯伦 | [2'20''27](https://www.bilibili.com/video/BV1WFu2zGEJY/) | 2025/7/18 |
+| 8 | 山月为关 | 2'20''80 | 2025/8/6 |
+| 9 | 山月为关 | [2'21''80](https://www.bilibili.com/video/BV14Sj3ziEVQ/?spm_id_from=333.1387.homepage.video_card.click) | 2025/5/25 |
+| 10 | 山月为关 | 2'21''99 | 2025/8/10 |
+
+### 万样骁凶
+
+| 排名  | 选手  | 成绩  | 日期  |
+| --- | --- | --- | --- |
+| 1 | 土豆 | [2'37''43](https://www.bilibili.com/video/BV1kAGgz5EEY/?spm_id_from=333.1387.homepage.video_card.click) | 2025/7/10 |
+| 2 | 福娃 | 2'39''01 | 2025/8/14 |
+| 3 | 福娃 | 2'39''89 | 2025/8/11 |
+| 4 | 土豆 | [2'40''78](https://www.bilibili.com/video/BV16y3szUEoa/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2025/7/2 |
+| 5 | 福娃 | 2'41''20 | 2025/8/4 |
+| 6 | 福娃 | 2'41''40 | 2025/8/10 |
+| 7 | 辣舞7 | 2'41''57 | 2025/8/14 |
+| 8 | 福娃 | 2'42''15 | 2025/8/11 |
+| 9 | 福娃 | 2'42''43 | 2025/8/12 |
+| 10 | 土豆 | 2'42''80 | 2025/8/5 |
+
+### 心猿
+
+| 排名  | 选手  | 成绩  | 日期  |
+| --- | --- | --- | --- |
+| 1 | 杰哥 | 1'14''69 | 2025/7/18 |
+| 2 | 薛定谔 | [1'15''18](https://www.bilibili.com/video/BV157TezsECJ/?spm_id_from=333.337.search-card.all.click) | 2025/6/9 |
+| 3 | 杰哥 | 1'15''23 | 2025/6/18 |
+| 4 | 杰哥 | 1'15''47 | 2025/7/14 |
+| 5 | 杰哥 | 1'15''56 | 2025/7/10 |
+| 6 | 杰哥 | 1'15''58 | 2025/6/28 |
+| 7 | 杰哥 | 1'15''83 | 2025/7/9 |
+| 8 | 杰哥 | [1'15''90](https://www.bilibili.com/video/BV1irTtzCEm6/?spm_id_from=333.337.search-card.all.click) | 2025/6/5 |
+| 9 | 杰哥 | 1'15''92 |  |
+| 10 | 薛定谔 | [1'16''03](https://www.bilibili.com/video/BV1hW7CzqEHR/?spm_id_from=333.337.search-card.all.click) | 2025/6/2 |
+
+### 梅山故人
+
+| 排名  | 选手  | 成绩  | 日期  |
+| --- | --- | --- | --- |
+| 1 | 山月为关 | [3'11''06](https://www.bilibili.com/video/BV1Znu8zXEXt/?spm_id_from=333.337.search-card.all.click) | 2025/7/16 |
+| 2 | 蚌 | 3'11''40 | 2025/7/16 |
+| 3 | 蚌 | [3'13''86](https://www.bilibili.com/video/BV1M47Xz4EQY/) | 2025/5/13 |
+| 4 | x | [3'15''24](https://www.douyin.com/user/MS4wLjABAAAA_IzqLJ-5JvPcSg975P6OU99VKQEhcBhcJiOAlp111ho9ZyNq3pIH6oWn-_v7C72F?from_tab_name=main\&modal_id=7536974871344041216) | 2025/8/11 |
+| 5 | 蚌 | 3'15''82 | 2025/6/7 |
+| 6 | 蚌 | 3'16''06 | 2025/7/6 |
+| 7 | 蚌 | [3'16''25](https://www.bilibili.com/video/BV1oyVWz2E5C/) | 2025/5/7 |
+| 8 | 白织 | [3'17''78](https://www.bilibili.com/video/BV1h2t9zZE2U/?spm_id_from=333.337.search-card.all.click) | 2025/8/12 |
+| 9 | 蚌 | 3'20''27 | 2025/7/6 |
+| 10 | 蚌 | [3'20''74](https://www.bilibili.com/video/BV1k1LJz7ECM/) | 2025/4/25 |
+
+### 六根一性
+
+| 排名  | 选手  | 成绩  | 日期  |
+| --- | --- | --- | --- |
+| 1 | 蚌 | [4'57''66](https://www.bilibili.com/video/BV1UjVYzoECk/?spm_id_from=333.1387.upload.video_card.click) | 2025/5/8 |
+| 2 | 白嫖 | [4'58''88](https://www.bilibili.com/video/BV1mu7JzfEdy/?spm_id_from=333.337.search-card.all.click) | 2025/5/30 |
+| 3 | 白嫖 | 4'59''98 |  |
+| 4 | 白嫖 | 5'01''04 |  |
+| 5 | 蚌 | [5'01''79](https://www.bilibili.com/video/BV1jWV3zCEB8/?spm_id_from=333.1387.homepage.video_card.click) | 2025/5/2 |
+| 6 | 白嫖 | [5'01''90](https://www.bilibili.com/opus/1071492025697697795?spm_id_from=333.1387.0.0) | 2025/5/27 |
+| 7 | 白嫖 | 5'02''33 |  |
+| 8 | 山月为关 | [5'03''05](https://www.bilibili.com/video/BV16PNhzUEqk/?spm_id_from=333.1387.homepage.video_card.click) | 2025/6/17 |
+| 9 | luyi | [5'03''35](https://www.bilibili.com/opus/1106015539725074465) | 2025/8/28 |
+| 10 | 白嫖 | 5'03''44 |  |
+
+## 总榜
+
+| 选手  | 三虎  | 四僧  | 四渎龙神 | 六健将 | 蛰虫始振 | 万样骁凶 | 心猿  | 梅山故人 | 六根一性 | 总成绩 |
+| --- | --- | --- | ---- | --- | ---- | ---- | --- | ---- | ---- | --- |
+| 蚌 | 53''17 | [1'24''93](https://www.bilibili.com/video/BV17zXiYqEY2/?spm_id_from=333.1387.upload.video_card.click) | 1'55''09 | [2'30''85](https://www.bilibili.com/video/BV14wjnz8ESH/?spm_id_from=333.1387.homepage.video_card.click) | [2'17''03](https://www.bilibili.com/video/BV1HZj3zcE1w/?spm_id_from=333.337.search-card.all.click) | [2'45''33](https://www.bilibili.com/video/BV1SjL3zNEM3/?spm_id_from=333.1387.upload.video_card.click) | [1'17''19](https://www.bilibili.com/video/BV1qT7rz6EsV/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 3'11''40 | [4'57''66](https://www.bilibili.com/video/BV1UjVYzoECk/?spm_id_from=333.1387.upload.video_card.click) | 21'12''65 |
+| 山月为关 | [54''00](https://www.bilibili.com/video/BV1FZ8AzKEGE/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | [1'27''68](https://www.bilibili.com/video/BV1dzQzYgE2t/) | [1'49''67](https://www.bilibili.com/video/BV1ND57zVEP6/) | [2'51''26](https://www.bilibili.com/video/BV1FZ8AzKEGE/?spm_id_from=333.337.search-card.all.click\&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9) | 2'17''73 | 2'51''68 | [1'21''75](https://www.bilibili.com/video/BV1kCM6z9E5f/?spm_id_from=333.337.search-card.all.click) | [3'11''06](https://www.bilibili.com/video/BV1Znu8zXEXt/?spm_id_from=333.337.search-card.all.click) | [5'03''05](https://www.bilibili.com/video/BV16PNhzUEqk/?spm_id_from=333.1387.homepage.video_card.click) | 21'47''88 |
+| 馒头 | [53''96](https://www.douyin.com/user/MS4wLjABAAAAJWMgIlFFBb3ivfHZIbmh2V7AjrGLub4jJb7wU77gNE7iLK1hKUSPyPNsGki9n2qf?from_tab_name=main\&modal_id=7525608247622569243) | [1'28''00](https://www.douyin.com/user/MS4wLjABAAAAJWMgIlFFBb3ivfHZIbmh2V7AjrGLub4jJb7wU77gNE7iLK1hKUSPyPNsGki9n2qf?from_tab_name=main\&modal_id=7497428885454310667\&vid=7503469241414421810) | [1'49''68](https://www.douyin.com/user/MS4wLjABAAAAJWMgIlFFBb3ivfHZIbmh2V7AjrGLub4jJb7wU77gNE7iLK1hKUSPyPNsGki9n2qf?from_tab_name=main\&modal_id=7541274364960935219) | [3'04''62](https://www.douyin.com/user/MS4wLjABAAAAJWMgIlFFBb3ivfHZIbmh2V7AjrGLub4jJb7wU77gNE7iLK1hKUSPyPNsGki9n2qf?from_tab_name=main\&modal_id=7508149719000943929) | [2'23''88](https://www.douyin.com/user/MS4wLjABAAAAJWMgIlFFBb3ivfHZIbmh2V7AjrGLub4jJb7wU77gNE7iLK1hKUSPyPNsGki9n2qf?from_tab_name=main\&modal_id=7509983590584487177) | [2'51''33](https://www.douyin.com/user/MS4wLjABAAAAJWMgIlFFBb3ivfHZIbmh2V7AjrGLub4jJb7wU77gNE7iLK1hKUSPyPNsGki9n2qf?from_tab_name=live\&modal_id=7540831981391613234) | [1'20''09](https://www.douyin.com/user/MS4wLjABAAAAJWMgIlFFBb3ivfHZIbmh2V7AjrGLub4jJb7wU77gNE7iLK1hKUSPyPNsGki9n2qf?from_tab_name=main\&modal_id=7538408803759394091\&vid=7503469241414421810) | [3'31''37](https://www.douyin.com/user/MS4wLjABAAAAJWMgIlFFBb3ivfHZIbmh2V7AjrGLub4jJb7wU77gNE7iLK1hKUSPyPNsGki9n2qf?from_tab_name=main\&modal_id=7540065313862307082\&vid=7503469241414421810) | 5'13''82 | 22'36''75 |
+| 阿班 | [56''49](https://www.douyin.com/user/MS4wLjABAAAAY8UtPlGRA1s6B2KmeMoAfefaD2YQHWBaRrxGO4JaezXs5uU1tvxZkuKnnktnrUF2?from_tab_name=main\&modal_id=7503942335609212212\&vid=7517149136764816651) | [1'28''36](https://www.douyin.com/user/MS4wLjABAAAAY8UtPlGRA1s6B2KmeMoAfefaD2YQHWBaRrxGO4JaezXs5uU1tvxZkuKnnktnrUF2?from_tab_name=main\&modal_id=7525816212123684096\&vid=7517149136764816651) | [1'59''03](https://www.douyin.com/user/MS4wLjABAAAAY8UtPlGRA1s6B2KmeMoAfefaD2YQHWBaRrxGO4JaezXs5uU1tvxZkuKnnktnrUF2?from_tab_name=main\&modal_id=7519460132141468967\&vid=7517149136764816651) | [2'55''02](https://www.douyin.com/user/MS4wLjABAAAAY8UtPlGRA1s6B2KmeMoAfefaD2YQHWBaRrxGO4JaezXs5uU1tvxZkuKnnktnrUF2?from_tab_name=main\&modal_id=7538466275014544690\&vid=7517149136764816651) | [2'39''25](https://www.douyin.com/user/MS4wLjABAAAAY8UtPlGRA1s6B2KmeMoAfefaD2YQHWBaRrxGO4JaezXs5uU1tvxZkuKnnktnrUF2?from_tab_name=main\&modal_id=7526890786592427304\&vid=7517149136764816651) | [2'53''92](https://www.douyin.com/user/MS4wLjABAAAAY8UtPlGRA1s6B2KmeMoAfefaD2YQHWBaRrxGO4JaezXs5uU1tvxZkuKnnktnrUF2?from_tab_name=main\&modal_id=7517149136764816651\&vid=7517149136764816651) | [1'20''20](https://www.douyin.com/user/MS4wLjABAAAAY8UtPlGRA1s6B2KmeMoAfefaD2YQHWBaRrxGO4JaezXs5uU1tvxZkuKnnktnrUF2?from_tab_name=main\&modal_id=7542112716148722953\&vid=7517149136764816651) | [3'53''46](https://www.douyin.com/user/MS4wLjABAAAAY8UtPlGRA1s6B2KmeMoAfefaD2YQHWBaRrxGO4JaezXs5uU1tvxZkuKnnktnrUF2?from_tab_name=main\&modal_id=7540888034729839912\&vid=7517149136764816651) | [5'16''64](https://www.douyin.com/user/MS4wLjABAAAAY8UtPlGRA1s6B2KmeMoAfefaD2YQHWBaRrxGO4JaezXs5uU1tvxZkuKnnktnrUF2?from_tab_name=main\&modal_id=7541747314612784394\&vid=7517149136764816651) | 23'22''37 |
+| 可惜加油 | [59''97](https://www.bilibili.com/video/BV1etfhYwEie/?spm_id_from=333.1387.upload.video_card.click) | [1'34''60](https://www.douyin.com/user/MS4wLjABAAAAPpK8noleSBtrK6wv0OjxLwlqU9ouCCaqUX40AyDrNts?from_tab_name=main\&modal_id=7458888576210668863) | [2'04''69](https://www.bilibili.com/video/BV1uNNQeFEA8/?spm_id_from=333.1387.upload.video_card.click) | [3'18''39](https://www.bilibili.com/video/BV1sKc1e8E6J/?spm_id_from=333.1387.upload.video_card.click) | [2'35''94](https://www.douyin.com/user/MS4wLjABAAAAPpK8noleSBtrK6wv0OjxLwlqU9ouCCaqUX40AyDrNts?from_tab_name=main\&modal_id=7458890689707822355) | 3'16''? | [1'30''29](https://www.bilibili.com/video/BV1qifDYtE2f/?spm_id_from=333.1387.upload.video_card.click) | [4'19''51](https://www.bilibili.com/video/BV1AzffYtEGH/?spm_id_from=333.1387.upload.video_card.click\&vd_source=7cf4cab059ea7f93283282c9c6208bcd) | [5'24''37](https://www.douyin.com/user/MS4wLjABAAAAPpK8noleSBtrK6wv0OjxLwlqU9ouCCaqUX40AyDrNts?from_tab_name=main\&modal_id=7479171296513805594) | 25'03''? |
+| 白嫖 | 57''05 | 1'34''45 | 2'01''59 | 3'48''66 | [2'30''97](https://www.bilibili.com/video/BV1daEWzWEeA/?spm_id_from=333.1387.homepage.video_card.click) | [2'59''52](https://www.bilibili.com/video/BV11YEwzVE4x/?spm_id_from=333.1387.homepage.video_card.click) | 1'35''82 | 7'12''24 | [4'58''88](https://www.bilibili.com/video/BV1mu7JzfEdy/?spm_id_from=333.337.search-card.all.click) | 27'42''20 |
+
+---
+
+---
+url: /guide/changelog.md
+---
+# 更新日志
+
+待补。
+
+---
+
+---
+url: /quick-start/rollback.md
+---
+# 游戏版本回退教程
+
+2025 年 10 月 16 日，黑猴迎来了一次更新，从 1.0.16.18901 更新至 1.0.20.22023。
+
+2026 年 1 月 14 日，黑猴又迎来了一次更新，从 1.0.20.22023 更新至 1.0.21.23831。
+
+这两次更新的原本目的是针对游戏进行一次优化，修改了一些底层细节，使得游戏在性能和质量方面运行的更好。但是针对目前的反响来看，PS 可能的确得到了提升。但是 PC 方面，JC 取消，秀杀赛道收到重创，连战 BOSS 出招改变，例如大头、石猿、黄眉、蜘蛛、青龙等，九禁速通圈受到毁灭性的打击。
+
+为了解决这一现状，本人参考 [Black Myth: Wukong 1.0.20.22023 Patch Notes](https://steamdb.info/patchnotes/20315824/) 和 [Black Myth: Wukong 1.0.21.23831 Patch Notes](https://steamdb.info/patchnotes/21393610/)，比对了更新前后的修改文件，制作了版本回退补丁。同时[尖奕](https://space.bilibili.com/346448060)大佬根据回退需求制作了批处理脚本，可以实现 1.0.16.18901 到 1.0.20.22023 或 1.0.21.23831 版本的一键切换。
+
+> 注意：本补丁只适用于 Steam 平台，Wegame、Epic 平台由于找不到更新前后的修改文件，没办法制作补丁，PS 平台自求多福吧。
+
+## 下载链接
+
+目前没有比较好的云盘存储和直链下载方式，只能放到一些现有云盘上。
+
+黑神话悟空 1.0.20.22023 和 1.0.21.23831 回退至 1.0.16.18901 补丁下载（对，你没听错，这两个版本回退至 1.0.16.18901 是同一个补丁文件）：
+
+1. 百度网盘：<https://pan.baidu.com/s/1ZyqRA8lum9DaEE71580eRA?pwd=t6ec>
+2. 夸克网盘：<https://pan.quark.cn/s/13181f5802e2>
+3. 天翼云盘：<https://cloud.189.cn/web/share?code=RZ32eaMVBnIz%EF%BC%88%E8%AE%BF%E9%97%AE%E7%A0%81%EF%BC%9A3uov%EF%BC%89>
+
+> 有百度网盘或夸克网盘会员的富哥用你们的会员就行。个人目前觉得天翼云盘还可以，下载不限速，只跟自己的带宽有关系。
+
+尖奕大佬制作的批处理脚本：
+
+1. [v0.5](https://lzx0626.lanzouq.com/iBjoc3gpc35a)：适用于 1.0.16.18901 和 1.0.20.22023 之间的切换。
+2. [v0.5.1](https://lzx0626.lanzouq.com/iT7vg3gpc3di)：适用于 1.0.16.18901 和 1.0.21.23831 之间的切换。
+
+## 使用教程
+
+本来想写一个文字教程的，但是[小布偶-Ragdoll](https://space.bilibili.com/436647221/)大佬做了一个视频，这里就暂时不写了。都看视频去！
+
+视频链接：<https://www.bilibili.com/video/BV1BX6YB4EbB/>
+
+## 注意事项
+
+需要特别注意的是，在进行上述的操作之前，请记得将你自己旧版本的存档进行备份。因为新版本的存档无法向下兼容到旧版本！
+
+重要的事情说三遍：
+
+> 请记得备份旧版本存档！
+>
+> 请记得备份旧版本存档！
+>
+> 请记得备份旧版本存档！
+
+若实在没有旧版存档，可以使用[尖奕](https://space.bilibili.com/346448060)大佬制作的版本切换工具，详情见[黑神话悟空存档版本切换工具](/tools/b1-archive-version-switch.html)。
+
+---
+
+---
+url: /quick-start/release.md
+---
+# 版本发布日志
+
+> 以下所有资源的链接均为蓝奏云盘的分享链接。若想直链下载，可以科学上网去我的 Github 仓库的 [Release](https://github.com/B1-9Ban-BossRush/b1-showinfo-docs/releases) 进行下载。别问为什么没有 Gitee，这玩意狗都不用。
+
+## ShowInfo
+
+本 MOD 的压缩包中整合了 MOD 加载器 CSharpLoader 和 MOD 本体。
+
+为方便查找和下载，这里的版本管理采用时间线倒序，将最新的版本放在前面，后续更新稳定 stable 版本以后会单独说明。
+
+### v2.0-LZ-1stAnniv-dev.10.1
+
+为迎合一周年连战活动制作的特殊版本。
+
+下载链接如下：[v2.0-LZ-1stAnniv-dev.10.1](https://lzx0626.lanzouq.com/id6ld3gpau0f)
+
+发布日志如下：
+
+1. 整合了云轩大佬的 BossRush V4，解压放到相应目录即可同时使用自定义连战和关键数据显示功能。
+2. 由于 BossRush V4 和风灵月影矛盾，因此实现了部分连战中经常需要用到得当功能作为风灵平替：
+   * 游戏中按下 F5 可以加速，再次按下恢复 1 倍速，由于不能像风灵月影那样有提示音（作者时间有限），因此在连战进入三二一倒数的时候会强制恢复 1 倍速。
+   * Ctrl+F1 可以设置攻击力，指定数值请编辑 \_atkBase\_xxx 文件名；
+   * Ctrl+F2 设置无限生命，\_infHP\_1 为开启，\_infHP\_0 为关闭；
+   * Ctrl+F10 设置最大血量用于模拟半血出发夜叉头，对应文件 \_maxHP\_xxx；
+   * Ctrl+F11 为设置棍势，对应文件 \_gunshi\_xxx；
+   * Ctrl+F12 为设置四灾寒、火、毒、雷抗性，对应文件 \_szXXX\_xxx。
+
+> 重要事项: 除棍势为一次性设置以外，其他都为常驻，需要编辑数值后再按下快捷键才可覆盖，其中 1\_infHP\_ 用 0,1 表示关闭和开启，其余都用 -1 表示关闭。每次修改完文件名后都需要按下对应快捷键保证生效。需要注意的是修改完成后还需刷新猴子以完成应用，如重新去打连战，或者去个新土地庙。
+
+3. 为了连战周年纪念赛修改了自定义连战中部分 boss 的血量，其中纪念赛老 boss 组（不净、毒蛙、寅虎、黑手道人、石猿、法相、虎先锋）血量和官方连战保持一致，新 Boss 组（黑风、石先锋、莲眼、石蛙、赤尻马猴、璧水金晶兽）血量全部改为接近入圣难度的复战 boss 血量。
+
+对应文件如下：
+
+### v2.0-dev.x
+
+在 v1.1-dev.x 版本基础上，增加了如下功能：
+
+1. 新的 BOSS 血量实现，提升效率降低资源使用，全部复战、主线血条均可显示数值。
+
+v2.0-dev.x 已经实现基础数据展示、血量显示、计时器、结算页显示细节，之后预计不会做新功能了，只会修 BUG 和闪退，等到没啥问题就直接出 v2.0 稳定版。
+
+下载链接如下：
+
+* [v2.0-dev.8](https://lzx0626.lanzouq.com/iSpIl3bbi5mb)：结算页恢复老版本的实现方法以改善老版本闪退、卡顿、死机等问题（新版本无法正常显示结算页，建议新版继续用 dev.7）。同时计时器实现方式简化以降低闪退概率。
+
+* [v2.0-dev.7](https://lzx0626.lanzouq.com/it06z38tuvhe)
+
+* [v2.0-dev.6](https://lzx0626.lanzouq.com/ieTUg37qpene)
+
+* [v2.0-dev.5](https://lzx0626.lanzouq.com/impJV37f68ni)
+
+* [v2.0-dev.2](https://lzx0626.lanzouq.com/i6hXI373yc4j)
+
+* [v2.0-dev.1](https://lzx0626.lanzouq.com/iPzqX372nxba)
+
+### v1.1-dev.x
+
+在 v1.0 版本基础上，增加了如下功能：
+
+1. 增加了计时器，可以看到截止目前和每个 BOSS 的用时。
+2. 增加了 BOSS 的血量显示。
+3. 增加了击败每个 BOSS 的爆伤和截至目前的爆伤。
+4. 在结算界面增加显示了耗时和爆伤明细。
+5. 更换官方字体，更加美观。
+6. 增加了法力、气力相关数据。
+7. 兼容主线速通需求。
+
+下载链接如下：
+
+* [v1.1-dev.12](https://lzx0626.lanzouq.com/iH1s736y3zeb)：第一，修复三二一出战不显示计时器的 BUG。第二，尝试降低闪退率。
+
+* [v1.1-dev.11](https://lzx0626.lanzouq.com/ipOen36opu6f)：第一，尝试降低闪退率。第二，修改文字间隔。
+
+* [v1.1-dev.10](https://lzx0626.lanzouq.com/irULC36lmukd)：第一，改了代码结构，尝试降低闪退率。第二，更换官方字体，更加美观。第三，增加了法力、气力相关数据。第四，兼容主线速通需求。
+
+* [v1.1-dev.9](https://lzx0626.lanzouq.com/iHTbl36adycj)：连战成功、连战失败、试演成功、失败菜单界面都能显示耗时和暴伤明细。同时修改计时器 bug。
+
+* [v1.1-dev.8](https://lzx0626.lanzouq.com/ilvNF368xjrc)：增加了击败每个 BOSS 的爆伤和截至目前的爆伤。
+
+* [v1.1-dev.7](https://lzx0626.lanzouq.com/iCVYt363uxzg)
+
+* [v1.1-dev.6](https://lzx0626.lanzouq.com/i2gux363uxwd)：修改计时器的 bug，增加了 BOSS 的血量显示。
+
+* [v1.1-dev.5](https://lzx0626.lanzouq.com/i3ZcM35xl6wb)：修复重新挑战不清空计时历史的问题。
+
+* [v1.1-dev.4](https://lzx0626.lanzouq.com/iOdJ535vqdva)：增加了每个 BOSS 的用时。
+
+* [v1.1-dev.3](https://lzx0626.lanzouq.com/iTV1i35ugrjg)：优化了一下计时器，倒数 3 2 1 的时候会显示。
+
+* [v1.1-dev.2](https://lzx0626.lanzouq.com/iiQhE35s2adc)
+
+### v1.0（正式版本）
+
+最终发布的正式版本 v1.0。同时也伴随着新榜单规则的制定完善和新榜单记录的开始。
+
+下载链接：[v1.0](https://lzx0626.lanzouq.com/iWkYQ34uuhsd)
+
+### v0.1-dev.x
+
+在 v0.0 版本基础上，优化修改了游戏崩溃的问题，为了避免版本冗杂，因此放在一个 release 中，部分版本的特殊改动会具体说明。
+
+下载链接如下：
+
+* [v0.1-dev.8](https://lzx0626.lanzouq.com/il7zW34rylmh)
+
+* [v0.1-dev.7](https://lzx0626.lanzouq.com/io07d34o37kh)：目前测试来看，这个版本稳定的一比，本人鏖战 4 小时 15 分钟，最终体力不支败下阵来。
+
+* [v0.1-dev.6](https://lzx0626.lanzouq.com/iAUEw34o37he)
+
+* [v0.1-dev.5](https://lzx0626.lanzouq.com/iomaR34o37fc)：宋笛大佬为了针对性地查找 Bug，增加了一个终端输出信息。
+
+* [v0.1-dev.4](https://lzx0626.lanzouq.com/i4aMM34o37eb)
+
+* [v0.1-dev.3](https://lzx0626.lanzouq.com/ikIV834o37da)
+
+* [v0.1-dev.2](https://lzx0626.lanzouq.com/iVghs34o37bi)
+
+* [v0.1-dev.1](https://lzx0626.lanzouq.com/i3TyW34o377e)
+
+* [v0.1-dev](https://lzx0626.lanzouq.com/i1PU334o37li)
+
+### v0.0
+
+最初发布的测试版本。
+
+下载链接：[v0.0](https://lzx0626.lanzouq.com/ihh1S34o375c)
+
+## CSharpLoader
+
+黑神话悟空 MOD 的 CSharp 加载器，原项目地址：[B1CSharpLoader](https://github.com/czastack/B1CSharpLoader)。
+
+---
+
+---
+url: /others/gallery.md
+---
+# 相册
+
+记录游戏过程中的一些珍贵瞬间。
+
+## 刘易斯时刻
+
+刘易斯即留一丝的谐音，指速通过程中剩一丝血，绝望的一笔的时刻。
+
+> 作者声明：以下的内容可能会引人不适，请注意分辨后食用。😐😐😐
+
+---
+
+---
+url: /guide.md
+---
+# 简介
+
+## 前置背景
+
+本人是一名黑神话悟空连战九禁速通爱好者。但鉴于 2025 年 8 月中旬左右，九禁连战各种离谱成绩出现，榜单管理者宋笛大佬正在研究如何开发一个永久显示实时暴击率到战斗界面的 mod，以杜绝使用风灵月影和给招式加暴击率 buff 的 mod 打成绩的情况，净化九禁速通环境。历经千辛万苦，宋笛大佬成功做出了测试版本，本网站是对其发包的版本归档以及一些相关文档。
+
+## 基本介绍
+
+本部分包含了实时关键数据显示 MOD 的安装和新榜单的一些规则。
+
+后续可以考虑在其他版块加入更多内容，包括评论、趣事等内容。欢迎大家联系本人或者宋笛提出更多建议！
+
+最后，各位天命人，在拿到 MOD 装好以后，凹就完事了。祝大家凹出好成绩！
+
+## 基础信息
+
+> 网站作者：[DavidingPlus](https://davidingplus.cn)。
+>
+> MOD 作者：宋笛很厉害，QQ：623969184。
+
+欢迎加入九禁速通交流群（九禁速通第一人@蚌的粉丝群）：1037297581。
+
+---
+
+---
+url: /tools/b1-mod-edit.md
+---
+# 黑神话悟空 MOD 编辑器
+
+具体[见此](https://b1-mod-edit.davidingplus.cn)。
+
+---
+
+---
+url: /tools/b1-archive-version-switch.md
+---
+# 黑神话悟空存档版本切换工具
+
+具体[见此](https://b1-archive-version-switch.davidingplus.cn)。
+
+---
+
+---
+url: /tools/b1-mini-trainer.md
+---
+# 黑神话悟空小风灵
+
+使用时请放在黑猴数显 MOD 的 CSharpLoader 目录下，如下图所示：
+
+下载链接如下（建议下载最新版）：
+
+1. [v0.3.1](https://lzx0626.lanzouq.com/iKy8G3gpc3ni)
