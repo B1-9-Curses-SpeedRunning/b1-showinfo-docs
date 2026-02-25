@@ -409,7 +409,7 @@ export function generateJsonFirstAnniversary(filePath, sheetIndex, outputJsonPat
     // 遍历每个标题列生成选手数据。
     for (const { title, startCol } of titles) {
         // 跳过不需要解析的列，如汇总或备注。
-        if ("排名" === title || "汇总" === title || "备注" === title || "历史成绩-道满归根" === title || "历史成绩-群妖聚义" === title) continue
+        if ("排名" === title || "已核对" === title || "汇总" === title || "备注" === title || "历史成绩-道满归根" === title || "历史成绩-群妖聚义" === title) continue
 
         const arr = []
 
