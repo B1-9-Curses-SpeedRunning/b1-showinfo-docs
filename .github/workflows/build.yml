@@ -70,26 +70,26 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}   
 
-  # 部署到 AZune 了，该部分废弃 deprecated。
-  # deploy-to-my-server:
-  #   name: Deploy to My Server
-  #   runs-on: ubuntu-latest
-  #   needs: build
-  #   if: github.ref == 'refs/heads/master' || github.event_name == 'workflow_dispatch'  # 触发条件同 deploy-to-gh-pages。
-  #   steps:
-  #     - name: Download artifact
-  #       uses: actions/download-artifact@v4
-  #       with:
-  #         name: dist
-  #         path: dist
+  # Azure 暂时无法使用了，暂时部署到自己服务器上。
+  deploy-to-my-server:
+    name: Deploy to My Server
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/master' || github.event_name == 'workflow_dispatch'  # 触发条件同 deploy-to-gh-pages。
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
 
-  #     - name: Deploy to My Own Server
-  #       # 链接 https://github.com/easingthemes/ssh-deploy
-  #       uses: easingthemes/ssh-deploy@v5.0.0
-  #       env:
-  #         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-  #         ARGS: "-avzr --times --update --delete"
-  #         SOURCE: "dist/"
-  #         REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-  #         REMOTE_USER: ${{ secrets.REMOTE_USER }}
-  #         TARGET: ${{ secrets.TARGET }}
+      - name: Deploy to My Own Server
+        # 链接 https://github.com/easingthemes/ssh-deploy
+        uses: easingthemes/ssh-deploy@v5.0.0
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-avzr --times --update --delete"
+          SOURCE: "dist/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.TARGET }}
