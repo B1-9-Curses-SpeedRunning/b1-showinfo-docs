@@ -241,7 +241,7 @@ export function convertFirstAnniversaryList(inputJsonPath) {
  * @param {string} pageHeader 页面开头显示的文字。
  * @param {string} pageFooter 页面结尾显示的文字。
  */
-export function generateOfficialRankingList(singleJsonPath, totalJsonPath, outputMdPath, pageHeader = '', pageFooter = '') {
+export function generateGauntletOfficialRankingList(singleJsonPath, totalJsonPath, outputMdPath, pageHeader = '', pageFooter = '') {
     let content = pageHeader
     content += convertSingleList(singleJsonPath)
     content += convertTotalList(totalJsonPath)
@@ -256,7 +256,7 @@ export function generateOfficialRankingList(singleJsonPath, totalJsonPath, outpu
  * @param {string} pageHeader 页面开头显示的文字。
  * @param {string} pageFooter 页面结尾显示的文字。
  */
-export function generateFirstAnniversaryRankingList(firstAnniversaryJsonPath, outputMdPath, pageHeader = '', pageFooter = '') {
+export function generateGauntletFirstAnniversaryRankingList(firstAnniversaryJsonPath, outputMdPath, pageHeader = '', pageFooter = '') {
     let content = pageHeader
     content += convertFirstAnniversaryList(firstAnniversaryJsonPath)
     content += pageFooter
@@ -270,7 +270,7 @@ export function generateFirstAnniversaryRankingList(firstAnniversaryJsonPath, ou
  * @param outputJsonPath 输出的 Json 文件路径。
  * @return 返回按标题分组的单项成绩 JSON。
  */
-export function generateJsonSingle(filePath, sheetIndex, outputJsonPath) {
+export function generateGauntletJsonSingle(filePath, sheetIndex, outputJsonPath) {
     const workbook = XLSX.readFile(filePath) // 读取 Excel 文件。
     const sheetName = workbook.SheetNames[sheetIndex] // 获取工作表名称。
     const sheet = workbook.Sheets[sheetName] // 获取工作表对象。
@@ -334,7 +334,7 @@ export function generateJsonSingle(filePath, sheetIndex, outputJsonPath) {
  * @param outputJsonPath 输出的 Json 文件路径。
  * @return 返回总成绩 JSON。
  */
-export function generateJsonTotal(filePath, sheetIndex, outputJsonPath) {
+export function generateGauntletJsonTotal(filePath, sheetIndex, outputJsonPath) {
     const workbook = XLSX.readFile(filePath) // 读取 Excel 文件。
     const sheetName = workbook.SheetNames[sheetIndex] // 获取工作表名称。
     const sheet = workbook.Sheets[sheetName] // 获取工作表对象。
@@ -392,7 +392,7 @@ export function generateJsonTotal(filePath, sheetIndex, outputJsonPath) {
  * @param outputJsonPath 输出的 Json 文件路径。
  * @return 返回按标题分组的单项成绩 JSON。
  */
-export function generateJsonFirstAnniversary(filePath, sheetIndex, outputJsonPath) {
+export function generateGauntletJsonFirstAnniversary(filePath, sheetIndex, outputJsonPath) {
     const workbook = XLSX.readFile(filePath) // 读取 Excel 文件。
     const sheetName = workbook.SheetNames[sheetIndex] // 获取工作表名称。
     const sheet = workbook.Sheets[sheetName] // 获取工作表对象。
@@ -471,9 +471,9 @@ export function generateJsonFirstAnniversary(filePath, sheetIndex, outputJsonPat
  * @param {string} filePath 源文件路径。
  * @param {string} outputPath 输出文件路径。
  */
-export function generateLastUpdatedTime(filePath, outputPath) {
+export function generateGauntletLastUpdatedTime(filePath, outputPath) {
     const stats = fs.statSync(filePath)
-    const lastUpdatedTime = stats.mtime.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })
+    const gauntletLastUpdatedTime = stats.mtime.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })
 
-    fs.writeFileSync(outputPath, `${lastUpdatedTime}`, 'utf-8')
+    fs.writeFileSync(outputPath, `${gauntletLastUpdatedTime}`, 'utf-8')
 }
