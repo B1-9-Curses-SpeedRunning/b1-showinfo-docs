@@ -6,7 +6,7 @@
  * Copyright (c) 2025 DavidingPlus
  * 
  */
-import { generateJsonSingle, generateJsonTotal, generateOfficialRankingList, generateJsonFirstAnniversary, generateFirstAnniversaryRankingList, generateLastUpdatedTime } from "./util.js"
+import { generateJsonSingle, generateJsonTotal, generateOfficialRankingList, generateJsonFirstAnniversary, generateFirstAnniversaryRankingList, generateLastUpdatedTime } from "./util-gauntlet.js"
 import fs from 'fs'
 
 

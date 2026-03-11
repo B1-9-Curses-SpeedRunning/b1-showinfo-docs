@@ -1,5 +1,5 @@
 /**
- * @file util.js
+ * @file util-gauntlet.js
  * @author DavidingPlus (davidingplus@qq.com)
  * @brief 将榜单单项和总榜的 Excel/JSON 数据生成完整 Markdown 文档。
  * @details 流程：
