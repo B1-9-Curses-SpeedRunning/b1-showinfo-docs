@@ -6,8 +6,9 @@
  * Copyright (c) 2025 DavidingPlus
  * 
  */
-import { generateJsonSingle, generateJsonTotal, generateOfficialRankingList, generateJsonFirstAnniversary, generateFirstAnniversaryRankingList, generateLastUpdatedTime } from "./util-gauntlet.js"
 import fs from 'fs'
+import { generateJsonSingle, generateJsonTotal, generateOfficialRankingList, generateJsonFirstAnniversary, generateFirstAnniversaryRankingList, generateLastUpdatedTime } from "./util-gauntlet.js"
+import { generateRematchJsonNextWeek, generateRematchWeekList } from './util-rematch.js'
 
 
 console.log("now running command: npm/pnpm run " + process.env.npm_lifecycle_event)
@@ -48,3 +49,8 @@ generateOfficialRankingList(
     'docs/ranking-list/gauntlet/old-list.md',
     `# 旧榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。由于已停更，仅展示前十名，[原文档](https://docs.qq.com/sheet/DTXNnc09DRGZWVGxt)。\n\n`
 )
+
+
+// generateRematchJsonNextWeek("data/rematch/boss-list.json", "data/rematch/week-list.json")
+
+generateRematchWeekList("data/rematch/week-list.json", "docs/ranking-list/rematch/week-list.md", "# 复战齐天每周 BOSS 名单\n\n")

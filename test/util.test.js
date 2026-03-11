@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import fs from 'fs';
 import parse from 'parse-duration';
-import { normalizeTime, convertSingleList, convertTotalList } from '../scripts/util.js';
+import { normalizeTime, convertSingleList, convertTotalList } from '../scripts/util-gauntlet.js';
 
 
 describe('normalizeTime', () => {
