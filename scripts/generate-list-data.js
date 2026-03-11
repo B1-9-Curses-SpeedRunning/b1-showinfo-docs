@@ -12,28 +12,28 @@ import fs from 'fs'
 
 console.log("now running command: npm/pnpm run " + process.env.npm_lifecycle_event)
 if ("dev" === process.env.npm_lifecycle_event || "generate-list" === process.env.npm_lifecycle_event) {
-    generateLastUpdatedTime("data/黑猴九禁速通榜(新).xlsx", "data/last-updated-time")
+    generateLastUpdatedTime("data/gauntlet/黑猴九禁速通榜(新).xlsx", "data/gauntlet/last-updated-time")
 
-    generateJsonSingle("data/黑猴九禁速通榜(新).xlsx", 1, "data/new-list-single.json")
+    generateJsonSingle("data/gauntlet/黑猴九禁速通榜(新).xlsx", 1, "data/gauntlet/new-list-single.json")
 
-    generateJsonTotal("data/黑猴九禁速通榜(新).xlsx", 2, "data/new-list-total.json")
+    generateJsonTotal("data/gauntlet/黑猴九禁速通榜(新).xlsx", 2, "data/gauntlet/new-list-total.json")
 
-    generateJsonFirstAnniversary("data/黑猴九禁速通榜(新).xlsx", 4, "data/first-anniversary.json")
+    generateJsonFirstAnniversary("data/gauntlet/黑猴九禁速通榜(新).xlsx", 4, "data/gauntlet/first-anniversary.json")
 }
 
 
-const lastUpdatedTime = fs.readFileSync('data/last-updated-time', 'utf-8').trim()
+const lastUpdatedTime = fs.readFileSync('data/gauntlet/last-updated-time', 'utf-8').trim()
 
 generateOfficialRankingList(
-    'data/new-list-single.json',
-    'data/new-list-total.json',
-    'docs/ranking-list/new-list.md',
+    'data/gauntlet/new-list-single.json',
+    'data/gauntlet/new-list-total.json',
+    'docs/ranking-list/gauntlet/new-list.md',
     `# 新榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。若更新不及时请优先参考[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v)。\n\n> 榜单最后更新于：${lastUpdatedTime}\n\n`
 )
 
 generateFirstAnniversaryRankingList(
-    'data/first-anniversary.json',
-    'docs/ranking-list/first-anniversary.md',
+    'data/gauntlet/first-anniversary.json',
+    'docs/ranking-list/gauntlet/first-anniversary.md',
     `# 一周年活动连战榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。若更新不及时请优先参考[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v?tab=000004)。\n\n> 榜单最后更新于：${lastUpdatedTime}\n\n`,
     `\n## 特别祝贺
 
@@ -43,8 +43,8 @@ generateFirstAnniversaryRankingList(
 )
 
 generateOfficialRankingList(
-    'data/old-list-single.json',
-    'data/old-list-total.json',
-    'docs/ranking-list/old-list.md',
+    'data/gauntlet/old-list-single.json',
+    'data/gauntlet/old-list-total.json',
+    'docs/ranking-list/gauntlet/old-list.md',
     `# 旧榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。由于已停更，仅展示前十名，[原文档](https://docs.qq.com/sheet/DTXNnc09DRGZWVGxt)。\n\n`
 )
