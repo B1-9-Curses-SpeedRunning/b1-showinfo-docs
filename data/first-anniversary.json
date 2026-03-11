@@ -1,369 +1,2840 @@
 [
     {
-        "道满归根": [
+        "三虎": [
             {
-                "选手": "山月为关",
+                "选手": "离九",
                 "成绩": [
-                    "3'53''63",
-                    "https://www.bilibili.com/video/BV1ftcNzaE43/?spm_id_from=333.337.search-card.all.click"
+                    "1'10''45",
+                    "https://www.douyin.com/video/7554943077699489024"
                 ],
-                "日期": "2026/02/08"
+                "日期": "2025/09/28"
             },
             {
-                "选手": "luyixxxx",
+                "选手": "零零妖",
                 "成绩": [
-                    "3'56''54",
-                    "https://www.bilibili.com/video/BV1ptFxzFEA8/?spm_id_from=333.337.search-card.all.click"
+                    "1'01''56",
+                    "https://www.bilibili.com/video/BV1pLYAz1EE7?spm_id_from=333.788.videopod.sections&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
                 ],
-                "日期": "2026/02/07"
+                "日期": "2025/09/09"
+            },
+            {
+                "选手": "纯黑得逃生",
+                "成绩": [
+                    "59''70",
+                    "https://www.bilibili.com/video/BV13uxazoEt6/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/05"
+            },
+            {
+                "选手": "萧风FX",
+                "成绩": [
+                    "57''48",
+                    "https://www.bilibili.com/video/BV1dsWnzFEwN/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/17"
+            },
+            {
+                "选手": "小何²",
+                "成绩": [
+                    "58''03",
+                    "https://www.bilibili.com/video/BV1BmHnz4EAF/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/01"
+            },
+            {
+                "选手": "落山秋",
+                "成绩": [
+                    "59''37",
+                    "https://www.douyin.com/video/7560353200428158259"
+                ],
+                "日期": "2025/10/12"
+            },
+            {
+                "选手": "雌蕊呀",
+                "成绩": [
+                    "59''18",
+                    "https://www.bilibili.com/video/BV1oMsTz4EgK/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/10/20"
+            },
+            {
+                "选手": "欈尰矅",
+                "成绩": [
+                    "59''36",
+                    "https://www.bilibili.com/video/BV1eLYPzeEsY/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/09"
+            },
+            {
+                "选手": "鱼小瑜er",
+                "成绩": [
+                    "58''98",
+                    "https://www.bilibili.com/video/BV1Tia1zMEXt/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/04"
+            },
+            {
+                "选手": "六根",
+                "成绩": [
+                    "58''78",
+                    "https://www.douyin.com/video/7548560660423462204"
+                ],
+                "日期": "2025/09/10"
+            },
+            {
+                "选手": "游戏老潇",
+                "成绩": [
+                    "58''75",
+                    "https://www.bilibili.com/video/BV1kZWRzvEPm/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/16"
+            },
+            {
+                "选手": "析大牛",
+                "成绩": [
+                    "58''21",
+                    "https://www.douyin.com/video/7564285055871290639"
+                ],
+                "日期": "2025/10/22"
+            },
+            {
+                "选手": "是你都对",
+                "成绩": [
+                    "58''58",
+                    "https://www.bilibili.com/video/BV1CKpGzjE31/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/09/13"
+            },
+            {
+                "选手": "萧风FX",
+                "成绩": [
+                    "53''60",
+                    "https://b23.tv/wU2LQpE"
+                ],
+                "日期": "2025/10/19"
+            },
+            {
+                "选手": "萧风FX",
+                "成绩": [
+                    "53''55",
+                    "https://b23.tv/2Ol2IUv"
+                ],
+                "日期": "2025/11/01"
+            },
+            {
+                "选手": "萧风FX",
+                "成绩": [
+                    "52''48",
+                    "https://b23.tv/WDUJWxG"
+                ],
+                "日期": "2025/11/04"
+            },
+            {
+                "选手": "_忆殇_",
+                "成绩": [
+                    "58''49",
+                    "https://www.bilibili.com/video/BV1mTyCBkEci/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/10/28"
+            },
+            {
+                "选手": "小何²",
+                "成绩": [
+                    "56''19",
+                    "https://www.bilibili.com/video/BV1Krswz8ERx/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/10/12"
+            },
+            {
+                "选手": "离九",
+                "成绩": [
+                    "57''81",
+                    "https://www.douyin.com/video/7564034266516213032"
+                ],
+                "日期": "2025/10/22"
+            },
+            {
+                "选手": "小天",
+                "成绩": [
+                    "57''55",
+                    "https://www.douyin.com/video/7567370232159849778"
+                ],
+                "日期": "2025/10/31"
+            },
+            {
+                "选手": "尸体腐烂时代",
+                "成绩": [
+                    "57''46",
+                    "https://b23.tv/qnwmWES"
+                ],
+                "日期": "2025/09/14"
+            },
+            {
+                "选手": "存在K",
+                "成绩": [
+                    "56''36"
+                ],
+                "日期": "2025/12/03"
+            },
+            {
+                "选手": "最重要",
+                "成绩": [
+                    "56''75"
+                ],
+                "日期": "2025/12/06"
+            },
+            {
+                "选手": "存在K",
+                "成绩": [
+                    "55''14"
+                ],
+                "日期": "2025/12/06"
             },
             {
                 "选手": "阿班",
                 "成绩": [
-                    "3'58''72",
-                    "https://www.bilibili.com/video/BV1qtrsBvEdP/?spm_id_from=333.1387.homepage.video_card.click"
+                    "56''20",
+                    "https://www.bilibili.com/video/BV1FpY5z6E4t/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
                 ],
-                "日期": "2026/01/14"
+                "日期": "2025/09/07"
             },
             {
-                "选手": "4_c_er",
+                "选手": "阿班",
                 "成绩": [
-                    "4'01''31",
-                    "https://www.bilibili.com/video/BV1bNFJzDEFW/?spm_id_from=333.337.search-card.all.click"
+                    "55''70"
                 ],
-                "日期": "2026/02/07"
+                "日期": "2025/12/07"
             },
             {
-                "选手": "辣舞7",
+                "选手": "天傲花",
                 "成绩": [
-                    "4'03''69",
-                    "https://www.bilibili.com/video/BV14TcxzqERw/"
+                    "57''43",
+                    "https://www.bilibili.com/video/BV1z6p4zJEvR?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=main.space-contribution.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=0a843d48-da7d-4333-a19b-65f3e8c5acf1&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1764606704&amp;unique_k=mCWTZHB&amp;up_id=422735802"
+                ],
+                "日期": "2025/09/17"
+            },
+            {
+                "选手": "最重要",
+                "成绩": [
+                    "56''60"
+                ],
+                "日期": "2025/12/07"
+            },
+            {
+                "选手": "萧风FX",
+                "成绩": [
+                    "51''49",
+                    "https://b23.tv/SI2aS1y"
+                ],
+                "日期": "2025/11/07"
+            },
+            {
+                "选手": "雌蕊呀",
+                "成绩": [
+                    "57''24",
+                    "https://www.bilibili.com/video/BV1zMWUzyEy2?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=main.space-contribution.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=e344bed9-263c-499e-a104-c86c50126347&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1764606653&amp;unique_k=6XH0QU8&amp;up_id=3546621920938165"
+                ],
+                "日期": "2025/10/21"
+            },
+            {
+                "选手": "尖奕",
+                "成绩": [
+                    "51''38"
+                ],
+                "日期": "2025/09/29"
+            },
+            {
+                "选手": "萧风FX",
+                "成绩": [
+                    "51''39",
+                    "https://www.bilibili.com/video/BV1t7BvBGEdL/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=main.space.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=fd9195de-1a4b-4110-b998-6a19bd6fa1f4&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1766762660&amp;unique_k=ipE2gZk&amp;up_id=3537107876317501"
+                ],
+                "日期": "2025/12/26"
+            },
+            {
+                "选手": "家里少盐",
+                "成绩": [
+                    "57''19",
+                    "https://www.bilibili.com/video/BV1WfSyBsEYM/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=tm.recommend.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=3193d64f-f3bb-481f-af05-2a6d254bc97a&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1764606144&amp;unique_k=yA4SOZY&amp;up_id=283465595"
+                ],
+                "日期": "2025/12/02"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "54''14",
+                    "https://b23.tv/K2sf8Bk"
+                ],
+                "日期": "2025/12/08"
+            },
+            {
+                "选手": "DJiMing",
+                "成绩": [
+                    "56''93",
+                    "https://www.bilibili.com/video/BV1WqfZBJEXZ/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2026/02/04"
+            },
+            {
+                "选手": "离九",
+                "成绩": [
+                    "56''08"
+                ],
+                "日期": "2025/10/27"
+            },
+            {
+                "选手": "LowHead",
+                "成绩": [
+                    "56''99",
+                    "https://www.bilibili.com/video/BV1exWEzDEod/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/30"
+            }
+        ]
+    },
+    {
+        "四僧": [
+            {
+                "选手": "维尔特陈伯伦",
+                "成绩": [
+                    "1'29''66",
+                    "https://www.bilibili.com/video/BV14KHJziEnT/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/01"
+            },
+            {
+                "选手": "小何²",
+                "成绩": [
+                    "1'32''80",
+                    "https://www.bilibili.com/video/BV1u9pnz7EhL/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/13"
+            },
+            {
+                "选手": "维尔特陈伯伦",
+                "成绩": [
+                    "1'27''90",
+                    "https://www.bilibili.com/video/BV1PYHuzMEGN/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/03"
+            },
+            {
+                "选手": "维尔特陈伯伦",
+                "成绩": [
+                    "1'24''85",
+                    "https://www.bilibili.com/video/BV1gCx5z6E5a/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/10/06"
+            },
+            {
+                "选手": "薛定谔de奇点",
+                "成绩": [
+                    "1'27''44",
+                    "https://www.bilibili.com/video/BV1veyVBkEmc/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/11/18"
+            },
+            {
+                "选手": "放歌须纵酒",
+                "成绩": [
+                    "1'46''93",
+                    "https://www.bilibili.com/video/BV1yhp4zxELA/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/17"
+            },
+            {
+                "选手": "小何²",
+                "成绩": [
+                    "1'29''46",
+                    "https://www.bilibili.com/video/BV1JjxgzkEK9/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/05"
+            },
+            {
+                "选手": "山月为关",
+                "成绩": [
+                    "1'26''75",
+                    "https://www.bilibili.com/video/BV1aTaZz1EEs?spm_id_from=333.788.videopod.episodes&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9&amp;p=2"
+                ],
+                "日期": "2025/09/03"
+            },
+            {
+                "选手": "山月为关",
+                "成绩": [
+                    "1'25''87"
+                ],
+                "日期": "2025/12/12"
+            },
+            {
+                "选手": "零零妖",
+                "成绩": [
+                    "1'42''44",
+                    "https://www.bilibili.com/video/BV1kUJZzeE8y/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/22"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "1'26''40"
+                ],
+                "日期": "2025/12/18"
+            },
+            {
+                "选手": "MG-Super强",
+                "成绩": [
+                    "1'41''57",
+                    "https://www.bilibili.com/video/BV1b2pjzvEHc/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/09/17"
+            },
+            {
+                "选手": "白织",
+                "成绩": [
+                    "1'24''98"
+                ],
+                "日期": "2025/12/20"
+            },
+            {
+                "选手": "猛揣瘸子那条好腿",
+                "成绩": [
+                    "1'41''29",
+                    "https://www.douyin.com/video/7578488247957916970?previous_page=app_code_link"
+                ],
+                "日期": "2025/11/30"
+            },
+            {
+                "选手": "尸体腐烂时代",
+                "成绩": [
+                    "1'41''32",
+                    "https://www.bilibili.com/video/BV1TSa9zhEkP/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/08"
+            },
+            {
+                "选手": "蚌",
+                "成绩": [
+                    "1'21''51"
                 ],
                 "日期": "2026/02/06"
             },
             {
                 "选手": "蚌",
                 "成绩": [
-                    "4'05''30"
+                    "1'20''64"
                 ],
-                "日期": "2026/01/10"
+                "日期": "2026/02/06"
             },
             {
-                "选手": "寻乐苦",
+                "选手": "梅山故人-荔枝",
                 "成绩": [
-                    "4'05''41",
-                    "https://www.bilibili.com/video/BV1KTFQz6EQQ/?spm_id_from=333.1387.homepage.video_card.click"
+                    "1'39''20",
+                    "https://www.douyin.com/video/7578460878509575434"
                 ],
-                "日期": "2026/01/20"
+                "日期": "2025/11/30"
             },
             {
-                "选手": "君亦-伪",
+                "选手": "阿班",
                 "成绩": [
-                    "4'05''82",
-                    "https://www.bilibili.com/video/BV1QN6FBnE1V/?-Arouter=story&amp;buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=tm.recommend.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=163&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=5fbfbad3-48ea-4a14-acee-e85d53e9e361&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=main.ugc-video-detail-vertical.0.0&amp;timestamp=1769678919&amp;unique_k=iUJ1SeR&amp;up_id=296470991"
+                    "1'24''26",
+                    "https://www.bilibili.com/video/BV1o2qQBYEDw/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=dt.dt.video.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=9eb6cf86-9db9-4ccb-b315-13db6397fad0&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1766067947&amp;unique_k=AgH6peW&amp;up_id=511651162"
                 ],
-                "日期": "2026/01/29"
+                "日期": "2025/12/18"
             },
             {
-                "选手": "Yoon君",
+                "选手": "离九",
                 "成绩": [
-                    "4'09''97"
+                    "1'34''19",
+                    "https://www.douyin.com/video/7554266134599683380"
                 ],
-                "日期": "2026/01/27"
+                "日期": "2025/09/25"
             },
             {
                 "选手": "小何²",
                 "成绩": [
-                    "4'17''20",
-                    "https://www.bilibili.com/video/BV1rrFXzNEvV/?spm_id_from=333.1387.homepage.video_card.click"
+                    "1'25''38",
+                    "https://www.bilibili.com/video/BV1DkmEBpEhZ/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
                 ],
-                "日期": "2026/02/10"
+                "日期": "2025/12/11"
             },
             {
-                "选手": "雌蕊呀",
+                "选手": "小何²",
                 "成绩": [
-                    "4'20''99",
-                    "https://www.bilibili.com/video/BV1ePirBtEAc/?spm_id_from=333.337.search-card.all.click"
+                    "1'25''21"
                 ],
-                "日期": "2026/01/04"
+                "日期": "2026/02/21"
             },
             {
-                "选手": "1xuan",
+                "选手": "gaming-lunar",
                 "成绩": [
-                    "4'23''57"
+                    "1'38''65",
+                    "https://www.bilibili.com/video/BV1Kd1hBLEp9/?spm_id_from=333.337.search-card.all.click"
                 ],
-                "日期": "2026/02/10"
+                "日期": "2025/11/02"
             },
             {
                 "选手": "欈尰矅",
                 "成绩": [
-                    "4'44''60",
-                    "https://www.bilibili.com/video/BV1kTiMB7Eiu/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=tm.recommend.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=8babdb1c-3e75-4d55-927e-555805974d5d&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1767271310&amp;unique_k=sKjZDIi&amp;up_id=1361287194"
+                    "1'28''34",
+                    "https://www.bilibili.com/video/BV19CfBBCEtK/?spm_id_from=333.1007.tianma.1-1-1.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
                 ],
-                "日期": "2025/12/31"
+                "日期": "2026/02/23"
             },
             {
-                "选手": "_忆殇_",
+                "选手": "luyixxxx",
                 "成绩": [
-                    "5'08''04",
-                    "https://www.bilibili.com/video/BV1EoBeBdEmt/?-Arouter=story&amp;buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=united.player-video-detail.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=163&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=e111b4c9-beda-4c93-be61-977cf74ecc2c&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=main.ugc-video-detail-vertical.0.0&amp;timestamp=1766766593&amp;unique_k=oXIz01u&amp;up_id=21397068"
+                    "1'29''06",
+                    "https://www.bilibili.com/video/BV1DZYVzdEJo/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/07"
+            },
+            {
+                "选手": "luyixxxx",
+                "成绩": [
+                    "1'26''58"
+                ],
+                "日期": "2026/02/27"
+            },
+            {
+                "选手": "猛揣瘸子那条好腿",
+                "成绩": [
+                    "1'37''01",
+                    "https://www.douyin.com/video/7589656729961368884?previous_page=app_code_link"
+                ],
+                "日期": "2025/11/30"
+            }
+        ]
+    },
+    {
+        "四龙": [
+            {
+                "选手": "纯黑得逃生",
+                "成绩": [
+                    "1'57''92",
+                    "https://www.bilibili.com/video/BV1rHxjzYEru/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/10/06"
+            },
+            {
+                "选手": "山月为关",
+                "成绩": [
+                    "1'54''15",
+                    "https://www.bilibili.com/video/BV1aTaZz1EEs?spm_id_from=333.788.videopod.episodes&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9&amp;p=3"
+                ],
+                "日期": "2025/09/08"
+            },
+            {
+                "选手": "薛定谔de奇点",
+                "成绩": [
+                    "1'46''89"
+                ],
+                "日期": "2025/09/11"
+            },
+            {
+                "选手": "薛定谔de奇点",
+                "成绩": [
+                    "1'45''15"
+                ],
+                "日期": "2025/11/02"
+            },
+            {
+                "选手": "薛定谔de奇点",
+                "成绩": [
+                    "1'44''49",
+                    "https://www.bilibili.com/video/BV14okvBJEAk/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/11/11"
+            },
+            {
+                "选手": "小何²",
+                "成绩": [
+                    "2'01''91",
+                    "https://www.bilibili.com/video/BV1x7HxzpEoM/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/01"
+            },
+            {
+                "选手": "小何²",
+                "成绩": [
+                    "1'56''95",
+                    "https://www.bilibili.com/video/BV1mRSWBqETB/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=tm.recommend.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=170857a1-dee1-4d5a-abb6-3cbaf6d248e6&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1764843993&amp;unique_k=qidSlvE&amp;up_id=695726695"
+                ],
+                "日期": "2025/11/23"
+            },
+            {
+                "选手": "gaming-lunar",
+                "成绩": [
+                    "2'17''88",
+                    "http://bilibili.com/video/BV1MrsBzKE2x/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/10/22"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "1'56''14",
+                    "https://www.bilibili.com/video/BV1ndCYBKEsn/?spm_id_from=333.1007.tianma.1-1-1.click"
+                ],
+                "日期": "2025/11/15"
+            },
+            {
+                "选手": "薛定谔de奇点",
+                "成绩": [
+                    "1'42''68",
+                    "https://www.bilibili.com/video/BV1N1S7BJEEh/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/11/28"
+            },
+            {
+                "选手": "极了无",
+                "成绩": [
+                    "1'52''17",
+                    "https://www.bilibili.com/video/BV1VcYTzrE1z?spm_id_from=333.788.player.player_end_recommend_autoplay&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/06"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "1'52''62"
+                ],
+                "日期": "2025/12/15"
+            },
+            {
+                "选手": "离九",
+                "成绩": [
+                    "2'06''63",
+                    "https://www.douyin.com/video/7554942231356099892"
+                ],
+                "日期": "2025/09/28"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "1'51''35"
+                ],
+                "日期": "2025/12/15"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "1'50''58"
+                ],
+                "日期": "2025/12/16"
+            },
+            {
+                "选手": "蚌",
+                "成绩": [
+                    "1'48''08"
+                ],
+                "日期": "2025/12/13"
+            },
+            {
+                "选手": "蚌",
+                "成绩": [
+                    "1'39''94",
+                    "https://www.bilibili.com/video/BV11Bq5BVEh1/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=dt.dt.video.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=e37a45ef-e6c2-4835-b81c-986e05d3d0c9&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1765967743&amp;unique_k=cca9K4R&amp;up_id=1041159056"
+                ],
+                "日期": "2025/12/17"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "1'49''16"
+                ],
+                "日期": "2025/12/16"
+            },
+            {
+                "选手": "gaming-lunar",
+                "成绩": [
+                    "2'10''54",
+                    "https://www.bilibili.com/video/BV1sUmqBwEjF/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=tm.recommend.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=1e94e6de-90f5-43ca-9b58-38f0068125d2&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1765707429&amp;unique_k=ZzIm4Pt&amp;up_id=3546894571670352"
+                ],
+                "日期": "2025/12/14"
+            },
+            {
+                "选手": "4_c_er",
+                "成绩": [
+                    "1'53''46",
+                    "https://www.bilibili.com/video/BV1Ydxmz6Egs/?spm_id_from=333.788.videopod.sections&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/07"
+            },
+            {
+                "选手": "山月为关",
+                "成绩": [
+                    "1'49''83",
+                    "https://www.bilibili.com/video/BV1yNsszpEA9/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/10/25"
+            },
+            {
+                "选手": "gaming-lunar",
+                "成绩": [
+                    "2'07''54",
+                    "https://www.bilibili.com/video/BV1ySqEBHE17/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=tm.recommend.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=2164b61d-ec97-40ce-8e8d-60ec7699211f&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1766054075&amp;unique_k=b5uw6su&amp;up_id=3546894571670352"
+                ],
+                "日期": "2025/12/18"
+            }
+        ]
+    },
+    {
+        "六将": [
+            {
+                "选手": "1xuan",
+                "成绩": [
+                    "2'27''31",
+                    "https://www.bilibili.com/video/BV14Jp1z2EjC/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/16"
+            },
+            {
+                "选手": "1xuan",
+                "成绩": [
+                    "2'24''89",
+                    "https://www.bilibili.com/video/BV1YQpfzwErz/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/21"
+            },
+            {
+                "选手": "1xuan",
+                "成绩": [
+                    "2'24''60",
+                    "https://www.bilibili.com/video/BV1pBnNzsEiW/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/09/23"
+            },
+            {
+                "选手": "A妹",
+                "成绩": [
+                    "2'46''44"
+                ],
+                "日期": "2025/09/28"
+            },
+            {
+                "选手": "1xuan",
+                "成绩": [
+                    "2'23''53",
+                    "https://www.bilibili.com/video/BV13Sn9z3Egd/"
+                ],
+                "日期": "2025/09/23"
+            },
+            {
+                "选手": "1xuan",
+                "成绩": [
+                    "2'17''51",
+                    "https://www.bilibili.com/video/BV1LtnmzwEy5/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/30"
+            },
+            {
+                "选手": "1xuan",
+                "成绩": [
+                    "2'11''96",
+                    "https://www.bilibili.com/video/BV18HxfzYES2/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/10/08"
+            },
+            {
+                "选手": "1xuan",
+                "成绩": [
+                    "2'11''78",
+                    "https://www.bilibili.com/video/BV19KsqzgEXV/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/10/23"
+            },
+            {
+                "选手": "luyixxxx",
+                "成绩": [
+                    "2'27''02"
+                ],
+                "日期": "2025/10/22"
+            },
+            {
+                "选手": "gaming-lunar",
+                "成绩": [
+                    "4'38''46",
+                    "https://www.bilibili.com/video/BV17DsXzxEiA/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/10/24"
+            },
+            {
+                "选手": "离九",
+                "成绩": [
+                    "3'14''00",
+                    "https://www.douyin.com/video/7554941662607838499"
+                ],
+                "日期": "2025/09/28"
+            },
+            {
+                "选手": "小何²",
+                "成绩": [
+                    "2'55''77",
+                    "https://www.bilibili.com/video/BV1J1HpzqEDN?spm_id_from=333.788.player.player_end_recommend_autoplay&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/01"
+            },
+            {
+                "选手": "蚌",
+                "成绩": [
+                    "2'28''69"
+                ],
+                "日期": "2025/12/08"
+            },
+            {
+                "选手": "gaming-lunar",
+                "成绩": [
+                    "3'41''87",
+                    "https://www.bilibili.com/video/BV1DekfBpEuf/?-Arouter=story&amp;buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=main.ugc-video-detail-vertical.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=143&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=3feb0fc2-d029-4f02-b586-341791c7ed40&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=main.ugc-video-detail-verticalspace.0.0&amp;timestamp=1765184063&amp;unique_k=BIutTHl&amp;up_id=3546894571670352"
+                ],
+                "日期": "2025/11/10"
+            }
+        ]
+    },
+    {
+        "六虫": [
+            {
+                "选手": "山月为关",
+                "成绩": [
+                    "2'17''97",
+                    "https://www.bilibili.com/video/BV1aTaZz1EEs?spm_id_from=333.788.videopod.episodes&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9&amp;p=5"
+                ],
+                "日期": "2025/08/30"
+            },
+            {
+                "选手": "山月为关",
+                "成绩": [
+                    "2'15''36"
+                ],
+                "日期": "2025/09/16"
+            },
+            {
+                "选手": "馒头",
+                "成绩": [
+                    "2'20''49",
+                    "https://www.douyin.com/video/7549917110885993767"
+                ],
+                "日期": "2025/09/14"
+            },
+            {
+                "选手": "天傲花",
+                "成绩": [
+                    "2'44''43",
+                    "https://www.bilibili.com/video/BV1crWAzxEZ6/?spm_id_from=333.788.recommend_more_video.0&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/21"
+            },
+            {
+                "选手": "离九",
+                "成绩": [
+                    "2'29''00",
+                    "https://www.douyin.com/video/7550498501944347938"
+                ],
+                "日期": "2025/09/15"
+            },
+            {
+                "选手": "luyixxxx",
+                "成绩": [
+                    "2'25''63"
+                ],
+                "日期": "2025/09/28"
+            },
+            {
+                "选手": "离九",
+                "成绩": [
+                    "2'21''33",
+                    "https://www.douyin.com/video/7554341841052011828"
+                ],
+                "日期": "2025/09/22"
+            },
+            {
+                "选手": "小何²",
+                "成绩": [
+                    "2'39''00",
+                    "https://www.bilibili.com/video/BV1awaHzVEYX/?spm_id_from=333.1387.upload.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/01"
+            },
+            {
+                "选手": "薛定谔de奇点",
+                "成绩": [
+                    "2'25''11",
+                    "https://www.bilibili.com/video/BV1dSWcz3ERd?vd_source=d9379e1bc0470f96ffb21ae71e1c19c5"
+                ],
+                "日期": "2025/09/21"
+            },
+            {
+                "选手": "辣舞7",
+                "成绩": [
+                    "2'20''11"
+                ],
+                "日期": "2025/10/20"
+            },
+            {
+                "选手": "辣舞7",
+                "成绩": [
+                    "2'18''63"
+                ],
+                "日期": "2025/10/21"
+            },
+            {
+                "选手": "辣舞7",
+                "成绩": [
+                    "2'16''30"
+                ],
+                "日期": "2025/10/22"
+            },
+            {
+                "选手": "辣舞7",
+                "成绩": [
+                    "2'15''39"
+                ],
+                "日期": "2025/10/22"
+            },
+            {
+                "选手": "辣舞7",
+                "成绩": [
+                    "2'12''85"
+                ],
+                "日期": "2025/10/23"
+            },
+            {
+                "选手": "雌蕊呀",
+                "成绩": [
+                    "2'30''57",
+                    "https://www.bilibili.com/video/BV126sVzfEkG/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/10/24"
+            },
+            {
+                "选手": "辣舞7",
+                "成绩": [
+                    "2'10''71",
+                    "https://www.bilibili.com/video/BV15VxPznEVm/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/10/26"
+            },
+            {
+                "选手": "辣舞7",
+                "成绩": [
+                    "2'10''21"
+                ],
+                "日期": "2025/10/29"
+            },
+            {
+                "选手": "小天",
+                "成绩": [
+                    "2'28''35",
+                    "https://www.douyin.com/video/7562199069502868755"
+                ],
+                "日期": "2025/10/16"
+            },
+            {
+                "选手": "山月为关",
+                "成绩": [
+                    "2'14''44",
+                    "https://www.bilibili.com/video/BV1pQp2zCE34/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/16"
+            },
+            {
+                "选手": "尧虽无意逐鹿",
+                "成绩": [
+                    "2'52''16",
+                    "https://www.bilibili.com/video/BV1pRCABsEEV/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/11/14"
+            },
+            {
+                "选手": "小何²",
+                "成绩": [
+                    "2'33''57",
+                    "https://www.bilibili.com/video/BV1d5xSzjE4Q/?spm_id_from=333.788.player.switch&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/07"
+            },
+            {
+                "选手": "小何²",
+                "成绩": [
+                    "2'27''65"
+                ],
+                "日期": "2025/11/08"
+            },
+            {
+                "选手": "离九",
+                "成绩": [
+                    "2'15''73"
+                ],
+                "日期": "2025/10/05"
+            },
+            {
+                "选手": "山月为关",
+                "成绩": [
+                    "2'12''66",
+                    "https://www.bilibili.com/video/BV1SUUKB9EvA/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/11/14"
+            },
+            {
+                "选手": "长门",
+                "成绩": [
+                    "3'04''26",
+                    "https://www.douyin.com/video/7587007631340883251?previous_page=app_code_link"
+                ],
+                "日期": "2025/12/23"
+            },
+            {
+                "选手": "想吃软饭",
+                "成绩": [
+                    "2'23''02",
+                    "https://www.douyin.com/video/7588061852156906790?previous_page=app_code_link"
                 ],
                 "日期": "2025/12/26"
             },
             {
-                "选手": "DJiMing",
+                "选手": "落山秋",
                 "成绩": [
-                    "5'26\"22",
-                    "https://www.bilibili.com/video/BV1omzCB2Evg/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=default-value&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=af530b65-c30e-4301-8f44-917b34ba3351&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1769247283&amp;unique_k=a16ucyW&amp;up_id=35423060"
+                    "2'21''60",
+                    "https://www.douyin.com/video/7591443705022778658"
                 ],
-                "日期": "2026/01/24"
+                "日期": "2026/01/04"
             },
             {
-                "选手": "秋起泛白露",
+                "选手": "小天",
                 "成绩": [
-                    "6'34''45",
-                    "https://www.bilibili.com/video/BV1KgvkBJEBy/?buvid=XYFB5EFF1DDA2C1CCB4285811FF57FDB3589A&amp;from_spmid=dt.dt.video.0&amp;is_story_h5=false&amp;mid=tZAbt17WEt4FiUiWpOGUqn8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=23443555-ab25-4ad5-8907-51cdf33bc102&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1766930295&amp;unique_k=QihLPr9&amp;up_id=486845521"
+                    "2'19''32"
                 ],
-                "日期": "2025/12/28"
-            },
-            {
-                "选手": "市井小羿",
-                "成绩": [
-                    "8'51''17",
-                    "https://www.bilibili.com/video/BV18XzjBbEyq?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=dt.dt.video.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=bc204d85-1476-4e22-8ade-8df17d7d36b5&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1769009854&amp;unique_k=cEKPrMP&amp;up_id=59468586"
-                ],
-                "日期": "2026/01/20"
-            }
-        ]
-    },
-    {
-        "群妖聚义": [
-            {
-                "选手": "山月为关",
-                "成绩": [
-                    "2'14''92",
-                    "https://www.bilibili.com/video/BV1BUFXz8EYn/?spm_id_from=333.1387.homepage.video_card.click"
-                ],
-                "日期": "2026/02/10"
-            },
-            {
-                "选手": "寻乐苦",
-                "成绩": [
-                    "2'15''76",
-                    "https://www.bilibili.com/video/BV14bfZBRECH/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
-                ],
-                "日期": "2026/02/04"
-            },
-            {
-                "选手": "4_c_er",
-                "成绩": [
-                    "2'20''74",
-                    "https://www.bilibili.com/video/BV145FdznEWj/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
-                ],
-                "日期": "2026/02/10"
-            },
-            {
-                "选手": "luyixxxx",
-                "成绩": [
-                    "2'25''44",
-                    "https://www.bilibili.com/video/BV1sz6YBTEpH/?spm_id_from=333.1387.homepage.video_card.click"
-                ],
-                "日期": "2026/01/30"
-            },
-            {
-                "选手": "辣舞7",
-                "成绩": [
-                    "2'29''73",
-                    "https://www.bilibili.com/video/BV14TcxzqERw/"
-                ],
-                "日期": "2026/02/10"
-            },
-            {
-                "选手": "1xuan",
-                "成绩": [
-                    "2'38''05"
-                ],
-                "日期": "2026/02/09"
+                "日期": "2025/11/05"
             },
             {
                 "选手": "蚌",
                 "成绩": [
-                    "2'40''74",
-                    "https://www.bilibili.com/video/BV1ZKiPBhEhx/?buvid=XYFB5EFF1DDA2C1CCB4285811FF57FDB3589A&amp;from_spmid=dt.dt.video.0&amp;is_story_h5=false&amp;mid=tZAbt17WEt4FiUiWpOGUqn8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=6bb72740-2103-487e-8aa5-8693c2dc9e7b&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1767116021&amp;unique_k=39VEIrv&amp;up_id=1041159056"
+                    "2'14''97"
                 ],
-                "日期": "2025/12/30"
+                "日期": "2026/01/01"
             },
             {
-                "选手": "小何²",
+                "选手": "蚌",
                 "成绩": [
-                    "2'43''35",
-                    "https://www.bilibili.com/video/BV1kzFXziEmS/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                    "2'12''96"
                 ],
-                "日期": "2026/02/10"
+                "日期": "2026/02/07"
             },
             {
-                "选手": "君亦-伪",
+                "选手": "尧虽无意逐鹿",
                 "成绩": [
-                    "2'47''06",
-                    "https://www.bilibili.com/video/BV1aGFxzgEWe/?vd_source=43fd8d8dfb638098fa4fd06e2791cc00"
+                    "2'21''57",
+                    "https://www.bilibili.com/video/BV1esCYB4ExR/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
                 ],
-                "日期": "2026/02/08"
+                "日期": "2025/11/17"
             },
             {
-                "选手": "Yoon君",
+                "选手": "gaming-lunar",
                 "成绩": [
-                    "2'49''92"
+                    "2'57''74",
+                    "https://www.bilibili.com/video/BV1DMxTznEzx/?spm_id_from=333.1387.homepage.video_card.click"
                 ],
-                "日期": "2026/01/08"
+                "日期": "2025/10/04"
             },
             {
                 "选手": "阿班",
                 "成绩": [
-                    "2'50''24",
-                    "https://www.bilibili.com/video/BV1MRiTBxE1S/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=tm.recommend.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=b1d17652-708a-4865-ba9a-38faf8667ddd&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1767177861&amp;unique_k=IaqyfjK&amp;up_id=511651162"
+                    "2'24''40",
+                    "https://www.bilibili.com/video/BV1KGCtBcE6u/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/11/13"
+            }
+        ]
+    },
+    {
+        "万凶": [
+            {
+                "选手": "4_c_er",
+                "成绩": [
+                    "2'40''21",
+                    "https://www.bilibili.com/video/BV1hGpVzwExS/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/12"
+            },
+            {
+                "选手": "辣舞7",
+                "成绩": [
+                    "2'39''33"
+                ],
+                "日期": "2025/09/02"
+            },
+            {
+                "选手": "luyixxxx",
+                "成绩": [
+                    "2'47''15"
+                ],
+                "日期": "2025/09/15"
+            },
+            {
+                "选手": "sjuauahss",
+                "成绩": [
+                    "3'04''18",
+                    "https://www.bilibili.com/video/BV1c9pxzQEXu/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/17"
+            },
+            {
+                "选手": "sjuauahss",
+                "成绩": [
+                    "3'01''23",
+                    "https://www.bilibili.com/video/BV1iipaztEnd/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/17"
+            },
+            {
+                "选手": "小天",
+                "成绩": [
+                    "2'38''84",
+                    "https://www.douyin.com/user/MS4wLjABAAAA5l37C_eKcICHAwn6x9XZbRDwcejXmnrOyxdebiPzwFk?from_tab_name=main&amp;modal_id=7547245535879630099&amp;vid=7547245535879630099"
+                ],
+                "日期": "2025/09/06"
+            },
+            {
+                "选手": "sjuauahss",
+                "成绩": [
+                    "2'58''75",
+                    "https://www.bilibili.com/video/BV1uPWVzhEWC/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/19"
+            },
+            {
+                "选手": "小天",
+                "成绩": [
+                    "2'38''84",
+                    "https://www.douyin.com/user/MS4wLjABAAAA5l37C_eKcICHAwn6x9XZbRDwcejXmnrOyxdebiPzwFk?from_tab_name=main&amp;modal_id=7547245535879630099&amp;vid=7547245535879630099"
+                ],
+                "日期": "2025/09/06"
+            },
+            {
+                "选手": "辣舞7",
+                "成绩": [
+                    "2'36''46",
+                    "https://www.bilibili.com/video/BV1EwpSzyEbN/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/16"
+            },
+            {
+                "选手": "土豆",
+                "成绩": [
+                    "2'38''02"
+                ],
+                "日期": "2025/09/08"
+            },
+            {
+                "选手": "Ther1015",
+                "成绩": [
+                    "3'17''40",
+                    "https://www.bilibili.com/video/BV1oCaNzgEKJ/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/03"
+            },
+            {
+                "选手": "土豆",
+                "成绩": [
+                    "2'37''25"
+                ],
+                "日期": "2025/09/29"
+            },
+            {
+                "选手": "离九",
+                "成绩": [
+                    "2'44''89",
+                    "https://www.douyin.com/video/7543725585903865107"
+                ],
+                "日期": "2025/08/28"
+            },
+            {
+                "选手": "天傲花",
+                "成绩": [
+                    "2'48''03",
+                    "https://www.bilibili.com/video/BV18VaUzDEhd/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/04"
+            },
+            {
+                "选手": "土豆",
+                "成绩": [
+                    "2'37''06"
+                ],
+                "日期": "2025/10/01"
+            },
+            {
+                "选手": "六根",
+                "成绩": [
+                    "2'50''95",
+                    "https://www.douyin.com/video/7548014223253081403"
+                ],
+                "日期": "2025/09/09"
+            },
+            {
+                "选手": "山月为关",
+                "成绩": [
+                    "2'46''08",
+                    "https://www.bilibili.com/video/BV1aTaZz1EEs?spm_id_from=333.788.videopod.episodes&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9&amp;p=6"
+                ],
+                "日期": "2025/08/27"
+            },
+            {
+                "选手": "沐沐来了",
+                "成绩": [
+                    "2'59''25",
+                    "https://www.douyin.com/video/7544674620012612903"
+                ],
+                "日期": "2025/08/31"
+            },
+            {
+                "选手": "起飞吧范佩西",
+                "成绩": [
+                    "3'05''89",
+                    "https://www.bilibili.com/video/BV1RZp9zQEDf?spm_id_from=333.788.player.switch&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9&amp;p=2"
+                ],
+                "日期": "2025/09/20"
+            },
+            {
+                "选手": "面条子",
+                "成绩": [
+                    "3'03''79",
+                    "https://www.douyin.com/video/7556459938667744548"
+                ],
+                "日期": "2025/10/01"
+            },
+            {
+                "选手": "想吃软饭",
+                "成绩": [
+                    "2'44''32",
+                    "https://www.douyin.com/video/7555739439272627456"
+                ],
+                "日期": "2025/09/29"
+            },
+            {
+                "选手": "落山秋",
+                "成绩": [
+                    "2'54''08",
+                    "https://www.douyin.com/video/7545900605936569615"
+                ],
+                "日期": "2025/09/03"
+            },
+            {
+                "选手": "析大牛",
+                "成绩": [
+                    "2'50''98",
+                    "https://www.douyin.com/video/7548089959211715849"
+                ],
+                "日期": "2025/09/09"
+            },
+            {
+                "选手": "cocoyibo",
+                "成绩": [
+                    "2'53''76",
+                    "https://www.bilibili.com/video/BV16JptzXEy4/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/17"
+            },
+            {
+                "选手": "天傲花",
+                "成绩": [
+                    "2'45''82",
+                    "https://www.bilibili.com/video/BV1HMH7z4EUX/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/30"
+            },
+            {
+                "选手": "sjuauahss",
+                "成绩": [
+                    "2'50''28",
+                    "https://www.bilibili.com/video/BV1YFJ1zUEzr/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=7cf4cab059ea7f93283282c9c6208bcd"
+                ],
+                "日期": "2025/09/23"
+            },
+            {
+                "选手": "析大牛",
+                "成绩": [
+                    "2'42''82",
+                    "https://www.douyin.com/video/7558333784601480483"
+                ],
+                "日期": "2025/10/07"
+            },
+            {
+                "选手": "是你都对",
+                "成绩": [
+                    "2'49''98",
+                    "https://www.bilibili.com/video/BV1H6hqzzEvk/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/08/30"
+            },
+            {
+                "选手": "土豆",
+                "成绩": [
+                    "2'33''66",
+                    "https://www.bilibili.com/video/BV1W3HJzAEB3/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/01"
+            },
+            {
+                "选手": "天傲花",
+                "成绩": [
+                    "2'44''28",
+                    "https://www.bilibili.com/video/BV1zhxrzYExc/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/08"
+            },
+            {
+                "选手": "土豆",
+                "成绩": [
+                    "2'32''79",
+                    "https://www.bilibili.com/video/BV1SJsNz3EAo/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/19"
+            },
+            {
+                "选手": "铁里铁气",
+                "成绩": [
+                    "2'49''24",
+                    "https://www.douyin.com/video/7559850058988965129"
+                ],
+                "日期": "2025/10/10"
+            },
+            {
+                "选手": "想吃软饭",
+                "成绩": [
+                    "2'41''88",
+                    "https://www.douyin.com/video/7557037787074022691"
+                ],
+                "日期": "2025/10/03"
+            },
+            {
+                "选手": "cocoyibo",
+                "成绩": [
+                    "2'49''15",
+                    "https://www.bilibili.com/video/BV131WBzzEQj/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/17"
+            },
+            {
+                "选手": "秦个个",
+                "成绩": [
+                    "2'48''65"
+                ],
+                "日期": "2025/10/31"
+            },
+            {
+                "选手": "落山秋",
+                "成绩": [
+                    "2'46''30",
+                    "https://www.douyin.com/video/7558531268862872884"
+                ],
+                "日期": "2025/10/07"
+            },
+            {
+                "选手": "天傲花",
+                "成绩": [
+                    "2'43''96",
+                    "https://www.bilibili.com/video/BV1waW9zeE4x/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/10/21"
+            },
+            {
+                "选手": "kun",
+                "成绩": [
+                    "2'47''75",
+                    "https://www.douyin.com/video/7553219093189365044"
+                ],
+                "日期": "2025/09/23"
+            },
+            {
+                "选手": "山月为关",
+                "成绩": [
+                    "2'41''77",
+                    "https://www.bilibili.com/video/BV1zUHpzeE3v/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/01"
+            },
+            {
+                "选手": "白织",
+                "成绩": [
+                    "2'47''13",
+                    "https://www.bilibili.com/video/BV1MdxnzdECS/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/10/03"
+            },
+            {
+                "选手": "天傲花",
+                "成绩": [
+                    "2'42''53",
+                    "https://www.bilibili.com/video/BV1uQ1YBdEqV/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/11/03"
+            },
+            {
+                "选手": "小何²",
+                "成绩": [
+                    "2'46''28",
+                    "https://www.bilibili.com/video/BV1RApRzEE5e/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/20"
+            },
+            {
+                "选手": "秦个个",
+                "成绩": [
+                    "2'46''53",
+                    "https://www.douyin.com/video/7568130400813272371"
+                ],
+                "日期": "2025/11/02"
+            },
+            {
+                "选手": "小何²",
+                "成绩": [
+                    "2'40''85",
+                    "https://www.bilibili.com/video/BV1dECQBVEA4/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/11/16"
+            },
+            {
+                "选手": "土豆",
+                "成绩": [
+                    "2'32''66",
+                    "https://www.bilibili.com/video/BV1SJsNz3EAo/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/21"
+            },
+            {
+                "选手": "小何²",
+                "成绩": [
+                    "2'39''15",
+                    "https://www.bilibili.com/video/BV1ZSUNBPEV7/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/11/23"
+            },
+            {
+                "选手": "Y-Zz",
+                "成绩": [
+                    "2'46''25",
+                    "https://www.douyin.com/video/7554577563336396090"
+                ],
+                "日期": "2025/09/27"
+            },
+            {
+                "选手": "4_c_er",
+                "成绩": [
+                    "2'39''21",
+                    "https://www.bilibili.com/video/BV1sFpyzrEup?spm_id_from=333.788.videopod.sections&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/16"
+            },
+            {
+                "选手": "一只刘富贵",
+                "成绩": [
+                    "2'44''85",
+                    "https://www.douyin.com/video/7567135113861205275"
+                ],
+                "日期": "2025/10/31"
+            },
+            {
+                "选手": "离九",
+                "成绩": [
+                    "2'40''187",
+                    "https://www.douyin.com/video/7556021186732248355"
+                ],
+                "日期": "2025/09/29"
+            },
+            {
+                "选手": "六根",
+                "成绩": [
+                    "2'45''56",
+                    "https://www.douyin.com/video/7555834535192218938"
+                ],
+                "日期": "2025/09/30"
+            },
+            {
+                "选手": "1xuan",
+                "成绩": [
+                    "2'44''89",
+                    "https://www.bilibili.com/video/BV1xnxnzSE8K/?spm_id_from=333.1007.top_right_bar_window_dynamic.content.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/04"
+            },
+            {
+                "选手": "面条子",
+                "成绩": [
+                    "2'41''05",
+                    "https://www.douyin.com/video/7587909861150854454"
+                ],
+                "日期": "2025/12/20"
+            },
+            {
+                "选手": "天傲花",
+                "成绩": [
+                    "2'40''18",
+                    "https://www.bilibili.com/video/BV1xkCcBRE1C/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/11/10"
+            },
+            {
+                "选手": "小何²",
+                "成绩": [
+                    "2'28''88",
+                    "https://www.bilibili.com/video/BV1gzS7BWEcL/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/11/28"
+            },
+            {
+                "选手": "半斤",
+                "成绩": [
+                    "2'44''88",
+                    "https://www.douyin.com/video/7570367140910370075"
+                ],
+                "日期": "2025/11/08"
+            },
+            {
+                "选手": "蚌",
+                "成绩": [
+                    "2'38''75"
                 ],
                 "日期": "2025/12/31"
             },
             {
-                "选手": "雌蕊呀",
+                "选手": "极了无",
                 "成绩": [
-                    "2'50''81",
-                    "https://www.bilibili.com/video/BV1p8z8BQE4n/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=dt.dt.video.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=0219aa96-27b4-43e7-825b-47567d259ea1&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1769424268&amp;unique_k=ogm815J&amp;up_id=3546621920938165"
+                    "2'44''75",
+                    "https://www.bilibili.com/video/BV1taJdzqEy6/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
                 ],
-                "日期": "2026/01/26"
+                "日期": "2025/09/21"
             },
             {
-                "选手": "欈尰矅",
+                "选手": "离九",
                 "成绩": [
-                    "2'57''98",
-                    "https://www.bilibili.com/video/BV1NmFLziEQy/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                    "2'37''05",
+                    "https://www.douyin.com/video/7583936313583553807?previous_page=app_code_link"
                 ],
-                "日期": "2026/02/03"
+                "日期": "2025/12/14"
             },
             {
-                "选手": "DJiMing",
+                "选手": "敲敲",
                 "成绩": [
-                    "3'58\"85",
-                    "https://www.bilibili.com/video/BV1PErLBDE4S/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                    "2'44''21",
+                    "https://www.douyin.com/video/7574296218839414949"
                 ],
-                "日期": "2026/01/13"
-            },
-            {
-                "选手": "市井小羿",
-                "成绩": [
-                    "8'51''62",
-                    "https://www.bilibili.com/video/BV1Huz7BmE75/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=main.space-contribution.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=ff1f6dc8-59f3-453b-8e9b-b3cd659486f7&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1769098281&amp;unique_k=T3ce8x9&amp;up_id=59468586"
-                ],
-                "日期": "2026/01/20"
-            }
-        ]
-    },
-    {
-        "总成绩": [
-            {
-                "选手": "山月为关",
-                "成绩": [
-                    "6'08''55"
-                ],
-                "奖金": "3200+666元"
-            },
-            {
-                "选手": "寻乐苦",
-                "成绩": [
-                    "6'21''17"
-                ],
-                "奖金": "2000元"
-            },
-            {
-                "选手": "luyixxxx",
-                "成绩": [
-                    "6'21''98"
-                ],
-                "奖金": "1200元"
-            },
-            {
-                "选手": "4_c_er",
-                "成绩": [
-                    "6'22''05"
-                ],
-                "奖金": "800元"
-            },
-            {
-                "选手": "辣舞7",
-                "成绩": [
-                    "6'33''42"
-                ],
-                "奖金": "600元"
+                "日期": "2025/11/19"
             },
             {
                 "选手": "阿班",
                 "成绩": [
-                    "6'48''96"
+                    "2'43''98",
+                    "https://www.bilibili.com/video/BV1WzYKzdEVM/?spm_id_from=333.1387.homepage.video_card.click"
                 ],
-                "奖金": "黑武士5pro"
+                "日期": "2025/09/04"
             },
             {
-                "选手": "君亦-伪",
+                "选手": "面条子",
                 "成绩": [
-                    "6'52\"88"
+                    "2'39''90"
                 ],
-                "奖金": "300元"
+                "日期": "2025/12/31"
             },
             {
-                "选手": "Yoon君",
+                "选手": "Dawn",
                 "成绩": [
-                    "6'59''89"
+                    "2'37''14",
+                    "https://www.douyin.com/video/7606736280432463154"
                 ],
-                "奖金": "200元"
+                "日期": "2026/02/14"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "2'36''03",
+                    "https://www.bilibili.com/video/BV1iAAYz3EPX/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=dt.dt.video.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=51e4512b-aaa3-45e0-a278-78a6bb61135e&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1772275865&amp;unique_k=iXshKde&amp;up_id=511651162"
+                ],
+                "日期": "2026/02/27"
+            }
+        ]
+    },
+    {
+        "心猿": [
+            {
+                "选手": "关注君君milimo谢谢喵",
+                "成绩": [
+                    "1'22''94",
+                    "https://www.bilibili.com/video/BV1idaFzoEbK/?spm_id_from=333.1387.upload.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/02"
+            },
+            {
+                "选手": "A妹",
+                "成绩": [
+                    "1'30''47"
+                ],
+                "日期": "2025/09/17"
+            },
+            {
+                "选手": "离九",
+                "成绩": [
+                    "1'22''40",
+                    "https://www.douyin.com/video/7550883786435677440"
+                ],
+                "日期": "2025/09/16"
+            },
+            {
+                "选手": "零零妖",
+                "成绩": [
+                    "1'20''99",
+                    "https://www.bilibili.com/video/BV1KKYGzCEG2?spm_id_from=333.788.videopod.sections&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/05"
+            },
+            {
+                "选手": "沐沐来了",
+                "成绩": [
+                    "1'21''67",
+                    "https://www.douyin.com/video/7551607386700598566"
+                ],
+                "日期": "2025/09/19"
+            },
+            {
+                "选手": "沐沐来了",
+                "成绩": [
+                    "1'19''36",
+                    "https://www.douyin.com/video/7551737618631871782"
+                ],
+                "日期": "2025/09/19"
+            },
+            {
+                "选手": "山月为关",
+                "成绩": [
+                    "1'21''98",
+                    "https://www.bilibili.com/video/BV1aTaZz1EEs?spm_id_from=333.788.videopod.episodes&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9&amp;p=7"
+                ],
+                "日期": "2025/09/04"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "1'23''53",
+                    "https://www.bilibili.com/video/BV1a8aPzcEou/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/08/30"
+            },
+            {
+                "选手": "零零妖",
+                "成绩": [
+                    "1'19''43",
+                    "https://www.bilibili.com/video/BV17yWgziEzy?spm_id_from=333.788.videopod.sections&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/19"
+            },
+            {
+                "选手": "白织",
+                "成绩": [
+                    "1'19''90",
+                    "https://www.bilibili.com/video/BV17MxBzQExR/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/08"
+            },
+            {
+                "选手": "4_c_er",
+                "成绩": [
+                    "1'18''91",
+                    "https://www.bilibili.com/video/BV1p74pzWEDS/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/11"
+            },
+            {
+                "选手": "馒头",
+                "成绩": [
+                    "1'19''93",
+                    "https://www.douyin.com/user/MS4wLjABAAAAJWMgIlFFBb3ivfHZIbmh2V7AjrGLub4jJb7wU77gNE7iLK1hKUSPyPNsGki9n2qf?from_tab_name=live&amp;modal_id=7547250761042824474"
+                ],
+                "日期": "2025/09/04"
+            },
+            {
+                "选手": "杰哥",
+                "成绩": [
+                    "1'17''75",
+                    "https://www.bilibili.com/video/BV1zKJdzsEvF/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/15"
             },
             {
                 "选手": "小何²",
                 "成绩": [
-                    "7'00''55"
+                    "1'21''54",
+                    "https://www.bilibili.com/video/BV1VPp3zfEyu/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
                 ],
-                "奖金": "八戒小挎包"
+                "日期": "2025/09/02"
             },
             {
-                "选手": "1xuan",
+                "选手": "杰哥",
                 "成绩": [
-                    "7'01\"62"
+                    "1'16''49",
+                    "https://www.bilibili.com/video/BV1tAWezQE89/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
                 ],
-                "奖金": "八戒小挎包"
+                "日期": "2025/10/16"
             },
             {
-                "选手": "雌蕊呀",
+                "选手": "杰哥",
                 "成绩": [
-                    "7'11''80"
+                    "1'15''78",
+                    "https://www.bilibili.com/video/BV1Aks1zUE9q/?spm_id_from=333.337.search-card.all.click"
                 ],
-                "奖金": "八戒小挎包"
+                "日期": "2025/10/27"
             },
             {
-                "选手": "欈尰矅",
+                "选手": "关注君君milimo谢谢喵",
                 "成绩": [
-                    "7'42''58"
+                    "1'18''71",
+                    "https://www.bilibili.com/video/BV144pmzSEcZ/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
                 ],
-                "奖金": "八戒小挎包"
+                "日期": "2025/09/17"
             },
             {
-                "选手": "DJiMing",
+                "选手": "关注君君milimo谢谢喵",
                 "成绩": [
-                    "9'25''07"
+                    "1'17''63",
+                    "https://www.bilibili.com/video/BV1571XBDEzu/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
                 ],
-                "奖金": "临沂炒鸡"
+                "日期": "2025/11/08"
             },
             {
-                "选手": "市井小羿",
+                "选手": "杰哥",
                 "成绩": [
-                    "17'42''79"
+                    "1'15''15",
+                    "https://www.bilibili.com/video/BV1e1kUBNEa2/?spm_id_from=333.337.search-card.all.click"
                 ],
-                "奖金": "临沂炒鸡"
+                "日期": "2025/11/04"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "1'20''52",
+                    "https://www.bilibili.com/video/BV1184JzmEpQ/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/10/06"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "1'19''57"
+                ],
+                "日期": "2025/12/09"
+            },
+            {
+                "选手": "小何²",
+                "成绩": [
+                    "1'19''90",
+                    "https://www.bilibili.com/video/BV14rswz8Ec5/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/10/18"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "1'19''51"
+                ],
+                "日期": "2025/12/11"
+            },
+            {
+                "选手": "萧风FX",
+                "成绩": [
+                    "1'31''91"
+                ],
+                "日期": "2025/11/27"
+            },
+            {
+                "选手": "萧风FX",
+                "成绩": [
+                    "1'22''52"
+                ],
+                "日期": "2026/01/02"
+            },
+            {
+                "选手": "萧风FX",
+                "成绩": [
+                    "1'20''06"
+                ],
+                "日期": "2026/01/03"
+            },
+            {
+                "选手": "萧风FX",
+                "成绩": [
+                    "1'18''80"
+                ],
+                "日期": "2026/01/03"
+            },
+            {
+                "选手": "萧风FX",
+                "成绩": [
+                    "1'17''45",
+                    "https://www.bilibili.com/video/BV19GiiB2EnJ/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=dt.dt.video.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=4accf2f4-cba4-4150-9735-c11bcf2e3027&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1767428226&amp;unique_k=W95kwQI&amp;up_id=3537107876317501"
+                ],
+                "日期": "2026/01/03"
+            },
+            {
+                "选手": "想吃软饭",
+                "成绩": [
+                    "1'22''06",
+                    "https://www.douyin.com/video/7552126009185766671"
+                ],
+                "日期": "2025/09/17"
+            },
+            {
+                "选手": "小天",
+                "成绩": [
+                    "1'23''67",
+                    "https://www.douyin.com/video/7561822720984370471"
+                ],
+                "日期": "2025/10/11"
+            },
+            {
+                "选手": "A妹",
+                "成绩": [
+                    "1'23''42"
+                ],
+                "日期": "2025/09/18"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "1'18''06",
+                    "https://www.bilibili.com/video/BV1YUqLBxESc/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/12/17"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "1'17''47"
+                ],
+                "日期": "2026/02/02"
             },
             {
                 "选手": "蚌",
                 "成绩": [
-                    "6'46''04"
+                    "1'15''84",
+                    "https://www.bilibili.com/video/BV1mwFKzLEQd/?-Arouter=story&amp;buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=tm.recommend.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=163&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=156ab5d1-9c2b-4c39-ad3f-113b77cfbf48&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=main.ugc-video-detail-vertical.0.0&amp;timestamp=1770018531&amp;unique_k=PDxv49s&amp;up_id=1041159056"
                 ],
-                "奖金": "视频丢失，痛失奖品"
+                "日期": "2026/02/02"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "1'15''28",
+                    "https://www.bilibili.com/video/BV1UHFNzCEAG/?-Arouter=story&amp;buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=tm.recommend.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=163&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=567ccb43-5e8a-487d-9975-36ae0db83729&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=main.ugc-video-detail-vertical.0.0&amp;timestamp=1770025735&amp;unique_k=EfZZHyN&amp;up_id=511651162"
+                ],
+                "日期": "2026/02/02"
+            },
+            {
+                "选手": "蚌",
+                "成绩": [
+                    "1'14''76"
+                ],
+                "日期": "2026/02/02"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "1'13''44",
+                    "https://www.bilibili.com/video/BV1upFTzDEy7?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=dt.dt.video.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=11a5525d-006b-4153-af3f-c67cdff7ddf5&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1770038586&amp;unique_k=MdiIbsP&amp;up_id=511651162"
+                ],
+                "日期": "2026/02/02"
+            },
+            {
+                "选手": "君亦-伪",
+                "成绩": [
+                    "1'23''40",
+                    "https://www.bilibili.com/video/BV1n1SFBxEvk/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=main.space-contribution.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=acdb9f7e-40bd-4ab2-a556-e1b4dc4a4de2&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1764762155&amp;unique_k=tbrssht&amp;up_id=296470991"
+                ],
+                "日期": "2025/11/29"
+            },
+            {
+                "选手": "福娃芙卡",
+                "成绩": [
+                    "1'22''82",
+                    "https://www.bilibili.com/video/BV1t9pRz5Ejg/?spm_id_from=333.1007.top_right_bar_window_dynamic.content.click&amp;vd_source=7cf4cab059ea7f93283282c9c6208bcd"
+                ],
+                "日期": "2025/09/20"
+            },
+            {
+                "选手": "luyixxxx",
+                "成绩": [
+                    "1'17''84",
+                    "https://www.bilibili.com/video/BV1hr43zMEr8/?spm_id_from=333.1387.upload.video_card.click&amp;vd_source=ee89a74e2b259afea2d26ba59d70b3e1"
+                ],
+                "日期": "2025/10/12"
+            },
+            {
+                "选手": "luyixxxx",
+                "成绩": [
+                    "1'14''53"
+                ],
+                "日期": "2026/02/19"
+            },
+            {
+                "选手": "离九",
+                "成绩": [
+                    "1'20''40",
+                    "https://www.douyin.com/video/7551648481778765096"
+                ],
+                "日期": "2025/09/18"
+            },
+            {
+                "选手": "luyixxxx",
+                "成绩": [
+                    "1'12''23",
+                    "https://www.bilibili.com/video/BV1ZPZBBjEND/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2026/02/20"
+            },
+            {
+                "选手": "山月为关",
+                "成绩": [
+                    "1'17''81",
+                    "https://www.bilibili.com/video/BV1k1Hsz5Ewf/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/01"
+            },
+            {
+                "选手": "luyixxxx",
+                "成绩": [
+                    "1'10''83",
+                    "https://www.bilibili.com/video/BV1Y3fYBcEas/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=main.space-contribution.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=3a1faa6d-daa2-4085-94c9-3addcaec61ec&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1772088726&amp;unique_k=E5Ew2V8&amp;up_id=480163929"
+                ],
+                "日期": "2026/02/25"
+            }
+        ]
+    },
+    {
+        "梅山": [
+            {
+                "选手": "山月为关",
+                "成绩": [
+                    "3'17''61"
+                ],
+                "日期": "2025/09/09"
+            },
+            {
+                "选手": "4_c_er",
+                "成绩": [
+                    "3'22''06",
+                    "https://www.bilibili.com/video/BV1vrxuziEf9/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/06"
+            },
+            {
+                "选手": "离九",
+                "成绩": [
+                    "3'53''20",
+                    "https://www.douyin.com/video/7553905582223265024"
+                ],
+                "日期": "2025/09/24"
+            },
+            {
+                "选手": "离九",
+                "成绩": [
+                    "3'50''13"
+                ],
+                "日期": "2025/10/12"
+            },
+            {
+                "选手": "摸鱼",
+                "成绩": [
+                    "3'49''34",
+                    "https://www.bilibili.com/video/BV1gpH3zXE3p/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/03"
+            },
+            {
+                "选手": "4_c_er",
+                "成绩": [
+                    "3'10''61",
+                    "https://www.bilibili.com/video/BV1DwxUziETM/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/07"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "3'30''83",
+                    "https://www.bilibili.com/video/BV1SepcztESo/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/09/14"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "3'26''20",
+                    "https://www.bilibili.com/video/BV1oLyZBYE3R/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/11/02"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "3'22''12"
+                ],
+                "日期": "2025/11/08"
+            },
+            {
+                "选手": "离九",
+                "成绩": [
+                    "3'39''33",
+                    "https://www.douyin.com/video/7564374546913611008"
+                ],
+                "日期": "2025/10/22"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "3'18''73",
+                    "https://www.bilibili.com/video/BV14pkDBZEkg/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/11/09"
+            },
+            {
+                "选手": "寻乐苦",
+                "成绩": [
+                    "3'06''37",
+                    "https://www.bilibili.com/video/BV1NSYAzpEYW/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/09"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "3'18''34"
+                ],
+                "日期": "2025/11/15"
+            },
+            {
+                "选手": "雌蕊呀",
+                "成绩": [
+                    "3'48''01",
+                    "https://www.bilibili.com/video/BV1hRC3B4EPX/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/11/14"
+            },
+            {
+                "选手": "雌蕊呀",
+                "成绩": [
+                    "3'25''12",
+                    "https://www.bilibili.com/video/BV16hyLBpE5K/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/11/18"
+            },
+            {
+                "选手": "棍势哥",
+                "成绩": [
+                    "3'12''00",
+                    "https://www.bilibili.com/video/BV1ZjCJBsEuy/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/11/12"
+            },
+            {
+                "选手": "cocoyibo",
+                "成绩": [
+                    "3'36''19",
+                    "https://www.bilibili.com/video/BV1cUUXB3E1A/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/11/25"
+            },
+            {
+                "选手": "4_c_er",
+                "成绩": [
+                    "3'01''43",
+                    "https://www.bilibili.com/video/BV1WC13BQEEw/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/11/01"
+            },
+            {
+                "选手": "gaming-lunar",
+                "成绩": [
+                    "4'56''00",
+                    "https://www.bilibili.com/video/BV1x626BuE2P/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=dt.dt.video.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=813bd3c4-1b13-406b-983d-2be728b8d2bb&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1765179358&amp;unique_k=ZfZzHh7&amp;up_id=3546894571670352"
+                ],
+                "日期": "2025/12/08"
+            },
+            {
+                "选手": "小何²",
+                "成绩": [
+                    "4'12''09",
+                    "https://www.bilibili.com/video/BV1saxszZEEw/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/04"
+            },
+            {
+                "选手": "小何²",
+                "成绩": [
+                    "3'36''03"
+                ],
+                "日期": "2025/12/08"
+            },
+            {
+                "选手": "辣舞7",
+                "成绩": [
+                    "3'13''38"
+                ],
+                "日期": "2025/11/18"
+            },
+            {
+                "选手": "秋起泛白露",
+                "成绩": [
+                    "5'10''52",
+                    "https://www.bilibili.com/video/BV1FV2kBqEhP/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=tm.recommend.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=bec02247-040b-43ba-8685-2e2a0c9e9fa1&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1765286537&amp;unique_k=yDCmCeY&amp;up_id=486845521"
+                ],
+                "日期": "2025/12/08"
+            },
+            {
+                "选手": "维尔特陈伯伦",
+                "成绩": [
+                    "3'30''79",
+                    "https://www.bilibili.com/video/BV1Uy1SBvEi4/?spm_id_from=333.1007.tianma.2-2-5.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/11/07"
+            },
+            {
+                "选手": "木木",
+                "成绩": [
+                    "4'11''92",
+                    "https://www.bilibili.com/video/BV1HM1wBREUU/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/11/02"
+            },
+            {
+                "选手": "luyixxxx",
+                "成绩": [
+                    "3'24''88"
+                ],
+                "日期": "2025/12/20"
+            },
+            {
+                "选手": "辣舞7",
+                "成绩": [
+                    "3'08''86"
+                ],
+                "日期": "2025/12/15"
+            },
+            {
+                "选手": "Murphy",
+                "成绩": [
+                    "5'46''45",
+                    "https://www.bilibili.com/video/BV1Rv4ez6EvN/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/10/15"
+            },
+            {
+                "选手": "秋起泛白露",
+                "成绩": [
+                    "5'00''18",
+                    "https://www.bilibili.com/video/BV1G2qfB2EEN/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=dt.dt.video.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=0b41f1bb-791e-4de9-9f37-6e6c553b0126&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1766162307&amp;unique_k=Sp5Le7T&amp;up_id=486845521"
+                ],
+                "日期": "2025/12/19"
+            },
+            {
+                "选手": "维尔特陈伯伦",
+                "成绩": [
+                    "3'08''951",
+                    "https://www.bilibili.com/video/BV1iTBABfENf/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/12/19"
+            },
+            {
+                "选手": "天傲花",
+                "成绩": [
+                    "4'22''52",
+                    "https://www.bilibili.com/video/BV1V7zmB9EqS/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=dt.dt.video.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=39fc0d3b-4bec-46d1-86e4-41403e4601da&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1769309232&amp;unique_k=7k5sWef&amp;up_id=422735802"
+                ],
+                "日期": "2026/01/25"
+            },
+            {
+                "选手": "gaming-lunar",
+                "成绩": [
+                    "4'22''78",
+                    "https://www.bilibili.com/video/BV1rVmxBxExM/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=main.space-contribution.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=b0b96658-a296-4d97-839d-8273877b33ee&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1765362756&amp;unique_k=ieIGfOV&amp;up_id=3546894571670352"
+                ],
+                "日期": "2025/12/10"
+            },
+            {
+                "选手": "沧海一粟",
+                "成绩": [
+                    "4'05''43",
+                    "https://v.douyin.com/iiKA_2y7M2g/"
+                ],
+                "日期": "2026/01/14"
+            },
+            {
+                "选手": "天傲花",
+                "成绩": [
+                    "3'57\"64",
+                    "https://www.bilibili.com/video/BV1r26YBhEWQ/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2026/01/29"
+            },
+            {
+                "选手": "从此不尿尿",
+                "成绩": [
+                    "3'11''72",
+                    "https://www.bilibili.com/video/BV12j6pB3Ec3/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=dt.dt.video.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=03cd9373-72fb-4ee0-926f-f30d43a20128&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1769883780&amp;unique_k=4BYtMdw&amp;up_id=110072502"
+                ],
+                "日期": "2026/02/01"
+            },
+            {
+                "选手": "极了无",
+                "成绩": [
+                    "4'00''08",
+                    "https://www.bilibili.com/video/BV1NgsKzMEBT/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/20"
+            },
+            {
+                "选手": "天傲花",
+                "成绩": [
+                    "3'49\"01",
+                    "https://www.bilibili.com/video/BV1pEffBHE9x/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2026/02/04"
+            },
+            {
+                "选手": "维尔特陈伯伦",
+                "成绩": [
+                    "3'06''39",
+                    "https://www.bilibili.com/video/BV1836eB5Efz?-Arouter=story&amp;buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=tm.recommend.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;plat_id=163&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=7ade94a1-7c29-44ad-8a04-23501a964f48&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=main.ugc-video-detail-vertical.0.0&amp;timestamp=1769751759&amp;unique_k=Ws4bMIr&amp;up_id=1027845560"
+                ],
+                "日期": "2026/01/30"
+            },
+            {
+                "选手": "小何²",
+                "成绩": [
+                    "3'17''85",
+                    "https://www.bilibili.com/video/BV1kMmvBDEwX/?buvid=XU0B4A10615D95543B4172F09054237E2E98D&amp;from_spmid=dt.space-dt.video.0&amp;is_story_h5=false&amp;mid=S82tpB0vDUk1xSfEXHdKhw%3D%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=2a94da97-c579-44e0-87ab-7e949d9af2ba&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1765697025&amp;unique_k=NMe6uEr&amp;up_id=695726695"
+                ],
+                "日期": "2025/12/14"
+            },
+            {
+                "选手": "4_c_er",
+                "成绩": [
+                    "2'57''12",
+                    "https://www.bilibili.com/video/BV12K2dBUEGv?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=tm.recommend.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=0ba4f6c2-4617-4ca1-ae68-4e6bd23b39ce&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1765062386&amp;unique_k=kCB525u&amp;up_id=34752710&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9&amp;p=2&amp;spm_id_from=333.788.videopod.sections"
+                ],
+                "日期": "2025/12/07"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "2'59''46",
+                    "https://www.bilibili.com/video/BV1JUyGB5EGz/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/11/18"
+            },
+            {
+                "选手": "A妹",
+                "成绩": [
+                    "3'55''30",
+                    "https://www.bilibili.com/video/BV1EEaBzqES3/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/06"
+            },
+            {
+                "选手": "离九",
+                "成绩": [
+                    "3'19''95",
+                    "https://www.douyin.com/video/7571364109103963584"
+                ],
+                "日期": "2025/11/11"
+            },
+            {
+                "选手": "想吃软饭",
+                "成绩": [
+                    "3'43''37"
+                ],
+                "日期": "2026/01/03"
+            },
+            {
+                "选手": "离九",
+                "成绩": [
+                    "3'08''50",
+                    "https://www.douyin.com/video/7611064591484960948?previous_page=app_code_link"
+                ],
+                "日期": "2026/02/26"
+            }
+        ]
+    },
+    {
+        "六根": [
+            {
+                "选手": "福娃芙卡",
+                "成绩": [
+                    "5'18''64",
+                    "https://www.bilibili.com/video/BV1iNYwzYEVZ/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/09"
+            },
+            {
+                "选手": "福娃",
+                "成绩": [
+                    "5'05''38",
+                    "https://www.bilibili.com/video/BV1e5J9z3EN8/?spm_id_from=333.1387.homepage.video_card.clic"
+                ],
+                "日期": "2025/09/24"
+            },
+            {
+                "选手": "山月为关",
+                "成绩": [
+                    "5'05''88"
+                ],
+                "日期": "2025/09/10"
+            },
+            {
+                "选手": "山月为关",
+                "成绩": [
+                    "5'05''09"
+                ],
+                "日期": "2025/09/28"
+            },
+            {
+                "选手": "吃花椒的芝麻酱",
+                "成绩": [
+                    "5'12''25",
+                    "https://www.bilibili.com/video/BV15aH9z2EYq/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/10"
+            },
+            {
+                "选手": "离九",
+                "成绩": [
+                    "5'18''93",
+                    "https://www.douyin.com/video/7549054387748228352"
+                ],
+                "日期": "2025/09/11"
+            },
+            {
+                "选手": "寻乐苦",
+                "成绩": [
+                    "5'11''89",
+                    "https://www.bilibili.com/video/BV1UqpvzWEKQ/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/18"
+            },
+            {
+                "选手": "寻乐苦",
+                "成绩": [
+                    "5'06''40",
+                    "https://www.bilibili.com/video/BV1RsxYzvERM/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/28"
+            },
+            {
+                "选手": "君亦-伪",
+                "成绩": [
+                    "5'33''01",
+                    "https://www.bilibili.com/video/BV1co4tzAEeF/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/10/14"
+            },
+            {
+                "选手": "山月为关",
+                "成绩": [
+                    "5'03''73"
+                ],
+                "日期": "2025/09/29"
+            },
+            {
+                "选手": "君亦-伪",
+                "成绩": [
+                    "5'24''29",
+                    "https://www.bilibili.com/video/BV1SdWQzuEdn/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/10/21"
+            },
+            {
+                "选手": "白织",
+                "成绩": [
+                    "5'11''70",
+                    "https://www.bilibili.com/video/BV1fnabzVEch/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/05"
+            },
+            {
+                "选手": "吃花椒的芝麻酱",
+                "成绩": [
+                    "5'10''49",
+                    "https://www.bilibili.com/video/BV1tUnBzdEbz?spm_id_from=333.788.videopod.sections&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/29"
+            },
+            {
+                "选手": "离九",
+                "成绩": [
+                    "5'08''98"
+                ],
+                "日期": "2025/10/08"
+            },
+            {
+                "选手": "白织",
+                "成绩": [
+                    "5'04''99",
+                    "https://www.bilibili.com/video/BV1pfxNzBE93/?vd_source=bab071ada82f8ebb9f99be72fca7f571"
+                ],
+                "日期": "2025/10/26"
+            },
+            {
+                "选手": "白织",
+                "成绩": [
+                    "5'04''42"
+                ],
+                "日期": "2025/10/29"
+            },
+            {
+                "选手": "白织",
+                "成绩": [
+                    "5'00''66"
+                ],
+                "日期": "2025/11/01"
+            },
+            {
+                "选手": "白织",
+                "成绩": [
+                    "5'00''37"
+                ],
+                "日期": "2025/11/02"
+            },
+            {
+                "选手": "君亦-伪",
+                "成绩": [
+                    "5'11''98",
+                    "https://www.bilibili.com/video/BV1rfs7zAEBf/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/10/23"
+            },
+            {
+                "选手": "山月为关",
+                "成绩": [
+                    "5'00''48",
+                    "https://www.bilibili.com/video/BV1YtsszqEee/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/10/22"
+            },
+            {
+                "选手": "山月为关",
+                "成绩": [
+                    "4'59''88"
+                ],
+                "日期": "2025/11/11"
+            },
+            {
+                "选手": "白织",
+                "成绩": [
+                    "4'56''78",
+                    "https://www.bilibili.com/video/BV1cxyfB2EvK/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/11/02"
+            },
+            {
+                "选手": "山月为关",
+                "成绩": [
+                    "4'59''75"
+                ],
+                "日期": "2025/11/13"
+            },
+            {
+                "选手": "山月为关",
+                "成绩": [
+                    "4'52''93"
+                ],
+                "日期": "2025/11/15"
+            },
+            {
+                "选手": "落山秋",
+                "成绩": [
+                    "5'17''74",
+                    "https://www.douyin.com/video/7571521289974828328"
+                ],
+                "日期": "2025/11/12"
+            },
+            {
+                "选手": "白织",
+                "成绩": [
+                    "4'50''91",
+                    "https://www.bilibili.com/video/BV18YCyBDEfD/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/11/15"
+            },
+            {
+                "选手": "Y-Zz",
+                "成绩": [
+                    "5'08''62",
+                    "https://www.douyin.com/video/7569416742017036465"
+                ],
+                "日期": "2025/11/06"
+            },
+            {
+                "选手": "沐沐来了",
+                "成绩": [
+                    "5'27''92",
+                    "https://www.douyin.com/video/7573275027781602601"
+                ],
+                "日期": "2025/11/16"
+            },
+            {
+                "选手": "极了无",
+                "成绩": [
+                    "5'19''76",
+                    "https://www.bilibili.com/video/BV16AJ9zUEum/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/24"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "5'06''12",
+                    "https://www.bilibili.com/video/BV1o7kmBeEQW/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/11/11"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "5'02''73"
+                ],
+                "日期": "2025/11/22"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "4'59''65",
+                    "https://www.bilibili.com/video/BV1wuUnBmE2M/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/11/22"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "4'57''95"
+                ],
+                "日期": "2025/11/22"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "4'55''97",
+                    "https://www.bilibili.com/video/BV12tUGBaEWy/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/11/24"
+            },
+            {
+                "选手": "沐沐来了",
+                "成绩": [
+                    "5'22''95",
+                    "https://www.douyin.com/video/7574064837349739839"
+                ],
+                "日期": "2025/11/20"
+            },
+            {
+                "选手": "君亦-伪",
+                "成绩": [
+                    "5'04''32"
+                ],
+                "日期": "2025/11/21"
+            },
+            {
+                "选手": "君亦-伪",
+                "成绩": [
+                    "5'01''36"
+                ],
+                "日期": "2025/11/30"
+            },
+            {
+                "选手": "小何²",
+                "成绩": [
+                    "5'46''84",
+                    "https://www.bilibili.com/video/BV1mhnjzZEnP/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/27"
+            },
+            {
+                "选手": "想吃软饭",
+                "成绩": [
+                    "5'13''93",
+                    "https://www.douyin.com/video/7574022109966519579"
+                ],
+                "日期": "2025/11/17"
+            },
+            {
+                "选手": "离九",
+                "成绩": [
+                    "5'01''96",
+                    "https://www.douyin.com/video/7566137938678926644"
+                ],
+                "日期": "2025/10/28"
+            },
+            {
+                "选手": "gaming-lunar",
+                "成绩": [
+                    "6'26''81",
+                    "https://www.bilibili.com/video/BV1nLU3BQECV/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/11/23"
+            },
+            {
+                "选手": "如梦逸如幻",
+                "成绩": [
+                    "6'08''98"
+                ],
+                "日期": "2025/11/27"
+            },
+            {
+                "选手": "落山秋",
+                "成绩": [
+                    "5'12''65",
+                    "https://www.douyin.com/user/MS4wLjABAAAAVzoTvUhi9DcSHYm4V26d8h4NDNBp4yidlb9NPY2v9t8?from_tab_name=main&amp;relation=0&amp;vid=7577713790289022223"
+                ],
+                "日期": "2025/11/18"
+            },
+            {
+                "选手": "小何²",
+                "成绩": [
+                    "5'12''11",
+                    "https://www.bilibili.com/video/BV1dnSiBEEnP/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/11/30"
+            },
+            {
+                "选手": "落山秋",
+                "成绩": [
+                    "5'10''46",
+                    "https://www.douyin.com/video/7577713790289022223"
+                ],
+                "日期": "2025/11/28"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "4'51''10",
+                    "https://www.bilibili.com/video/BV1YHSwBSEBq/?spm_id_from=333.1387.homepage.video_card.click"
+                ],
+                "日期": "2025/11/29"
+            },
+            {
+                "选手": "天傲花",
+                "成绩": [
+                    "5'30''65",
+                    "https://www.bilibili.com/video/BV1fVCgBiEmh/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/11/14"
+            },
+            {
+                "选手": "1xuan",
+                "成绩": [
+                    "5'28''05",
+                    "https://www.bilibili.com/video/BV1mMagzzEQU?spm_id_from=333.788.videopod.sections&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/03"
+            },
+            {
+                "选手": "沐沐来了",
+                "成绩": [
+                    "5'08''67",
+                    "https://www.douyin.com/video/7578140632519118122"
+                ],
+                "日期": "2025/11/28"
+            },
+            {
+                "选手": "雌蕊呀",
+                "成绩": [
+                    "5'17''11",
+                    "https://www.bilibili.com/video/BV1hMxDzgEgH/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/10/07"
+            },
+            {
+                "选手": "想吃软饭",
+                "成绩": [
+                    "5'04''18"
+                ],
+                "日期": "2025/11/30"
+            },
+            {
+                "选手": "张明煌",
+                "成绩": [
+                    "5'15''58",
+                    "https://www.bilibili.com/video/BV1v7mdBNE68/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=tm.recommend.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=52c39f8b-c6d2-4b1e-860c-3e03e189f151&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1765713253&amp;unique_k=AttgZgD&amp;up_id=27606218"
+                ],
+                "日期": "2025/12/13"
+            },
+            {
+                "选手": "落山秋",
+                "成绩": [
+                    "5'04''12",
+                    "https://www.douyin.com/video/7581102956464868649?previous_page=app_code_link"
+                ],
+                "日期": "2025/12/07"
+            },
+            {
+                "选手": "落山秋",
+                "成绩": [
+                    "4'59''55",
+                    "https://www.douyin.com/video/7588334580671728932?previous_page=app_code_link"
+                ],
+                "日期": "2025/12/26"
+            },
+            {
+                "选手": "蚌",
+                "成绩": [
+                    "4'45''76",
+                    "https://www.bilibili.com/video/BV1xCS7BDE2k/?spm_id_from=333.788.recommend_more_video.0&amp;trackid=web_related_0.router-related-2206419-xc9bj.1765016513634.15"
+                ],
+                "日期": "2025/11/28"
+            },
+            {
+                "选手": "析大牛",
+                "成绩": [
+                    "5'16''57",
+                    "https://www.douyin.com/video/7583637890601585929?previous_page=app_code_link"
+                ],
+                "日期": "2025/12/14"
+            },
+            {
+                "选手": "A妹",
+                "成绩": [
+                    "5'12''55",
+                    "https://www.bilibili.com/video/BV1e2HDzzEk3/?spm_id_from=333.337.search-card.all.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/09/10"
+            },
+            {
+                "选手": "君亦-伪",
+                "成绩": [
+                    "4'52''35",
+                    "https://www.bilibili.com/video/BV1SSSvBzEjp/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/11/30"
+            },
+            {
+                "选手": "土豆",
+                "成绩": [
+                    "4'52''68",
+                    "https://www.bilibili.com/video/BV1rhqPBMETW/?buvid=XXE0805E7127701A70649782E9183E554AA7C&amp;from_spmid=tm.recommend.0.0&amp;is_story_h5=false&amp;mid=OuBfR%2F4tOrqTFpHXpuOqPA%3D%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=7bdf48e8-bd2b-4e0f-ab36-bed7f435ddf3&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1767710138&amp;unique_k=GiBMkZd&amp;up_id=12251587"
+                ],
+                "日期": "2026/01/06"
+            },
+            {
+                "选手": "Y-Zz",
+                "成绩": [
+                    "5'04''09",
+                    "https://www.douyin.com/video/7574618550004381882"
+                ],
+                "日期": "2025/11/20"
+            },
+            {
+                "选手": "蚌",
+                "成绩": [
+                    "4'45''09",
+                    "https://www.bilibili.com/video/BV1DZieBMEui/?buvid=XX1BD0017390F8118B2DD1C7884DF4920F072&amp;from_spmid=default-value&amp;is_story_h5=false&amp;mid=%2BKGIpXZ9EbiwORQsKAH9iw%3D%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=50113ed4-0451-45b4-a32d-5e49ed1f0ab6&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1767439769&amp;unique_k=z2WsBis&amp;up_id=1041159056"
+                ],
+                "日期": "2026/01/03"
+            },
+            {
+                "选手": "土豆",
+                "成绩": [
+                    "4'45''63",
+                    "https://www.bilibili.com/video/BV1wnrfBuEzv/?spm_id_from=333.1007.top_right_bar_window_history.content.click&amp;vd_source=43fd8d8dfb638098fa4fd06e2791cc00"
+                ],
+                "日期": "2026/01/15"
+            },
+            {
+                "选手": "君亦-伪",
+                "成绩": [
+                    "4'48''54",
+                    "https://www.bilibili.com/video/BV13s69BTEU6/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=default-value&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=96b1da72-29b7-40ae-a092-ae3c9a834f39&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1768112088&amp;unique_k=fqpf8X3&amp;up_id=296470991"
+                ],
+                "日期": "2026/01/10"
+            },
+            {
+                "选手": "离九",
+                "成绩": [
+                    "4'56''20",
+                    "https://www.douyin.com/video/7578825087567998626"
+                ],
+                "日期": "2025/12/01"
+            },
+            {
+                "选手": "小何²",
+                "成绩": [
+                    "4'57''71",
+                    "https://b23.tv/AorwER4"
+                ],
+                "日期": "2025/12/06"
+            },
+            {
+                "选手": "小何²",
+                "成绩": [
+                    "4'52''90",
+                    "https://www.bilibili.com/video/BV1akfVBMEhw/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2026/02/14"
+            },
+            {
+                "选手": "张明煌",
+                "成绩": [
+                    "5'02''44",
+                    "https://www.bilibili.com/video/BV1zbqVBhE4V/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=dt.dt.video.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=1ee45b2e-9edc-49c1-9648-fbec7abbb8dc&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1765978705&amp;unique_k=OCggKWg&amp;up_id=27606218"
+                ],
+                "日期": "2025/12/17"
+            },
+            {
+                "选手": "山月为关",
+                "成绩": [
+                    "4'50''22",
+                    "https://www.bilibili.com/video/BV1hpyGBwEd9/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2025/11/16"
+            },
+            {
+                "选手": "极了无",
+                "成绩": [
+                    "5'08''33",
+                    "https://www.bilibili.com/video/BV1xByABFE5L/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/11/20"
+            },
+            {
+                "选手": "土豆",
+                "成绩": [
+                    "4'41''65",
+                    "https://www.bilibili.com/video/BV1uJ64BdEdL/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=dt.dt.video.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=952e9578-caa4-4b3d-9cce-d69a681ef8d3&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1769942578&amp;unique_k=tQqZVju&amp;up_id=12251587"
+                ],
+                "日期": "2026/01/31"
+            },
+            {
+                "选手": "福禄娃",
+                "成绩": [
+                    "5'07''66"
+                ],
+                "日期": "2026/02/26"
+            },
+            {
+                "选手": "福禄娃",
+                "成绩": [
+                    "5'03''93"
+                ],
+                "日期": "2026/02/27"
+            },
+            {
+                "选手": "福禄娃",
+                "成绩": [
+                    "5'01''36"
+                ],
+                "日期": "2026/02/28"
+            },
+            {
+                "选手": "土豆",
+                "成绩": [
+                    "4'41''26"
+                ],
+                "日期": "2026/02/26"
             }
         ]
     }
