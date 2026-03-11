@@ -7,19 +7,19 @@
  * 
  */
 import fs from 'fs'
-import { generateGauntletJsonSingle, generateGauntletJsonTotal, generateGauntletOfficialRankingList, generateGauntletJsonFirstAnniversary, generateGauntletFirstAnniversaryRankingList, generateGauntletLastUpdatedTime } from "./util-gauntlet.js"
+import { generateGauntletJsonSingle, generateGauntletJsonTotal, generateGauntletOfficialRankingList, generateGauntletJsonFirstAnniversary, generateGauntletFirstAnniversaryRankingList, generateGauntletLastUpdatedTime } from './util-gauntlet.js'
 import { generateRematchJsonNextWeek, generateRematchWeekList } from './util-rematch.js'
 
 
-console.log("now running command: npm/pnpm run " + process.env.npm_lifecycle_event)
-if ("dev" === process.env.npm_lifecycle_event || "generate-list" === process.env.npm_lifecycle_event) {
-    generateGauntletLastUpdatedTime("data/gauntlet/黑猴九禁速通榜(新).xlsx", "data/gauntlet/last-updated-time")
+console.log('now running command: npm/pnpm run ' + process.env.npm_lifecycle_event)
+if ('dev' === process.env.npm_lifecycle_event || 'generate-list' === process.env.npm_lifecycle_event) {
+    generateGauntletLastUpdatedTime('data/gauntlet/黑猴九禁速通榜(新).xlsx', 'data/gauntlet/last-updated-time')
 
-    generateGauntletJsonSingle("data/gauntlet/黑猴九禁速通榜(新).xlsx", 1, "data/gauntlet/new-list-single.json")
+    generateGauntletJsonSingle('data/gauntlet/黑猴九禁速通榜(新).xlsx', 1, 'data/gauntlet/new-list-single.json')
 
-    generateGauntletJsonTotal("data/gauntlet/黑猴九禁速通榜(新).xlsx", 2, "data/gauntlet/new-list-total.json")
+    generateGauntletJsonTotal('data/gauntlet/黑猴九禁速通榜(新).xlsx', 2, 'data/gauntlet/new-list-total.json')
 
-    generateGauntletJsonFirstAnniversary("data/gauntlet/黑猴九禁速通榜(新).xlsx", 4, "data/gauntlet/first-anniversary.json")
+    generateGauntletJsonFirstAnniversary('data/gauntlet/黑猴九禁速通榜(新).xlsx', 4, 'data/gauntlet/first-anniversary.json')
 }
 
 
@@ -51,6 +51,6 @@ generateGauntletOfficialRankingList(
 )
 
 
-// generateRematchJsonNextWeek("data/rematch/boss-list.json", "data/rematch/week-list.json")
+// generateRematchJsonNextWeek('data/rematch/boss-list.json', 'data/rematch/week-list.json')
 
-generateRematchWeekList("data/rematch/week-list.json", "docs/ranking-list/rematch/week-list.md", "# 复战齐天每周 BOSS 名单\n\n")
+generateRematchWeekList('data/rematch/week-list.json', 'docs/ranking-list/rematch/week-list.md', `# 复战齐天每周 BOSS 名单\n\n`)

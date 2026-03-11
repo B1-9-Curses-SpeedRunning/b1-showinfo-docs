@@ -13,7 +13,7 @@
  */
 import fs from 'fs'
 import json2md from 'json2md'
-import XLSX from "xlsx"
+import XLSX from 'xlsx'
 import moment from 'moment'
 
 
@@ -73,7 +73,7 @@ export function convertSingleList(inputJsonPath) {
     // 生成标题：单项。
     const markdownElements = [{ h2: '单项' }]
 
-    // rawJson 是数组，每个元素是 { "组名": [选手数组] }
+    // rawJson 是数组，每个元素是 { '组名': [选手数组] }
     rawJson.forEach(section => {
         const groupName = Object.keys(section)[0] // 三虎、四僧等。
         const tableData = section[groupName]
@@ -183,7 +183,7 @@ export function convertFirstAnniversaryList(inputJsonPath) {
     const markdownElements = []
 
     // 由于周年连战的总成绩 json 格式和单项式一样的，因此按照单项的方式处理即可。
-    // rawJson 是数组，每个元素是 { "组名": [选手数组] }
+    // rawJson 是数组，每个元素是 { '组名': [选手数组] }
     rawJson.forEach(section => {
         const groupName = Object.keys(section)[0]
         const tableData = section[groupName]
@@ -274,7 +274,7 @@ export function generateGauntletJsonSingle(filePath, sheetIndex, outputJsonPath)
     const workbook = XLSX.readFile(filePath) // 读取 Excel 文件。
     const sheetName = workbook.SheetNames[sheetIndex] // 获取工作表名称。
     const sheet = workbook.Sheets[sheetName] // 获取工作表对象。
-    const range = XLSX.utils.decode_range(sheet["!ref"]) // 获取数据范围。
+    const range = XLSX.utils.decode_range(sheet['!ref']) // 获取数据范围。
 
     const titles = []
     // 提取第一行标题及起始列。
@@ -287,7 +287,7 @@ export function generateGauntletJsonSingle(filePath, sheetIndex, outputJsonPath)
     // 遍历每个标题列生成选手数据。
     for (const { title, startCol } of titles) {
         // 跳过不需要解析的列，如汇总或备注。
-        if ("汇总" === title || "备注" === title) continue
+        if ('汇总' === title || '备注' === title) continue
 
         const arr = []
 
@@ -303,14 +303,14 @@ export function generateGauntletJsonSingle(filePath, sheetIndex, outputJsonPath)
 
             const name = String(nameCell.v).trim()
             // 特殊行处理：遇到破纪录次数结束，遇到前十玩家跳过。
-            if ("破纪录次数(含旧榜)↓" === name) break
-            if ("前十玩家↑" === name) continue
+            if ('破纪录次数(含旧榜)↓' === name) break
+            if ('前十玩家↑' === name) continue
 
             // 读取成绩和链接。
-            const score = scoreCell ? String(scoreCell.v) : ""
-            const link = scoreCell?.l?.Target || ""
+            const score = scoreCell ? String(scoreCell.v) : ''
+            const link = scoreCell?.l?.Target || ''
             // 日期优先使用格式化显示，否则取原始值。
-            const date = moment(new Date((dateCell.v - 25569) * 86400 * 1000)).format("YYYY/MM/DD")
+            const date = moment(new Date((dateCell.v - 25569) * 86400 * 1000)).format('YYYY/MM/DD')
 
             // 构造选手对象，成绩带链接则使用数组 [成绩, 链接]。
             arr.push({
@@ -324,7 +324,7 @@ export function generateGauntletJsonSingle(filePath, sheetIndex, outputJsonPath)
         if (arr.length > 0) res.push({ [title]: arr })
     }
 
-    fs.writeFileSync(outputJsonPath, JSON.stringify(res, null, 4), "utf-8")
+    fs.writeFileSync(outputJsonPath, JSON.stringify(res, null, 4), 'utf-8')
 }
 
 /**
@@ -338,7 +338,7 @@ export function generateGauntletJsonTotal(filePath, sheetIndex, outputJsonPath) 
     const workbook = XLSX.readFile(filePath) // 读取 Excel 文件。
     const sheetName = workbook.SheetNames[sheetIndex] // 获取工作表名称。
     const sheet = workbook.Sheets[sheetName] // 获取工作表对象。
-    const range = XLSX.utils.decode_range(sheet["!ref"]) // 获取数据范围。
+    const range = XLSX.utils.decode_range(sheet['!ref']) // 获取数据范围。
 
     const headers = []
     // 提取表头列。
@@ -360,15 +360,15 @@ export function generateGauntletJsonTotal(filePath, sheetIndex, outputJsonPath) 
             const cell = sheet[cellAddress]                      // 获取单元格对象。
 
             // 如果是选手列，检查姓名是否存在。
-            if ("选手" === header) {
+            if ('选手' === header) {
                 if (!cell || !cell.v) break // 选手为空直接跳过整行。
                 hasName = true
-                rowObj["选手"] = cell.v     // 保存选手姓名。
+                rowObj['选手'] = cell.v     // 保存选手姓名。
                 continue
             }
 
             // 如果是总成绩列。
-            if ("总成绩" === header) {
+            if ('总成绩' === header) {
                 // 总成绩可能为空，如果有则直接取值，否则设为空数组。
                 rowObj[header] = cell && cell.v ? cell.v : []
                 continue
@@ -382,7 +382,7 @@ export function generateGauntletJsonTotal(filePath, sheetIndex, outputJsonPath) 
         if (hasName) res.push(rowObj)
     }
 
-    fs.writeFileSync(outputJsonPath, JSON.stringify(res, null, 4), "utf-8")
+    fs.writeFileSync(outputJsonPath, JSON.stringify(res, null, 4), 'utf-8')
 }
 
 /**
@@ -396,7 +396,7 @@ export function generateGauntletJsonFirstAnniversary(filePath, sheetIndex, outpu
     const workbook = XLSX.readFile(filePath) // 读取 Excel 文件。
     const sheetName = workbook.SheetNames[sheetIndex] // 获取工作表名称。
     const sheet = workbook.Sheets[sheetName] // 获取工作表对象。
-    const range = XLSX.utils.decode_range(sheet["!ref"]) // 获取数据范围。
+    const range = XLSX.utils.decode_range(sheet['!ref']) // 获取数据范围。
 
     const titles = []
     // 提取第一行标题及起始列。
@@ -409,7 +409,7 @@ export function generateGauntletJsonFirstAnniversary(filePath, sheetIndex, outpu
     // 遍历每个标题列生成选手数据。
     for (const { title, startCol } of titles) {
         // 跳过不需要解析的列，如汇总或备注。
-        if ("排名" === title || "已核对" === title || "汇总" === title || "备注" === title || "历史成绩-道满归根" === title || "历史成绩-群妖聚义" === title) continue
+        if ('排名' === title || '已核对' === title || '汇总' === title || '备注' === title || '历史成绩-道满归根' === title || '历史成绩-群妖聚义' === title) continue
 
         const arr = []
 
@@ -426,24 +426,24 @@ export function generateGauntletJsonFirstAnniversary(filePath, sheetIndex, outpu
 
             const name = String(nameCell.v).trim()
             // 特殊行处理：遇到破纪录次数结束，遇到前十玩家跳过。
-            if ("破纪录次数↓" === name) break
-            if ("前十玩家↑" === name) continue
+            if ('破纪录次数↓' === name) break
+            if ('前十玩家↑' === name) continue
 
             // 读取成绩和链接。
-            const score = scoreCell ? String(scoreCell.v) : ""
-            const link = scoreCell?.l?.Target || ""
+            const score = scoreCell ? String(scoreCell.v) : ''
+            const link = scoreCell?.l?.Target || ''
 
-            let dateOrReward = ""
-            if ("总成绩" == title) {
-                dateOrReward = dateOrRewardCell ? String(dateOrRewardCell.v) : ""
+            let dateOrReward = ''
+            if ('总成绩' == title) {
+                dateOrReward = dateOrRewardCell ? String(dateOrRewardCell.v) : ''
             }
             else {
                 // 日期优先使用格式化显示，否则取原始值。
-                dateOrReward = moment(new Date((dateOrRewardCell.v - 25569) * 86400 * 1000)).format("YYYY/MM/DD")
+                dateOrReward = moment(new Date((dateOrRewardCell.v - 25569) * 86400 * 1000)).format('YYYY/MM/DD')
             }
 
             // 构造选手对象，成绩带链接则使用数组 [成绩, 链接]。
-            if ("总成绩" == title) {
+            if ('总成绩' == title) {
                 arr.push({
                     选手: name,
                     成绩: link ? [score, link] : [score],
@@ -463,7 +463,7 @@ export function generateGauntletJsonFirstAnniversary(filePath, sheetIndex, outpu
         if (arr.length > 0) res.push({ [title]: arr })
     }
 
-    fs.writeFileSync(outputJsonPath, JSON.stringify(res, null, 4), "utf-8")
+    fs.writeFileSync(outputJsonPath, JSON.stringify(res, null, 4), 'utf-8')
 }
 
 /**

@@ -8,21 +8,21 @@ import json2md from 'json2md'
  * @param {string} weekListJsonPath 每周 BOSS 名单的 JSON 路径。
  */
 export function generateRematchJsonNextWeek(bossListJsonPath, weekListJsonPath) {
-    const bossList = JSON.parse(fs.readFileSync(bossListJsonPath, "utf8"))
-    const weekList = JSON.parse(fs.readFileSync(weekListJsonPath, "utf8"))
+    const bossList = JSON.parse(fs.readFileSync(bossListJsonPath, 'utf8'))
+    const weekList = JSON.parse(fs.readFileSync(weekListJsonPath, 'utf8'))
 
     const lastWeekList = weekList[weekList.length - 1]
 
     // 上一周的 BOSS 名单。
     const lastWeekBoss = new Set(
-        Object.keys(lastWeekList).filter(k => k !== "week")
+        Object.keys(lastWeekList).filter(k => k !== 'week')
     )
 
     // 排除上一周的 BOSS。
     const candidates = bossList.filter(b => !lastWeekBoss.has(b.name))
 
     if (candidates.length < 8) {
-        throw new Error("可选 BOSS 不足 8 个")
+        throw new Error('可选 BOSS 不足 8 个')
     }
 
     // 洗牌。
@@ -43,7 +43,7 @@ export function generateRematchJsonNextWeek(bossListJsonPath, weekListJsonPath) 
     fs.writeFileSync(
         weekListJsonPath,
         JSON.stringify(weekList, null, 4),
-        "utf8"
+        'utf8'
     )
 }
 
@@ -55,7 +55,7 @@ export function generateRematchJsonNextWeek(bossListJsonPath, weekListJsonPath) 
  * @param {string} pageFooter 页面结尾显示的文字。
  */
 export function generateRematchWeekList(weekListJsonPath, outputMdPath, pageHeader = '', pageFooter = '') {
-    const weekList = JSON.parse(fs.readFileSync(weekListJsonPath, "utf8"))
+    const weekList = JSON.parse(fs.readFileSync(weekListJsonPath, 'utf8'))
 
     const mdData = []
 
@@ -67,7 +67,7 @@ export function generateRematchWeekList(weekListJsonPath, outputMdPath, pageHead
         const list = []
 
         for (const [name, url] of Object.entries(week)) {
-            if (name === "week") continue
+            if (name === 'week') continue
 
             list.push(`[${name}](${url})`)
         }
@@ -81,5 +81,5 @@ export function generateRematchWeekList(weekListJsonPath, outputMdPath, pageHead
     content += json2md(mdData)
     content += pageFooter
 
-    fs.writeFileSync(outputMdPath, content, "utf8")
+    fs.writeFileSync(outputMdPath, content, 'utf8')
 }
