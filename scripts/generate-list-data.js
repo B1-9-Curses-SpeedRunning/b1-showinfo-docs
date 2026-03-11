@@ -18,7 +18,7 @@ if ("dev" === process.env.npm_lifecycle_event || "generate-list" === process.env
 
     generateJsonTotal("data/黑猴九禁速通榜(新).xlsx", 2, "data/new-list-total.json")
 
-    generateJsonFirstAnniversary("data/黑猴九禁速通榜(新).xlsx", 3, "data/first-anniversary.json")
+    generateJsonFirstAnniversary("data/黑猴九禁速通榜(新).xlsx", 4, "data/first-anniversary.json")
 }
 
 
