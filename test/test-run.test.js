@@ -1,5 +1,5 @@
 import parse from 'parse-duration';
-import { normalizeTime } from '../scripts/util.js';
+import { normalizeTime } from '../scripts/util-gauntlet.js';
 import moment from 'moment';
 import 'moment-duration-format';
 
