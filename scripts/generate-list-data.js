@@ -12,7 +12,7 @@ import { generateRematchJsonNextWeek, generateRematchWeekList } from './util-rem
 
 
 console.log('now running command: npm/pnpm run ' + process.env.npm_lifecycle_event)
-if ('dev' === process.env.npm_lifecycle_event || 'generate-list' === process.env.npm_lifecycle_event) {
+if ('dev' === process.env.npm_lifecycle_event || 'generate-list-data' === process.env.npm_lifecycle_event) {
     generateGauntletLastUpdatedTime('data/gauntlet/黑猴九禁速通榜(新).xlsx', 'data/gauntlet/last-updated-time')
 
     generateGauntletJsonSingle('data/gauntlet/黑猴九禁速通榜(新).xlsx', 1, 'data/gauntlet/new-list-single.json')
@@ -50,7 +50,5 @@ generateGauntletOfficialRankingList(
     `# 旧榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。由于已停更，仅展示前十名，[原文档](https://docs.qq.com/sheet/DTXNnc09DRGZWVGxt)。\n\n`
 )
 
-
-// generateRematchJsonNextWeek('data/rematch/boss-list.json', 'data/rematch/week-list.json')
 
 generateRematchWeekList('data/rematch/week-list.json', 'docs/ranking-list/rematch/week-list.md', '2026-03-09', `# 复战齐天每周 BOSS 名单\n\n`)

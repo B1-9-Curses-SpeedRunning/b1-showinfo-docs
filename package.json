@@ -16,7 +16,8 @@
     "dev": "node scripts/generate-list-data.js && vitepress dev docs",
     "build": "node scripts/generate-list-data.js && vitepress build docs",
     "preview": "node scripts/generate-list-data.js && vitepress build docs && vitepress preview docs",
-    "generate-list": "node scripts/generate-list-data.js",
+    "generate-list-data": "node scripts/generate-list-data.js",
+    "generate-week-list": "node scripts/generate-week-list.js",
     "test": "mocha"
   },
   "dependencies": {
