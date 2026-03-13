@@ -1,0 +1,38 @@
+name: Update Rematch Week List
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 北京时间 周日 23:59。
+    - cron: "59 15 * * 0"
+
+jobs:
+  build:
+    name: Update Week List
+    runs-on: windows-latest
+
+    steps:
+      # 检出 Git 仓库。
+      - name: Check out git repository
+        uses: actions/checkout@v4
+
+      # 安装 Node.js。
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # 安装项目依赖。
+      - name: Install Dependencies
+        run: npm install
+
+      # 更新 Week List 名单。
+      - name: Generate boss list
+        run: npm run generate-week-list
+
+      # 提交更改。
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: "."
+          message: "Auto: Update Rematch Week List"
