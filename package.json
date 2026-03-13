@@ -13,11 +13,11 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "node scripts/generate-list-data.js && vitepress dev docs",
-    "build": "node scripts/generate-list-data.js && vitepress build docs",
-    "preview": "node scripts/generate-list-data.js && vitepress build docs && vitepress preview docs",
-    "generate-list-data": "node scripts/generate-list-data.js",
-    "generate-week-list": "node scripts/generate-week-list.js",
+    "dev": "node scripts/main.js && vitepress dev docs",
+    "build": "node scripts/main.js && vitepress build docs",
+    "preview": "node scripts/main.js && vitepress build docs && vitepress preview docs",
+    "generate-list-data": "node scripts/main.js",
+    "generate-week-list": "node scripts/main.js",
     "test": "mocha"
   },
   "dependencies": {
