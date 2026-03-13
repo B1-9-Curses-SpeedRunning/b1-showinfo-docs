@@ -36,3 +36,4 @@ jobs:
         with:
           add: "."
           message: "Auto: Update Rematch Week List"
+          default_author: github_actions
