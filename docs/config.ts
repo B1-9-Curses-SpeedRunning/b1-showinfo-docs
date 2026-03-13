@@ -108,8 +108,8 @@ function GetNav(): DefaultTheme.NavItem[] {
                 { text: '快速上手', link: '/quick-start/install' }
             ]
         },
-        { text: '新榜链接', link: '/ranking-list/new-list' },
-        { text: '旧榜链接', link: '/ranking-list/old-list' }
+        { text: '新榜链接', link: '/ranking-list/gauntlet/new-list' },
+        { text: '旧榜链接', link: '/ranking-list/gauntlet/old-list' }
     ]
 }
 

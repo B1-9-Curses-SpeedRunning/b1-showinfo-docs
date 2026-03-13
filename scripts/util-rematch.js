@@ -51,31 +51,56 @@ export function generateRematchJsonNextWeek(bossListJsonPath, weekListJsonPath) 
  * 生成复战每周 BOSS 名单 Markdown 文件。
  * @param {String} weekListJsonPath 每周 BOSS 名单的 JSON 路径。
  * @param {String} outputMdPath 输出 Markdown 文件路径。
+ * @param {String} startDate 起始日期。
  * @param {string} pageHeader 页面开头显示的文字。
  * @param {string} pageFooter 页面结尾显示的文字。
  */
-export function generateRematchWeekList(weekListJsonPath, outputMdPath, pageHeader = '', pageFooter = '') {
+export function generateRematchWeekList(weekListJsonPath, outputMdPath, startDate, pageHeader = '', pageFooter = '') {
     const weekList = JSON.parse(fs.readFileSync(weekListJsonPath, 'utf8'))
 
-    const mdData = []
+    const rows = []
 
     for (const week of weekList) {
-        const weekNum = week.week
 
-        mdData.push({ h2: `Week ${weekNum}` })
+        // weekIndex 用于计算当前周相对第一周的偏移。例如：Week1 = 0, Week2 = 1, Week3 = 2。
+        const weekIndex = week.week - 1
 
-        const list = []
+        // 计算本周开始日期。
+        const start = new Date(startDate)
+        start.setDate(start.getDate() + weekIndex * 7)
+
+        // 结束日期 = 开始日期 + 6 天。
+        const end = new Date(start)
+        end.setDate(end.getDate() + 6)
+
+        // 日期格式化为 YYYY-MM-DD。
+        const format = d => d.toISOString().slice(0, 10)
+
+        // 存储当前周的 BOSS 列表。
+        const bossList = []
 
         for (const [name, url] of Object.entries(week)) {
-            if (name === 'week') continue
+            // 跳过 week 字段（它不是 BOSS）。
+            if ('week' === name) continue
 
-            list.push(`[${name}](${url})`)
+            bossList.push(`[${name}](${url})`)
         }
 
-        mdData.push({
-            ul: list
-        })
+        // 构建表格的一行。周次，日期区间，BOSS 名单。
+        rows.push([
+            week.week,
+            `${format(start)} ~ ${format(end)}`,
+            bossList.join('、')
+        ])
     }
+
+    // 构造 json2md 需要的数据结构。
+    const mdData = [{
+        table: {
+            headers: ['周', '日期', 'Boss 名单'],
+            rows
+        }
+    }]
 
     let content = pageHeader
     content += json2md(mdData)

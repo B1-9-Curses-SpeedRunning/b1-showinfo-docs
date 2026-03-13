@@ -53,4 +53,4 @@ generateGauntletOfficialRankingList(
 
 // generateRematchJsonNextWeek('data/rematch/boss-list.json', 'data/rematch/week-list.json')
 
-generateRematchWeekList('data/rematch/week-list.json', 'docs/ranking-list/rematch/week-list.md', `# 复战齐天每周 BOSS 名单\n\n`)
+generateRematchWeekList('data/rematch/week-list.json', 'docs/ranking-list/rematch/week-list.md', '2026-03-09', `# 复战齐天每周 BOSS 名单\n\n`)
