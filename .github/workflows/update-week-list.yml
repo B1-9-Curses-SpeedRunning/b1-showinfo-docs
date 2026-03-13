@@ -31,18 +31,9 @@ jobs:
         run: npm run generate-week-list
 
       # 提交更改。
-      # 本来是可以直接用 EndBug/add-and-commit@v9 工具的，但是由于 GitHub 的 CI 保护机制，这种方式的提交没办法触发 Workflow，因此手动提交。
-      # - name: Commit changes
-      #   uses: EndBug/add-and-commit@v9
-      #   with:
-      #     add: "."
-      #     message: "Auto Update Rematch Week List"
-      #     default_author: github_actions
       - name: Commit changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add .
-          git commit -m "Auto Update Rematch Week List"
-          git push
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: "."
+          message: "Auto Update Rematch Week List"
+          default_author: github_actions

@@ -7,6 +7,10 @@ on:
       - '**'
     tags:
       - "v*"
+  # GitHub 的没办法做到 一个 CI 触发另一个 CI，因此这里单独写出额外的触发条件。
+  workflow_run:
+    workflows: ["Update Rematch Week List"]
+    types: [completed]
 
 jobs:
   build:
