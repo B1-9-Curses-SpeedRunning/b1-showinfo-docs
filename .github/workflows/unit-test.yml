@@ -7,9 +7,6 @@ on:
       - '**'
     tags:
       - "v*"
-  workflow_run:
-    workflows: ["Update Rematch Week List"]
-    types: [completed]
 
 jobs:
   unit-test:
