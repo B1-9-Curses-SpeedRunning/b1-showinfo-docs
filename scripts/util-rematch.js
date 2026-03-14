@@ -26,7 +26,7 @@ export function generateRematchJsonNextWeek(bossListJsonPath, weekListJsonPath) 
         throw new Error('可选 BOSS 不足 8 个')
     }
 
-    // 洗牌。
+    // 洗牌出 8 个 BOSS。
     const shuffled = candidates.sort(() => Math.random() - 0.5)
 
     const selected = shuffled.slice(0, 8)
@@ -194,6 +194,79 @@ export function generateRematchJsonEachChapter(filePath, sheetIndex, outputJsonP
     }
 
     fs.writeFileSync(outputJsonPath, JSON.stringify(result, null, 4), "utf-8")
+}
+
+/**
+ * 转换复战每一章的数据。
+ * @param {string} inputJsonPath 原始 JSON 文件路径。
+ * @returns {string}
+ */
+export function convertEachChapter(inputJsonPath) {
+    const data = JSON.parse(fs.readFileSync(inputJsonPath, "utf-8"))
+
+    const md = []
+
+    const bosses = Object.keys(data["单禁字赛道"])
+
+    for (const boss of bosses) {
+
+        // Boss 标题。
+        md.push({ h3: boss })
+
+        for (const mode of ["单禁字赛道", "无限制赛道"]) {
+
+            // 赛道名称（普通文本）。
+            md.push(mode + '\n')
+
+            const rows = data[mode][boss]
+
+            const table = {
+                headers: ["排名", "选手", "成绩", "mod"],
+                rows: []
+            }
+
+            rows.forEach((item, index) => {
+
+                const score = item.成绩.length === 2
+                    ? `[${item.成绩[0]}](${item.成绩[1]})`
+                    : item.成绩[0]
+
+                table.rows.push([
+                    index + 1,
+                    item.选手,
+                    score,
+                    item.mod
+                ])
+            })
+
+            md.push({ table })
+        }
+    }
+
+
+    return json2md(md)
+}
+
+/**
+ * 生成复战 BOSS 成绩榜单 Markdown 文件。
+ * @param {string} eachChapterJsonPrefix 每章节榜单 JSON 原文件路径前缀。
+ * @param {string} outputMdPath 输出的 Markdown 文件路径。
+ * @param {string} pageHeader 页面开头显示的文字。
+ * @param {string} pageFooter 页面结尾显示的文字。
+ */
+export function generateRematchBossRankingList(eachChapterJsonPrefix, outputMdPath, pageHeader = '', pageFooter = '') {
+    let content = pageHeader
+
+    const cn = ["一", "二", "三", "四", "五", "六"]
+
+    for (let i = 1; i <= 6; ++i) {
+        // 每章前加第几章。
+        content += `## 第${cn[i - 1]}章\n\n`
+
+        content += convertEachChapter(eachChapterJsonPrefix + `${i}.json`)
+    }
+    content += pageFooter
+    fs.writeFileSync(outputMdPath, content, 'utf-8')
 }
 
 /**

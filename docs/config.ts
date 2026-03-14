@@ -145,6 +145,7 @@ function getSidebar(): DefaultTheme.SidebarItem[] {
                 { text: '九禁连战新榜单海报', link: '/gauntlet/new-list-poster' },
                 { text: '一周年活动连战榜单', link: '/gauntlet/first-anniversary' },
                 { text: '九禁连战旧榜单', link: '/gauntlet/old-list' },
+                { text: '复战齐天速通榜单', link: '/rematch/leaderboard' },
                 { text: '复战齐天每周 BOSS 名单', link: '/rematch/week-list' }
             ]
         },

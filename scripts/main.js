@@ -8,7 +8,7 @@
  */
 import fs from 'fs'
 import { generateGauntletJsonSingle, generateGauntletJsonTotal, generateGauntletOfficialRankingList, generateGauntletJsonFirstAnniversary, generateGauntletFirstAnniversaryRankingList, generateGauntletLastUpdatedTime } from './util-gauntlet.js'
-import { generateRematchJsonNextWeek, generateRematchWeekList, generateRematchJsonEachChapter, generateRematchLastUpdatedTime } from './util-rematch.js'
+import { generateRematchJsonNextWeek, generateRematchWeekList, generateRematchJsonEachChapter, generateRematchLastUpdatedTime, generateRematchBossRankingList } from './util-rematch.js'
 
 
 console.log('now running command: npm/pnpm run ' + process.env.npm_lifecycle_event)
@@ -27,17 +27,21 @@ else {
 
         generateGauntletJsonFirstAnniversary('data/gauntlet/黑猴九禁速通榜(新).xlsx', 4, 'data/gauntlet/first-anniversary.json')
 
+
         // 复战。
         generateRematchLastUpdatedTime('data/rematch/黑猴复战齐天速通榜.xlsx', 'data/rematch/last-updated-time')
 
-        for (let i = 1; i <= 6; i++) {
+        for (let i = 1; i <= 6; ++i) {
             generateRematchJsonEachChapter('data/rematch/黑猴复战齐天速通榜.xlsx', i, `data/rematch/chapter-${i}.json`)
         }
     }
 
 
     const gauntletLastUpdatedTime = fs.readFileSync('data/gauntlet/last-updated-time', 'utf-8').trim()
+    const rematchLastUpdatedTime = fs.readFileSync('data/rematch/last-updated-time', 'utf-8').trim()
 
+
+    // 连战。
     generateGauntletOfficialRankingList(
         'data/gauntlet/new-list-single.json',
         'data/gauntlet/new-list-total.json',
@@ -64,5 +68,12 @@ else {
     )
 
 
+    // 复战。
     generateRematchWeekList('data/rematch/week-list.json', 'docs/ranking-list/rematch/week-list.md', '2026-03-09', `# 复战齐天每周 BOSS 名单\n\n`)
+
+    generateRematchBossRankingList(
+        'data/rematch/chapter-',
+        'docs/ranking-list/rematch/leaderboard.md',
+        `# 复战齐天速通榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。若更新不及时请优先参考[原文档](https://docs.qq.com/sheet/DSnhYRENVZmNCQk9i)。\n\n> 榜单最后更新于：${rematchLastUpdatedTime}\n\n`
+    )
 }
