@@ -16,7 +16,7 @@
     "dev": "node scripts/main.js && vitepress dev docs",
     "build": "node scripts/main.js && vitepress build docs",
     "preview": "node scripts/main.js && vitepress build docs && vitepress preview docs",
-    "generate-list-data": "node scripts/main.js",
+    "generate-data": "node scripts/main.js",
     "generate-week-boss-list": "node scripts/main.js",
     "test": "mocha"
   },
