@@ -4,11 +4,23 @@ import XLSX from 'xlsx'
 
 
 /**
- * 生成下一周的 BOSS 名单。
+ * @brief 读取复战榜文件的最后修改时间并写入文件。
+ * @param {string} filePath 源文件路径。
+ * @param {string} outputPath 输出文件路径。
+ */
+export function generateRematchLastUpdatedTime(filePath, outputPath) {
+    const stats = fs.statSync(filePath)
+    const rematchLastUpdatedTime = stats.mtime.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })
+
+    fs.writeFileSync(outputPath, `${rematchLastUpdatedTime}`, 'utf-8')
+}
+
+/**
+ * @brief 生成下一周的 BOSS 名单。
  * @param {string} bossListJsonPath 总 BOSS 名单的 JSON 路径。
  * @param {string} weekListJsonPath 每周 BOSS 名单的 JSON 路径。
  */
-export function generateRematchJsonNextWeek(bossListJsonPath, weekListJsonPath) {
+export function generateRematchBossNextWeek(bossListJsonPath, weekListJsonPath) {
     const bossList = JSON.parse(fs.readFileSync(bossListJsonPath, 'utf8'))
     const weekList = JSON.parse(fs.readFileSync(weekListJsonPath, 'utf8'))
 
@@ -49,14 +61,14 @@ export function generateRematchJsonNextWeek(bossListJsonPath, weekListJsonPath) 
 }
 
 /**
- * 生成复战每周 BOSS 名单 Markdown 文件。
+ * @brief 生成复战每周 BOSS 名单 Markdown 文件。
  * @param {String} weekListJsonPath 每周 BOSS 名单的 JSON 路径。
  * @param {String} outputMdPath 输出 Markdown 文件路径。
  * @param {String} startDate 起始日期。
  * @param {string} pageHeader 页面开头显示的文字。
  * @param {string} pageFooter 页面结尾显示的文字。
  */
-export function generateRematchWeekList(weekListJsonPath, outputMdPath, startDate, pageHeader = '', pageFooter = '') {
+export function generateRematchWeekBossList(weekListJsonPath, outputMdPath, startDate, pageHeader = '', pageFooter = '') {
     const weekList = JSON.parse(fs.readFileSync(weekListJsonPath, 'utf8'))
 
     const rows = []
@@ -197,7 +209,7 @@ export function generateRematchJsonEachChapter(filePath, sheetIndex, outputJsonP
 }
 
 /**
- * 转换复战每一章的数据。
+ * @brief 转换复战每一章的数据。
  * @param {string} inputJsonPath 原始 JSON 文件路径。
  * @returns {string}
  */
@@ -248,13 +260,13 @@ export function convertEachChapter(inputJsonPath) {
 }
 
 /**
- * 生成复战 BOSS 成绩榜单 Markdown 文件。
+ * @brief 生成复战 BOSS 成绩榜单 Markdown 文件。
  * @param {string} eachChapterJsonPrefix 每章节榜单 JSON 原文件路径前缀。
  * @param {string} outputMdPath 输出的 Markdown 文件路径。
  * @param {string} pageHeader 页面开头显示的文字。
  * @param {string} pageFooter 页面结尾显示的文字。
  */
-export function generateRematchBossRankingList(eachChapterJsonPrefix, outputMdPath, pageHeader = '', pageFooter = '') {
+export function generateRematchLeaderboard(eachChapterJsonPrefix, outputMdPath, pageHeader = '', pageFooter = '') {
     let content = pageHeader
 
     const cn = ["一", "二", "三", "四", "五", "六"]
@@ -267,16 +279,4 @@ export function generateRematchBossRankingList(eachChapterJsonPrefix, outputMdPa
     }
     content += pageFooter
     fs.writeFileSync(outputMdPath, content, 'utf-8')
-}
-
-/**
- * @brief 读取复战榜文件的最后修改时间并写入文件。
- * @param {string} filePath 源文件路径。
- * @param {string} outputPath 输出文件路径。
- */
-export function generateRematchLastUpdatedTime(filePath, outputPath) {
-    const stats = fs.statSync(filePath)
-    const rematchLastUpdatedTime = stats.mtime.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })
-
-    fs.writeFileSync(outputPath, `${rematchLastUpdatedTime}`, 'utf-8')
 }

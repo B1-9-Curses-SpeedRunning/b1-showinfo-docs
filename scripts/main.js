@@ -7,14 +7,14 @@
  * 
  */
 import fs from 'fs'
-import { generateGauntletJsonSingle, generateGauntletJsonOverall, generateGauntletOfficialRankingList, generateGauntletJsonFirstAnniversary, generateGauntletFirstAnniversaryRankingList, generateGauntletLastUpdatedTime } from './util-gauntlet.js'
-import { generateRematchJsonNextWeek, generateRematchWeekList, generateRematchJsonEachChapter, generateRematchLastUpdatedTime, generateRematchBossRankingList } from './util-rematch.js'
+import { generateGauntletJsonSingle, generateGauntletJsonOverall, generateGauntletOfficialLeaderboard, generateGauntletJsonFirstAnniversary, generateGauntletFirstAnniversaryLeaderboard, generateGauntletLastUpdatedTime } from './util-gauntlet.js'
+import { generateRematchBossNextWeek, generateRematchWeekBossList, generateRematchJsonEachChapter, generateRematchLastUpdatedTime, generateRematchLeaderboard } from './util-rematch.js'
 
 
 console.log('now running command: npm/pnpm run ' + process.env.npm_lifecycle_event)
 
-if ('generate-week-list' === process.env.npm_lifecycle_event) {
-    generateRematchJsonNextWeek('data/rematch/boss-list.json', 'data/rematch/week-list.json')
+if ('generate-week-boss-list' === process.env.npm_lifecycle_event) {
+    generateRematchBossNextWeek('data/rematch/boss-list.json', 'data/rematch/week-boss-list.json')
 }
 else {
     if ('dev' === process.env.npm_lifecycle_event || 'generate-list-data' === process.env.npm_lifecycle_event) {
@@ -42,16 +42,16 @@ else {
 
 
     // 连战。
-    generateGauntletOfficialRankingList(
+    generateGauntletOfficialLeaderboard(
         'data/gauntlet/new-single.json',
         'data/gauntlet/new-overall.json',
-        'docs/ranking-list/gauntlet/new-leaderboard.md',
+        'docs/leaderboard/gauntlet/new-leaderboard.md',
         `# 九禁连战新榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。若更新不及时请优先参考[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v)。\n\n> 榜单最后更新于：${gauntletLastUpdatedTime}\n\n`
     )
 
-    generateGauntletFirstAnniversaryRankingList(
+    generateGauntletFirstAnniversaryLeaderboard(
         'data/gauntlet/first-anniversary.json',
-        'docs/ranking-list/gauntlet/first-anniversary-leaderboard.md',
+        'docs/leaderboard/gauntlet/first-anniversary-leaderboard.md',
         `# 一周年活动连战榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。若更新不及时请优先参考[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v?tab=000004)。\n\n> 榜单最后更新于：${gauntletLastUpdatedTime}\n\n`,
         `\n## 特别祝贺
 
@@ -60,20 +60,20 @@ else {
 2. [阿班](https://space.bilibili.com/511651162/)选手道满归根记录 [3'58''72](https://www.bilibili.com/video/BV1qtrsBvEdP/) 从 2026 年 1 月 10 日保持 10 天至 2025 年 1 月 20 日，获得影之刃零豪华版一份。\n\n`
     )
 
-    generateGauntletOfficialRankingList(
+    generateGauntletOfficialLeaderboard(
         'data/gauntlet/old-single.json',
         'data/gauntlet/old-overall.json',
-        'docs/ranking-list/gauntlet/old-leaderboard.md',
+        'docs/leaderboard/gauntlet/old-leaderboard.md',
         `# 九禁连战旧榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。由于已停更，仅展示前十名，[原文档](https://docs.qq.com/sheet/DTXNnc09DRGZWVGxt)。\n\n`
     )
 
 
     // 复战。
-    generateRematchWeekList('data/rematch/week-list.json', 'docs/ranking-list/rematch/week-list.md', '2026-03-09', `# 复战齐天每周 BOSS 名单\n\n`)
+    generateRematchWeekBossList('data/rematch/week-boss-list.json', 'docs/leaderboard/rematch/week-boss-list.md', '2026-03-09', `# 复战齐天每周 BOSS 名单\n\n`)
 
-    generateRematchBossRankingList(
+    generateRematchLeaderboard(
         'data/rematch/chapter-',
-        'docs/ranking-list/rematch/leaderboard.md',
+        'docs/leaderboard/rematch/leaderboard.md',
         `# 复战齐天速通榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。若更新不及时请优先参考[原文档](https://docs.qq.com/sheet/DSnhYRENVZmNCQk9i)。\n\n> 榜单最后更新于：${rematchLastUpdatedTime}\n\n`
     )
 }

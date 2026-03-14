@@ -1,8 +1,8 @@
-docs/ranking-list/gauntlet/new-leaderboard.md
-docs/ranking-list/gauntlet/first-anniversary-leaderboard.md
-docs/ranking-list/gauntlet/old-leaderboard.md
-docs/ranking-list/rematch/week-list.md
-docs/ranking-list/rematch/leaderboard.md
+docs/leaderboard/gauntlet/new-leaderboard.md
+docs/leaderboard/gauntlet/first-anniversary-leaderboard.md
+docs/leaderboard/gauntlet/old-leaderboard.md
+docs/leaderboard/rematch/week-boss-list.md
+docs/leaderboard/rematch/leaderboard.md
 *.xlsx
 
 *.assets/

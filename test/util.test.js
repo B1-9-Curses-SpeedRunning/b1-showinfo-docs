@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import fs from 'fs';
 import parse from 'parse-duration';
-import { normalizeTime, convertSingleList, convertOverallList } from '../scripts/util-gauntlet.js';
+import { normalizeTime, convertSingle, convertOverall } from '../scripts/util-gauntlet.js';
 
 
 describe('normalizeTime', () => {
@@ -56,7 +56,7 @@ describe('parse normalizeTime', () => {
     });
 });
 
-describe('convertSingleList', () => {
+describe('convertSingle', () => {
     const testJsonPath = './test-single.json';
     const testData = [
         {
@@ -83,7 +83,7 @@ describe('convertSingleList', () => {
     });
 
     it('包含表头', () => {
-        const md = convertSingleList(testJsonPath);
+        const md = convertSingle(testJsonPath);
 
         expect(md).to.include('单项');
         expect(md).to.include('三虎');
@@ -92,7 +92,7 @@ describe('convertSingleList', () => {
     });
 
     // it('成绩排序正确', () => {
-    //     const md = convertSingleList(testJsonPath);
+    //     const md = convertSingle(testJsonPath);
 
     //     console.log(md)
 
@@ -100,7 +100,7 @@ describe('convertSingleList', () => {
     // });
 });
 
-describe('convertOverallList', () => {
+describe('convertOverall', () => {
     const testJsonPath = './test-overall.json';
     const testData = [
         {
@@ -140,7 +140,7 @@ describe('convertOverallList', () => {
     });
 
     it('包含表头', () => {
-        const md = convertOverallList(testJsonPath);
+        const md = convertOverall(testJsonPath);
 
         expect(md).to.include('选手');
         expect(md).to.include('三虎');
@@ -156,7 +156,7 @@ describe('convertOverallList', () => {
     });
 
     // it('总成绩排序正确', () => {
-    //     const md = convertOverallList(testJsonPath);
+    //     const md = convertOverall(testJsonPath);
 
     //     console.log(md)
 

@@ -108,8 +108,8 @@ function GetNav(): DefaultTheme.NavItem[] {
                 { text: '快速上手', link: '/quick-start/install' }
             ]
         },
-        { text: '九禁连战新榜单', link: '/ranking-list/gauntlet/new-leaderboard' },
-        { text: '复战齐天速通榜单', link: '/ranking-list/rematch/leaderboard' }
+        { text: '九禁连战新榜单', link: '/leaderboard/gauntlet/new-leaderboard' },
+        { text: '复战齐天速通榜单', link: '/leaderboard/rematch/leaderboard' }
     ]
 }
 
@@ -137,7 +137,7 @@ function getSidebar(): DefaultTheme.SidebarItem[] {
         },
         {
             text: '成绩榜单',
-            base: '/ranking-list',
+            base: '/leaderboard',
             collapsed: false,
             items: [
                 { text: '新榜规则', link: '/rules' },
@@ -146,7 +146,7 @@ function getSidebar(): DefaultTheme.SidebarItem[] {
                 { text: '一周年活动连战榜单', link: '/gauntlet/first-anniversary-leaderboard' },
                 { text: '九禁连战旧榜单', link: '/gauntlet/old-leaderboard' },
                 { text: '复战齐天速通榜单', link: '/rematch/leaderboard' },
-                { text: '复战齐天每周 BOSS 名单', link: '/rematch/week-list' }
+                { text: '复战齐天每周 BOSS 名单', link: '/rematch/week-boss-list' }
             ]
         },
         {
