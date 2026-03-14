@@ -155,14 +155,18 @@ export function generateRematchJsonEachChapter(filePath, sheetIndex, outputJsonP
     for (let r = 2; r <= range.e.r; r++) {
         const firstCell = sheet[XLSX.utils.encode_cell({ r, c: 0 })]
 
-        // 识别赛道切换。
+        // 识别赛道切换或底部说明区。
         if (firstCell && firstCell.v) {
             const text = String(firstCell.v)
 
+            // 切换到无限制赛道。
             if (text.includes("无限制赛道")) {
                 mode = "无限制赛道"
                 continue
             }
+
+            // 遇到说明区直接结束。
+            if (text.includes("暂时只记录抖音和b站有视频的成绩")) { break }
         }
 
         // 逐个 BOSS 读取对应列的数据。
