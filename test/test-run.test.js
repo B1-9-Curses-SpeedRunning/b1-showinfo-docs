@@ -4,7 +4,7 @@ import moment from 'moment';
 import 'moment-duration-format';
 
 
-describe('Calculate Total Score', () => {
+describe('Calculate Overall Score', () => {
     it("计算新榜总成绩", () => {
         const scores = [
             ["山月为关", "53''79", "1'21''78", "1'49''83", "2'31''50", "2'12''66", "2'35''46", "1'17''81", "3'03''56", "4'50''22"],
@@ -19,15 +19,15 @@ describe('Calculate Total Score', () => {
 
 
         for (const score of scores) {
-            let totalScore = 0;
+            let overallScore = 0;
             let player = "";
 
             for (let i = 0; i < score.length; ++i) {
                 if (0 == i) player = score[0];
-                else totalScore += parse(normalizeTime(score[i]));
+                else overallScore += parse(normalizeTime(score[i]));
             }
 
-            console.log(player + ": " + moment.duration(totalScore, 'milliseconds').format("mm:ss.SSS", { trim: false }));
+            console.log(player + ": " + moment.duration(overallScore, 'milliseconds').format("mm:ss.SSS", { trim: false }));
         }
     });
 })

@@ -1,6 +1,6 @@
 <meta name="referrer" content="no-referrer"/>
 
-# 新榜单海报
+# 九禁连战新榜单海报
 
 ## 2025 年 9 月
 

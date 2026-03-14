@@ -7,7 +7,7 @@
  * 
  */
 import fs from 'fs'
-import { generateGauntletJsonSingle, generateGauntletJsonTotal, generateGauntletOfficialRankingList, generateGauntletJsonFirstAnniversary, generateGauntletFirstAnniversaryRankingList, generateGauntletLastUpdatedTime } from './util-gauntlet.js'
+import { generateGauntletJsonSingle, generateGauntletJsonOverall, generateGauntletOfficialRankingList, generateGauntletJsonFirstAnniversary, generateGauntletFirstAnniversaryRankingList, generateGauntletLastUpdatedTime } from './util-gauntlet.js'
 import { generateRematchJsonNextWeek, generateRematchWeekList, generateRematchJsonEachChapter, generateRematchLastUpdatedTime, generateRematchBossRankingList } from './util-rematch.js'
 
 
@@ -21,9 +21,9 @@ else {
         // 连战。
         generateGauntletLastUpdatedTime('data/gauntlet/黑猴九禁速通榜(新).xlsx', 'data/gauntlet/last-updated-time')
 
-        generateGauntletJsonSingle('data/gauntlet/黑猴九禁速通榜(新).xlsx', 1, 'data/gauntlet/new-list-single.json')
+        generateGauntletJsonSingle('data/gauntlet/黑猴九禁速通榜(新).xlsx', 1, 'data/gauntlet/new-single.json')
 
-        generateGauntletJsonTotal('data/gauntlet/黑猴九禁速通榜(新).xlsx', 2, 'data/gauntlet/new-list-total.json')
+        generateGauntletJsonOverall('data/gauntlet/黑猴九禁速通榜(新).xlsx', 2, 'data/gauntlet/new-overall.json')
 
         generateGauntletJsonFirstAnniversary('data/gauntlet/黑猴九禁速通榜(新).xlsx', 4, 'data/gauntlet/first-anniversary.json')
 
@@ -43,15 +43,15 @@ else {
 
     // 连战。
     generateGauntletOfficialRankingList(
-        'data/gauntlet/new-list-single.json',
-        'data/gauntlet/new-list-total.json',
-        'docs/ranking-list/gauntlet/new-list.md',
-        `# 新榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。若更新不及时请优先参考[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v)。\n\n> 榜单最后更新于：${gauntletLastUpdatedTime}\n\n`
+        'data/gauntlet/new-single.json',
+        'data/gauntlet/new-overall.json',
+        'docs/ranking-list/gauntlet/new-leaderboard.md',
+        `# 九禁连战新榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。若更新不及时请优先参考[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v)。\n\n> 榜单最后更新于：${gauntletLastUpdatedTime}\n\n`
     )
 
     generateGauntletFirstAnniversaryRankingList(
         'data/gauntlet/first-anniversary.json',
-        'docs/ranking-list/gauntlet/first-anniversary.md',
+        'docs/ranking-list/gauntlet/first-anniversary-leaderboard.md',
         `# 一周年活动连战榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。若更新不及时请优先参考[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v?tab=000004)。\n\n> 榜单最后更新于：${gauntletLastUpdatedTime}\n\n`,
         `\n## 特别祝贺
 
@@ -61,10 +61,10 @@ else {
     )
 
     generateGauntletOfficialRankingList(
-        'data/gauntlet/old-list-single.json',
-        'data/gauntlet/old-list-total.json',
-        'docs/ranking-list/gauntlet/old-list.md',
-        `# 旧榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。由于已停更，仅展示前十名，[原文档](https://docs.qq.com/sheet/DTXNnc09DRGZWVGxt)。\n\n`
+        'data/gauntlet/old-single.json',
+        'data/gauntlet/old-overall.json',
+        'docs/ranking-list/gauntlet/old-leaderboard.md',
+        `# 九禁连战旧榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。由于已停更，仅展示前十名，[原文档](https://docs.qq.com/sheet/DTXNnc09DRGZWVGxt)。\n\n`
     )
 
 

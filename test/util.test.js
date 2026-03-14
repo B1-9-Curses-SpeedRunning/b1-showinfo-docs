@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import fs from 'fs';
 import parse from 'parse-duration';
-import { normalizeTime, convertSingleList, convertTotalList } from '../scripts/util-gauntlet.js';
+import { normalizeTime, convertSingleList, convertOverallList } from '../scripts/util-gauntlet.js';
 
 
 describe('normalizeTime', () => {
@@ -100,8 +100,8 @@ describe('convertSingleList', () => {
     // });
 });
 
-describe('convertTotalList', () => {
-    const testJsonPath = './test-total.json';
+describe('convertOverallList', () => {
+    const testJsonPath = './test-overall.json';
     const testData = [
         {
             "选手": "张三",
@@ -140,7 +140,7 @@ describe('convertTotalList', () => {
     });
 
     it('包含表头', () => {
-        const md = convertTotalList(testJsonPath);
+        const md = convertOverallList(testJsonPath);
 
         expect(md).to.include('选手');
         expect(md).to.include('三虎');
@@ -156,7 +156,7 @@ describe('convertTotalList', () => {
     });
 
     // it('总成绩排序正确', () => {
-    //     const md = convertTotalList(testJsonPath);
+    //     const md = convertOverallList(testJsonPath);
 
     //     console.log(md)
 

@@ -128,7 +128,7 @@ export function convertSingleList(inputJsonPath) {
  * @param {string} inputJsonPath 原始 JSON 文件路径。
  * @returns {string}
  */
-export function convertTotalList(inputJsonPath) {
+export function convertOverallList(inputJsonPath) {
     // 读取原始 JSON 文件。
     const rawJson = JSON.parse(fs.readFileSync(inputJsonPath, 'utf-8'))
 
@@ -236,15 +236,15 @@ export function convertFirstAnniversaryList(inputJsonPath) {
 /**
  * 生成官方榜单 Markdown 文件。
  * @param {string} singleJsonPath 单项 JSON 原文件路径。
- * @param {string} totalJsonPath 总榜 JSON 原文件路径。
+ * @param {string} overallJsonPath 总榜 JSON 原文件路径。
  * @param {string} outputMdPath 输出的 Markdown 文件路径。
  * @param {string} pageHeader 页面开头显示的文字。
  * @param {string} pageFooter 页面结尾显示的文字。
  */
-export function generateGauntletOfficialRankingList(singleJsonPath, totalJsonPath, outputMdPath, pageHeader = '', pageFooter = '') {
+export function generateGauntletOfficialRankingList(singleJsonPath, overallJsonPath, outputMdPath, pageHeader = '', pageFooter = '') {
     let content = pageHeader
     content += convertSingleList(singleJsonPath)
-    content += convertTotalList(totalJsonPath)
+    content += convertOverallList(overallJsonPath)
     content += pageFooter
     fs.writeFileSync(outputMdPath, content, 'utf-8')
 }
@@ -334,7 +334,7 @@ export function generateGauntletJsonSingle(filePath, sheetIndex, outputJsonPath)
  * @param outputJsonPath 输出的 Json 文件路径。
  * @return 返回总成绩 JSON。
  */
-export function generateGauntletJsonTotal(filePath, sheetIndex, outputJsonPath) {
+export function generateGauntletJsonOverall(filePath, sheetIndex, outputJsonPath) {
     const workbook = XLSX.readFile(filePath) // 读取 Excel 文件。
     const sheetName = workbook.SheetNames[sheetIndex] // 获取工作表名称。
     const sheet = workbook.Sheets[sheetName] // 获取工作表对象。
