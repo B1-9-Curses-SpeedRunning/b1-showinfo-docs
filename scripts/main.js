@@ -17,7 +17,7 @@ if ('generate-week-boss-list' === process.env.npm_lifecycle_event) {
     generateRematchBossNextWeek('data/rematch/boss-list.json', 'data/rematch/week-boss-list.json')
 }
 else {
-    if ('dev' === process.env.npm_lifecycle_event || 'generate-list-data' === process.env.npm_lifecycle_event) {
+    if ('dev' === process.env.npm_lifecycle_event || 'generate-data' === process.env.npm_lifecycle_event) {
         // 连战。
         generateGauntletLastUpdatedTime('data/gauntlet/黑猴九禁速通榜(新).xlsx', 'data/gauntlet/last-updated-time')
 
