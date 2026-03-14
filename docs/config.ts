@@ -108,7 +108,7 @@ function GetNav(): DefaultTheme.NavItem[] {
                 { text: '快速上手', link: '/quick-start/install' }
             ]
         },
-        { text: '九禁连战新榜单', link: '/leaderboard/gauntlet/new-leaderboard' },
+        { text: '九禁连战新榜单', link: '/leaderboard/gauntlet/new' },
         { text: '复战齐天速通榜单', link: '/leaderboard/rematch/leaderboard' }
     ]
 }
@@ -141,10 +141,10 @@ function getSidebar(): DefaultTheme.SidebarItem[] {
             collapsed: false,
             items: [
                 { text: '新榜规则', link: '/rules' },
-                { text: '九禁连战新榜单', link: '/gauntlet/new-leaderboard' },
-                { text: '九禁连战新榜单海报', link: '/gauntlet/new-leaderboard-poster' },
-                { text: '一周年活动连战榜单', link: '/gauntlet/first-anniversary-leaderboard' },
-                { text: '九禁连战旧榜单', link: '/gauntlet/old-leaderboard' },
+                { text: '九禁连战新榜单', link: '/gauntlet/new' },
+                { text: '九禁连战新榜单海报', link: '/gauntlet/new-poster' },
+                { text: '一周年活动连战榜单', link: '/gauntlet/first-anniversary' },
+                { text: '九禁连战旧榜单', link: '/gauntlet/old' },
                 { text: '复战齐天速通榜单', link: '/rematch/leaderboard' },
                 { text: '复战齐天每周 BOSS 名单', link: '/rematch/week-boss-list' }
             ]

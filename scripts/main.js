@@ -45,13 +45,13 @@ else {
     generateGauntletOfficialLeaderboard(
         'data/gauntlet/new-single.json',
         'data/gauntlet/new-overall.json',
-        'docs/leaderboard/gauntlet/new-leaderboard.md',
+        'docs/leaderboard/gauntlet/new.md',
         `# 九禁连战新榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。若更新不及时请优先参考[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v)。\n\n> 榜单最后更新于：${gauntletLastUpdatedTime}\n\n`
     )
 
     generateGauntletFirstAnniversaryLeaderboard(
         'data/gauntlet/first-anniversary.json',
-        'docs/leaderboard/gauntlet/first-anniversary-leaderboard.md',
+        'docs/leaderboard/gauntlet/first-anniversary.md',
         `# 一周年活动连战榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。若更新不及时请优先参考[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v?tab=000004)。\n\n> 榜单最后更新于：${gauntletLastUpdatedTime}\n\n`,
         `\n## 特别祝贺
 
@@ -63,7 +63,7 @@ else {
     generateGauntletOfficialLeaderboard(
         'data/gauntlet/old-single.json',
         'data/gauntlet/old-overall.json',
-        'docs/leaderboard/gauntlet/old-leaderboard.md',
+        'docs/leaderboard/gauntlet/old.md',
         `# 九禁连战旧榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。由于已停更，仅展示前十名，[原文档](https://docs.qq.com/sheet/DTXNnc09DRGZWVGxt)。\n\n`
     )
 
