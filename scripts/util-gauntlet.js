@@ -18,7 +18,19 @@ import moment from 'moment'
 
 
 /**
- * 将竞速成绩规范化为 parse-duration 可识别的格式。
+ * @brief 读取连战榜文件的最后修改时间并写入文件。
+ * @param {string} filePath 源文件路径。
+ * @param {string} outputPath 输出文件路径。
+ */
+export function generateGauntletLastUpdatedTime(filePath, outputPath) {
+    const stats = fs.statSync(filePath)
+    const gauntletLastUpdatedTime = stats.mtime.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })
+
+    fs.writeFileSync(outputPath, `${gauntletLastUpdatedTime}`, 'utf-8')
+}
+
+/**
+ * @brief 将竞速成绩规范化为 parse-duration 可识别的格式。
  * 给几个例子：
  * 51''45 -> 51.45s
  * 1'17''75 -> 1m17.75s
@@ -59,208 +71,6 @@ export function normalizeTime(timeStr) {
 
     // 匹配不到，返回原串。（目前给的数据走不到这个分支）
     return timeStr
-}
-
-/**
- * 转换官方连战单项的数据，可按成绩进行排序。
- * @param {string} inputJsonPath 原始 JSON 文件路径。
- * @returns {string}
- */
-export function convertSingleList(inputJsonPath) {
-    // 读取原始 JSON 文件。
-    const rawJson = JSON.parse(fs.readFileSync(inputJsonPath, 'utf-8'))
-
-    // 生成标题：单项。
-    const markdownElements = [{ h2: '单项' }]
-
-    // rawJson 是数组，每个元素是 { '组名': [选手数组] }
-    rawJson.forEach(section => {
-        const groupName = Object.keys(section)[0] // 三虎、四僧等。
-        const tableData = section[groupName]
-
-        // 生成组标题。
-        const elements = [{ h3: groupName }]
-
-        if (tableData && tableData.length > 0) {
-            // 按成绩排序，快的在前（暂时不排序）
-            // const sortedTable = [...tableData].sort((a, b) => {
-            //     return parse(normalizeTime(a['成绩'][0])) - parse(normalizeTime(b['成绩'][0]))
-            // })
-            const sortedTable = [...tableData]
-
-            // 给每行加排名。
-            const tableRows = sortedTable.map((entry, index) => ({
-                排名: 1 + index,
-                ...entry
-            }))
-
-            // 获取列名。
-            const columnNames = Object.keys(tableRows[0])
-
-            // 构造表格内容。
-            const tableContent = tableRows.map(row =>
-                columnNames.map(col => {
-                    const e = row[col]
-                    // 若是数组且长度大于 1 代表带链接。
-                    return Array.isArray(e)
-                        ? (e.length > 1 ? `[${e[0]}](${e[1]})` : e[0])
-                        : e
-                })
-            )
-
-            elements.push({
-                table: {
-                    headers: columnNames,
-                    rows: tableContent
-                }
-            })
-        }
-
-        markdownElements.push(...elements)
-    })
-
-
-    return json2md(markdownElements)
-}
-
-/**
- * 转换官方连战总榜的数据，可按总成绩排序。
- * @param {string} inputJsonPath 原始 JSON 文件路径。
- * @returns {string}
- */
-export function convertTotalList(inputJsonPath) {
-    // 读取原始 JSON 文件。
-    const rawJson = JSON.parse(fs.readFileSync(inputJsonPath, 'utf-8'))
-
-    // 生成标题：总榜。
-    const markdownElements = [
-        { h2: '总榜' }
-    ]
-
-    // 处理每一行。
-    if (rawJson.length > 0) {
-        // 按照“总成绩”进行排序。（暂时不排序）
-        // const sortedTable = [...rawJson].sort((a, b) => {
-        //     return (a['总成绩'].length ? parse(normalizeTime(a['总成绩'])) : Infinity) - (b['总成绩'].length ? parse(normalizeTime(b['总成绩'])) : Infinity)
-        // })
-        const sortedTable = [...rawJson]
-
-        // 获取列名（JSON 对象的字段名）。
-        const columnNames = Object.keys(sortedTable[0])
-
-        // 每行的数据数组。
-        const tableContent = sortedTable.map(row =>
-            columnNames.map(col => {
-                const e = row[col]
-                // 若是数组且长度大于 1 代表是带链接的成绩，需构造超链接，若只有成绩，则返回 0 号元素，去掉括号。若数组长度为 0，则是空串，返回空。
-                return Array.isArray(e)
-                    ? (e.length === 0 ? '' : (e.length > 1 ? `[${e[0]}](${e[1]})` : e[0]))
-                    : e
-            })
-        )
-
-        markdownElements.push({
-            table: {
-                headers: columnNames,
-                rows: tableContent
-            }
-        })
-    }
-
-
-    return json2md(markdownElements)
-}
-
-/**
- * 转换一周年活动连战榜单的数据。
- * @param {string} inputJsonPath 原始 JSON 文件路径。
- * @returns {string}
- */
-export function convertFirstAnniversaryList(inputJsonPath) {
-    // 读取原始 JSON 文件。
-    const rawJson = JSON.parse(fs.readFileSync(inputJsonPath, 'utf-8'))
-
-    const markdownElements = []
-
-    // 由于周年连战的总成绩 json 格式和单项式一样的，因此按照单项的方式处理即可。
-    // rawJson 是数组，每个元素是 { '组名': [选手数组] }
-    rawJson.forEach(section => {
-        const groupName = Object.keys(section)[0]
-        const tableData = section[groupName]
-
-        // 生成组标题。
-        const elements = [{ h2: groupName }]
-
-        if (tableData && tableData.length > 0) {
-            // 按成绩排序，快的在前（暂时不排序）
-            // const sortedTable = [...tableData].sort((a, b) => {
-            //     return parse(normalizeTime(a['成绩'][0])) - parse(normalizeTime(b['成绩'][0]))
-            // })
-            const sortedTable = [...tableData]
-
-            // 给每行加排名。
-            const tableRows = sortedTable.map((entry, index) => ({
-                排名: 1 + index,
-                ...entry
-            }))
-
-            // 获取列名。
-            const columnNames = Object.keys(tableRows[0])
-
-            // 构造表格内容。
-            const tableContent = tableRows.map(row =>
-                columnNames.map(col => {
-                    const e = row[col]
-                    // 若是数组且长度大于 1 代表带链接。
-                    return Array.isArray(e)
-                        ? (e.length > 1 ? `[${e[0]}](${e[1]})` : e[0])
-                        : e
-                })
-            )
-
-            elements.push({
-                table: {
-                    headers: columnNames,
-                    rows: tableContent
-                }
-            })
-        }
-
-        markdownElements.push(...elements)
-    })
-
-
-    return json2md(markdownElements)
-}
-
-/**
- * 生成官方榜单 Markdown 文件。
- * @param {string} singleJsonPath 单项 JSON 原文件路径。
- * @param {string} totalJsonPath 总榜 JSON 原文件路径。
- * @param {string} outputMdPath 输出的 Markdown 文件路径。
- * @param {string} pageHeader 页面开头显示的文字。
- * @param {string} pageFooter 页面结尾显示的文字。
- */
-export function generateGauntletOfficialRankingList(singleJsonPath, totalJsonPath, outputMdPath, pageHeader = '', pageFooter = '') {
-    let content = pageHeader
-    content += convertSingleList(singleJsonPath)
-    content += convertTotalList(totalJsonPath)
-    content += pageFooter
-    fs.writeFileSync(outputMdPath, content, 'utf-8')
-}
-
-/**
- * 生成一周年活动连战榜单 Markdown 文件。
- * @param {string} firstAnniversaryJsonPath 周年连战 JSON 原文件路径。
- * @param {string} outputMdPath 输出的 Markdown 文件路径。
- * @param {string} pageHeader 页面开头显示的文字。
- * @param {string} pageFooter 页面结尾显示的文字。
- */
-export function generateGauntletFirstAnniversaryRankingList(firstAnniversaryJsonPath, outputMdPath, pageHeader = '', pageFooter = '') {
-    let content = pageHeader
-    content += convertFirstAnniversaryList(firstAnniversaryJsonPath)
-    content += pageFooter
-    fs.writeFileSync(outputMdPath, content, 'utf-8')
 }
 
 /**
@@ -334,7 +144,7 @@ export function generateGauntletJsonSingle(filePath, sheetIndex, outputJsonPath)
  * @param outputJsonPath 输出的 Json 文件路径。
  * @return 返回总成绩 JSON。
  */
-export function generateGauntletJsonTotal(filePath, sheetIndex, outputJsonPath) {
+export function generateGauntletJsonOverall(filePath, sheetIndex, outputJsonPath) {
     const workbook = XLSX.readFile(filePath) // 读取 Excel 文件。
     const sheetName = workbook.SheetNames[sheetIndex] // 获取工作表名称。
     const sheet = workbook.Sheets[sheetName] // 获取工作表对象。
@@ -467,13 +277,203 @@ export function generateGauntletJsonFirstAnniversary(filePath, sheetIndex, outpu
 }
 
 /**
- * @brief 读取指定文件的最后修改时间并写入文件。
- * @param {string} filePath 源文件路径。
- * @param {string} outputPath 输出文件路径。
+ * @brief 转换官方连战单项的数据，可按成绩进行排序。
+ * @param {string} inputJsonPath 原始 JSON 文件路径。
+ * @returns {string}
  */
-export function generateGauntletLastUpdatedTime(filePath, outputPath) {
-    const stats = fs.statSync(filePath)
-    const gauntletLastUpdatedTime = stats.mtime.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })
+export function convertSingle(inputJsonPath) {
+    // 读取原始 JSON 文件。
+    const rawJson = JSON.parse(fs.readFileSync(inputJsonPath, 'utf-8'))
 
-    fs.writeFileSync(outputPath, `${gauntletLastUpdatedTime}`, 'utf-8')
+    // 生成标题：单项。
+    const markdownElements = [{ h2: '单项' }]
+
+    // rawJson 是数组，每个元素是 { '组名': [选手数组] }
+    rawJson.forEach(section => {
+        const groupName = Object.keys(section)[0] // 三虎、四僧等。
+        const tableData = section[groupName]
+
+        // 生成组标题。
+        const elements = [{ h3: groupName }]
+
+        if (tableData && tableData.length > 0) {
+            // 按成绩排序，快的在前（暂时不排序）
+            // const sortedTable = [...tableData].sort((a, b) => {
+            //     return parse(normalizeTime(a['成绩'][0])) - parse(normalizeTime(b['成绩'][0]))
+            // })
+            const sortedTable = [...tableData]
+
+            // 给每行加排名。
+            const tableRows = sortedTable.map((entry, index) => ({
+                排名: 1 + index,
+                ...entry
+            }))
+
+            // 获取列名。
+            const columnNames = Object.keys(tableRows[0])
+
+            // 构造表格内容。
+            const tableContent = tableRows.map(row =>
+                columnNames.map(col => {
+                    const e = row[col]
+                    // 若是数组且长度大于 1 代表带链接。
+                    return Array.isArray(e)
+                        ? (e.length > 1 ? `[${e[0]}](${e[1]})` : e[0])
+                        : e
+                })
+            )
+
+            elements.push({
+                table: {
+                    headers: columnNames,
+                    rows: tableContent
+                }
+            })
+        }
+
+        markdownElements.push(...elements)
+    })
+
+
+    return json2md(markdownElements)
+}
+
+/**
+ * @brief 转换官方连战总榜的数据，可按总成绩排序。
+ * @param {string} inputJsonPath 原始 JSON 文件路径。
+ * @returns {string}
+ */
+export function convertOverall(inputJsonPath) {
+    // 读取原始 JSON 文件。
+    const rawJson = JSON.parse(fs.readFileSync(inputJsonPath, 'utf-8'))
+
+    // 生成标题：总榜。
+    const markdownElements = [
+        { h2: '总榜' }
+    ]
+
+    // 处理每一行。
+    if (rawJson.length > 0) {
+        // 按照“总成绩”进行排序。（暂时不排序）
+        // const sortedTable = [...rawJson].sort((a, b) => {
+        //     return (a['总成绩'].length ? parse(normalizeTime(a['总成绩'])) : Infinity) - (b['总成绩'].length ? parse(normalizeTime(b['总成绩'])) : Infinity)
+        // })
+        const sortedTable = [...rawJson]
+
+        // 获取列名（JSON 对象的字段名）。
+        const columnNames = Object.keys(sortedTable[0])
+
+        // 每行的数据数组。
+        const tableContent = sortedTable.map(row =>
+            columnNames.map(col => {
+                const e = row[col]
+                // 若是数组且长度大于 1 代表是带链接的成绩，需构造超链接，若只有成绩，则返回 0 号元素，去掉括号。若数组长度为 0，则是空串，返回空。
+                return Array.isArray(e)
+                    ? (e.length === 0 ? '' : (e.length > 1 ? `[${e[0]}](${e[1]})` : e[0]))
+                    : e
+            })
+        )
+
+        markdownElements.push({
+            table: {
+                headers: columnNames,
+                rows: tableContent
+            }
+        })
+    }
+
+
+    return json2md(markdownElements)
+}
+
+/**
+ * @brief 转换一周年活动连战榜单的数据。
+ * @param {string} inputJsonPath 原始 JSON 文件路径。
+ * @returns {string}
+ */
+export function convertFirstAnniversary(inputJsonPath) {
+    // 读取原始 JSON 文件。
+    const rawJson = JSON.parse(fs.readFileSync(inputJsonPath, 'utf-8'))
+
+    const markdownElements = []
+
+    // 由于周年连战的总成绩 json 格式和单项式一样的，因此按照单项的方式处理即可。
+    // rawJson 是数组，每个元素是 { '组名': [选手数组] }
+    rawJson.forEach(section => {
+        const groupName = Object.keys(section)[0]
+        const tableData = section[groupName]
+
+        // 生成组标题。
+        const elements = [{ h2: groupName }]
+
+        if (tableData && tableData.length > 0) {
+            // 按成绩排序，快的在前（暂时不排序）
+            // const sortedTable = [...tableData].sort((a, b) => {
+            //     return parse(normalizeTime(a['成绩'][0])) - parse(normalizeTime(b['成绩'][0]))
+            // })
+            const sortedTable = [...tableData]
+
+            // 给每行加排名。
+            const tableRows = sortedTable.map((entry, index) => ({
+                排名: 1 + index,
+                ...entry
+            }))
+
+            // 获取列名。
+            const columnNames = Object.keys(tableRows[0])
+
+            // 构造表格内容。
+            const tableContent = tableRows.map(row =>
+                columnNames.map(col => {
+                    const e = row[col]
+                    // 若是数组且长度大于 1 代表带链接。
+                    return Array.isArray(e)
+                        ? (e.length > 1 ? `[${e[0]}](${e[1]})` : e[0])
+                        : e
+                })
+            )
+
+            elements.push({
+                table: {
+                    headers: columnNames,
+                    rows: tableContent
+                }
+            })
+        }
+
+        markdownElements.push(...elements)
+    })
+
+
+    return json2md(markdownElements)
+}
+
+/**
+ * @brief 生成官方榜单 Markdown 文件。
+ * @param {string} singleJsonPath 单项 JSON 原文件路径。
+ * @param {string} overallJsonPath 总榜 JSON 原文件路径。
+ * @param {string} outputMdPath 输出的 Markdown 文件路径。
+ * @param {string} pageHeader 页面开头显示的文字。
+ * @param {string} pageFooter 页面结尾显示的文字。
+ */
+export function generateGauntletOfficialLeaderboard(singleJsonPath, overallJsonPath, outputMdPath, pageHeader = '', pageFooter = '') {
+    let content = pageHeader
+    content += convertSingle(singleJsonPath)
+    content += convertOverall(overallJsonPath)
+    content += pageFooter
+    fs.writeFileSync(outputMdPath, content, 'utf-8')
+}
+
+/**
+ * @brief 生成一周年活动连战榜单 Markdown 文件。
+ * @param {string} firstAnniversaryJsonPath 周年连战 JSON 原文件路径。
+ * @param {string} outputMdPath 输出的 Markdown 文件路径。
+ * @param {string} pageHeader 页面开头显示的文字。
+ * @param {string} pageFooter 页面结尾显示的文字。
+ */
+export function generateGauntletFirstAnniversaryLeaderboard(firstAnniversaryJsonPath, outputMdPath, pageHeader = '', pageFooter = '') {
+    let content = pageHeader
+    content += convertFirstAnniversary(firstAnniversaryJsonPath)
+    content += pageFooter
+    fs.writeFileSync(outputMdPath, content, 'utf-8')
 }
