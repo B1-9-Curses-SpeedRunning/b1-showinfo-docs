@@ -8,7 +8,7 @@
  */
 import fs from 'fs'
 import { generateGauntletJsonSingle, generateGauntletJsonTotal, generateGauntletOfficialRankingList, generateGauntletJsonFirstAnniversary, generateGauntletFirstAnniversaryRankingList, generateGauntletLastUpdatedTime } from './util-gauntlet.js'
-import { generateRematchJsonNextWeek, generateRematchWeekList } from './util-rematch.js'
+import { generateRematchJsonNextWeek, generateRematchWeekList, generateRematchJsonEachChapter, generateRematchLastUpdatedTime } from './util-rematch.js'
 
 
 console.log('now running command: npm/pnpm run ' + process.env.npm_lifecycle_event)
@@ -18,6 +18,7 @@ if ('generate-week-list' === process.env.npm_lifecycle_event) {
 }
 else {
     if ('dev' === process.env.npm_lifecycle_event || 'generate-list-data' === process.env.npm_lifecycle_event) {
+        // 连战。
         generateGauntletLastUpdatedTime('data/gauntlet/黑猴九禁速通榜(新).xlsx', 'data/gauntlet/last-updated-time')
 
         generateGauntletJsonSingle('data/gauntlet/黑猴九禁速通榜(新).xlsx', 1, 'data/gauntlet/new-list-single.json')
@@ -25,6 +26,13 @@ else {
         generateGauntletJsonTotal('data/gauntlet/黑猴九禁速通榜(新).xlsx', 2, 'data/gauntlet/new-list-total.json')
 
         generateGauntletJsonFirstAnniversary('data/gauntlet/黑猴九禁速通榜(新).xlsx', 4, 'data/gauntlet/first-anniversary.json')
+
+        // 复战。
+        generateRematchLastUpdatedTime('data/rematch/黑猴复战齐天速通榜.xlsx', 'data/rematch/last-updated-time')
+
+        for (let i = 1; i <= 6; i++) {
+            generateRematchJsonEachChapter('data/rematch/黑猴复战齐天速通榜.xlsx', i, `data/rematch/chapter-${i}.json`)
+        }
     }
 
 

@@ -467,7 +467,7 @@ export function generateGauntletJsonFirstAnniversary(filePath, sheetIndex, outpu
 }
 
 /**
- * @brief 读取指定文件的最后修改时间并写入文件。
+ * @brief 读取连战榜文件的最后修改时间并写入文件。
  * @param {string} filePath 源文件路径。
  * @param {string} outputPath 输出文件路径。
  */
