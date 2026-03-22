@@ -57,7 +57,9 @@ else {
 
 1. [山月为关](https://space.bilibili.com/3493117797861490/)选手道满归根记录 [4'04''79](https://www.bilibili.com/video/BV1RLiPBsEM4/) 从 2025 年 12 月 30 日保持 10 天至 2026 年 1 月 9 日，获得影之刃零豪华版一份。
 
-2. [阿班](https://space.bilibili.com/511651162/)选手道满归根记录 [3'58''72](https://www.bilibili.com/video/BV1qtrsBvEdP/) 从 2026 年 1 月 10 日保持 10 天至 2025 年 1 月 20 日，获得影之刃零豪华版一份。\n\n`
+2. [阿班](https://space.bilibili.com/511651162/)选手道满归根记录 [3'58''72](https://www.bilibili.com/video/BV1qtrsBvEdP/) 从 2026 年 1 月 10 日保持 10 天至 2026 年 1 月 20 日，获得影之刃零豪华版一份。
+
+3. [辣舞77777](https://space.bilibili.com/290027032/)选手群妖聚义记录 [2'07''26](https://www.bilibili.com/video/BV1qtrsBvEdP/) 从 2026 年 3 月 5 日保持 10 天至 2026 年 3 月 15 日，获得影之刃零豪华版一份。\n\n`
     )
 
     generateGauntletOfficialLeaderboard(
