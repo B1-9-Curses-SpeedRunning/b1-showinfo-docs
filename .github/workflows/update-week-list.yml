@@ -3,8 +3,8 @@ name: Update Rematch Week List
 on:
   workflow_dispatch:
   schedule:
-    # 北京时间 周日 23:59。
-    - cron: "59 15 * * 0"
+    # 北京时间 周日 23:29（为了避免延迟，打一点提前量）
+    - cron: "29 15 * * 0"
 
 jobs:
   build:
