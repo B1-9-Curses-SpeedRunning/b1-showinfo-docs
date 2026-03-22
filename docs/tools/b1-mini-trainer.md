@@ -8,3 +8,5 @@
 
 1. [v0.3.1](https://lzx0626.lanzouq.com/iKy8G3gpc3ni)
 
+2. [v0.4.0](https://lzx0626.lanzouq.com/i4GV63l7nxjc)
+
