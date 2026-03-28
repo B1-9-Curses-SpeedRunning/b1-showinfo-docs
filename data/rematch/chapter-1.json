@@ -402,6 +402,46 @@
                     "https://www.bilibili.com/video/BV1ibFMzvE8D/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "无mod"
+            },
+            {
+                "选手": "圣代奶油冰淇淋",
+                "成绩": [
+                    "2'31''93",
+                    "https://www.bilibili.com/video/BV12dCJYEEBw/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "无mod"
+            },
+            {
+                "选手": "CPA综合稳过",
+                "成绩": [
+                    "3'26''02",
+                    "https://www.bilibili.com/video/BV1SarhY2EM7/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "无mod"
+            },
+            {
+                "选手": "星之_所在",
+                "成绩": [
+                    "3'57''38",
+                    "https://www.bilibili.com/video/BV195CjYSEuJ/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "无mod"
+            },
+            {
+                "选手": "大将_RZH",
+                "成绩": [
+                    "4'09''77",
+                    "https://www.bilibili.com/video/BV13daNzAEHR/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "无mod"
+            },
+            {
+                "选手": "magic903",
+                "成绩": [
+                    "7'41''37",
+                    "https://www.bilibili.com/video/BV1YpXvY8EUb/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "无mod"
             }
         ],
         "金池长老": [
@@ -527,9 +567,17 @@
     "无限制赛道": {
         "广智": [
             {
+                "选手": "゚Nexa",
+                "成绩": [
+                    "6''588",
+                    "https://www.bilibili.com/video/BV1QYQrBaEfs/?vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "有mod"
+            },
+            {
                 "选手": "dy棍势哥",
                 "成绩": [
-                    "6\"58",
+                    "6\"589",
                     "https://www.bilibili.com/video/BV1eXszz2EpW/?buvid=XU196DE10EBDE1F7498311959C96394884402&amp;is_story_h5=false&amp;mid=R2Eq0QT37OtMLwZk0DjDmA%3D%3D&amp;plat_id=287&amp;share_from=ugc&amp;share_medium=android_i&amp;share_plat=android&amp;share_session_id=46d0a6ef-1b2d-4804-a9a1-fe666f5a364e&amp;share_source=COPY&amp;share_tag=s_i&amp;spmid=main.my-favorite.option-more.0.click&amp;timestamp=1773405087&amp;unique_k=4XVtecP&amp;up_id=436237661&amp;vd_source=6d2a5a555187150470bc28325a2d7c05"
                 ],
                 "mod": "有mod"
@@ -555,14 +603,6 @@
                 "成绩": [
                     "9''66",
                     "https://www.bilibili.com/video/BV1uowKzxEsG/?spm_id_from=333.1387.favlist.content.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
-                ],
-                "mod": "无mod"
-            },
-            {
-                "选手": "一只阳儿吖",
-                "成绩": [
-                    "11\"89",
-                    "https://www.bilibili.com/video/BV1AMPbzLEJG/?spm_id_from=333.1007.top_right_bar_window_history.content.click&amp;vd_source=5344151427fdc7683169a99d7e341908"
                 ],
                 "mod": "无mod"
             }
@@ -703,18 +743,18 @@
                 "mod": "有mod"
             },
             {
-                "选手": "午夜亢奋丶",
+                "选手": "知天命的天命人",
                 "成绩": [
-                    "9''78",
-                    "https://www.bilibili.com/video/BV1vVPezjEWD/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                    "8''81",
+                    "https://www.bilibili.com/video/BV1PWQ6BDEyq/?spm_id_from=333.1365.list.card_archive.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "无mod"
             },
             {
-                "选手": "知天命的天命人",
+                "选手": "午夜亢奋丶",
                 "成绩": [
-                    "9''91",
-                    "https://www.bilibili.com/video/BV1YoAjzFEvC/?spm_id_from=333.1387.favlist.content.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                    "9''78",
+                    "https://www.bilibili.com/video/BV1vVPezjEWD/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "无mod"
             },
@@ -765,6 +805,14 @@
                 "成绩": [
                     "1'01''99",
                     "https://www.bilibili.com/video/BV1DrAfzgEVR/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "无mod"
+            },
+            {
+                "选手": "隔壁班的魏班",
+                "成绩": [
+                    "1'28''34",
+                    "https://www.bilibili.com/video/BV1E7rdYPEZk/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "无mod"
             }

@@ -98,6 +98,14 @@
         ],
         "浪波波 石蛙": [
             {
+                "选手": "米子匀",
+                "成绩": [
+                    "24''67无伤磬槌",
+                    "https://www.bilibili.com/video/BV14pQ6BnETq/?vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "有mod"
+            },
+            {
                 "选手": "o6ing",
                 "成绩": [
                     "32''70无伤磬槌",
@@ -133,6 +141,14 @@
             }
         ],
         "大石敢当": [
+            {
+                "选手": "゚Nexa",
+                "成绩": [
+                    "44''22行者通天",
+                    "https://www.bilibili.com/video/BV197XEBMETT/?spm_id_from=333.1387.favlist.content.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "有mod"
+            },
             {
                 "选手": "一只阳儿吖",
                 "成绩": [
@@ -171,6 +187,14 @@
             }
         ],
         "碧臂螂": [
+            {
+                "选手": "米子匀",
+                "成绩": [
+                    "25''10无伤磬槌",
+                    "https://www.bilibili.com/video/BV1GvXPB8EAU/?spm_id_from=333.1387.favlist.content.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "有mod"
+            },
             {
                 "选手": "MurphyW__",
                 "成绩": [
@@ -666,12 +690,12 @@
                 "mod": "无mod"
             },
             {
-                "选手": "艾札克佛斯特_",
+                "选手": "DJiMing",
                 "成绩": [
-                    "59''07",
-                    "https://www.bilibili.com/video/BV18BZxBvEtx/?spm_id_from=333.337.search-card.all.click&amp;vd_source=5344151427fdc7683169a99d7e341908"
+                    "58''78",
+                    "https://www.bilibili.com/video/BV1JQQUBYEhe?vd_source=268a18f83317fdf476fb2f045c22b693"
                 ],
-                "mod": "无mod"
+                "mod": "有mod"
             },
             {
                 "选手": "wanzidemao",
@@ -693,9 +717,9 @@
                 "选手": "乌莲_",
                 "成绩": [
                     "1’08”99",
-                    "https://www.bilibili.com/video/BV1rZ6EBoEfT/?spm_id_from=333.337.search-card.all.click&amp;vd_source=5344151427fdc7683169a99d7e341908"
+                    "https://www.bilibili.com/video/BV1rZ6EBoEfT?vd_source=268a18f83317fdf476fb2f045c22b693"
                 ],
-                "mod": "无mod"
+                "mod": "有mod"
             }
         ]
     }
