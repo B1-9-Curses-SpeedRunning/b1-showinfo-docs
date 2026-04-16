@@ -8,6 +8,11 @@
 
 为方便查找和下载，这里的版本管理采用时间线倒序，将最新的版本放在前面，后续更新稳定 stable 版本以后会单独说明。
 
+### 推荐版本
+
+1. 九禁连战推荐使用 [v2.0-LZ-1stAnniv-dev.10.1](https://lzx0626.lanzouq.com/id6ld3gpau0f)。
+2. 复战齐天推荐使用 [v2.0-dev.7](https://lzx0626.lanzouq.com/it06z38tuvhe)。
+
 ### v2.0-LZ-1stAnniv-dev.10.1
 
 为迎合一周年连战活动制作的特殊版本。
