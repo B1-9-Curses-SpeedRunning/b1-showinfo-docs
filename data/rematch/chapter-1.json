@@ -100,12 +100,20 @@
                 "mod": "有mod"
             },
             {
+                "选手": "赋闲散人",
+                "成绩": [
+                    "24''11无伤磬槌",
+                    "https://www.bilibili.com/video/BV1ZXNaesEFi?spm_id_from=333.788.videopod.sections&amp;vd_source=5344151427fdc7683169a99d7e341908&amp;p=5"
+                ],
+                "mod": "无mod"
+            },
+            {
                 "选手": "MurphyW__",
                 "成绩": [
                     "24''46无伤磬槌",
                     "https://www.bilibili.com/video/BV1fNyWBGEZ5?spm_id_from=333.788.videopod.episodes&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0&amp;p=2"
                 ],
-                "mod": "无mod"
+                "mod": "有mod"
             },
             {
                 "选手": "magicyang123",
@@ -144,14 +152,6 @@
                 "成绩": [
                     "55''85有伤金箍棒",
                     "https://www.bilibili.com/video/BV1gZFSe7EYN/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
-                ],
-                "mod": "无mod"
-            },
-            {
-                "选手": "纷羽夜莺",
-                "成绩": [
-                    "1'01''22无伤磬槌",
-                    "https://www.bilibili.com/video/BV13wiDBDEEK/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "无mod"
             }
@@ -264,6 +264,14 @@
                 "mod": "有mod"
             },
             {
+                "选手": "赋闲散人",
+                "成绩": [
+                    "19“50无伤磬槌",
+                    "https://www.bilibili.com/video/BV1Tx9ZYSEqb/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=5344151427fdc7683169a99d7e341908"
+                ],
+                "mod": "无mod"
+            },
+            {
                 "选手": "Nexse",
                 "成绩": [
                     "24''65无伤磬槌",
@@ -302,14 +310,6 @@
                     "https://www.bilibili.com/video/BV1goaNzaEU6/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "无mod"
-            },
-            {
-                "选手": "星之_所在",
-                "成绩": [
-                    "1'01''95",
-                    "https://www.bilibili.com/video/BV1yskBYbEc4/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
-                ],
-                "mod": "无mod"
             }
         ],
         "广谋": [
@@ -336,6 +336,14 @@
                     "https://www.bilibili.com/video/BV1fNyWBGEZ5?spm_id_from=333.788.videopod.episodes&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0&amp;p=5"
                 ],
                 "mod": "有mod"
+            },
+            {
+                "选手": "赋闲散人",
+                "成绩": [
+                    "22\"64无伤磬槌",
+                    "https://www.bilibili.com/video/BV1kyfSYAEnP?spm_id_from=333.788.videopod.sections&amp;vd_source=5344151427fdc7683169a99d7e341908&amp;p=3"
+                ],
+                "mod": "无mod"
             },
             {
                 "选手": "米切尔Mitchell",
@@ -382,14 +390,6 @@
                 "成绩": [
                     "1'10''64",
                     "https://www.bilibili.com/video/BV1xzkUYfEkG/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
-                ],
-                "mod": "无mod"
-            },
-            {
-                "选手": "大将_RZH",
-                "成绩": [
-                    "1'13''78",
-                    "https://www.bilibili.com/video/BV1DoaNzhEN1/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "无mod"
             }
@@ -500,6 +500,30 @@
                     "https://www.bilibili.com/video/BV19d3ozhEFG?spm_id_from=333.788.videopod.episodes&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0&amp;p=7"
                 ],
                 "mod": "无mod"
+            },
+            {
+                "选手": "cocoyibo",
+                "成绩": [
+                    "2'09''24",
+                    "https://www.bilibili.com/video/BV1jGELzKEMr/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "无mod"
+            },
+            {
+                "选手": "带鱼OoO水中游",
+                "成绩": [
+                    "2'24''89",
+                    "https://www.bilibili.com/video/BV1kvsNzcEGs?spm_id_from=333.788.videopod.episodes&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "无mod"
+            },
+            {
+                "选手": "星之_所在",
+                "成绩": [
+                    "3'24''02",
+                    "https://www.bilibili.com/video/BV1WZC6YBEte/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "无mod"
             }
         ],
         "赤髯龙": [
@@ -512,9 +536,25 @@
                 "mod": "有mod"
             },
             {
+                "选手": "封无问",
+                "成绩": [
+                    "11''54行者通天",
+                    "https://www.bilibili.com/video/BV1s4D1BFE1U/?spm_id_from=333.1365.top_right_bar_window_default_collection.content.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "有mod"
+            },
+            {
                 "选手": "张张正在睡觉",
                 "成绩": [
                     "13''80无伤通天"
+                ],
+                "mod": "无mod"
+            },
+            {
+                "选手": "赋闲散人",
+                "成绩": [
+                    "20''34无伤磬槌",
+                    "https://www.bilibili.com/video/BV1Tx9ZYSEqb/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=5344151427fdc7683169a99d7e341908"
                 ],
                 "mod": "无mod"
             },
@@ -531,6 +571,14 @@
                 "成绩": [
                     "25''71无伤磬槌",
                     "https://www.bilibili.com/video/BV1fNyWBGEZ5?spm_id_from=333.788.videopod.episodes&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0&amp;p=8"
+                ],
+                "mod": "无mod"
+            },
+            {
+                "选手": "星之_所在",
+                "成绩": [
+                    "46''12",
+                    "https://www.bilibili.com/video/BV1ycCpYXE9N/?spm_id_from=333.1387.upload.video_card.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "无mod"
             }
@@ -567,6 +615,22 @@
                     "https://www.bilibili.com/video/BV19d3ozhEFG?spm_id_from=333.788.videopod.episodes&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0&amp;p=9"
                 ],
                 "mod": "无mod"
+            },
+            {
+                "选手": "带鱼OoO水中游",
+                "成绩": [
+                    "2'17''03",
+                    "https://www.bilibili.com/video/BV1vMsjzEEHS?spm_id_from=333.788.videopod.episodes&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0&amp;p=2"
+                ],
+                "mod": "无mod"
+            },
+            {
+                "选手": "星之_所在",
+                "成绩": [
+                    "2'48''75",
+                    "https://www.bilibili.com/video/BV17S6aYcEqp/?spm_id_from=333.1387.upload.video_card.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "无mod"
             }
         ],
         "黑熊精": [
@@ -599,6 +663,22 @@
                 "成绩": [
                     "1'38''70无伤磬槌",
                     "https://www.bilibili.com/video/BV1P16ABDEbh?buvid=XX3ABA63A0F489CE7A4C83CE056B607B0D1F6&amp;from_spmid=main.xcx.0.FgU8dOM.6kfjhm17lcg0&amp;is_story_h5=false&amp;mid=R2Eq0QT37OtMLwZk0DjDmA%3D%3D&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=6f62f26e-03be-4186-99b5-6fb1cc9da7ab&amp;share_source=COPY&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1772446374&amp;unique_k=ijNWi2i&amp;up_id=18336827&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "无mod"
+            },
+            {
+                "选手": "星之_所在",
+                "成绩": [
+                    "3'06''02",
+                    "https://www.bilibili.com/video/BV1926UYTESV/?spm_id_from=333.1387.upload.video_card.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "无mod"
+            },
+            {
+                "选手": "带鱼OoO水中游",
+                "成绩": [
+                    "3'06''63",
+                    "https://www.bilibili.com/video/BV1zK1TBhEkK?spm_id_from=333.788.videopod.episodes&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "无mod"
             }
@@ -879,6 +959,22 @@
                 "成绩": [
                     "1'26''27",
                     "https://www.bilibili.com/video/BV1kArKY8ETA/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "无mod"
+            },
+            {
+                "选手": "大大菠萝啊啊啊",
+                "成绩": [
+                    "1'32''30",
+                    "https://www.bilibili.com/video/BV1mMc6eXEfP/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "无mod"
+            },
+            {
+                "选手": "米切尔Mitchell",
+                "成绩": [
+                    "1'38''17",
+                    "https://www.bilibili.com/video/BV1KHCGY8Esf/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "无mod"
             }
