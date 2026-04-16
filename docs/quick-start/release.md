@@ -10,8 +10,29 @@
 
 ### 推荐版本
 
-1. 九禁连战推荐使用 [v2.0-LZ-1stAnniv-dev.10.1](https://lzx0626.lanzouq.com/id6ld3gpau0f)。
-2. 复战齐天推荐使用 [v2.0-dev.7](https://lzx0626.lanzouq.com/it06z38tuvhe)。
+推荐使用 [v2.0-dev.7](https://lzx0626.lanzouq.com/it06z38tuvhe)。
+
+### v2.0-dev.x
+
+在 v1.1-dev.x 版本基础上，增加了如下功能：
+
+1. 新的 BOSS 血量实现，提升效率降低资源使用，全部复战、主线血条均可显示数值。
+
+v2.0-dev.x 已经实现基础数据展示、血量显示、计时器、结算页显示细节，之后预计不会做新功能了，只会修 BUG 和闪退，等到没啥问题就直接出 v2.0 稳定版。
+
+下载链接如下：
+
+- [v2.0-dev.8](https://lzx0626.lanzouq.com/iSpIl3bbi5mb)：结算页恢复老版本的实现方法以改善老版本闪退、卡顿、死机等问题（新版本无法正常显示结算页，建议新版继续用 dev.7）。同时计时器实现方式简化以降低闪退概率。
+
+- [v2.0-dev.7](https://lzx0626.lanzouq.com/it06z38tuvhe)
+
+- [v2.0-dev.6](https://lzx0626.lanzouq.com/ieTUg37qpene)
+
+- [v2.0-dev.5](https://lzx0626.lanzouq.com/impJV37f68ni)
+
+- [v2.0-dev.2](https://lzx0626.lanzouq.com/i6hXI373yc4j)
+
+- [v2.0-dev.1](https://lzx0626.lanzouq.com/iPzqX372nxba)
 
 ### v2.0-LZ-1stAnniv-dev.10.1
 
@@ -35,29 +56,6 @@
 对应文件如下：
 
 <center><img src="https://cdn.davidingplus.cn/images/2025/12/25/500d2c85104380208186f7bafeff9e77.png" alt="500d2c85104380208186f7bafeff9e77" style="zoom:70%;" /></center>
-
-
-### v2.0-dev.x
-
-在 v1.1-dev.x 版本基础上，增加了如下功能：
-
-1. 新的 BOSS 血量实现，提升效率降低资源使用，全部复战、主线血条均可显示数值。
-
-v2.0-dev.x 已经实现基础数据展示、血量显示、计时器、结算页显示细节，之后预计不会做新功能了，只会修 BUG 和闪退，等到没啥问题就直接出 v2.0 稳定版。
-
-下载链接如下：
-
-- [v2.0-dev.8](https://lzx0626.lanzouq.com/iSpIl3bbi5mb)：结算页恢复老版本的实现方法以改善老版本闪退、卡顿、死机等问题（新版本无法正常显示结算页，建议新版继续用 dev.7）。同时计时器实现方式简化以降低闪退概率。
-
-- [v2.0-dev.7](https://lzx0626.lanzouq.com/it06z38tuvhe)
-
-- [v2.0-dev.6](https://lzx0626.lanzouq.com/ieTUg37qpene)
-
-- [v2.0-dev.5](https://lzx0626.lanzouq.com/impJV37f68ni)
-
-- [v2.0-dev.2](https://lzx0626.lanzouq.com/i6hXI373yc4j)
-
-- [v2.0-dev.1](https://lzx0626.lanzouq.com/iPzqX372nxba)
 
 ### v1.1-dev.x
 
@@ -95,7 +93,7 @@ v2.0-dev.x 已经实现基础数据展示、血量显示、计时器、结算页
 
 - [v1.1-dev.2](https://lzx0626.lanzouq.com/iiQhE35s2adc)
 
-### v1.0（正式版本）
+### v1.0
 
 最终发布的正式版本 v1.0。同时也伴随着新榜单规则的制定完善和新榜单记录的开始。
 
