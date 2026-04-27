@@ -61,7 +61,7 @@ export function generateRematchBossNextWeek(bossListJsonPath, weekListJsonPath) 
 }
 
 /**
- * @brief 生成复战每周 BOSS 名单 Markdown 文件。
+ * @brief 生成复战每周 BOSS 名单 Markdown 文件（按周次倒序）。
  * @param {String} weekListJsonPath 每周 BOSS 名单的 JSON 路径。
  * @param {String} outputMdPath 输出 Markdown 文件路径。
  * @param {String} startDate 起始日期。
@@ -107,7 +107,9 @@ export function generateRematchWeekBossList(weekListJsonPath, outputMdPath, star
         ])
     }
 
-    // 构造 json2md 需要的数据结构。
+    // 按周次倒序排序（Week 2 在 Week 1 前面）。
+    rows.sort((a, b) => b[0] - a[0])
+
     const mdData = [{
         table: {
             headers: ['周', '日期', 'Boss 名单'],
