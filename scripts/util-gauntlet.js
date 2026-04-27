@@ -113,7 +113,7 @@ export function generateGauntletJsonSingle(filePath, sheetIndex, outputJsonPath)
 
             const name = String(nameCell.v).trim()
             // 特殊行处理：遇到破纪录次数结束，遇到前十玩家跳过。
-            if ('破纪录次数(含旧榜)↓' === name) break
+            if ('破纪录次数(包括无数显成绩)↓' === name) break
             if ('前十玩家↑' === name) continue
 
             // 读取成绩和链接。

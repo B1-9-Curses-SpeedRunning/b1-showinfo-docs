@@ -116,6 +116,22 @@
                 "mod": "有mod"
             },
             {
+                "选手": "风屿之旅",
+                "成绩": [
+                    "26''89无伤磬槌",
+                    "https://www.bilibili.com/video/BV1vidSBTEtp/?buvid=XX3ABA63A0F489CE7A4C83CE056B607B0D1F6&amp;from_spmid=main.xcx.0.Pyx5fw0.1dx30wrbsfgg&amp;is_story_h5=false&amp;mid=R2Eq0QT37OtMLwZk0DjDmA%3D%3D&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=f49cbc35-cfd5-4310-bf11-7a5e2f3467fd&amp;share_source=COPY&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1776772305&amp;unique_k=uzPvUEz&amp;up_id=3546980284369760&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "无mod"
+            },
+            {
+                "选手": "SSGSWK",
+                "成绩": [
+                    "34''76",
+                    "https://www.bilibili.com/video/BV1hT63BUEhV/?spm_id_from=333.1387.upload.video_card.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "无mod"
+            },
+            {
                 "选手": "magicyang123",
                 "成绩": [
                     "40''06",
@@ -136,22 +152,6 @@
                 "成绩": [
                     "44''90金箍棒",
                     "https://www.bilibili.com/video/BV1eaHyzREkX/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
-                ],
-                "mod": "无mod"
-            },
-            {
-                "选手": "Cocktail-小徐师傅",
-                "成绩": [
-                    "50''14",
-                    "https://www.bilibili.com/video/BV19d3ozhEFG?spm_id_from=333.788.videopod.episodes&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
-                ],
-                "mod": "无mod"
-            },
-            {
-                "选手": "GoYounGoD",
-                "成绩": [
-                    "55''85有伤金箍棒",
-                    "https://www.bilibili.com/video/BV1gZFSe7EYN/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "无mod"
             }
@@ -803,10 +803,10 @@
                 "mod": "无mod"
             },
             {
-                "选手": "luzongyou爱摄影",
+                "选手": "_Mr-Crow_",
                 "成绩": [
-                    "19''60",
-                    "https://www.bilibili.com/video/BV14fTWz1EVZ/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                    "19''16",
+                    "https://www.bilibili.com/video/BV1pxB9BUEKe?spm_id_from=333.788.videopod.sections&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0&amp;p=4"
                 ],
                 "mod": "无mod"
             }
@@ -845,10 +845,10 @@
                 "mod": "无mod"
             },
             {
-                "选手": "米切尔Mitchell",
+                "选手": "_Mr-Crow_",
                 "成绩": [
-                    "22''13",
-                    "https://www.bilibili.com/video/BV1sHCGYbEZ3/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                    "14''11",
+                    "https://www.bilibili.com/video/BV1pxB9BUEKe?spm_id_from=333.788.videopod.sections&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0&amp;p=5"
                 ],
                 "mod": "无mod"
             }
@@ -887,10 +887,10 @@
                 "mod": "无mod"
             },
             {
-                "选手": "大大菠萝啊啊啊",
+                "选手": "_Mr-Crow_",
                 "成绩": [
-                    "14''10",
-                    "https://www.bilibili.com/video/BV1LKcAe8EqX/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                    "14''06",
+                    "https://www.bilibili.com/video/BV1pxB9BUEKe?spm_id_from=333.788.videopod.sections&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0&amp;p=6"
                 ],
                 "mod": "无mod"
             }
@@ -901,6 +901,14 @@
                 "成绩": [
                     "22''40",
                     "https://www.bilibili.com/video/BV1osfyY6EBi/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "无mod"
+            },
+            {
+                "选手": "_Mr-Crow_",
+                "成绩": [
+                    "42''16",
+                    "https://www.bilibili.com/video/BV1pxB9BUEKe?spm_id_from=333.788.videopod.sections&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0&amp;p=8"
                 ],
                 "mod": "无mod"
             },
@@ -921,23 +929,23 @@
                 "mod": "无mod"
             },
             {
-                "选手": "午夜亢奋丶",
-                "成绩": [
-                    "59''22",
-                    "https://www.bilibili.com/video/BV13nD4BHEaF?spm_id_from=333.788.videopod.episodes&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0&amp;p=3"
-                ],
-                "mod": "无mod"
-            },
-            {
                 "选手": "知天命的天命人",
                 "成绩": [
-                    "1'01''95",
-                    "https://www.bilibili.com/video/BV1zKD6BMEHn/?spm_id_from=333.1387.favlist.content.click"
+                    "58''80",
+                    "https://www.bilibili.com/video/BV1beoSBaEw1?spm_id_from=333.788.videopod.sections&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0&amp;p=2"
                 ],
                 "mod": "无mod"
             }
         ],
         "金池长老": [
+            {
+                "选手": "_Mr-Crow_",
+                "成绩": [
+                    "1'20''12",
+                    "https://www.bilibili.com/video/BV1pxB9BUEKe?spm_id_from=333.788.videopod.sections&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0&amp;p=10"
+                ],
+                "mod": "无mod"
+            },
             {
                 "选手": "一只阳儿吖",
                 "成绩": [
@@ -967,14 +975,6 @@
                 "成绩": [
                     "1'32''30",
                     "https://www.bilibili.com/video/BV1mMc6eXEfP/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
-                ],
-                "mod": "无mod"
-            },
-            {
-                "选手": "米切尔Mitchell",
-                "成绩": [
-                    "1'38''17",
-                    "https://www.bilibili.com/video/BV1KHCGY8Esf/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "无mod"
             }
@@ -1011,6 +1011,14 @@
                     "https://www.bilibili.com/video/BV1GJMBzYEs3/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "无mod"
+            },
+            {
+                "选手": "_Mr-Crow_",
+                "成绩": [
+                    "17''77",
+                    "https://www.bilibili.com/video/BV1pxB9BUEKe?spm_id_from=333.788.videopod.sections&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0&amp;p=11"
+                ],
+                "mod": "无mod"
             }
         ],
         "黑风大王": [
@@ -1027,6 +1035,14 @@
                 "成绩": [
                     "13''13",
                     "https://www.bilibili.com/video/BV18hamzJExS/?spm_id_from=333.1387.search.video_card.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "无mod"
+            },
+            {
+                "选手": "_Mr-Crow_",
+                "成绩": [
+                    "17''06",
+                    "https://www.bilibili.com/video/BV1pxB9BUEKe?spm_id_from=333.788.videopod.sections&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0&amp;p=12"
                 ],
                 "mod": "无mod"
             },
@@ -1051,10 +1067,18 @@
             {
                 "选手": "三个铁骨银参",
                 "成绩": [
-                    "19''92",
-                    "https://www.bilibili.com/video/BV1Dtwqz1E9c/?spm_id_from=333.1387.favlist.content.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                    "17''98",
+                    "https://www.bilibili.com/video/BV1PrdXBhEW6/?spm_id_from=333.1387.favlist.content.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "有mod"
+            },
+            {
+                "选手": "_Mr-Crow_",
+                "成绩": [
+                    "19''31",
+                    "https://www.bilibili.com/video/BV1pxB9BUEKe?spm_id_from=333.788.videopod.sections&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0&amp;p=14"
+                ],
+                "mod": "无mod"
             },
             {
                 "选手": "鈴止月",
@@ -1077,14 +1101,6 @@
                 "成绩": [
                     "23''52",
                     "https://www.bilibili.com/video/BV1Hzu9zZEED/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
-                ],
-                "mod": "无mod"
-            },
-            {
-                "选手": "一只阳儿吖",
-                "成绩": [
-                    "27”98",
-                    "https://www.bilibili.com/video/BV1LkfTYeEtV?spm_id_from=333.788.videopod.sections&amp;vd_source=5344151427fdc7683169a99d7e341908"
                 ],
                 "mod": "无mod"
             }
