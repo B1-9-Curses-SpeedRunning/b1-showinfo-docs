@@ -57,6 +57,12 @@ v2.0-dev.x 已经实现基础数据展示、血量显示、计时器、结算页
 
 <center><img src="https://cdn.davidingplus.cn/images/2025/12/25/500d2c85104380208186f7bafeff9e77.png" alt="500d2c85104380208186f7bafeff9e77" style="zoom:70%;" /></center>
 
+### 山月定制
+
+主要用于打自定义连战的随机全 BOSS，适配了显示面板逻辑。
+
+下载链接如下：[山月定制](https://lzx0626.lanzouq.com/igCcB3ouim5i)
+
 ### v1.1-dev.x
 
 在 v1.0 版本基础上，增加了如下功能：
