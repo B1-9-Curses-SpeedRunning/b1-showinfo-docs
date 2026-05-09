@@ -16,7 +16,7 @@
 目前没有比较好的云盘存储和直链下载方式，只能放到一些现有云盘上。
 
 黑神话悟空 1.0.20.22023 和 1.0.21.23831 回退至 1.0.16.18901 补丁下载（对，你没听错，这两个版本回退至 1.0.16.18901 是同一个补丁文件）：
-1. 百度网盘：[https://pan.baidu.com/s/1ZyqRA8lum9DaEE71580eRA?pwd=t6ec](https://pan.baidu.com/s/1ZyqRA8lum9DaEE71580eRA?pwd=t6ec)
+1. 百度网盘：[https://pan.baidu.com/s/1Qe3dTTsrZRYEmpm5f3fQ6Q?pwd=imod](https://pan.baidu.com/s/1Qe3dTTsrZRYEmpm5f3fQ6Q?pwd=imod)
 2. 夸克网盘：[https://pan.quark.cn/s/13181f5802e2](https://pan.quark.cn/s/13181f5802e2)
 3. 天翼云盘：[https://cloud.189.cn/web/share?code=RZ32eaMVBnIz%EF%BC%88%E8%AE%BF%E9%97%AE%E7%A0%81%EF%BC%9A3uov%EF%BC%89](https://cloud.189.cn/web/share?code=RZ32eaMVBnIz%EF%BC%88%E8%AE%BF%E9%97%AE%E7%A0%81%EF%BC%9A3uov%EF%BC%89)
 
