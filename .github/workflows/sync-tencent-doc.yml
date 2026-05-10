@@ -1,0 +1,56 @@
+name: Sync Tencent Docs
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 北京时间 每天 23:29（为了避免延迟，打一点提前量）。
+    - cron: "29 15 * * *"
+
+jobs:
+  sync:
+    name: Sync Tencent Docs
+    runs-on: windows-latest
+
+    env:
+      TENCENT_ACCESS_TOKEN: ${{ secrets.TENCENT_ACCESS_TOKEN }}
+      TENCENT_CLIENT_ID: ${{ secrets.TENCENT_CLIENT_ID }}
+      TENCENT_OPEN_ID: ${{ secrets.TENCENT_OPEN_ID }}
+
+    steps:
+      # 拉取仓库代码。
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+      # 安装 Node.js。
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # 安装 Python。
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # 安装项目依赖。
+      - name: Install Dependencies
+        run: npm install
+
+      # 执行同步脚本。
+      - name: Run sync script
+        run: npm run sync-tencent-doc
+
+      # 生成最新数据文件。
+      - name: Generate newest data
+        run: npm run generate-data
+
+      # 提交变更。
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: "."
+          message: "Auto Sync Tencent Docs"
+          default_author: github_actions

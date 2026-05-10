@@ -18,6 +18,7 @@
     "preview": "node scripts/main.js && vitepress build docs && vitepress preview docs",
     "generate-data": "node scripts/main.js",
     "generate-week-boss-list": "node scripts/main.js",
+    "sync-tencent-doc": "pip install -r data/requirements.txt && python data/tencent_doc_syncer.py",
     "test": "mocha"
   },
   "dependencies": {
