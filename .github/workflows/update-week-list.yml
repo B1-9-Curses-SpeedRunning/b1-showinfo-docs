@@ -13,7 +13,7 @@ jobs:
 
     steps:
       # 检出 Git 仓库。
-      - name: Check out git repository
+      - name: Check Out Git Repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
@@ -29,11 +29,11 @@ jobs:
         run: npm install
 
       # 更新 Week List 名单。
-      - name: Generate boss list
+      - name: Generate Boss List
         run: npm run generate-week-boss-list
 
       # 提交更改。
-      - name: Commit changes
+      - name: Commit Changes
         uses: EndBug/add-and-commit@v9
         with:
           add: "."

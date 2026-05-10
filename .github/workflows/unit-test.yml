@@ -14,7 +14,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Check out git repository
+      - name: Check Out Git Repository
         uses: actions/checkout@v4
 
       - name: Install Node.js

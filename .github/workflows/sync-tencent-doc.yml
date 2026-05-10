@@ -9,7 +9,7 @@ on:
 jobs:
   sync:
     name: Sync Tencent Docs
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     env:
       TENCENT_ACCESS_TOKEN: ${{ secrets.TENCENT_ACCESS_TOKEN }}
@@ -18,7 +18,7 @@ jobs:
 
     steps:
       # 拉取仓库代码。
-      - name: Checkout repository
+      - name: Check Out Git Repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
@@ -40,15 +40,15 @@ jobs:
         run: npm install
 
       # 执行同步脚本。
-      - name: Run sync script
+      - name: Run Sync Script
         run: npm run sync-tencent-doc
 
       # 生成最新数据文件。
-      - name: Generate newest data
+      - name: Generate Newest Data
         run: npm run generate-data
 
       # 提交变更。
-      - name: Commit changes
+      - name: Commit Changes
         uses: EndBug/add-and-commit@v9
         with:
           add: "."
