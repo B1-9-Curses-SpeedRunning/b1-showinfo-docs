@@ -47,10 +47,16 @@ jobs:
       - name: Generate Newest Data
         run: npm run generate-data
 
+      # 生成提交日期（北京时间）。
+      - name: Generate Commit Time
+        run: |
+          export TZ='Asia/Shanghai'
+          echo "COMMIT_TIME=$(date '+%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+
       # 提交变更。
       - name: Commit Changes
         uses: EndBug/add-and-commit@v9
         with:
           add: "."
-          message: "Auto Sync Tencent Docs"
+          message: "Auto Sync Tencent Docs (${{ env.COMMIT_TIME }})"
           default_author: github_actions
