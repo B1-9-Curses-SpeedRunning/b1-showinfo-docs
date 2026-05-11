@@ -2,10 +2,10 @@ name: Sync Tencent Docs
 
 on:
   workflow_dispatch:
-  # TODO GitHub 的 CI 机器访问不到腾讯文档的链接，暂时无法使用。
-  # schedule:
-  #   # 北京时间 每天 23:29（为了避免延迟，打一点提前量）。
-  #   - cron: "29 15 * * *"
+  # GitHub 的 CI 机器访问不到腾讯文档的链接，因此改用 self-hosted 自建机器。
+  schedule:
+    # 北京时间 每天 23:29（为了避免延迟，打一点提前量）。
+    - cron: "29 15 * * *"
 
 jobs:
   sync:
@@ -38,28 +38,28 @@ jobs:
           python -c "print('hello python')"
           node -e "console.log('hello node')"
 
-      # # 安装项目依赖。
-      # - name: Install Dependencies
-      #   run: npm install
+      # 安装项目依赖。
+      - name: Install Dependencies
+        run: npm install
 
-      # # 执行同步脚本。
-      # - name: Run Sync Script
-      #   run: npm run sync-tencent-doc
+      # 执行同步脚本。
+      - name: Run Sync Script
+        run: npm run sync-tencent-doc
 
-      # # 生成最新数据文件。
-      # - name: Generate Newest Data
-      #   run: npm run generate-data
+      # 生成最新数据文件。
+      - name: Generate Newest Data
+        run: npm run generate-data
 
-      # # 生成提交日期（北京时间）。
-      # - name: Generate Commit Time
-      #   run: |
-      #     export TZ='Asia/Shanghai'
-      #     echo "COMMIT_TIME=$(date '+%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+      # 生成提交日期（北京时间）。
+      - name: Generate Commit Time
+        run: |
+          export TZ='Asia/Shanghai'
+          echo "COMMIT_TIME=$(date '+%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
-      # # 提交变更。
-      # - name: Commit Changes
-      #   uses: EndBug/add-and-commit@v9
-      #   with:
-      #     add: "."
-      #     message: "Auto Sync Tencent Docs (${{ env.COMMIT_TIME }})"
-      #     default_author: github_actions
+      # 提交变更。
+      - name: Commit Changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: "."
+          message: "Auto Sync Tencent Docs (${{ env.COMMIT_TIME }})"
+          default_author: github_actions
