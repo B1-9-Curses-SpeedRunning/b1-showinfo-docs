@@ -14,7 +14,7 @@ jobs:
     runs-on: [self-hosted]
 
     container:
-      image: nikolaik/python-nodejs:python3.8-nodejs22-slim
+      image: ghcr.io/b1-9-curses-speedrunning/b1-showinfo-docs-docker-runtime:latest
 
     env:
       TENCENT_ACCESS_TOKEN: ${{ secrets.TENCENT_ACCESS_TOKEN }}
