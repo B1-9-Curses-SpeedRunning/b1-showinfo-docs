@@ -14,7 +14,7 @@ jobs:
     runs-on: [self-hosted]
 
     container:
-      image: node:22-bookworm
+      image: nikolaik/python-nodejs:python3.8-nodejs22-slim
 
     env:
       TENCENT_ACCESS_TOKEN: ${{ secrets.TENCENT_ACCESS_TOKEN }}
@@ -28,17 +28,19 @@ jobs:
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
-      # 安装 Python。
-      - name: Install Python
+      # 测试工具链版本。
+      - name: Test Tool Chains
         run: |
-          apt update
-          apt install -y python3 python3-pip python3-venv
-
           python -V
+          node -v
+          npm -v
 
-      # 安装项目依赖。
-      - name: Install Dependencies
-        run: npm install
+          python -c "print('hello python')"
+          node -e "console.log('hello node')"
+
+      # # 安装项目依赖。
+      # - name: Install Dependencies
+      #   run: npm install
 
       # # 执行同步脚本。
       # - name: Run Sync Script
