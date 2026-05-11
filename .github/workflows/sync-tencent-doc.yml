@@ -14,7 +14,7 @@ jobs:
     runs-on: [self-hosted]
 
     container:
-      image: ghcr.io/b1-9-curses-speedrunning/b1-showinfo-docs-docker-runtime:latest
+      image: crpi-96fmgk5153fcd5gd.cn-chengdu.personal.cr.aliyuncs.com/images-davidingplus/b1-showinfo-docs-docker-runtime:v1.0.0
 
     env:
       TENCENT_ACCESS_TOKEN: ${{ secrets.TENCENT_ACCESS_TOKEN }}
