@@ -10,7 +10,11 @@ on:
 jobs:
   sync:
     name: Sync Tencent Docs
-    runs-on: ubuntu-latest
+
+    runs-on: [self-hosted]
+
+    container:
+      image: node:22-bookworm
 
     env:
       TENCENT_ACCESS_TOKEN: ${{ secrets.TENCENT_ACCESS_TOKEN }}
@@ -24,40 +28,36 @@ jobs:
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
-      # 安装 Node.js。
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
       # 安装 Python。
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
+      - name: Install Python
+        run: |
+          apt update
+          apt install -y python3 python3-pip python3-venv
+
+          python -V
 
       # 安装项目依赖。
       - name: Install Dependencies
         run: npm install
 
-      # 执行同步脚本。
-      - name: Run Sync Script
-        run: npm run sync-tencent-doc
+      # # 执行同步脚本。
+      # - name: Run Sync Script
+      #   run: npm run sync-tencent-doc
 
-      # 生成最新数据文件。
-      - name: Generate Newest Data
-        run: npm run generate-data
+      # # 生成最新数据文件。
+      # - name: Generate Newest Data
+      #   run: npm run generate-data
 
-      # 生成提交日期（北京时间）。
-      - name: Generate Commit Time
-        run: |
-          export TZ='Asia/Shanghai'
-          echo "COMMIT_TIME=$(date '+%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+      # # 生成提交日期（北京时间）。
+      # - name: Generate Commit Time
+      #   run: |
+      #     export TZ='Asia/Shanghai'
+      #     echo "COMMIT_TIME=$(date '+%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
-      # 提交变更。
-      - name: Commit Changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          add: "."
-          message: "Auto Sync Tencent Docs (${{ env.COMMIT_TIME }})"
-          default_author: github_actions
+      # # 提交变更。
+      # - name: Commit Changes
+      #   uses: EndBug/add-and-commit@v9
+      #   with:
+      #     add: "."
+      #     message: "Auto Sync Tencent Docs (${{ env.COMMIT_TIME }})"
+      #     default_author: github_actions
