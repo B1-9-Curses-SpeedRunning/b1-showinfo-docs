@@ -61,7 +61,7 @@ v2.0-dev.x 已经实现基础数据展示、血量显示、计时器、结算页
 
 主要用于打自定义连战的随机全 BOSS，适配了显示面板逻辑。
 
-下载链接如下：[山月定制](https://lzx0626.lanzouq.com/igCcB3ouim5i)
+下载链接如下：[山月定制](https://lzx0626.lanzouq.com/idMu33p92tmb)
 
 ### v1.1-dev.x
 
