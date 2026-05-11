@@ -15,7 +15,7 @@ jobs:
 
     steps:
       # 检出 Git 仓库。
-      - name: Check out git repository
+      - name: Check Out Git Repository
         uses: actions/checkout@v4
 
       # 安装 Node.js。
@@ -35,7 +35,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
       # 上传构建产物。
-      - name: Upload artifacts
+      - name: Upload Artifacts
         # 链接 https://github.com/actions/upload-artifact/
         uses: actions/upload-artifact@v4
         with:
@@ -50,7 +50,7 @@ jobs:
     needs: build  # 表示依赖于 build 作业完成。
     if: github.ref == 'refs/heads/master' || github.event_name == 'workflow_dispatch'  # 仅在 master 分支或手动触发时部署。
     steps:
-      - name: Download artifact
+      - name: Download Artifacts
         # 链接 https://github.com/actions/download-artifact
         uses: actions/download-artifact@v4
         with:

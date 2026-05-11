@@ -46,7 +46,5 @@ build
 .history/**
 docs/.vitepress/dist
 docs/.vitepress/cache
-node_modules
-package-lock.json
 pnpm-lock.yaml
 !docs/public/**
