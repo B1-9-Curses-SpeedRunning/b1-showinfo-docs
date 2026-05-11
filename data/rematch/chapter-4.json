@@ -1,6 +1,6 @@
 {
     "单禁字赛道": {
-        "二姐": [
+        "二姐（可选八戒）": [
             {
                 "选手": "一只阳儿吖",
                 "成绩": [
@@ -280,6 +280,14 @@
                     "https://www.bilibili.com/video/BV1siBTBxE46?spm_id_from=333.788.videopod.sections&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "无mod"
+            },
+            {
+                "选手": "寂不会来往",
+                "成绩": [
+                    "5'02''67有伤三尖枪",
+                    "https://space.bilibili.com/8126259?spm_id_from=333.788.upinfo.detail.click"
+                ],
+                "mod": "无mod"
             }
         ],
         "波里个波 毒蛙": [
@@ -407,6 +415,14 @@
             }
         ],
         "紫蛛儿（开局不计时）": [
+            {
+                "选手": "米子匀",
+                "成绩": [
+                    "32''53无伤磬槌",
+                    "https://www.bilibili.com/video/BV167RDBLExd/?spm_id_from=333.1387.favlist.content.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "有mod"
+            },
             {
                 "选手": "一只阳儿吖",
                 "成绩": [
@@ -642,6 +658,14 @@
                 "mod": "有mod"
             },
             {
+                "选手": "毒島さまサイコーだ",
+                "成绩": [
+                    "28''37有伤神锋",
+                    "https://www.bilibili.com/video/BV1oTR9BUEKK/?spm_id_from=333.1365.top_right_bar_window_default_collection.content.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "有mod"
+            },
+            {
                 "选手": "一只阳儿吖",
                 "成绩": [
                     "29”81无伤神锋",
@@ -694,14 +718,6 @@
                 "成绩": [
                     "57''76无伤大圣",
                     "https://www.bilibili.com/video/BV1kQnoziEWF?spm_id_from=333.788.player.switch&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
-                ],
-                "mod": "无mod"
-            },
-            {
-                "选手": "没电的热水器",
-                "成绩": [
-                    "1'15''10无伤磬槌",
-                    "https://www.bilibili.com/video/BV1XtwNzxEKY/?spm_id_from=333.1365.top_right_bar_window_history.content.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "无mod"
             }
@@ -800,7 +816,7 @@
         ]
     },
     "无限制赛道": {
-        "二姐": [
+        "二姐（可选八戒）": [
             {
                 "选手": "゚Nexa",
                 "成绩": [
@@ -1348,6 +1364,14 @@
         ],
         "晦月魔君（双阶段）": [
             {
+                "选手": "DJiMing",
+                "成绩": [
+                    "41''94",
+                    "https://www.bilibili.com/video/BV18D5H6UE6P/?spm_id_from=333.1387.favlist.content.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "有mod"
+            },
+            {
                 "选手": "coccobello",
                 "成绩": [
                     "44''95",
@@ -1364,26 +1388,18 @@
                 "mod": "有mod"
             },
             {
+                "选手": "王文宁宁文王",
+                "成绩": [
+                    "49''84",
+                    "https://www.bilibili.com/video/BV1ZYReBcEHg?vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0&amp;p=2&amp;spm_id_from=333.788.videopod.episodes"
+                ],
+                "mod": "无mod"
+            },
+            {
                 "选手": "qs5270",
                 "成绩": [
                     "53''68",
                     "https://www.bilibili.com/video/BV1ua5wzgE5T/?spm_id_from=333.337.search-card.all.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
-                ],
-                "mod": "无mod"
-            },
-            {
-                "选手": "王文宁宁文王",
-                "成绩": [
-                    "56''09",
-                    "https://www.bilibili.com/video/BV1ZYReBcEHg/?vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
-                ],
-                "mod": "无mod"
-            },
-            {
-                "选手": "_Mr-Crow_",
-                "成绩": [
-                    "57''74",
-                    "https://www.bilibili.com/video/BV1pxB9BUEKe?spm_id_from=333.788.videopod.sections&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0&amp;p=73"
                 ],
                 "mod": "无mod"
             }
