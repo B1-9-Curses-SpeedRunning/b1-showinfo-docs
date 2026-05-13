@@ -24,6 +24,10 @@ $ npm install
 $ npm run build
 ```
 
+## 更新日志
+
+详见 [CHANGELOG](./CHANGELOG.md)。
+
 ## 备注
 
 本网站集成了很多自定义的需求，例如：
