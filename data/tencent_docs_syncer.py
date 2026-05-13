@@ -197,7 +197,7 @@ def downloadFile(downloadUrl: str, outputPath: Path) -> Path:
     return outputPath
 
 
-def downloadTencentDoc(
+def downloadTencentDocs(
     encodedId: str,
     outputDir: Path,
     exportType: str,
@@ -244,7 +244,7 @@ def main():
 
     for task in tasks:
         try:
-            savedPath = downloadTencentDoc(
+            savedPath = downloadTencentDocs(
                 encodedId=task["encodedId"],
                 exportType=task["exportType"],
                 outputDir=task["outputDir"]

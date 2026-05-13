@@ -45,7 +45,7 @@ jobs:
 
       # 执行同步脚本。
       - name: Run Sync Script
-        run: npm run sync-tencent-doc
+        run: npm run sync-tencent-docs
 
       # 生成最新数据文件。
       - name: Generate Newest Data
