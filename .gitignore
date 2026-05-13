@@ -1,3 +1,6 @@
+pnpm-lock.yaml
+pnpm-workspace.yaml
+
 docs/leaderboard/gauntlet/new.md
 docs/leaderboard/gauntlet/first-anniversary.md
 docs/leaderboard/gauntlet/old.md
@@ -46,5 +49,4 @@ build
 .history/**
 docs/.vitepress/dist
 docs/.vitepress/cache
-pnpm-lock.yaml
 !docs/public/**
