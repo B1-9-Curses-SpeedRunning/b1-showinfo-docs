@@ -2,7 +2,7 @@
 
 该手册基于 [VitePress](https://vitepress.dev) 制作。
 
-若希望本地构建此项目，需本机安装 [Node.js](https://nodejs.org)。
+若希望本地构建此项目，需本机安装 [Node.js](https://nodejs.org) 以及 [pnpm](https://pnpm.io) 工具。
 
 本文档在线链接：[黑神话悟空 实时关键数据显示 MOD 手册](https://b1.davidingplus.cn)。
 
@@ -11,8 +11,8 @@
 环境搭建完毕后，请在根目录执行：
 
 ```bash
-$ npm install
-$ npm run dev
+$ pnpm install
+$ pnpm run dev
 ```
 
 即可通过 `http://localhost:5173` 访问。
@@ -20,8 +20,8 @@ $ npm run dev
 ## 打包项目
 
 ```bash
-$ npm install
-$ npm run build
+$ pnpm install
+$ pnpm run build
 ```
 
 ## 更新日志

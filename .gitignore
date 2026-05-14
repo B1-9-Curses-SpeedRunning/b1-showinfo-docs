@@ -1,5 +1,4 @@
-pnpm-lock.yaml
-pnpm-workspace.yaml
+package-lock.json
 
 docs/leaderboard/gauntlet/new.md
 docs/leaderboard/gauntlet/first-anniversary.md

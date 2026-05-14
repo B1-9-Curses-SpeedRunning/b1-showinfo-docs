@@ -18,19 +18,24 @@ jobs:
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
+      # 安装 pnpm。
+      - name: Setup Pnpm
+        uses: pnpm/action-setup@v4
+
       # 安装 Node.js。
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: 'pnpm'
 
       # 安装项目依赖。
       - name: Install Dependencies
-        run: npm install
+        run: pnpm install --frozen-lockfile
 
       # 更新 Week List 名单。
       - name: Generate Boss List
-        run: npm run generate-week-boss-list
+        run: pnpm run generate-week-boss-list
 
       # 提交更改。
       - name: Commit Changes
