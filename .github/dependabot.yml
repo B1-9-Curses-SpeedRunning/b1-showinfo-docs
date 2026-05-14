@@ -9,4 +9,27 @@ updates:
     directory: "/"
     # Check the npm registry for updates every day (weekdays)
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "sunday"
+      time: "23:30"
+      timezone: "Asia/Shanghai"
+
+    # 最多同时开 5 个 PR。
+    open-pull-requests-limit: 5
+
+    # 合并所有 npm 更新。
+    groups:
+      npm-dependencies:
+        patterns:
+          - "*"
+
+    # 忽略 major 更新（推荐）。
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - "version-update:semver-major"
+
+    # Commit message 风格。
+    commit-message:
+      prefix: "deps(npm):"
+      include: "scope"
