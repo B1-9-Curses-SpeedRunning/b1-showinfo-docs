@@ -18,19 +18,24 @@ jobs:
       - name: Check Out Git Repository
         uses: actions/checkout@v4
 
+      # 安装 pnpm。
+      - name: Setup Pnpm
+        uses: pnpm/action-setup@v4
+
       # 安装 Node.js。
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: 'pnpm'
 
       # 安装项目依赖。
       - name: Install Dependencies
-        run: npm install
+        run: pnpm install --frozen-lockfile
 
       # 构建程序。
       - name: Build Website
-        run: npm run build
+        run: pnpm run build
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 

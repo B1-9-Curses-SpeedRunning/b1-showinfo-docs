@@ -34,6 +34,7 @@ jobs:
           python -V
           node -v
           npm -v
+          pnpm -v
           git --version
 
           python -c "print('hello python')"
@@ -41,15 +42,15 @@ jobs:
 
       # 安装项目依赖。
       - name: Install Dependencies
-        run: npm install
+        run: pnpm install --frozen-lockfile
 
       # 执行同步脚本。
       - name: Run Sync Script
-        run: npm run sync-tencent-docs
+        run: pnpm run sync-tencent-docs
 
       # 生成最新数据文件。
       - name: Generate Newest Data
-        run: npm run generate-data
+        run: pnpm run generate-data
 
       # 生成提交日期（北京时间）。
       - name: Generate Commit Time
