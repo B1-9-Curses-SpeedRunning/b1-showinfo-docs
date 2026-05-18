@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
   # GitHub 的 CI 机器访问不到腾讯文档的链接，因此改用 self-hosted 自建机器。
   schedule:
-    # 北京时间 每天 23:29（为了避免延迟，打一点提前量）。
-    - cron: "29 15 * * *"
+    # 北京时间 每天 24:00（和 update-week-list.yml 时间错开）。
+    - cron: "00 16 * * *"
 
 jobs:
   sync:
@@ -72,4 +72,5 @@ jobs:
           git diff --cached --quiet && exit 0
 
           git commit -m "Auto Sync Tencent Docs (${{ env.COMMIT_TIME }})"
+          git pull -r
           git push origin HEAD:${{ github.ref_name }}
