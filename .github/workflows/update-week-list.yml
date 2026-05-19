@@ -41,6 +41,7 @@ jobs:
       - name: Commit Changes
         uses: EndBug/add-and-commit@v9
         with:
-          add: "."
+          add: "data/"
           message: "Auto Update Rematch Week Boss List"
           default_author: github_actions
+          pull: '--rebase --autostash ...'

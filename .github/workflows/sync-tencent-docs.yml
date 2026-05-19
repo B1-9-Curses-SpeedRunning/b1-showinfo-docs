@@ -58,10 +58,16 @@ jobs:
           export TZ='Asia/Shanghai'
           echo "COMMIT_TIME=$(date '+%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
-      # 提交变更。
-      - name: Commit Changes
+      # 提交更改。
+      - name: Commit Changes Without Push
+        id: commit-changes-without-push
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+          # 配置 Http 使得连接尽量稳定。
+          git config --global http.version HTTP/1.1
+          git config --global http.lowSpeedLimit 1000
+          git config --global http.lowSpeedTime 60
 
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -69,8 +75,23 @@ jobs:
           git add data/
 
           # 没有变更就直接结束，避免 git commit 失败。
-          git diff --cached --quiet && exit 0
+          if git diff --cached --quiet; then
+            echo "has-changes=false" >> $GITHUB_OUTPUT
+            exit 0
+          else
+            echo "has-changes=true" >> $GITHUB_OUTPUT
+          fi
 
           git commit -m "Auto Sync Tencent Docs (${{ env.COMMIT_TIME }})"
-          git pull -r
-          git push origin HEAD:${{ github.ref_name }}
+
+      # 推送到远端仓库。因为这个 CI 是跑在自己服务器上的，连接 GitHub 不稳定，push 可能会失败，所以在这里添加重试机制。
+      - name: Push To Remote Git Repository
+        if: steps.commit-changes-without-push.outputs.has-changes == 'true'
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 5
+          max_attempts: 3
+          retry_on: error
+          command: |
+            git pull --rebase --autostash
+            git push origin HEAD:${{ github.ref_name }}
