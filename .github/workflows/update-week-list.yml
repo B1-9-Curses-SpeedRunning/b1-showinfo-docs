@@ -11,6 +11,9 @@ jobs:
     name: Update Week List
     runs-on: windows-latest
 
+    permissions:
+      contents: write
+
     steps:
       # 检出 Git 仓库。
       - name: Check Out Git Repository
@@ -44,4 +47,4 @@ jobs:
           add: "data/"
           message: "Auto Update Rematch Week Boss List"
           default_author: github_actions
-          pull: '--rebase --autostash ...'
+          pull: '--rebase --autostash'
