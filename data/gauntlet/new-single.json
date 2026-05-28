@@ -811,14 +811,6 @@
                 "日期": "2025/09/16"
             },
             {
-                "选手": "阿班",
-                "成绩": [
-                    "2'15''37",
-                    "https://www.bilibili.com/video/BV1iAAYz3EPX/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=dt.dt.video.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=51e4512b-aaa3-45e0-a278-78a6bb61135e&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1772275865&amp;unique_k=iXshKde&amp;up_id=511651162"
-                ],
-                "日期": "2026/02/28"
-            },
-            {
                 "选手": "想吃软饭",
                 "成绩": [
                     "2'15''69",
@@ -943,6 +935,14 @@
                     "https://www.bilibili.com/video/BV1qZ2QBtEWG/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=tm.recommend.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=84a23a77-f3ae-4cf8-bbe6-b8d312b4f955&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1765028401&amp;unique_k=UYC0QVx&amp;up_id=169961001"
                 ],
                 "日期": "2025/12/06"
+            },
+            {
+                "选手": "阿班",
+                "成绩": [
+                    "2'03''38",
+                    "https://www.bilibili.com/video/BV1PEVs65Edt/?spm_id_from=333.337.search-card.all.click"
+                ],
+                "日期": "2026/05/28"
             }
         ]
     },
