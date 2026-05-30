@@ -752,7 +752,7 @@
                     "2'00''04",
                     "https://www.bilibili.com/video/BV13SVb6zEzH/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
                 ],
-                "日期": "2025/11/02"
+                "日期": "2025/05/27"
             },
             {
                 "选手": "阿班",
@@ -785,6 +785,14 @@
                     "https://www.douyin.com/video/7552115213382782248"
                 ],
                 "日期": "2025/09/20"
+            },
+            {
+                "选手": "沐沐来了",
+                "成绩": [
+                    "2'12''23",
+                    "https://www.douyin.com/video/7645613503134453032"
+                ],
+                "日期": "2026/05/30"
             },
             {
                 "选手": "小天",
@@ -935,14 +943,6 @@
                     "https://www.douyin.com/video/7587983972405253221?previous_page=app_code_link"
                 ],
                 "日期": "2025/12/26"
-            },
-            {
-                "选手": "cocoyibo",
-                "成绩": [
-                    "2'36''69",
-                    "https://www.bilibili.com/video/BV1qZ2QBtEWG/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=tm.recommend.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=84a23a77-f3ae-4cf8-bbe6-b8d312b4f955&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1765028401&amp;unique_k=UYC0QVx&amp;up_id=169961001"
-                ],
-                "日期": "2025/12/06"
             }
         ]
     },
@@ -1003,6 +1003,14 @@
                     "https://www.bilibili.com/video/BV1LGG76GEsg/?spm_id_from=333.40164.0.0&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
                 ],
                 "日期": "2026/05/24"
+            },
+            {
+                "选手": "开心小阳哥",
+                "成绩": [
+                    "2'33''29",
+                    "https://www.douyin.com/video/7645385326189366580"
+                ],
+                "日期": "2026/05/30"
             },
             {
                 "选手": "面条子",
@@ -1084,6 +1092,14 @@
                 "日期": "2026/03/16"
             },
             {
+                "选手": "落山秋",
+                "成绩": [
+                    "2'36''72",
+                    "https://www.douyin.com/video/7645361737595735315"
+                ],
+                "日期": "2026/05/29"
+            },
+            {
                 "选手": "棍势哥",
                 "成绩": [
                     "2'36''78",
@@ -1129,22 +1145,6 @@
                     "https://www.bilibili.com/video/BV1cHcNzqE7b?-Arouter=story&amp;buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=tm.recommend.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;plat_id=163&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=776d9cbb-4a13-4324-b6c0-30e9e08fbd36&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=main.ugc-video-detail-vertical.0.0&amp;timestamp=1770615324&amp;unique_k=dXMnxkw&amp;up_id=30316805"
                 ],
                 "日期": "2026/02/08"
-            },
-            {
-                "选手": "开心小阳哥",
-                "成绩": [
-                    "2'38''31",
-                    "https://www.douyin.com/video/7629537318868684095"
-                ],
-                "日期": "2026/04/17"
-            },
-            {
-                "选手": "天傲花",
-                "成绩": [
-                    "2'38''79",
-                    "https://www.bilibili.com/video/BV1nyzVBME4e/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=tm.recommend.0.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=75eb757a-d4e8-44ea-9b76-e57f7a144739&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1768990978&amp;unique_k=uvJLhUx&amp;up_id=422735802"
-                ],
-                "日期": "2026/01/20"
             }
         ]
     },
