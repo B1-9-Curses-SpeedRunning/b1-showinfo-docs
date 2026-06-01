@@ -179,7 +179,7 @@ export function generateGauntletJsonSingle(filePath, sheetIndex, outputJsonPath)
  * @return 返回总成绩 JSON。
  */
 export function generateGauntletJsonOverall(filePath, sheetIndex, outputJsonPath) {
-    const workbook = XLSX.readFile(filePath) // 读取 Excel 文件。
+    const workbook = XLSX.readFile(filePath, { cellStyles: true }) // 读取 Excel 文件。
     const sheetName = workbook.SheetNames[sheetIndex] // 获取工作表名称。
     const sheet = workbook.Sheets[sheetName] // 获取工作表对象。
     const range = XLSX.utils.decode_range(sheet['!ref']) // 获取数据范围。
@@ -237,7 +237,7 @@ export function generateGauntletJsonOverall(filePath, sheetIndex, outputJsonPath
  * @return 返回按标题分组的单项成绩 JSON。
  */
 export function generateGauntletJsonFirstAnniversary(filePath, sheetIndex, outputJsonPath) {
-    const workbook = XLSX.readFile(filePath) // 读取 Excel 文件。
+    const workbook = XLSX.readFile(filePath, { cellStyles: true }) // 读取 Excel 文件。
     const sheetName = workbook.SheetNames[sheetIndex] // 获取工作表名称。
     const sheet = workbook.Sheets[sheetName] // 获取工作表对象。
     const range = XLSX.utils.decode_range(sheet['!ref']) // 获取数据范围。
@@ -276,6 +276,7 @@ export function generateGauntletJsonFirstAnniversary(filePath, sheetIndex, outpu
             // 读取成绩和链接。
             const score = scoreCell ? String(scoreCell.v) : ''
             const link = scoreCell?.l?.Target || ''
+            const highlight = getGauntletScoreHighlight(scoreCell)
 
             let dateOrReward = ''
             if ('总成绩' == title) {
@@ -291,14 +292,16 @@ export function generateGauntletJsonFirstAnniversary(filePath, sheetIndex, outpu
                 arr.push({
                     选手: name,
                     成绩: link ? [score, link] : [score],
-                    奖金: dateOrReward
+                    奖金: dateOrReward,
+                    highlight
                 })
             }
             else {
                 arr.push({
                     选手: name,
                     成绩: link ? [score, link] : [score],
-                    日期: dateOrReward
+                    日期: dateOrReward,
+                    highlight
                 })
             }
         }
@@ -458,12 +461,16 @@ export function convertFirstAnniversary(inputJsonPath) {
             }))
 
             // 获取列名。
-            const columnNames = Object.keys(tableRows[0])
+            const columnNames = Object.keys(tableRows[0]).filter(columnName => 'highlight' !== columnName)
 
             // 构造表格内容。
             const tableContent = tableRows.map(row =>
                 columnNames.map(col => {
                     const e = row[col]
+                    if ('成绩' === col) {
+                        return renderGauntletScoreCell(e, row.highlight)
+                    }
+
                     // 若是数组且长度大于 1 代表带链接。
                     return Array.isArray(e)
                         ? (e.length > 1 ? `[${e[0]}](${e[1]})` : e[0])

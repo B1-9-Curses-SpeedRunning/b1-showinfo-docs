@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import fs from 'fs';
 import parse from 'parse-duration';
-import { normalizeTime, convertSingle, convertOverall, getGauntletScoreHighlight } from '../scripts/util-gauntlet.js';
+import { normalizeTime, convertSingle, convertOverall, convertFirstAnniversary, getGauntletScoreHighlight } from '../scripts/util-gauntlet.js';
 
 
 describe('normalizeTime', () => {
@@ -25,11 +25,11 @@ describe('normalizeTime', () => {
         expect(normalizeTime("3'16''?")).to.equal('3m16s');
     });
 
-    it('空字符串 -> 空', () => {
+    it('empty string -> empty', () => {
         expect(normalizeTime("")).to.equal('');
     });
 
-    it('非法字符串 -> 原值', () => {
+    it('invalid string -> original', () => {
         expect(normalizeTime("abc")).to.equal('abc');
     });
 });
@@ -57,7 +57,7 @@ describe('parse normalizeTime', () => {
 });
 
 describe('getGauntletScoreHighlight', () => {
-    it('黑底金字 -> gold', () => {
+    it('black background and gold text -> gold', () => {
         const cell = {
             s: { fgColor: { rgb: '000000' } },
             r: '<r><rPr><color rgb="FFFFE270"/></rPr><t>49&apos;&apos;69</t></r>'
@@ -66,7 +66,7 @@ describe('getGauntletScoreHighlight', () => {
         expect(getGauntletScoreHighlight(cell)).to.equal('gold');
     });
 
-    it('黑底白字 -> white', () => {
+    it('black background and white text -> white', () => {
         const cell = {
             s: { fgColor: { rgb: '000000' } },
             r: '<r><rPr><color rgb="FFF2F2F2"/></rPr><t>1&apos;18&apos;&apos;92</t></r>'
@@ -75,7 +75,7 @@ describe('getGauntletScoreHighlight', () => {
         expect(getGauntletScoreHighlight(cell)).to.equal('white');
     });
 
-    it('普通成绩 -> none', () => {
+    it('normal score -> none', () => {
         const cell = {
             s: { patternType: 'none' },
             r: '<r><rPr><color rgb="FF175CEB"/></rPr><t>49&apos;&apos;88</t></r>'
@@ -101,7 +101,8 @@ describe('convertSingle', () => {
                     "成绩": ["50''86", "https://example.com"],
                     "日期": "2025/6/25",
                     "highlight": "gold"
-                }]
+                }
+            ]
         }
     ];
 
@@ -113,7 +114,7 @@ describe('convertSingle', () => {
         fs.unlinkSync(testJsonPath);
     });
 
-    it('包含表头', () => {
+    it('includes headers and renders highlight markup', () => {
         const md = convertSingle(testJsonPath);
 
         expect(md).to.include('单项');
@@ -123,14 +124,6 @@ describe('convertSingle', () => {
         expect(md).to.not.include('| highlight |');
         expect(md).to.include('gauntlet-highlight--gold');
     });
-
-    // it('成绩排序正确', () => {
-    //     const md = convertSingle(testJsonPath);
-
-    //     console.log(md)
-
-    //     expect(md.indexOf('张三')).to.be.greaterThan(md.indexOf('李四'));
-    // });
 });
 
 describe('convertOverall', () => {
@@ -172,7 +165,7 @@ describe('convertOverall', () => {
         fs.unlinkSync(testJsonPath);
     });
 
-    it('包含表头', () => {
+    it('includes headers', () => {
         const md = convertOverall(testJsonPath);
 
         expect(md).to.include('选手');
@@ -187,13 +180,54 @@ describe('convertOverall', () => {
         expect(md).to.include('六根一性');
         expect(md).to.include('总成绩');
     });
+});
 
-    // it('总成绩排序正确', () => {
-    //     const md = convertOverall(testJsonPath);
+describe('convertFirstAnniversary', () => {
+    const testJsonPath = './test-first-anniversary.json';
+    const testData = [
+        {
+            "道满归根": [
+                {
+                    "选手": "张三",
+                    "成绩": ["3'53''63", "https://example.com"],
+                    "日期": "2026/02/08",
+                    "highlight": "gold"
+                },
+                {
+                    "选手": "李四",
+                    "成绩": ["3'56''54"],
+                    "日期": "2026/02/07",
+                    "highlight": "none"
+                }
+            ]
+        },
+        {
+            "总成绩": [
+                {
+                    "选手": "张三",
+                    "成绩": ["6'08''55"],
+                    "奖金": "3200元",
+                    "highlight": "white"
+                }
+            ]
+        }
+    ];
 
-    //     console.log(md)
+    before(() => {
+        fs.writeFileSync(testJsonPath, JSON.stringify(testData), 'utf-8');
+    });
 
-    //     expect(md).to.include('总榜');
-    //     expect(md.indexOf('李四')).to.be.lessThan(md.indexOf('张三'));
-    // });
+    after(() => {
+        fs.unlinkSync(testJsonPath);
+    });
+
+    it('renders highlighted anniversary scores', () => {
+        const md = convertFirstAnniversary(testJsonPath);
+
+        expect(md).to.include('道满归根');
+        expect(md).to.include('总成绩');
+        expect(md).to.not.include('| highlight |');
+        expect(md).to.include('gauntlet-highlight--gold');
+        expect(md).to.include('gauntlet-highlight--white');
+    });
 });
