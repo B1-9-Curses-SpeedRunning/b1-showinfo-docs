@@ -120,7 +120,8 @@ describe('convertSingle', () => {
         expect(md).to.include('三虎');
         expect(md).to.include('选手');
         expect(md).to.include('成绩');
-        expect(md).to.not.include('highlight');
+        expect(md).to.not.include('| highlight |');
+        expect(md).to.include('gauntlet-highlight--gold');
     });
 
     // it('成绩排序正确', () => {

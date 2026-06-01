@@ -38,6 +38,17 @@ export function getGauntletScoreHighlight(cell) {
     return GAUNTLET_HIGHLIGHT_FONT_COLORS[fontColor] || 'none'
 }
 
+export function renderGauntletScoreCell(scoreEntry, highlight = 'none') {
+    if (!Array.isArray(scoreEntry) || 0 === scoreEntry.length) return ''
+
+    const scoreText = scoreEntry[0]
+    const scoreContent = scoreEntry.length > 1 ? `[${scoreText}](${scoreEntry[1]})` : scoreText
+
+    if ('none' === highlight) return scoreContent
+
+    return `<span class="gauntlet-highlight gauntlet-highlight--${highlight}">${scoreContent}</span>`
+}
+
 /**
  * @brief 读取连战榜文件的最后修改时间并写入文件。
  * @param {string} filePath 源文件路径。
@@ -339,6 +350,10 @@ export function convertSingle(inputJsonPath) {
             const tableContent = tableRows.map(row =>
                 columnNames.map(col => {
                     const e = row[col]
+                    if ('成绩' === col) {
+                        return renderGauntletScoreCell(e, row.highlight)
+                    }
+
                     // 若是数组且长度大于 1 代表带链接。
                     return Array.isArray(e)
                         ? (e.length > 1 ? `[${e[0]}](${e[1]})` : e[0])
