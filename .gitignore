@@ -49,3 +49,4 @@ build
 docs/.vitepress/dist
 docs/.vitepress/cache
 !docs/public/**
+.pnpm-store/

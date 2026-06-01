@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import fs from 'fs';
 import parse from 'parse-duration';
-import { normalizeTime, convertSingle, convertOverall } from '../scripts/util-gauntlet.js';
+import { normalizeTime, convertSingle, convertOverall, getGauntletScoreHighlight } from '../scripts/util-gauntlet.js';
 
 
 describe('normalizeTime', () => {
@@ -56,6 +56,35 @@ describe('parse normalizeTime', () => {
     });
 });
 
+describe('getGauntletScoreHighlight', () => {
+    it('黑底金字 -> gold', () => {
+        const cell = {
+            s: { fgColor: { rgb: '000000' } },
+            r: '<r><rPr><color rgb="FFFFE270"/></rPr><t>49&apos;&apos;69</t></r>'
+        };
+
+        expect(getGauntletScoreHighlight(cell)).to.equal('gold');
+    });
+
+    it('黑底白字 -> white', () => {
+        const cell = {
+            s: { fgColor: { rgb: '000000' } },
+            r: '<r><rPr><color rgb="FFF2F2F2"/></rPr><t>1&apos;18&apos;&apos;92</t></r>'
+        };
+
+        expect(getGauntletScoreHighlight(cell)).to.equal('white');
+    });
+
+    it('普通成绩 -> none', () => {
+        const cell = {
+            s: { patternType: 'none' },
+            r: '<r><rPr><color rgb="FF175CEB"/></rPr><t>49&apos;&apos;88</t></r>'
+        };
+
+        expect(getGauntletScoreHighlight(cell)).to.equal('none');
+    });
+});
+
 describe('convertSingle', () => {
     const testJsonPath = './test-single.json';
     const testData = [
@@ -64,12 +93,14 @@ describe('convertSingle', () => {
                 {
                     "选手": "张三",
                     "成绩": ["50''99"],
-                    "日期": "2025/8/12"
+                    "日期": "2025/8/12",
+                    "highlight": "none"
                 },
                 {
                     "选手": "李四",
                     "成绩": ["50''86", "https://example.com"],
-                    "日期": "2025/6/25"
+                    "日期": "2025/6/25",
+                    "highlight": "gold"
                 }]
         }
     ];
@@ -89,6 +120,7 @@ describe('convertSingle', () => {
         expect(md).to.include('三虎');
         expect(md).to.include('选手');
         expect(md).to.include('成绩');
+        expect(md).to.not.include('highlight');
     });
 
     // it('成绩排序正确', () => {

@@ -17,6 +17,27 @@ import XLSX from 'xlsx'
 import moment from 'moment'
 
 
+const GAUNTLET_HIGHLIGHT_FONT_COLORS = {
+    FFFFE270: 'gold',
+    FFF2F2F2: 'white',
+    FFFFFFFF: 'white'
+}
+
+
+export function getGauntletScoreHighlight(cell) {
+    if (!cell) return 'none'
+
+    const backgroundColor = String(cell?.s?.fgColor?.rgb || '').toUpperCase()
+    const richText = String(cell?.r || '').toUpperCase()
+    const fontColor = richText.match(/RGB="([A-F0-9]{8})"/)?.[1] || ''
+    const normalizedBackgroundColor = backgroundColor.length === 6 ? `FF${backgroundColor}` : backgroundColor
+
+    if ('FF000000' !== normalizedBackgroundColor) return 'none'
+
+
+    return GAUNTLET_HIGHLIGHT_FONT_COLORS[fontColor] || 'none'
+}
+
 /**
  * @brief 读取连战榜文件的最后修改时间并写入文件。
  * @param {string} filePath 源文件路径。
@@ -81,7 +102,7 @@ export function normalizeTime(timeStr) {
  * @return 返回按标题分组的单项成绩 JSON。
  */
 export function generateGauntletJsonSingle(filePath, sheetIndex, outputJsonPath) {
-    const workbook = XLSX.readFile(filePath) // 读取 Excel 文件。
+    const workbook = XLSX.readFile(filePath, { cellStyles: true }) // 读取 Excel 文件。
     const sheetName = workbook.SheetNames[sheetIndex] // 获取工作表名称。
     const sheet = workbook.Sheets[sheetName] // 获取工作表对象。
     const range = XLSX.utils.decode_range(sheet['!ref']) // 获取数据范围。
@@ -119,6 +140,7 @@ export function generateGauntletJsonSingle(filePath, sheetIndex, outputJsonPath)
             // 读取成绩和链接。
             const score = scoreCell ? String(scoreCell.v) : ''
             const link = scoreCell?.l?.Target || ''
+            const highlight = getGauntletScoreHighlight(scoreCell)
             // 日期优先使用格式化显示，否则取原始值。
             const date = moment(new Date((dateCell.v - 25569) * 86400 * 1000)).format('YYYY/MM/DD')
 
@@ -126,7 +148,8 @@ export function generateGauntletJsonSingle(filePath, sheetIndex, outputJsonPath)
             arr.push({
                 选手: name,
                 成绩: link ? [score, link] : [score],
-                日期: date
+                日期: date,
+                highlight
             })
         }
 
@@ -310,7 +333,7 @@ export function convertSingle(inputJsonPath) {
             }))
 
             // 获取列名。
-            const columnNames = Object.keys(tableRows[0])
+            const columnNames = Object.keys(tableRows[0]).filter(columnName => 'highlight' !== columnName)
 
             // 构造表格内容。
             const tableContent = tableRows.map(row =>
