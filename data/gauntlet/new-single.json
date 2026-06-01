@@ -467,19 +467,19 @@
             {
                 "选手": "薛定谔de奇点",
                 "成绩": [
-                    "1'40''98",
-                    "https://www.bilibili.com/video/BV1Q1qsBEEzW/?buvid=XY1B2A218AA96221CBFADE8B509282AA64C31&amp;from_spmid=main.my-history.0.0&amp;is_story_h5=false&amp;mid=GB%2FAZuZI26hwTQGO9UnIKg%3D%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=288def36-3209-4efc-9310-ec1620aeb0bb&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1765805105&amp;unique_k=CMCOdud&amp;up_id=433666745"
+                    "1'39''85",
+                    "https://www.bilibili.com/video/BV1tRVS6dEiD/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
                 ],
-                "日期": "2025/12/15",
+                "日期": "2026/05/31",
                 "highlight": "none"
             },
             {
                 "选手": "阿班",
                 "成绩": [
-                    "1'43''17",
-                    "https://www.bilibili.com/video/BV1MfqLBUEFh/?buvid=XUF0A85FB6A762B87032E5291F5A5DB5962FB&amp;from_spmid=dt.dt.video.0&amp;is_story_h5=false&amp;mid=0AQ517emfoSKIFIKrGRsVX8FTQ%2FSZMtL1rElX6M3iMo%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=87523b26-6436-4f65-a713-cae728232c52&amp;share_source=QQ&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0&amp;timestamp=1765987540&amp;unique_k=gvhF8K7&amp;up_id=511651162"
+                    "1'41''44",
+                    "https://www.bilibili.com/video/BV1WbVQ6HEV5/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
                 ],
-                "日期": "2025/12/17",
+                "日期": "2026/05/31",
                 "highlight": "none"
             },
             {
@@ -841,10 +841,10 @@
             {
                 "选手": "辣舞7",
                 "成绩": [
-                    "2'00''04",
-                    "https://www.bilibili.com/video/BV13SVb6zEzH/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                    "1'59''66",
+                    "https://www.bilibili.com/video/BV1fsVo6bExe/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
                 ],
-                "日期": "2025/05/27",
+                "日期": "2026/06/01",
                 "highlight": "gold"
             },
             {
@@ -854,6 +854,15 @@
                     "https://www.bilibili.com/video/BV1PEVs65Edt/?spm_id_from=333.337.search-card.all.click"
                 ],
                 "日期": "2026/05/28",
+                "highlight": "none"
+            },
+            {
+                "选手": "沐沐来了",
+                "成绩": [
+                    "2'03''57",
+                    "https://www.douyin.com/video/7645663333663689999"
+                ],
+                "日期": "2026/05/30",
                 "highlight": "none"
             },
             {
@@ -875,6 +884,24 @@
                 "highlight": "none"
             },
             {
+                "选手": "半斤",
+                "成绩": [
+                    "2'08''27",
+                    "https://www.bilibili.com/video/BV1EaVf6YEPr/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2026/06/01",
+                "highlight": "none"
+            },
+            {
+                "选手": "小天",
+                "成绩": [
+                    "2'08''28",
+                    "http://douyin.com/video/7646019174631804210"
+                ],
+                "日期": "2026/05/28",
+                "highlight": "none"
+            },
+            {
                 "选手": "馒头",
                 "成绩": [
                     "2'12''11",
@@ -884,21 +911,12 @@
                 "highlight": "white"
             },
             {
-                "选手": "沐沐来了",
+                "选手": "忆尘",
                 "成绩": [
-                    "2'12''23",
-                    "https://www.douyin.com/video/7645613503134453032"
+                    "2'13''37",
+                    "https://www.douyin.com/video/7644840043723927397"
                 ],
-                "日期": "2026/05/30",
-                "highlight": "none"
-            },
-            {
-                "选手": "小天",
-                "成绩": [
-                    "2'13''85",
-                    "https://www.douyin.com/video/7595509589743766836?previous_page=app_code_link"
-                ],
-                "日期": "2026/01/14",
+                "日期": "2026/05/28",
                 "highlight": "none"
             },
             {
@@ -1041,24 +1059,6 @@
                     "https://www.douyin.com/video/7573156769682413434"
                 ],
                 "日期": "2025/11/16",
-                "highlight": "none"
-            },
-            {
-                "选手": "六根",
-                "成绩": [
-                    "2'27''60",
-                    "https://www.douyin.com/video/7555133276631027002"
-                ],
-                "日期": "2025/09/28",
-                "highlight": "none"
-            },
-            {
-                "选手": "忆尘",
-                "成绩": [
-                    "2'31''78",
-                    "https://www.douyin.com/video/7587983972405253221?previous_page=app_code_link"
-                ],
-                "日期": "2025/12/26",
                 "highlight": "none"
             }
         ]
