@@ -1,3 +1,16 @@
+/**
+ * @file util-rematch.js
+ * @author DavidingPlus (davidingplus@qq.com)
+ * @brief 将复战榜的 Excel/JSON 数据转换为每周 BOSS 名单与完整 Markdown 文档。
+ * @details 流程：
+ * 1. 从 Excel 文件解析各章节复战成绩，按赛道与 BOSS 生成对应 JSON 数据。
+ * 2. 读取每周 BOSS 名单 JSON，补齐日期范围并转换为 Markdown 表格。
+ * 3. 读取章节成绩 JSON，按 “BOSS -> 赛道” 的结构整理为页面内容。
+ * 4. 将各章节内容拼接为完整榜单文档，并输出到 docs 目录。
+ * 5. 按需生成下一周 BOSS 名单，供页面和数据脚本继续复用。
+ *
+ * Copyright (c) 2025 DavidingPlus
+ */
 import fs from 'fs'
 import json2md from 'json2md'
 import XLSX from 'xlsx'
@@ -17,8 +30,11 @@ export function generateRematchLastUpdatedTime(filePath, outputPath) {
 
 /**
  * @brief 生成下一周的 BOSS 名单。
- * @param {string} bossListJsonPath 总 BOSS 名单的 JSON 路径。
- * @param {string} weekListJsonPath 每周 BOSS 名单的 JSON 路径。
+ * @details
+ * 先读取已有周表，剔除上一周已经出现过的 BOSS，
+ * 再从剩余候选中随机抽取 8 个并追加到周表 JSON。
+ * @param {string} bossListJsonPath 总 BOSS 名单 JSON 路径。
+ * @param {string} weekListJsonPath 每周 BOSS 名单 JSON 路径。
  */
 export function generateRematchBossNextWeek(bossListJsonPath, weekListJsonPath) {
     const bossList = JSON.parse(fs.readFileSync(bossListJsonPath, 'utf8'))
@@ -61,7 +77,10 @@ export function generateRematchBossNextWeek(bossListJsonPath, weekListJsonPath) 
 }
 
 /**
- * @brief 生成复战每周 BOSS 名单 Markdown 文件（按周次倒序）。
+ * @brief 生成复战每周 BOSS 名单 Markdown 文件。
+ * @details
+ * 根据周次相对起始日期推算每周日期范围，并按周次倒序输出，
+ * 方便页面优先展示最近一周的名单。
  * @param {String} weekListJsonPath 每周 BOSS 名单的 JSON 路径。
  * @param {String} outputMdPath 输出 Markdown 文件路径。
  * @param {String} startDate 起始日期。
@@ -125,11 +144,14 @@ export function generateRematchWeekBossList(weekListJsonPath, outputMdPath, star
 }
 
 /**
- * @brief 解析复战每章的成绩表格，生成 JSON 数据。
+ * @brief 解析复战每章成绩表并生成 JSON。
+ * @details
+ * 单张工作表中同时包含“单禁字赛道”和“无限制赛道”两段数据，
+ * 解析时需要通过标记行切换当前写入的目标分组。
  * @param filePath Excel 文件路径。
  * @param sheetIndex 工作表索引。
- * @param outputJsonPath 输出的 Json 文件路径。
- * @return 返回复战每章的成绩表格 JSON。
+ * @param outputJsonPath 输出 JSON 文件路径。
+ * @return 返回复战每章成绩表 JSON。
  */
 export function generateRematchJsonEachChapter(filePath, sheetIndex, outputJsonPath) {
     const workbook = XLSX.readFile(filePath)
@@ -211,7 +233,10 @@ export function generateRematchJsonEachChapter(filePath, sheetIndex, outputJsonP
 }
 
 /**
- * @brief 转换复战每一章的数据。
+ * @brief 将复战单章 JSON 转为 Markdown。
+ * @details
+ * 页面输出顺序按“BOSS -> 赛道”组织，便于读者在同一 BOSS 小节下
+ * 直接比较不同赛道成绩，而不需要在页面中来回查找。
  * @param {string} inputJsonPath 原始 JSON 文件路径。
  * @returns {string}
  */

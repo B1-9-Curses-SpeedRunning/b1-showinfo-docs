@@ -24,6 +24,14 @@ const GAUNTLET_HIGHLIGHT_FONT_COLORS = {
 }
 
 
+/**
+ * @brief 识别连战成绩单元格的高亮样式。
+ * @details
+ * xlsx 读取结果中，背景色来自单元格 fill，字体颜色来自富文本片段。
+ * 只有在“黑底 + 特定字体颜色”同时满足时，才视为需要前端特殊展示的成绩。
+ * @param {Object | undefined} cell Excel 单元格对象。
+ * @returns {'gold' | 'white' | 'none'} 高亮类型。
+ */
 export function getGauntletScoreHighlight(cell) {
     if (!cell) return 'none'
 
@@ -38,6 +46,15 @@ export function getGauntletScoreHighlight(cell) {
     return GAUNTLET_HIGHLIGHT_FONT_COLORS[fontColor] || 'none'
 }
 
+/**
+ * @brief 将成绩字段渲染为可直接写入 Markdown 表格的字符串。
+ * @details
+ * 普通成绩保持原样输出；高亮成绩则包装为带 class 的内联 HTML，
+ * 以便 VitePress 在不改表格结构的前提下应用主题样式。
+ * @param {Array<string>} scoreEntry 成绩数组，格式为 [成绩] 或 [成绩, 链接]。
+ * @param {'gold' | 'white' | 'none'} highlight 高亮类型。
+ * @returns {string}
+ */
 export function renderGauntletScoreCell(scoreEntry, highlight = 'none') {
     if (!Array.isArray(scoreEntry) || 0 === scoreEntry.length) return ''
 
@@ -119,7 +136,7 @@ export function generateGauntletJsonSingle(filePath, sheetIndex, outputJsonPath)
     const range = XLSX.utils.decode_range(sheet['!ref']) // 获取数据范围。
 
     const titles = []
-    // 提取第一行标题及起始列。
+    // 记录每个分组标题在首行出现的起始列。单项榜与周年榜都按“姓名 / 成绩 / 日期或奖励”三列为一组展开，后续解析时依赖这里的起始列去定位同组数据。
     for (let c = range.s.c; c <= range.e.c; ++c) {
         const cell = sheet[XLSX.utils.encode_cell({ r: range.s.r, c })]
         if (cell && cell.v && String(cell.v).trim()) titles.push({ title: String(cell.v).trim(), startCol: c })
@@ -243,7 +260,7 @@ export function generateGauntletJsonFirstAnniversary(filePath, sheetIndex, outpu
     const range = XLSX.utils.decode_range(sheet['!ref']) // 获取数据范围。
 
     const titles = []
-    // 提取第一行标题及起始列。
+    // 记录周年各分组标题的起始列。周年页虽然包含单项、总成绩和历史成绩等多种区块，但底层仍然是按首行标题定位每组起始列，再逐组向下解析。
     for (let c = range.s.c; c <= range.e.c; ++c) {
         const cell = sheet[XLSX.utils.encode_cell({ r: range.s.r, c })]
         if (cell && cell.v && String(cell.v).trim()) titles.push({ title: String(cell.v).trim(), startCol: c })
@@ -278,6 +295,7 @@ export function generateGauntletJsonFirstAnniversary(filePath, sheetIndex, outpu
             const link = scoreCell?.l?.Target || ''
             const highlight = getGauntletScoreHighlight(scoreCell)
 
+            // 根据当前分组决定第三列语义。周年单项榜第三列存的是日期，总成绩第三列存的是奖金，因此这里需要按标题切换解析逻辑与输出字段。
             let dateOrReward = ''
             if ('总成绩' == title) {
                 dateOrReward = dateOrRewardCell ? String(dateOrRewardCell.v) : ''
@@ -438,7 +456,7 @@ export function convertFirstAnniversary(inputJsonPath) {
 
     const markdownElements = []
 
-    // 由于周年连战的总成绩 json 格式和单项式一样的，因此按照单项的方式处理即可。
+    // 复用单项榜的表格拼装逻辑处理周年连战。周年 JSON 虽然同时包含日期列和奖金列，但整体仍然保持“分组 -> 选手数组”的结构，所以这里沿用单项榜的渲染路径即可。
     // rawJson 是数组，每个元素是 { '组名': [选手数组] }
     rawJson.forEach(section => {
         const groupName = Object.keys(section)[0]
