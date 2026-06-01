@@ -1,10 +1,10 @@
 /**
  * @file main.js
  * @author DavidingPlus (davidingplus@qq.com)
- * @brief 生成榜单页面的主程序入口文件。
- * 
+ * @brief 项目数据构建入口，负责分发 Excel 解析与 Markdown 生成任务。
+ *
  * Copyright (c) 2025 DavidingPlus
- * 
+ *
  */
 import fs from 'fs'
 import { generateGauntletJsonSingle, generateGauntletJsonOverall, generateGauntletOfficialLeaderboard, generateGauntletJsonFirstAnniversary, generateGauntletFirstAnniversaryLeaderboard, generateGauntletLastUpdatedTime } from './util-gauntlet.js'
@@ -13,6 +13,12 @@ import { generateRematchBossNextWeek, generateRematchWeekBossList, generateRemat
 
 console.log('now running command: npm/pnpm run ' + process.env.npm_lifecycle_event)
 
+/**
+ * @brief 根据 package.json 中触发的脚本名称分发本次执行逻辑。
+ * @details
+ * 当前入口同时被 generate-data、generate-week-boss-list、dev、build 等脚本复用，
+ * 因此通过 npm_lifecycle_event 判断本次需要执行的是“更新原始数据”还是“仅重建文档页面”。
+ */
 if ('generate-week-boss-list' === process.env.npm_lifecycle_event) {
     generateRematchBossNextWeek('data/rematch/boss-list.json', 'data/rematch/week-boss-list.json')
 }

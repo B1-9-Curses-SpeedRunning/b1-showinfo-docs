@@ -1,3 +1,16 @@
+"""
+@file tencent_docs_syncer.py
+@author DavidingPlus (davidingplus@qq.com)
+@brief 从腾讯文档 OpenAPI 导出榜单源表并保存到本地数据目录。
+@details 流程：
+1. 从环境变量读取腾讯文档 OpenAPI 所需的鉴权信息。
+2. 将文档的编码 ID 转换为可用于导出的 fileID。
+3. 创建异步导出任务并轮询进度，拿到最终下载地址。
+4. 推断输出文件名并将导出结果保存到本地目录。
+5. 按预设任务批量同步连战与复战的源表文件。
+
+Copyright (c) 2025 DavidingPlus
+"""
 import os
 import re
 import time
@@ -12,13 +25,16 @@ accessToken = os.environ["TENCENT_ACCESS_TOKEN"]
 clientId = os.environ["TENCENT_CLIENT_ID"]
 openId = os.environ["TENCENT_OPEN_ID"]
 
+# @brief 访问腾讯文档 OpenAPI 所需的鉴权请求头。
+# @details 所有凭据均从环境变量读取，便于同时兼容本地运行和 CI 环境，
+# 避免把敏感信息直接写入仓库。
 baseHeaders = {
     "Access-Token": accessToken,
     "Client-Id": clientId,
     "Open-Id": openId,
 }
 
-# 使用 Session 复用连接，减少多次 HTTP 请求的开销。
+# @brief 复用 HTTP Session 以减少多次请求时的连接开销。
 session = requests.Session()
 
 
@@ -207,11 +223,10 @@ def downloadTencentDocs(
     outputFilename: Optional[str] = None,
 ) -> Path:
     """
-    封装完整流程：
-    1. 编码 ID -> fileID
-    2. 创建异步导出任务
-    3. 轮询导出进度
-    4. 下载文件到本地
+    @brief 封装一次完整的腾讯文档导出下载流程。
+    @details
+    依次完成编码 ID 转 fileID、创建导出任务、轮询进度以及下载文件到本地。
+    @note 执行顺序固定为：编码 ID -> fileID -> 创建导出任务 -> 轮询导出进度 -> 下载文件。
     """
     fileId = convertEncodedId(encodedId, type_=converterType)
     operationId = startExport(fileId, exportType=exportType)
@@ -228,6 +243,10 @@ def downloadTencentDocs(
 
 
 def main():
+    """
+    @brief 批量执行多个腾讯文档导出任务。
+    @details 将需要同步的源表集中配置在 tasks 中，逐个执行导出与下载。
+    """
     # 这里集中配置需要导出的任务，便于后续扩展成批处理。
     tasks = [
         {
