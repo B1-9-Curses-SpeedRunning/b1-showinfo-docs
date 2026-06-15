@@ -28,11 +28,11 @@ else {
 
         // generateGauntletLastUpdatedTime('data/gauntlet/黑猴九禁速通榜(新).xlsx', 'data/gauntlet/last-updated-time')
 
-        generateGauntletJsonSingle('data/gauntlet/黑猴九禁速通榜(新).xlsx', 1, 'data/gauntlet/new-single.json')
+        // generateGauntletJsonSingle('data/gauntlet/黑猴九禁速通榜(新).xlsx', 1, 'data/gauntlet/new-single.json')
 
-        generateGauntletJsonOverall('data/gauntlet/黑猴九禁速通榜(新).xlsx', 2, 'data/gauntlet/new-overall.json')
+        // generateGauntletJsonOverall('data/gauntlet/黑猴九禁速通榜(新).xlsx', 2, 'data/gauntlet/new-overall.json')
 
-        generateGauntletJsonFirstAnniversary('data/gauntlet/黑猴九禁速通榜(新).xlsx', 4, 'data/gauntlet/first-anniversary.json')
+        // generateGauntletJsonFirstAnniversary('data/gauntlet/黑猴九禁速通榜(新).xlsx', 4, 'data/gauntlet/first-anniversary.json')
 
 
         // 复战。
@@ -54,7 +54,7 @@ else {
         'data/gauntlet/new-single.json',
         'data/gauntlet/new-overall.json',
         'docs/leaderboard/gauntlet/new.md',
-        `# 九禁连战新榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。榜单目前已实现每日自动同步[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v?tab=000002)数据，若数据同步不及时或出现其他问题请联系[网站作者](https://davidingplus.cn)。\n\n`
+        `# 九禁连战新榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容，[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v?tab=000002)\n\n现已发现数显防作弊 MOD 已被破解，暴击率显示可被绕过，以后数显防作弊不再作数，九禁速通榜单暂停更新，望周知。感谢大家对九禁速通和数显 MOD 的支持，挥泪暂别！\n\n`
     )
 
     generateGauntletFirstAnniversaryLeaderboard(

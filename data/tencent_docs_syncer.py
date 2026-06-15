@@ -249,11 +249,11 @@ def main():
     """
     # 这里集中配置需要导出的任务，便于后续扩展成批处理。
     tasks = [
-        {
-            "encodedId": "DTUhETnNCQ0RoRm9v",
-            "exportType": "sheet",
-            "outputDir": Path("data/gauntlet")
-        },
+        # {
+        #     "encodedId": "DTUhETnNCQ0RoRm9v",
+        #     "exportType": "sheet",
+        #     "outputDir": Path("data/gauntlet")
+        # },
         {
             "encodedId": "DSnhYRENVZmNCQk9i",
             "exportType": "sheet",
