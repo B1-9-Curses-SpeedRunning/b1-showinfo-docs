@@ -614,6 +614,14 @@
         ],
         "毒统领": [
             {
+                "选手": "゚Nexa",
+                "成绩": [
+                    "6''55",
+                    "https://www.bilibili.com/video/BV1g67w6vETV/?vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "有数显"
+            },
+            {
                 "选手": "知天命的天命人",
                 "成绩": [
                     "9''59",
@@ -622,18 +630,18 @@
                 "mod": "无数显"
             },
             {
-                "选手": "一只阳儿吖",
-                "成绩": [
-                    "14”49",
-                    "https://www.bilibili.com/video/BV1AMPbzLEJG/?spm_id_from=333.1007.top_right_bar_window_history.content.click&amp;vd_source=5344151427fdc7683169a99d7e341908"
-                ],
-                "mod": "无数显"
-            },
-            {
                 "选手": "_Mr-Crow_",
                 "成绩": [
                     "13''03",
                     "https://www.bilibili.com/video/BV1pxB9BUEKe?spm_id_from=333.788.videopod.sections&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0&amp;p=97"
+                ],
+                "mod": "无数显"
+            },
+            {
+                "选手": "一只阳儿吖",
+                "成绩": [
+                    "14”49",
+                    "https://www.bilibili.com/video/BV1AMPbzLEJG/?spm_id_from=333.1007.top_right_bar_window_history.content.click&amp;vd_source=5344151427fdc7683169a99d7e341908"
                 ],
                 "mod": "无数显"
             },
