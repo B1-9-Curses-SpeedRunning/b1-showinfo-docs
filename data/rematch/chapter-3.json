@@ -588,6 +588,14 @@
                 "mod": "有数显"
             },
             {
+                "选手": "大红牛涨官",
+                "成绩": [
+                    "30''94有伤磬槌",
+                    "https://www.bilibili.com/video/BV1SKjR6yE5G/?spm_id_from=333.40164.top_right_bar_window_default_collection.content.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "有数显"
+            },
+            {
                 "选手": "MurphyW__",
                 "成绩": [
                     "34''97无伤磬槌",
@@ -640,14 +648,6 @@
                 "成绩": [
                     "1'33''21",
                     "https://www.bilibili.com/video/BV1Z2XhY4Evj/?spm_id_from=333.1387.upload.video_card.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
-                ],
-                "mod": "无数显"
-            },
-            {
-                "选手": "songjin",
-                "成绩": [
-                    "1'34''13行者磬槌",
-                    "https://www.bilibili.com/video/BV1mo61BGEKq/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "无数显"
             }
@@ -1710,28 +1710,28 @@
         ],
         "海上僧": [
             {
-                "选手": "午夜亢奋丶",
-                "成绩": [
-                    "4''30",
-                    "https://www.bilibili.com/video/BV1Saj26REY9/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
-                ],
-                "mod": "有数显"
-            },
-            {
                 "选手": "゚Nexa",
                 "成绩": [
-                    "4''38",
-                    "https://www.bilibili.com/video/BV1HcD7BVEnw/?spm_id_from=333.1007.top_right_bar_window_default_collection.content.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                    "3''30",
+                    "https://www.bilibili.com/video/BV1pZjX6wELp/?vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "有数显"
             },
             {
                 "选手": "知天命的天命人",
                 "成绩": [
-                    "4''60",
-                    "https://www.bilibili.com/video/BV1bVjm6oEPr/?spm_id_from=333.1365.top_right_bar_window_default_collection.content.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                    "4''18",
+                    "https://www.bilibili.com/video/BV1hrjR6DEXT/?spm_id_from=333.788.top_right_bar_window_dynamic.content.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "无数显"
+            },
+            {
+                "选手": "午夜亢奋丶",
+                "成绩": [
+                    "4''30",
+                    "https://www.bilibili.com/video/BV1Saj26REY9/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "有数显"
             },
             {
                 "选手": "一只阳儿吖",
