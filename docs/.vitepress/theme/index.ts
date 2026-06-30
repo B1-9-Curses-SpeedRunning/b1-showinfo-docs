@@ -31,10 +31,10 @@ export default {
     ctx.app.component('ContentWrapper', ContentWrapper)
   },
   setup() {
-    useWaline({
-      serverURL: 'https://waline.davidingplus.cn',
-      vitepressUseRoute: useRoute
-    })
+    // useWaline({
+    //   serverURL: 'https://waline.davidingplus.cn',
+    //   vitepressUseRoute: useRoute
+    // })
     useLive2d({
       vitepressUseRoute: useRoute,
       enable: true,
