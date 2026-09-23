@@ -152,7 +152,7 @@
             {
                 "选手": "一只阳儿吖",
                 "成绩": [
-                    "17''05无伤通天",
+                    "17''05全禁无伤通天",
                     "https://www.bilibili.com/video/BV1kEts65EeP/?spm_id_from=333.1387.favlist.content.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "有数显"
@@ -292,6 +292,14 @@
                 "成绩": [
                     "1'22''75",
                     "https://www.bilibili.com/video/BV13KvdB8ErM?spm_id_from=333.788.videopod.episodes&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "无数显"
+            },
+            {
+                "选手": "黑神话活地图",
+                "成绩": [
+                    "1'26''11",
+                    "https://www.bilibili.com/video/BV1Cph46cEmx/?vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "无数显"
             },
