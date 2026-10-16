@@ -38,7 +38,7 @@ v2.0-dev.x 已经实现基础数据展示、血量显示、计时器、结算页
 
 在 v2.0-LZ-1stAnniv-dev.10.1 基础上，修复了 BossRush V4 的若干问题并增加了一些练习用的功能。
 
-下载链接如下：[v2.0-LZ-1stAnniv-dev.10.1.0](/downloads/ShowInfo-BossRushV4_v2.0-LZ-1stAnniv-dev.10.1.0.zip)（本版本由本站直接提供下载）
+下载链接如下：[v2.0-LZ-1stAnniv-dev.10.1.0](https://lzx0626.lanzouq.com/iVKPa4c5x6cd)，密码：9pgx。
 
 压缩包已整合 CSharpLoader、BossRush V4 和 ShowInfo，解压后将其中的 b1 文件夹整个复制到游戏根目录（BlackMythWukong 文件夹）下覆盖即可，详见压缩包内的《安装说明（先看这个）.txt》。
 
