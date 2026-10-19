@@ -353,13 +353,14 @@
     },
     {
         "week": 33,
-        "无量蝠": "https://wiki.biligame.com/wukong/%E6%97%A0%E9%87%8F%E8%9D%A0",
-        "不白": "https://wiki.biligame.com/wukong/%E4%B8%8D%E7%99%BD",
-        "虎伥": "https://wiki.biligame.com/wukong/%E8%99%8E%E4%BC%A5",
-        "青背龙": "https://wiki.biligame.com/wukong/%E9%9D%92%E8%83%8C%E9%BE%99",
-        "水木兽": "https://wiki.biligame.com/wukong/%E6%B0%B4%E6%9C%A8%E5%85%BD",
-        "蘑女": "https://wiki.biligame.com/wukong/%E8%98%91%E5%A5%B3",
-        "百足虫": "https://wiki.biligame.com/wukong/%E7%99%BE%E8%B6%B3%E8%99%AB",
-        "沙国王父子（先杀国王后杀儿子）": "https://wiki.biligame.com/wukong/%E6%B2%99%E5%9B%BD%E7%8E%8B%E7%88%B6%E5%AD%90"
+        "final": true,
+        "灵虚子": "https://wiki.biligame.com/wukong/%E7%81%B5%E8%99%9A%E5%AD%90",
+        "虎先锋": "https://wiki.biligame.com/wukong/%E8%99%8E%E5%85%88%E9%94%8B",
+        "“虎先锋”": "https://wiki.biligame.com/wukong/%E2%80%9C%E8%99%8E%E5%85%88%E9%94%8B%E2%80%9D",
+        "猪八戒（双阶段）": "https://wiki.biligame.com/wukong/%E7%8C%AA%E5%85%AB%E6%88%92",
+        "晦月魔君（双阶段）": "https://wiki.biligame.com/wukong/%E6%99%A6%E6%9C%88%E9%AD%94%E5%90%9B",
+        "二郎显圣真君": "https://wiki.biligame.com/wukong/%E4%BA%8C%E9%83%8E%E6%98%BE%E5%9C%A3%E7%9C%9F%E5%90%9B",
+        "大圣残躯（开局不计时）（双阶段）": "https://wiki.biligame.com/wukong/%E5%A4%A7%E5%9C%A3%E6%AE%8B%E8%BA%AF",
+        "寅虎": "https://wiki.biligame.com/wukong/%E5%AF%85%E8%99%8E"
     }
 ]

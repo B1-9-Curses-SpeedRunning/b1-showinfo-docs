@@ -79,7 +79,12 @@ else {
 
 
     // 复战。
-    generateRematchWeekBossList('data/rematch/week-boss-list.json', 'docs/leaderboard/rematch/week-boss-list.md', '2026-03-09', `# 复战齐天每周 BOSS 名单\n\n`)
+    generateRematchWeekBossList(
+        'data/rematch/week-boss-list.json',
+        'docs/leaderboard/rematch/week-boss-list.md',
+        '2026-03-09',
+        `# 复战齐天每周 BOSS 名单\n\n因《影之刃零》即将发售，本名单自 2026 年 10 月 19 日起停止更新。最后一期采用人工指定的固定 BOSS 名单，此后不再每周轮换。感谢大家一直以来的参与和支持！\n\n`
+    )
 
     generateRematchLeaderboard(
         'data/rematch/chapter-',

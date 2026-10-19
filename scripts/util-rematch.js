@@ -33,18 +33,25 @@ export function generateRematchLastUpdatedTime(filePath, outputPath) {
  * @details
  * 先读取已有周表，剔除上一周已经出现过的 BOSS，
  * 再从剩余候选中随机抽取 8 个并追加到周表 JSON。
+ * 若末周标记 final: true，则名单已停更，不再追加。
  * @param {string} bossListJsonPath 总 BOSS 名单 JSON 路径。
  * @param {string} weekListJsonPath 每周 BOSS 名单 JSON 路径。
  */
 export function generateRematchBossNextWeek(bossListJsonPath, weekListJsonPath) {
-    const bossList = JSON.parse(fs.readFileSync(bossListJsonPath, 'utf8'))
     const weekList = JSON.parse(fs.readFileSync(weekListJsonPath, 'utf8'))
 
     const lastWeekList = weekList[weekList.length - 1]
 
+    if (lastWeekList.final === true) {
+        console.log('复战齐天每周 BOSS 名单已停更，保留最终固定名单。')
+        return
+    }
+
+    const bossList = JSON.parse(fs.readFileSync(bossListJsonPath, 'utf8'))
+
     // 上一周的 BOSS 名单。
     const lastWeekBoss = new Set(
-        Object.keys(lastWeekList).filter(k => k !== 'week')
+        Object.keys(lastWeekList).filter(k => k !== 'week' && k !== 'final')
     )
 
     // 排除上一周的 BOSS。
@@ -81,6 +88,7 @@ export function generateRematchBossNextWeek(bossListJsonPath, weekListJsonPath) 
  * @details
  * 根据周次相对起始日期推算每周日期范围，并按周次倒序输出，
  * 方便页面优先展示最近一周的名单。
+ * 标记 final: true 的最终名单以“以后”作为结束日期。
  * @param {String} weekListJsonPath 每周 BOSS 名单的 JSON 路径。
  * @param {String} outputMdPath 输出 Markdown 文件路径。
  * @param {String} startDate 起始日期。
@@ -112,8 +120,8 @@ export function generateRematchWeekBossList(weekListJsonPath, outputMdPath, star
         const bossList = []
 
         for (const [name, url] of Object.entries(week)) {
-            // 跳过 week 字段（它不是 BOSS）。
-            if ('week' === name) continue
+            // 跳过周次和停更标记（它们不是 BOSS）。
+            if ('week' === name || 'final' === name) continue
 
             bossList.push(`[${name}](${url})`)
         }
@@ -121,7 +129,7 @@ export function generateRematchWeekBossList(weekListJsonPath, outputMdPath, star
         // 构建表格的一行。周次，日期区间，BOSS 名单。
         rows.push([
             week.week,
-            `${format(start)} ~ ${format(end)}`,
+            `${format(start)} ~ ${week.final === true ? '以后' : format(end)}`,
             bossList.join('、')
         ])
     }
