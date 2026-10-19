@@ -34,6 +34,12 @@ v2.0-dev.x 已经实现基础数据展示、血量显示、计时器、结算页
 
 - [v2.0-dev.1](https://lzx0626.lanzouq.com/iPzqX372nxba)
 
+### v2.0-LZ-1stAnniv-dev.10.1.5
+
+在 v2.0-LZ-1stAnniv-dev.10.1.0 基础上，修复了更多 bug。
+
+下载链接如下：[v2.0-LZ-1stAnniv-dev.10.1.5](https://lzx0626.lanzouq.com/i82ga4cgoede)，密码：42k3。
+
 ### v2.0-LZ-1stAnniv-dev.10.1.0
 
 在 v2.0-LZ-1stAnniv-dev.10.1 基础上，修复了 BossRush V4 的若干问题并增加了一些练习用的功能。
