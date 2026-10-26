@@ -358,7 +358,7 @@
             {
                 "选手": "爱睡觉的周公",
                 "成绩": [
-                    "17''66夜叉神锋",
+                    "17''66无伤神锋",
                     "https://www.bilibili.com/video/BV1XYaS61Edd/?vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "有数显"
@@ -548,7 +548,7 @@
             {
                 "选手": "一只阳儿吖",
                 "成绩": [
-                    "35''45夜叉天龙",
+                    "35''45有伤天龙",
                     "https://www.bilibili.com/video/BV1FQbw67Eo9/?spm_id_from=333.1365.list.card_archive.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "有数显"
@@ -564,7 +564,7 @@
             {
                 "选手": "爱睡觉的周公",
                 "成绩": [
-                    "44''68夜叉天龙",
+                    "44''68无伤天龙",
                     "https://www.bilibili.com/video/BV17D866xE6p/?spm_id_from=333.1387.favlist.content.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "有数显"
@@ -768,9 +768,17 @@
         ],
         "大圣残躯（开局不计时）（双阶段）": [
             {
+                "选手": "endrain_",
+                "成绩": [
+                    "1'08''37有伤磬槌",
+                    "https://www.bilibili.com/video/BV18tH36uEFE/?spm_id_from=333.1365.top_right_bar_window_default_collection.content.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
+                ],
+                "mod": "有数显"
+            },
+            {
                 "选手": "DJiMing",
                 "成绩": [
-                    "1'09''255夜叉磬槌",
+                    "1'09''255有伤磬槌",
                     "https://www.bilibili.com/video/BV1YgaU6kEUG/?spm_id_from=333.1365.list.card_archive.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "有数显"
@@ -836,14 +844,6 @@
                 "成绩": [
                     "1'13''67有伤磬槌",
                     "https://www.bilibili.com/video/BV1dN8m6uEfJ/?spm_id_from=333.1387.favlist.content.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
-                ],
-                "mod": "有数显"
-            },
-            {
-                "选手": "乌知",
-                "成绩": [
-                    "1'13''81有伤馨槌",
-                    "https://www.bilibili.com/video/BV17A3E6VEDW/?spm_id_from=333.1365.list.card_archive.click&amp;vd_source=c36a87d6b40e8ba3f7a1058341c4e8f0"
                 ],
                 "mod": "有数显"
             }
